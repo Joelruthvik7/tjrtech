@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>TJR Tech Portfolio | Websites, Digital &amp; Media Projects</title>
+  <meta name="description" content="Explore TJR Tech's selected websites, digital projects, and media work across web development, interactive digital experiences, video, and creative media.">
+  <meta name="keywords" content="TJR Tech Portfolio, Web Development Showcase, Digital Projects, Media Production, Commercial Video, Short-Form Content, Enterprise Portfolio">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://www.tjrtech.com/portfolio">
+
+  <!-- Open Graph / Protocol -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tjrtech.com/portfolio">
+  <meta property="og:title" content="TJR Tech Portfolio | Websites, Digital &amp; Media Projects">
+  <meta property="og:description" content="Work That Turns Ideas Into Experiences. Explore selected websites, custom digital platforms, and cinematic media projects.">
+  <meta property="og:site_name" content="TJR TECH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TJR Tech Portfolio | Websites, Digital &amp; Media Projects">
+  <meta name="twitter:description" content="Selected work across digital platforms, web engineering, and creative visual media.">
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       01. DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-primary: #020617;        /* Near black void */
+      --bg-secondary: #070f26;      /* Deep midnight blue */
+      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
+      --bg-surface: #0e1d47;
+      --bg-card: rgba(12, 24, 61, 0.45);
+      --bg-card-hover: rgba(18, 36, 88, 0.75);
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-accent: rgba(45, 212, 191, 0.35);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-accent: #2dd4bf;       /* Teal Accent */
+      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+
+      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+      --glow-teal: rgba(45, 212, 191, 0.14);
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+
+      --container-max: 1280px;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background: var(--bg-primary);
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2.5px;
+      background: var(--accent-gradient);
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-spacing {
+      padding: 7.5rem 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 1.5px;
+      background: var(--text-accent);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text-primary);
+    }
+
+    .section-lead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #020617;
+      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .inline-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.2s ease;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .inline-link:hover {
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       02. GLOBAL HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
+      height: 86px;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      height: 72px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-accent);
+    }
+
+    .logo-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: -1rem;
+      background: rgba(7, 15, 38, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0;
+      min-width: 250px;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      list-style: none;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .dropdown-item a {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-item a:hover, .dropdown-item a.active-item {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-accent);
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-primary);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem 3rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-nav-list a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .mobile-submenu {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .mobile-submenu a {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       SECTION 01 — HERO
+       ========================================================================== */
+    .portfolio-hero-section {
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 4.5rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title-main {
+      font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title-main span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-supporting-copy {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-secondary-copy {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .collage-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #portfolioHeroCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ==========================================================================
+       SECTION 02 — THREE WAYS WE BUILD
+       ========================================================================== */
+    .intro-panels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .intro-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .intro-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.35s ease;
+    }
+
+    .intro-panel:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+    }
+
+    .intro-panel:hover::before {
+      width: 100%;
+    }
+
+    .panel-index {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .panel-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .panel-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* ==========================================================================
+       SECTION 10 — PORTFOLIO FILTER CONTROLS
+       ========================================================================== */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 3.5rem 0 2.5rem 0;
+    }
+
+    .filter-pill {
+      padding: 0.65rem 1.5rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      letter-spacing: 0.05em;
+    }
+
+    .filter-pill.active, .filter-pill:hover {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+      background: var(--bg-tertiary);
+    }
+
+    /* ==========================================================================
+       SECTION 03, 04, 06, 08, 09 — EDITORIAL GRID & MOCKUPS
+       ========================================================================== */
+    .portfolio-masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .project-card.hidden {
+      display: none;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-4px);
+    }
+
+    .project-card.span-6 { grid-column: span 6; }
+    .project-card.span-12 { grid-column: span 12; }
+    .project-card.span-7 { grid-column: span 7; }
+    .project-card.span-5 { grid-column: span 5; }
+    .project-card.span-3 { grid-column: span 3; }
+
+    /* Browser Mockup Presentation (Section 05) */
+    .browser-frame {
+      background: #01040f;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .browser-header {
+      padding: 0.6rem 1rem;
+      background: rgba(12, 24, 61, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .browser-url-bar {
+      flex-grow: 1;
+      height: 20px;
+      background: rgba(2, 6, 23, 0.8);
+      border-radius: 3px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      padding: 0 0.6rem;
+    }
+
+    .browser-canvas-view {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      background: linear-gradient(135deg, #0c183d 0%, #020617 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .wireframe-box {
+      width: 80%;
+      height: 100px;
+      border: 1px dashed rgba(45, 212, 191, 0.3);
+      border-radius: 4px;
+      background: rgba(45, 212, 191, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent);
+    }
+
+    /* Video Player Thumbnails (16:9 & 9:16) */
+    .media-thumb-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #01040f;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .media-thumb-frame.vertical {
+      aspect-ratio: 9 / 16;
+    }
+
+    .media-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .project-card:hover .media-thumb-img {
+      transform: scale(1.05);
+    }
+
+    .play-overlay-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(2, 6, 23, 0.85);
+      border: 1.5px solid var(--text-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 0 20px var(--glow-teal);
+      transition: var(--transition-smooth);
+    }
+
+    .project-card:hover .play-overlay-btn {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--text-accent);
+      color: #020617;
+    }
+
+    .project-content-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .project-category-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tech-spec {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    /* ==========================================================================
+       SECTION 07 & 12 — PROGRESSION & PROCESS DUAL PATHS
+       ========================================================================== */
+    .dual-process-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .process-dual-paths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .process-path-box {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+
+    .path-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .path-step-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+    }
+
+    .path-step-row span:first-child {
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       SECTION 13 — TECHNOLOGY & CREATIVITY SPLIT
+       ========================================================================== */
+    .tech-creative-split {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 3.5rem;
+    }
+
+    .tc-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+
+    .tc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .tc-list li::before {
+      content: "— ";
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    .tc-core-hub {
+      padding: 1.5rem 2rem;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--text-accent);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 0 25px var(--glow-teal);
+      text-align: center;
+    }
+
+    /* ==========================================================================
+       SECTION 14 — PROJECT SPOTLIGHT
+       ========================================================================== */
+    .spotlight-frame {
+      background: linear-gradient(135deg, rgba(12, 24, 61, 0.75) 0%, rgba(7, 15, 38, 0.95) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 3.5rem;
+      margin-top: 3.5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    /* ==========================================================================
+       SECTION 15 — WORK BY FORMAT & 16. WORKFLOW
+       ========================================================================== */
+    .format-chips-matrix {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .format-btn {
+      padding: 0.65rem 1.25rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .format-btn:hover, .format-btn.active {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+      background: var(--bg-tertiary);
+    }
+
+    .workflow-banner-stream {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3rem 2rem;
+      margin-top: 3.5rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: clamp(0.9rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .workflow-banner-stream span {
+      color: var(--text-accent);
+    }
+
+    /* ==========================================================================
+       SECTION 17 — PORTFOLIO PRINCIPLES
+       ========================================================================== */
+    .principles-5-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .principle-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .principle-box:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    /* ==========================================================================
+       SECTION 18 — CTA & 19. FAQ & 20. BRAND STATEMENT
+       ========================================================================== */
+    .cta-section {
+      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cta-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .faq-accordion-wrap {
+      max-width: 860px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item.active {
+      border-color: var(--border-medium);
+      background: rgba(14, 29, 71, 0.7);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+
+    .faq-indicator {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--text-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-indicator {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 1.75rem;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.5rem;
+    }
+
+    .brand-statement-section {
+      padding: 6.5rem 0;
+      text-align: center;
+      background: #020617;
+    }
+
+    .statement-pulse-chain {
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ==========================================================================
+       SECTION 21 — FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #01040f;
+      padding: 5.5rem 0 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      color: var(--text-accent);
+      font-family: var(--font-mono);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links-list a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--text-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* Modal System: Detail View & Video Lightbox */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.92);
+      backdrop-filter: blur(14px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-container-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 820px;
+      padding: 3rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.active .modal-container-box {
+      transform: translateY(0);
+    }
+
+    .modal-close-trigger {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close-trigger:hover {
+      color: #fff;
+    }
+
+    /* Lightbox specific */
+    .lightbox-video-container {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .lightbox-video-container.vertical {
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      margin: 1.5rem auto 0 auto;
+    }
+
+    .lightbox-video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Scroll Trigger Animation Engine */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .intro-panels-grid,
+      .process-dual-paths,
+      .principles-5-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .project-card.span-7,
+      .project-card.span-5,
+      .project-card.span-6,
+      .project-card.span-3 {
+        grid-column: span 6;
+      }
+      .spotlight-frame {
+        grid-template-columns: 1fr;
+      }
+      .tech-creative-split {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links, .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: flex;
+      }
+      .collage-canvas-wrap {
+        height: 360px;
+      }
+      .project-card.span-7,
+      .project-card.span-5,
+      .project-card.span-6,
+      .project-card.span-3 {
+        grid-column: span 12;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .intro-panels-grid,
+      .process-dual-paths,
+      .principles-5-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-spacing {
+        padding: 5rem 0;
+      }
+      .modal-container-box {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
+        <div class="logo-mark">T</div>
+        <span class="logo-title">TJR TECH</span>
+      </a>
+
+      <nav aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="/services" class="nav-link">
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
+              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
+              <li class="dropdown-item"><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/solutions" class="nav-link">
+              Solutions
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/solutions/for-businesses">For Businesses</a></li>
+              <li class="dropdown-item"><a href="/solutions/for-consultants">For Consultants</a></li>
+              <li class="dropdown-item"><a href="/solutions/for-professionals">For Professionals</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/portfolio" class="nav-link active">
+              Portfolio
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="#websites-section">Websites</a></li>
+              <li class="dropdown-item"><a href="#digital-section">Digital Projects</a></li>
+              <li class="dropdown-item"><a href="#media-section">Media Projects</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
+          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="/contact" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">
+          <span>Start a Project</span>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-link">Home</a></li>
+      <li><a href="/about" class="mobile-link">About Us</a></li>
+      <li>
+        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Portfolio</span>
+        <ul class="mobile-submenu">
+          <li><a href="#websites-section" class="mobile-link">Websites</a></li>
+          <li><a href="#digital-section" class="mobile-link">Digital Projects</a></li>
+          <li><a href="#media-section" class="mobile-link">Media Projects</a></li>
+        </ul>
+      </li>
+      <li><a href="/services" class="mobile-link">Services</a></li>
+      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
+      <li><a href="/careers" class="mobile-link">Careers</a></li>
+      <li><a href="/insights" class="mobile-link">Insights</a></li>
+      <li><a href="/contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <a href="/contact" class="btn btn-primary" style="width: 100%;">Start a Project</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 01 — HERO
+         ========================================================================== -->
+    <section class="portfolio-hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">TJR TECH / PORTFOLIO HUB</div>
+          <h1 class="hero-title-main">
+            Work That Turns <span>Ideas Into Experiences.</span>
+          </h1>
+          <p class="hero-supporting-copy">
+            Websites, digital projects, and media experiences created through design, technology, and creative execution.
+          </p>
+          <p class="hero-secondary-copy">
+            Explore selected work across digital experiences, web development, creative technology, and media production.
+          </p>
+          <div class="hero-actions">
+            <a href="#portfolio-grid" class="btn btn-primary">
+              <span>Explore Our Work</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="/contact" class="btn btn-secondary">
+              <span>Start a Project</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="collage-canvas-wrap">
+          <canvas id="portfolioHeroCanvas" aria-label="Dynamic abstract collage visualizer"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02 — THREE WAYS WE BUILD
+         ========================================================================== -->
+    <section class="section-spacing" id="ways-we-build">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PORTFOLIO DISCIPLINES</div>
+          <h2 class="section-title">Three Ways We Build.</h2>
+        </div>
+
+        <div class="intro-panels-grid">
+          <div class="intro-panel reveal">
+            <div>
+              <div class="panel-index">01</div>
+              <h3 class="panel-title">WEBSITES</h3>
+              <p class="panel-desc">Corporate websites, professional portfolios, commercial websites, and digital experiences.</p>
+            </div>
+            <button class="inline-link filter-direct-btn" data-filter="websites">Explore Websites &rarr;</button>
+          </div>
+
+          <div class="intro-panel reveal">
+            <div>
+              <div class="panel-index">02</div>
+              <h3 class="panel-title">DIGITAL PROJECTS</h3>
+              <p class="panel-desc">Interactive digital experiences, custom interfaces, technology-driven projects, and digital solutions.</p>
+            </div>
+            <button class="inline-link filter-direct-btn" data-filter="digital">Explore Digital Projects &rarr;</button>
+          </div>
+
+          <div class="intro-panel reveal">
+            <div>
+              <div class="panel-index">03</div>
+              <h3 class="panel-title">MEDIA PROJECTS</h3>
+              <p class="panel-desc">Video, advertising, motion, visual effects, short-form content, and creative media.</p>
+            </div>
+            <button class="inline-link filter-direct-btn" data-filter="media">Explore Media Projects &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10 — PORTFOLIO FILTER CONTROLS & SECTIONS 03, 04, 06, 08, 09
+         ========================================================================== -->
+    <section class="section-spacing" id="portfolio-grid" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 1.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">DEMONSTRATED WORK</div>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">A look at projects created across our digital and creative capabilities.</p>
+        </div>
+
+        <!-- Section 10: Interactive Filter -->
+        <div class="filter-bar reveal">
+          <button class="filter-pill active" data-category="all">ALL</button>
+          <button class="filter-pill" data-category="websites">WEBSITES</button>
+          <button class="filter-pill" data-category="digital">DIGITAL PROJECTS</button>
+          <button class="filter-pill" data-category="media">MEDIA PROJECTS</button>
+        </div>
+
+        <div class="portfolio-masonry-grid reveal">
+          
+          <!-- ITEM 01: Website Project 01 (Browser Mockup - Section 05) -->
+          <article class="project-card span-6" data-cat="websites" id="websites-section">
+            <div class="browser-frame">
+              <div class="browser-header">
+                <div class="browser-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                <div class="browser-url-bar">https://tjrtech.com/preview/project-01</div>
+              </div>
+              <div class="browser-canvas-view">
+                <div class="wireframe-box">[ Corporate Website Interface ]</div>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div>
+                <span class="project-category-tag">WEBSITES / CORPORATE</span>
+                <h3 class="project-title">WEBSITE PROJECT 01</h3>
+                <p class="project-desc">Digital corporate platform engineered with structured service architecture, clean branding, and responsive performance.</p>
+                <span class="project-tech-spec">Frontend Architecture &bull; Modern CSS &bull; Semantic HTML</span>
+              </div>
+              <button class="inline-link open-project-detail-btn" data-project-id="p1">View Project Details &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 02: Digital Project 01 (Interactive System) -->
+          <article class="project-card span-6" data-cat="digital" id="digital-section">
+            <div class="browser-frame">
+              <div class="browser-header">
+                <div class="browser-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                <div class="browser-url-bar">https://tjrtech.com/preview/digital-platform</div>
+              </div>
+              <div class="browser-canvas-view">
+                <div class="wireframe-box" style="border-color: rgba(56, 189, 248, 0.4); color: var(--text-accent-cyan);">[ Interactive Portal Architecture ]</div>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div>
+                <span class="project-category-tag">DIGITAL PROJECTS / CUSTOM PORTAL</span>
+                <h3 class="project-title">DIGITAL PROJECT 01</h3>
+                <p class="project-desc">Interactive dashboard interface developed around custom data presentation, modular components, and real-time state management.</p>
+                <span class="project-tech-spec">Custom Interface &bull; Modular State &bull; Data Integration</span>
+              </div>
+              <button class="inline-link open-project-detail-btn" data-project-id="p2">View Project Details &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 03: Media Video 01 (16:9 Long-Form) -->
+          <article class="project-card span-7" data-cat="media" id="media-section">
+            <div class="media-thumb-frame" data-vid="U9dea5OP42w" data-type="landscape" role="button" aria-label="Play Media Project 01">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/U9dea5OP42w/hqdefault.jpg" alt="Media Project 01 Thumbnail" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <div>
+                <span class="project-category-tag">MEDIA PROJECTS / VIDEO</span>
+                <h3 class="project-title">MEDIA PROJECT 01</h3>
+                <p class="project-desc">Commercial video production combining live-action cinematography, pacing direction, and color grading.</p>
+                <span class="project-tech-spec">Video Production &bull; Editing &bull; Color</span>
+              </div>
+              <button class="inline-link play-vid-trigger" data-vid="U9dea5OP42w" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 04: Media Video 02 (16:9 Long-Form) -->
+          <article class="project-card span-5" data-cat="media">
+            <div class="media-thumb-frame" data-vid="RMOhxN2nn4w" data-type="landscape" role="button" aria-label="Play Media Project 02">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/RMOhxN2nn4w/hqdefault.jpg" alt="Media Project 02 Thumbnail" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <div>
+                <span class="project-category-tag">MEDIA PROJECTS / BRAND</span>
+                <h3 class="project-title">MEDIA PROJECT 02</h3>
+                <p class="project-desc">Brand narrative content structured around visual pacing and sound design.</p>
+                <span class="project-tech-spec">Direction &bull; Sound &bull; Post-Production</span>
+              </div>
+              <button class="inline-link play-vid-trigger" data-vid="RMOhxN2nn4w" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 05: Media Video 03 (16:9 Long-Form) -->
+          <article class="project-card span-5" data-cat="media">
+            <div class="media-thumb-frame" data-vid="E5hWPLW-JJw" data-type="landscape" role="button" aria-label="Play Media Project 03">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/E5hWPLW-JJw/hqdefault.jpg" alt="Media Project 03 Thumbnail" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <div>
+                <span class="project-category-tag">MEDIA PROJECTS / PROMOTIONAL</span>
+                <h3 class="project-title">MEDIA PROJECT 03</h3>
+                <p class="project-desc">Dynamic visual sequencing designed for high retention across online streaming channels.</p>
+                <span class="project-tech-spec">Promotional Media &bull; Motion &bull; Delivery</span>
+              </div>
+              <button class="inline-link play-vid-trigger" data-vid="E5hWPLW-JJw" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 06: Media Video 04 (16:9 Long-Form) -->
+          <article class="project-card span-7" data-cat="media">
+            <div class="media-thumb-frame" data-vid="OAo6PeYvj8s" data-type="landscape" role="button" aria-label="Play Media Project 04">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/OAo6PeYvj8s/hqdefault.jpg" alt="Media Project 04 Thumbnail" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <div>
+                <span class="project-category-tag">MEDIA PROJECTS / CAMPAIGN</span>
+                <h3 class="project-title">MEDIA PROJECT 04</h3>
+                <p class="project-desc">Commercial video asset combining cinematography and tailored motion graphics for campaign distribution.</p>
+                <span class="project-tech-spec">Video Production &bull; Motion Graphics</span>
+              </div>
+              <button class="inline-link play-vid-trigger" data-vid="OAo6PeYvj8s" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 07: Short Form 01 (9:16) -->
+          <article class="project-card span-3" data-cat="media">
+            <div class="media-thumb-frame vertical" data-vid="dWP5LNV6LLI" data-type="vertical" role="button" aria-label="Play Short Form 01">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/dWP5LNV6LLI/hqdefault.jpg" alt="Short Form 01" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <span class="project-category-tag">SHORT FORM 01</span>
+              <button class="inline-link play-vid-trigger" data-vid="dWP5LNV6LLI" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 08: Short Form 02 (9:16) -->
+          <article class="project-card span-3" data-cat="media">
+            <div class="media-thumb-frame vertical" data-vid="Q2qLX9zTXUs" data-type="vertical" role="button" aria-label="Play Short Form 02">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/Q2qLX9zTXUs/hqdefault.jpg" alt="Short Form 02" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <span class="project-category-tag">SHORT FORM 02</span>
+              <button class="inline-link play-vid-trigger" data-vid="Q2qLX9zTXUs" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 09: Short Form 03 (9:16) -->
+          <article class="project-card span-3" data-cat="media">
+            <div class="media-thumb-frame vertical" data-vid="_HLdnOSh4tM" data-type="vertical" role="button" aria-label="Play Short Form 03">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/_HLdnOSh4tM/hqdefault.jpg" alt="Short Form 03" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <span class="project-category-tag">SHORT FORM 03</span>
+              <button class="inline-link play-vid-trigger" data-vid="_HLdnOSh4tM" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </article>
+
+          <!-- ITEM 10: Short Form 04 (9:16) -->
+          <article class="project-card span-3" data-cat="media">
+            <div class="media-thumb-frame vertical" data-vid="JaXnrG5Phmk" data-type="vertical" role="button" aria-label="Play Short Form 04">
+              <img class="media-thumb-img" src="https://img.youtube.com/vi/JaXnrG5Phmk/hqdefault.jpg" alt="Short Form 04" loading="lazy">
+              <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="project-content-body">
+              <span class="project-category-tag">SHORT FORM 04</span>
+              <button class="inline-link play-vid-trigger" data-vid="JaXnrG5Phmk" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 14 — PROJECT SPOTLIGHT
+       ========================================================================== -->
+    <section class="section-spacing" id="spotlight">
+      <div class="container">
+        <div class="spotlight-frame reveal">
+          <div>
+            <div class="eyebrow">FEATURED SPOTLIGHT</div>
+            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 1rem;">MEDIA PROJECT 01</h2>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
+              A highlighted commercial production showcasing live-action cinematography, pacing direction, color grading, and multi-channel asset preparation.
+            </p>
+            <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted); display: block; margin-bottom: 2rem;">
+              Format: Commercial Cinema &bull; 4K Production &bull; Multi-Track Audio
+            </span>
+            <button class="btn btn-primary play-vid-trigger" data-vid="U9dea5OP42w" data-type="landscape">
+              <span>Watch Spotlight Film</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </button>
+          </div>
+
+          <div class="media-thumb-frame" data-vid="U9dea5OP42w" data-type="landscape" role="button" aria-label="Play Media Project 01 Spotlight">
+            <img class="media-thumb-img" src="https://img.youtube.com/vi/U9dea5OP42w/hqdefault.jpg" alt="Spotlight Film Thumbnail" loading="lazy">
+            <div class="play-overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 07 & 12 — HOW WE BUILD (DUAL PROCESS PATHS)
+       ========================================================================== -->
+    <section class="section-spacing dual-process-section" id="how-we-build">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">METHODOLOGICAL EXECUTION</div>
+          <h2 class="section-title">Behind Every Project.</h2>
+          <p class="section-lead">Parallel delivery disciplines uniting digital engineering and creative media production.</p>
+        </div>
+
+        <div class="process-dual-paths reveal">
+          <!-- Digital Path -->
+          <div class="process-path-box">
+            <div class="eyebrow">DIGITAL DISCIPLINES</div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">Digital &amp; Web Path</h3>
+            <div class="path-stream">
+              <div class="path-step-row"><span>01</span><span>DISCOVER &bull; Requirements &amp; Scope</span></div>
+              <div class="path-step-row"><span>02</span><span>CONCEPT &bull; Information Architecture</span></div>
+              <div class="path-step-row"><span>03</span><span>DESIGN &bull; Layout &amp; User Interface</span></div>
+              <div class="path-step-row"><span>04</span><span>BUILD &bull; Frontend &amp; Platform Logic</span></div>
+              <div class="path-step-row"><span>05</span><span>REFINE &bull; Performance &amp; Usability</span></div>
+              <div class="path-step-row" style="border-color: var(--border-accent);"><span>06</span><span style="color: #fff;">DELIVER &bull; Deployment &amp; Evolution</span></div>
+            </div>
+          </div>
+
+          <!-- Creative Path -->
+          <div class="process-path-box">
+            <div class="eyebrow">CREATIVE MEDIA</div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">Media &amp; Video Path</h3>
+            <div class="path-stream">
+              <div class="path-step-row"><span>01</span><span>CONCEPT &bull; Narrative Strategy</span></div>
+              <div class="path-step-row"><span>02</span><span>PRODUCTION &bull; Cinematography &amp; Shoot</span></div>
+              <div class="path-step-row"><span>03</span><span>EDIT &bull; Editorial Assembly &amp; Rhythm</span></div>
+              <div class="path-step-row"><span>04</span><span>MOTION / VFX &bull; Titles &amp; Effects</span></div>
+              <div class="path-step-row" style="border-color: var(--border-accent);"><span>05</span><span style="color: #fff;">FINAL DELIVERY &bull; Broadcast Formats</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 13 — TECHNOLOGY & CREATIVITY SPLIT
+       ========================================================================== -->
+    <section class="section-spacing" id="technology-and-creativity">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">UNIFIED CRAFT</div>
+          <h2 class="section-title">Where Technology Meets Creativity.</h2>
+        </div>
+
+        <div class="tech-creative-split reveal">
+          <div class="tc-panel">
+            <div class="eyebrow">TECHNICAL CRAFT</div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">TECHNOLOGY</h3>
+            <ul class="tc-list">
+              <li>Frontend Engineering</li>
+              <li>Backend &amp; API Integration</li>
+              <li>Interactive Interfaces</li>
+              <li>WebGL &amp; Canvas Rendering</li>
+              <li>Responsive Systems</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="tc-core-hub">TJR TECH</div>
+          </div>
+
+          <div class="tc-panel">
+            <div class="eyebrow">VISUAL CRAFT</div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">CREATIVE</h3>
+            <ul class="tc-list">
+              <li>Visual Storytelling</li>
+              <li>Cinematography</li>
+              <li>Motion Graphics</li>
+              <li>Visual Effects</li>
+              <li>Creative Direction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 15 — WORK BY FORMAT & 16. WORKFLOW
+       ========================================================================== -->
+    <section class="section-spacing" id="formats-and-workflow" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">ADAPTIVE SPECIFICATIONS</div>
+          <h2 class="section-title">Built for Different Digital Formats.</h2>
+          <p class="section-lead">Projects engineered to perform across native formats, viewports, and streaming protocols.</p>
+        </div>
+
+        <div class="format-chips-matrix reveal">
+          <button class="format-btn active">WEB (Desktop &bull; Mobile)</button>
+          <button class="format-btn">DESKTOP INTERFACES</button>
+          <button class="format-btn">MOBILE-FIRST WEB</button>
+          <button class="format-btn">16:9 LANDSCAPE VIDEO</button>
+          <button class="format-btn">9:16 VERTICAL SHORTS</button>
+          <button class="format-btn">INTERACTIVE SYSTEMS</button>
+        </div>
+
+        <!-- Section 16: Workflow Visualization -->
+        <div class="workflow-banner-stream reveal">
+          IDEA <span>&rarr;</span> DESIGN &bull; TECHNOLOGY &bull; CREATIVE &bull; EXECUTION <span>&rarr;</span> DIGITAL EXPERIENCE
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 17 — PORTFOLIO PRINCIPLES
+       ========================================================================== -->
+    <section class="section-spacing" id="principles">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">DELIVERY VALUES</div>
+          <h2 class="section-title">How We Approach the Work.</h2>
+        </div>
+
+        <div class="principles-5-grid reveal">
+          <div class="principle-box">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">01</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">PURPOSE</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Every project starts with a reason and a defined goal.</p>
+          </div>
+          <div class="principle-box">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">02</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">CLARITY</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Technology and design should communicate clearly.</p>
+          </div>
+          <div class="principle-box">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">03</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">EXPERIENCE</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">The final product should be meaningful to the people using it.</p>
+          </div>
+          <div class="principle-box">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">04</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">DETAIL</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Small decisions shape the overall polished experience.</p>
+          </div>
+          <div class="principle-box">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">05</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">EVOLUTION</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Digital work can continue to improve and scale after launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 18 — PORTFOLIO CTA & 19. FAQ ACCORDION
+       ========================================================================== -->
+    <section class="section-spacing cta-section" id="cta">
+      <div class="container">
+        <div class="cta-container reveal">
+          <div class="eyebrow" style="justify-content: center;">COMMISSION WORK</div>
+          <h2 class="section-title" style="margin-bottom: 1.25rem;">Have an Idea for the Next Project?</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
+            Let's turn the next requirement into something worth experiencing.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <a href="/contact" class="btn btn-primary">
+              <span>Start a Project</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="/contact" class="btn btn-secondary">
+              <span>Contact TJR Tech</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 19: FAQ -->
+    <section class="section-spacing faq-section" id="faq">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">PORTFOLIO CLARITY</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion-wrap reveal">
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What types of work are included in the TJR Tech portfolio?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The portfolio can include websites, digital projects, and media projects created by TJR Tech.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I see your previous website work?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Available website projects can be explored through the Websites section of the portfolio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I watch your media work?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Selected media projects can be viewed through embedded or linked video previews directly on this page.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you show project technologies?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Where project information is available, the relevant technologies or production tools can be displayed.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I request a project similar to something in the portfolio?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Portfolio examples can be used as references when discussing a new project, subject to specific requirements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Are all projects shown on the website?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Not necessarily. The portfolio represents selected work approved for public presentation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you create a completely new type of digital project?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>New requirements can be discussed with the TJR Tech team to determine scope, feasibility, technology, and the appropriate approach.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 20 — FINAL BRAND STATEMENT
+         ========================================================================== -->
+    <section class="brand-statement-section" aria-label="Brand Signature Sequence">
+      <div class="container reveal">
+        <div class="statement-pulse-chain">
+          <span>WE BUILD.</span>
+          <span>WE CREATE.</span>
+          <span>WE EVOLVE.</span>
+        </div>
+        <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 620px; margin: 1.5rem auto 2rem auto;">
+          YOUR NEXT PROJECT STARTS HERE.
+        </p>
+        <div style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--text-accent); letter-spacing: 0.15em; text-transform: uppercase;">
+          TJR TECH — Technology. Talent. Digital Growth.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 21 — FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">TJR TECH</div>
+          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
+          <p class="footer-desc">
+            A technology and professional services organization delivering integrated solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Portfolio</div>
+          <ul class="footer-links-list">
+            <li><a href="#websites-section">Websites</a></li>
+            <li><a href="#digital-section">Digital Projects</a></li>
+            <li><a href="#media-section">Media Projects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links-list">
+            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
+            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+            <li><a href="/services/web-development">Web Development</a></li>
+            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links-list">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/directors">Leadership</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <ul class="footer-links-list">
+            <li><a href="/solutions/for-businesses">For Businesses</a></li>
+            <li><a href="/solutions/for-consultants">For Consultants</a></li>
+            <li><a href="/solutions/for-professionals">For Professionals</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal (Section 11) -->
+  <div class="modal-overlay" id="projectDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalDetailTitle">
+    <div class="modal-container-box">
+      <button class="modal-close-trigger" id="closeDetailModalBtn" aria-label="Close modal">&times;</button>
+      <div class="eyebrow" id="modalDetailCat">CATEGORY</div>
+      <h3 id="modalDetailTitle" style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Project Title</h3>
+      <p id="modalDetailDesc" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">Description</p>
+      
+      <div style="background: rgba(2, 6, 23, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.5rem; margin-bottom: 2rem;">
+        <strong style="color: #fff; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">TECHNOLOGY / MEDIUM</strong>
+        <span id="modalDetailTech" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-accent);">Tech Stack</span>
+      </div>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn-primary">Start a Similar Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Lightbox Modal (Section 09 - Lazy Loaded Player) -->
+  <div class="modal-overlay" id="videoLightboxModal" role="dialog" aria-modal="true" aria-label="Video Player Lightbox">
+    <div class="modal-container-box" style="padding: 2rem; max-width: 960px;">
+      <button class="modal-close-trigger" id="closeLightboxBtn" aria-label="Close video player">&times;</button>
+      <div class="lightbox-video-container" id="videoIframeContainer">
+        <!-- iframe injected on-demand -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODULAR VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Dynamic Copyright Year
+      const yearHolder = document.getElementById('yearHolder');
+      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+
+      // 2. Navigation Scroll & Progress Bar
+      const header = document.getElementById('mainHeader');
+      const progressBar = document.getElementById('scrollProgress');
+
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        if (progressBar) progressBar.style.width = scrolled + '%';
+        if (winScroll > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // 3. Mobile Navigation Drawer
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileMenuDrawer');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobile() {
+        const isOpen = mobileDrawer.classList.toggle('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', toggleMobile);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('active')) toggleMobile();
+          });
+        });
+      }
+
+      // 4. Scroll Reveal Observer
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
+      // 5. Hero Dynamic Collage Visualizer Canvas
+      (function initCollageCanvas() {
+        const canvas = document.getElementById('portfolioHeroCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let mouseX = 0, mouseY = 0;
+
+        function resize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          width = canvas.width = rect.width;
+          height = canvas.height = rect.height;
+        }
+
+        window.addEventListener('mousemove', (e) => {
+          const rect = canvas.getBoundingClientRect();
+          mouseX = (e.clientX - rect.left - width / 2) / (width / 2);
+          mouseY = (e.clientY - rect.top - height / 2) / (height / 2);
+        });
+
+        function render() {
+          ctx.clearRect(0, 0, width, height);
+
+          const cx = width / 2;
+          const cy = height / 2;
+
+          // Parallax layers representing web, digital, and media frames
+          drawLayer(cx - 70 + mouseX * 20, cy - 60 + mouseY * 20, 240, 140, 'rgba(45, 212, 191, 0.25)', 'WEBSITE FRAME');
+          drawLayer(cx + 60 - mouseX * 25, cy + 40 - mouseY * 25, 200, 120, 'rgba(56, 189, 248, 0.25)', 'DIGITAL UI');
+          drawLayer(cx + 20 + mouseX * 15, cy - 20 + mouseY * 15, 220, 130, 'rgba(148, 163, 184, 0.2)', 'MEDIA FRAME');
+
+          requestAnimationFrame(render);
+        }
+
+        function drawLayer(x, y, w, h, strokeColor, label) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(x - w / 2, y - h / 2, w, h);
+          ctx.fillStyle = 'rgba(7, 15, 38, 0.7)';
+          ctx.fill();
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+
+          ctx.font = '10px Space Grotesk, monospace';
+          ctx.fillStyle = strokeColor;
+          ctx.fillText(label, x - w / 2 + 12, y - h / 2 + 20);
+          ctx.restore();
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        render();
+      })();
+
+      // 6. Portfolio Category Filter Engine (Section 10)
+      const filterButtons = document.querySelectorAll('.filter-pill');
+      const projectCards = document.querySelectorAll('.project-card');
+      const directFilterButtons = document.querySelectorAll('.filter-direct-btn');
+
+      function setFilter(category) {
+        filterButtons.forEach(btn => {
+          if (btn.getAttribute('data-category') === category) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        projectCards.forEach(card => {
+          const cardCat = card.getAttribute('data-cat');
+          if (category === 'all' || cardCat === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-category');
+          setFilter(cat);
+        });
+      });
+
+      directFilterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-filter');
+          setFilter(cat);
+          const gridEl = document.getElementById('portfolio-grid');
+          if (gridEl) gridEl.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // 7. Video Lightbox Player System (Section 09)
+      const lightboxModal = document.getElementById('videoLightboxModal');
+      const iframeContainer = document.getElementById('videoIframeContainer');
+      const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+      const playTriggers = document.querySelectorAll('[data-vid]');
+
+      function openVideo(videoId, type) {
+        if (!videoId) return;
+        iframeContainer.innerHTML = '';
+
+        if (type === 'vertical') {
+          iframeContainer.classList.add('vertical');
+        } else {
+          iframeContainer.classList.remove('vertical');
+        }
+
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframeContainer.appendChild(iframe);
+
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeVideo() {
+        lightboxModal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          iframeContainer.innerHTML = '';
+        }, 350);
+      }
+
+      playTriggers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const vid = btn.getAttribute('data-vid');
+          const type = btn.getAttribute('data-type') || 'landscape';
+          openVideo(vid, type);
+        });
+      });
+
+      if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeVideo);
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', (e) => {
+          if (e.target === lightboxModal) closeVideo();
+        });
+      }
+
+      // 8. Project Detail Modal (Section 11)
+      const projectDetailData = {
+        p1: {
+          category: 'WEBSITES / CORPORATE',
+          title: 'WEBSITE PROJECT 01',
+          desc: 'A modern corporate digital experience engineered with semantic architecture, brand clarity, and responsive performance across modern display viewports.',
+          tech: 'Modern CSS &bull; Semantic HTML5 &bull; Core Web Vitals Optimization'
+        },
+        p2: {
+          category: 'DIGITAL PROJECTS / CUSTOM INTERFACE',
+          title: 'DIGITAL PROJECT 01',
+          desc: 'Interactive platform architecture developed around structured information hierarchy, custom UI components, and accessible user interaction.',
+          tech: 'Custom Interface Systems &bull; Reactive Logic &bull; Dynamic Components'
+        }
+      };
+
+      const detailModal = document.getElementById('projectDetailModal');
+      const closeDetailModalBtn = document.getElementById('closeDetailModalBtn');
+      const modalDetailCat = document.getElementById('modalDetailCat');
+      const modalDetailTitle = document.getElementById('modalDetailTitle');
+      const modalDetailDesc = document.getElementById('modalDetailDesc');
+      const modalDetailTech = document.getElementById('modalDetailTech');
+
+      document.querySelectorAll('.open-project-detail-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const pid = btn.getAttribute('data-project-id');
+          if (projectDetailData[pid]) {
+            modalDetailCat.textContent = projectDetailData[pid].category;
+            modalDetailTitle.textContent = projectDetailData[pid].title;
+            modalDetailDesc.textContent = projectDetailData[pid].desc;
+            modalDetailTech.innerHTML = projectDetailData[pid].tech;
+            detailModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      function closeDetailModal() {
+        detailModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (closeDetailModalBtn) closeDetailModalBtn.addEventListener('click', closeDetailModal);
+      if (detailModal) {
+        detailModal.addEventListener('click', (e) => {
+          if (e.target === detailModal) closeDetailModal();
+        });
+      }
+
+      // 9. FAQ Accordion Interaction
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        const ans = item.querySelector('.faq-answer');
+
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(other => {
+            other.classList.remove('active');
+            other.querySelector('.faq-answer').style.maxHeight = null;
+            other.querySelector('.faq-question-btn').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            ans.style.maxHeight = ans.scrollHeight + 30 + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Escape Key Handler for All Modals
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (lightboxModal && lightboxModal.classList.contains('active')) closeVideo();
+          if (detailModal && detailModal.classList.contains('active')) closeDetailModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>Insights &amp; Perspectives | TJR Tech</title>
+  <meta name="description" content="Explore perspectives, resources, and practical insights across technology, talent, digital experiences, and professional growth from TJR Tech.">
+  <meta name="keywords" content="Technology Insights, US IT Staffing Perspectives, Web Development Architecture, Digital Media Trends, Tech Careers, TJR Tech">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://www.tjrtech.com/insights">
+
+  <!-- Open Graph / Protocol -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tjrtech.com/insights">
+  <meta property="og:title" content="Insights &amp; Perspectives | TJR Tech">
+  <meta property="og:description" content="Ideas That Move Technology Forward. Practical insights across technology, talent, digital experiences, and professional growth.">
+  <meta property="og:site_name" content="TJR TECH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights &amp; Perspectives | TJR Tech">
+  <meta name="twitter:description" content="Ideas That Move Technology Forward. Enterprise perspectives on technology, talent, and digital growth.">
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       01. DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-primary: #020617;        /* Near black void */
+      --bg-secondary: #070f26;      /* Deep midnight blue */
+      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
+      --bg-surface: #0e1d47;
+      --bg-card: rgba(12, 24, 61, 0.45);
+      --bg-card-hover: rgba(18, 36, 88, 0.75);
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-accent: rgba(45, 212, 191, 0.35);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-accent: #2dd4bf;       /* Teal Accent */
+      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+
+      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+      --glow-teal: rgba(45, 212, 191, 0.14);
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+
+      --container-max: 1280px;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background: var(--bg-primary);
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2.5px;
+      background: var(--accent-gradient);
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-spacing {
+      padding: 7.5rem 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 1.5px;
+      background: var(--text-accent);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text-primary);
+    }
+
+    .section-lead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #020617;
+      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .inline-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.2s ease;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .inline-link:hover {
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       02. GLOBAL HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
+      height: 86px;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      height: 72px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-accent);
+    }
+
+    .logo-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: -1rem;
+      background: rgba(7, 15, 38, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0;
+      min-width: 250px;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      list-style: none;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .dropdown-item a {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-item a:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-accent);
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-primary);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem 3rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-nav-list a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .mobile-submenu {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .mobile-submenu a {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       SECTION 01 — HERO
+       ========================================================================== */
+    .insights-hero-section {
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 4.5rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title-main {
+      font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title-main span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-supporting-copy {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 2.25rem;
+      max-width: 620px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .knowledge-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #insightsHeroCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ==========================================================================
+       SECTION 02 — FEATURED INSIGHT
+       ========================================================================== */
+    .featured-insight-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .featured-insight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .featured-insight-card:hover {
+      border-color: var(--text-accent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .featured-visual-pane {
+      background: linear-gradient(135deg, #0c183d 0%, #020617 100%);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .visual-schematic-badge {
+      padding: 1.5rem 2rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px dashed rgba(45, 212, 191, 0.35);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--text-accent);
+      text-align: center;
+    }
+
+    .featured-content-pane {
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .meta-details-row {
+      display: flex;
+      gap: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION 03 & 08 — CATEGORY NAVIGATION & SEARCH
+       ========================================================================== */
+    .controls-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      margin: 3.5rem 0 2.5rem 0;
+    }
+
+    .search-input-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-insights-input {
+      width: 100%;
+      padding: 1rem 1.5rem 1rem 3rem;
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-insights-input:focus {
+      border-color: var(--text-accent);
+    }
+
+    .search-icon-svg {
+      position: absolute;
+      top: 50%;
+      left: 1.25rem;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .category-scroll-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none;
+    }
+
+    .category-scroll-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-btn {
+      padding: 0.65rem 1.25rem;
+      background: rgba(12, 24, 61, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+    }
+
+    .cat-btn.active, .cat-btn:hover {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+      background: var(--bg-tertiary);
+    }
+
+    .results-count-bar {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       SECTION 04 — INSIGHTS GRID & ARTICLE CARDS
+       ========================================================================== */
+    .insights-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .insight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .insight-card:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-4px);
+    }
+
+    .insight-card-thumb {
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(135deg, #0c183d 0%, #070f26 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+    }
+
+    .insight-card-body {
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .insight-cat-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--text-accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .insight-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .insight-card-excerpt {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       SECTION 05 — EXPLORE BY AUDIENCE (THREE PANELS)
+       ========================================================================== */
+    .audience-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .audience-panels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .audience-panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .audience-panel-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.35s ease;
+    }
+
+    .audience-panel-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+    }
+
+    .audience-panel-card:hover::before {
+      width: 100%;
+    }
+
+    .panel-kicker-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .audience-topics-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 1.75rem 0 2.25rem 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .audience-topics-list li::before {
+      content: "— ";
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       SECTION 06 — RESOURCE CENTER & 07. EXPLORE TOPICS
+       ========================================================================== */
+    .resource-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .resource-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .resource-card:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-4px);
+    }
+
+    .topics-tags-matrix {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .topic-node-tag {
+      padding: 0.6rem 1.25rem;
+      background: rgba(12, 24, 61, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .topic-node-tag:hover, .topic-node-tag.active {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+      background: var(--bg-tertiary);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       SECTION 12 & 13 — SERVICE & PORTFOLIO CONNECTIONS
+       ========================================================================== */
+    .connections-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .connection-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .connection-card:hover {
+      border-color: var(--border-accent);
+    }
+
+    /* ==========================================================================
+       SECTION 24 — FINAL BRAND CTA & 25. FOOTER
+       ========================================================================== */
+    .cta-section {
+      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cta-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .site-footer {
+      background-color: #01040f;
+      padding: 5.5rem 0 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      color: var(--text-accent);
+      font-family: var(--font-mono);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links-list a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--text-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       SECTION 09, 10, 11 — DYNAMIC ARTICLE READING MODAL
+       ========================================================================== */
+    .article-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.94);
+      backdrop-filter: blur(16px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .article-modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .article-container-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 1040px;
+      padding: 3.5rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .article-modal-overlay.active .article-container-box {
+      transform: translateY(0);
+    }
+
+    .article-reading-bar {
+      position: sticky;
+      top: -3.5rem;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent-gradient);
+      z-index: 10;
+    }
+
+    .modal-close-trigger {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: var(--text-muted);
+      font-size: 1.75rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close-trigger:hover {
+      color: #fff;
+    }
+
+    .article-reading-layout {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 4rem;
+      margin-top: 2rem;
+      align-items: start;
+    }
+
+    .article-main-body {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .article-main-body h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      margin: 2.5rem 0 1rem 0;
+    }
+
+    .article-main-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-sidebar {
+      position: sticky;
+      top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.75rem;
+    }
+
+    .sidebar-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .share-btn-wrap {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .share-tag-btn {
+      padding: 0.4rem 0.75rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .share-tag-btn:hover {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+    }
+
+    /* Scroll Trigger Animation Engine */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .insights-cards-grid,
+      .audience-panels-grid,
+      .connections-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .resource-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .featured-insight-card {
+        grid-template-columns: 1fr;
+      }
+      .featured-visual-pane {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .article-reading-layout {
+        grid-template-columns: 1fr;
+      }
+      .nav-links, .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: flex;
+      }
+      .knowledge-canvas-wrap {
+        height: 360px;
+      }
+      .featured-content-pane {
+        padding: 2.5rem 1.75rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .insights-cards-grid,
+      .audience-panels-grid,
+      .connections-grid,
+      .resource-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-spacing {
+        padding: 5rem 0;
+      }
+      .article-container-box {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
+        <div class="logo-mark">T</div>
+        <span class="logo-title">TJR TECH</span>
+      </a>
+
+      <nav aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="/services" class="nav-link">
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
+              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
+              <li class="dropdown-item"><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/solutions" class="nav-link">
+              Solutions
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/solutions/for-businesses">For Businesses</a></li>
+              <li class="dropdown-item"><a href="/solutions/for-consultants">For Consultants</a></li>
+              <li class="dropdown-item"><a href="/solutions/for-professionals">For Professionals</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/portfolio" class="nav-link">
+              Work / Portfolio
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/portfolio#websites-section">Websites</a></li>
+              <li class="dropdown-item"><a href="/portfolio#digital-section">Digital Projects</a></li>
+              <li class="dropdown-item"><a href="/portfolio#media-section">Media Projects</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="/insights" class="nav-link active">Insights</a></li>
+          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="/contact" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">
+          <span>Let's Talk &rarr;</span>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-link">Home</a></li>
+      <li><a href="/about" class="mobile-link">About Us</a></li>
+      <li><a href="/services" class="mobile-link">Services</a></li>
+      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
+      <li><a href="/portfolio" class="mobile-link">Work / Portfolio</a></li>
+      <li><a href="/careers" class="mobile-link">Careers</a></li>
+      <li><a href="/insights" class="mobile-link">Insights</a></li>
+      <li><a href="/contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <a href="/contact" class="btn btn-primary" style="width: 100%;">Let's Talk &rarr;</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 01 — HERO
+         ========================================================================== -->
+    <section class="insights-hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">TJR TECH / INSIGHTS</div>
+          <h1 class="hero-title-main">
+            Ideas That Move <span>Technology Forward.</span>
+          </h1>
+          <p class="hero-supporting-copy">
+            Explore perspectives, resources, and practical insights across technology, talent, digital experiences, and professional growth.
+          </p>
+          <div class="hero-actions">
+            <a href="#insights-explorer" class="btn btn-primary">
+              <span>Explore Insights</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#resources" class="btn btn-secondary">
+              <span>Explore Resources</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="knowledge-canvas-wrap">
+          <canvas id="insightsHeroCanvas" aria-label="Digital knowledge matrix and floating editorial nodes"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02 — FEATURED INSIGHT
+         ========================================================================== -->
+    <section class="section-spacing featured-insight-section" id="featured-insight">
+      <div class="container">
+        <div class="featured-insight-card reveal">
+          <div class="featured-visual-pane">
+            <div class="visual-schematic-badge">
+              [ CONCEPTUAL ARCHITECTURE ]<br>
+              Talent &bull; Technology &bull; Digital Capability
+            </div>
+          </div>
+
+          <div class="featured-content-pane">
+            <div class="featured-kicker">FEATURED / PERSPECTIVES</div>
+            <h2 style="font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.25;">
+              How Technology, Talent, and Digital Capability Are Becoming More Connected
+            </h2>
+            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
+              Organizations increasingly need connected talent, digital capabilities, and experiences that support how people work, communicate, and grow.
+            </p>
+            <div class="meta-details-row">
+              <span>EDITORIAL CONCEPT</span>
+              <span>&bull;</span>
+              <span>5 MIN READ</span>
+            </div>
+            <div>
+              <button class="btn btn-primary open-article-modal" data-slug="connected-capability">
+                <span>Read Insight &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03, 04, 08 — CATEGORY NAVIGATION, SEARCH, & INSIGHTS GRID
+         ========================================================================== -->
+    <section class="section-spacing" id="insights-explorer">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">EDITORIAL KNOWLEDGE BASE</div>
+          <h2 class="section-title">Explore Perspectives</h2>
+        </div>
+
+        <!-- Section 08: Search & Section 03: Category Navigation -->
+        <div class="controls-panel reveal">
+          <div class="search-input-wrap">
+            <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <input type="text" id="insightsSearchInput" class="search-insights-input" placeholder="Search insights, topics, and resources...">
+          </div>
+
+          <div class="category-scroll-nav" id="categoryNav">
+            <button class="cat-btn active" data-category="ALL">ALL</button>
+            <button class="cat-btn" data-category="TECHNOLOGY">TECHNOLOGY</button>
+            <button class="cat-btn" data-category="STAFFING & TALENT">STAFFING &amp; TALENT</button>
+            <button class="cat-btn" data-category="CONSULTING">CONSULTING</button>
+            <button class="cat-btn" data-category="WEB & DIGITAL">WEB &amp; DIGITAL</button>
+            <button class="cat-btn" data-category="MEDIA & CREATIVE">MEDIA &amp; CREATIVE</button>
+            <button class="cat-btn" data-category="CAREERS">CAREERS</button>
+            <button class="cat-btn" data-category="PROFESSIONAL GROWTH">PROFESSIONAL GROWTH</button>
+          </div>
+        </div>
+
+        <div class="results-count-bar" id="resultsCountBar">SHOWING INSIGHTS</div>
+
+        <!-- Section 04: Insights Grid -->
+        <div class="insights-cards-grid reveal" id="insightsGrid">
+          <!-- Rendered dynamically by CMS Engine in vanilla JS below -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05 — EXPLORE BY AUDIENCE (THREE PANELS)
+         ========================================================================== -->
+    <section class="section-spacing audience-section" id="audiences">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">TARGETED PERSPECTIVES</div>
+          <h2 class="section-title">Insights For Different Perspectives</h2>
+          <p class="section-lead">Curated knowledge tracks designed around specific organizational and career objectives.</p>
+        </div>
+
+        <div class="audience-panels-grid">
+          <!-- Card 1 -->
+          <div class="audience-panel-card reveal">
+            <div>
+              <div class="panel-kicker-label">FOR BUSINESSES</div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff;">Technology &amp; Business Perspectives</h3>
+              <ul class="audience-topics-list">
+                <li>Technology talent</li>
+                <li>Staffing models</li>
+                <li>Digital transformation</li>
+                <li>Web development architecture</li>
+                <li>Digital presence</li>
+                <li>Technology solutions</li>
+              </ul>
+            </div>
+            <a href="/solutions/for-businesses" class="inline-link">Explore Business Insights &rarr;</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="audience-panel-card reveal">
+            <div>
+              <div class="panel-kicker-label">FOR CONSULTANTS</div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff;">Technology Consultant Resources</h3>
+              <ul class="audience-topics-list">
+                <li>Career opportunities</li>
+                <li>Profile positioning</li>
+                <li>US IT opportunities</li>
+                <li>Interview preparation</li>
+                <li>Professional presentation</li>
+                <li>Technology career development</li>
+              </ul>
+            </div>
+            <a href="/solutions/for-consultants" class="inline-link">Explore Consultant Resources &rarr;</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="audience-panel-card reveal">
+            <div>
+              <div class="panel-kicker-label">FOR PROFESSIONALS</div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff;">Professional Growth &amp; Digital Identity</h3>
+              <ul class="audience-topics-list">
+                <li>Personal websites</li>
+                <li>Professional portfolios</li>
+                <li>Digital identity</li>
+                <li>Career presentation</li>
+                <li>Personal branding</li>
+                <li>Digital experiences</li>
+              </ul>
+            </div>
+            <a href="/solutions/for-professionals" class="inline-link">Explore Professional Insights &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06 — RESOURCE CENTER & 07. EXPLORE TOPICS
+         ========================================================================== -->
+    <section class="section-spacing" id="resources">
+      <div class="container">
+        <!-- Section 06: Resource Center -->
+        <div class="section-header reveal">
+          <div class="eyebrow">PRACTICAL TOOLS</div>
+          <h2 class="section-title">Resources</h2>
+          <p class="section-lead">
+            Practical resources designed to help businesses, consultants, and professionals navigate technology and digital opportunities.
+          </p>
+        </div>
+
+        <div class="resource-cards-grid reveal">
+          <div class="resource-card">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">RESOURCE / 01</div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Technology Resources</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">Frameworks, architectures, and engineering checklists.</p>
+            </div>
+            <a href="/services/web-development" class="inline-link" style="margin-top: 1.5rem;">Explore Tech &rarr;</a>
+          </div>
+
+          <div class="resource-card">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">RESOURCE / 02</div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Career Resources</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">Guides on technical interviewing, resumes, and career pathways.</p>
+            </div>
+            <a href="/careers" class="inline-link" style="margin-top: 1.5rem;">Explore Careers &rarr;</a>
+          </div>
+
+          <div class="resource-card">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">RESOURCE / 03</div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Staffing Resources</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">Market models, engagement frameworks, and tax term clarity.</p>
+            </div>
+            <a href="/services/us-it-staffing" class="inline-link" style="margin-top: 1.5rem;">Explore Staffing &rarr;</a>
+          </div>
+
+          <div class="resource-card">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">RESOURCE / 04</div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Digital Resources</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;">Digital identity benchmarks and portfolio guidelines.</p>
+            </div>
+            <a href="/solutions/for-professionals" class="inline-link" style="margin-top: 1.5rem;">Explore Digital &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Section 07: Explore Topics -->
+        <div class="section-header reveal" style="margin-top: 5.5rem;">
+          <div class="eyebrow">KNOWLEDGE NODES</div>
+          <h2 class="section-title">Explore Topics</h2>
+          <p class="section-lead">Click any connected topic to filter relevant articles and perspectives.</p>
+        </div>
+
+        <div class="topics-tags-matrix reveal" id="topicExplorerMatrix">
+          <button class="topic-node-tag" data-tag="Artificial Intelligence">Artificial Intelligence</button>
+          <button class="topic-node-tag" data-tag="Cloud">Cloud</button>
+          <button class="topic-node-tag" data-tag="DevOps">DevOps</button>
+          <button class="topic-node-tag" data-tag="Data">Data</button>
+          <button class="topic-node-tag" data-tag="Software Engineering">Software Engineering</button>
+          <button class="topic-node-tag" data-tag="Cybersecurity">Cybersecurity</button>
+          <button class="topic-node-tag" data-tag="US IT Staffing">US IT Staffing</button>
+          <button class="topic-node-tag" data-tag="Bench Sales">Bench Sales</button>
+          <button class="topic-node-tag" data-tag="Web Development">Web Development</button>
+          <button class="topic-node-tag" data-tag="Digital Experience">Digital Experience</button>
+          <button class="topic-node-tag" data-tag="Digital Media">Digital Media</button>
+          <button class="topic-node-tag" data-tag="Professional Portfolio">Professional Portfolio</button>
+          <button class="topic-node-tag" data-tag="Career Development">Career Development</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 12 & 13 — SERVICE & PORTFOLIO CONNECTIONS
+         ========================================================================== -->
+    <section class="section-spacing audience-section" id="connections">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PRACTICE PATHWAYS</div>
+          <h2 class="section-title">From Insight to Execution.</h2>
+        </div>
+
+        <div class="connections-grid reveal">
+          <div class="connection-card">
+            <div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Need technology talent?</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Scale technical capacity through specialized US IT recruitment pipelines.</p>
+            </div>
+            <a href="/services/us-it-staffing" class="inline-link" style="margin-top: 1.5rem;">Explore US IT Staffing &rarr;</a>
+          </div>
+
+          <div class="connection-card">
+            <div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Planning a digital experience?</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Engineer high-performance corporate portals and bespoke web systems.</p>
+            </div>
+            <a href="/services/web-development" class="inline-link" style="margin-top: 1.5rem;">Explore Web Development &rarr;</a>
+          </div>
+
+          <div class="connection-card">
+            <div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Have a story to bring to life?</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Commission commercial brand cinema, motion graphics, and digital ads.</p>
+            </div>
+            <a href="/services/ads-digital-media" class="inline-link" style="margin-top: 1.5rem;">Explore Ads &amp; Digital Media &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 24 — FINAL BRAND CTA
+         ========================================================================== -->
+    <section class="section-spacing cta-section" id="cta">
+      <div class="container">
+        <div class="cta-container reveal">
+          <div class="eyebrow" style="justify-content: center;">TJR TECH</div>
+          <h2 class="section-title" style="margin-bottom: 1rem;">Technology. Talent. Digital Growth.</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
+            Building opportunities through people, technology, and creative digital solutions.
+          </p>
+          <a href="/contact" class="btn btn-primary">
+            <span>Let's Build What's Next &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 25 — FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">TJR TECH</div>
+          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
+          <p class="footer-desc">
+            A technology and professional services organization delivering integrated solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links-list">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/directors">Leadership</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links-list">
+            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
+            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+            <li><a href="/services/web-development">Web Development</a></li>
+            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <ul class="footer-links-list">
+            <li><a href="/solutions/for-businesses">For Businesses</a></li>
+            <li><a href="/solutions/for-consultants">For Consultants</a></li>
+            <li><a href="/solutions/for-professionals">For Professionals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Work</div>
+          <ul class="footer-links-list">
+            <li><a href="/portfolio#websites-section">Websites</a></li>
+            <li><a href="/portfolio#digital-section">Digital Projects</a></li>
+            <li><a href="/portfolio#media-section">Media Projects</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SECTION 09, 10, 11 — DYNAMIC ARTICLE DETAIL MODAL
+       ========================================================================== -->
+  <div class="article-modal-overlay" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalArticleTitle">
+    <div class="article-container-box" id="articleModalContent">
+      <div class="article-reading-bar" id="articleReadingProgress"></div>
+      <button class="modal-close-trigger" id="closeArticleModalBtn" aria-label="Close reading view">&times;</button>
+      
+      <div class="eyebrow" id="modalArticleCategory">CATEGORY</div>
+      <h1 id="modalArticleTitle" style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem; line-height: 1.2;">Article Title</h1>
+      <p id="modalArticleIntro" style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;"></p>
+      
+      <div style="display: flex; gap: 1rem; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-accent); border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.5rem;">
+        <span id="modalArticleMeta">METADATA</span>
+      </div>
+
+      <div class="article-reading-layout">
+        <div class="article-main-body" id="modalArticleBody">
+          <!-- Article HTML rendered here -->
+        </div>
+
+        <aside class="article-sidebar">
+          <div>
+            <div class="sidebar-heading">IN THIS ARTICLE</div>
+            <ul class="toc-list" id="modalArticleTOC">
+              <!-- Dynamically generated TOC -->
+            </ul>
+          </div>
+
+          <div>
+            <div class="sidebar-heading">SHARE</div>
+            <div class="share-btn-wrap">
+              <button class="share-tag-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Article link copied to clipboard.');">Copy Link</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODULAR VANILLA JAVASCRIPT & CMS ARCHITECTURE
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Dynamic Copyright Year
+      const yearHolder = document.getElementById('yearHolder');
+      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+
+      // 2. Navigation Scroll & Progress Bar
+      const header = document.getElementById('mainHeader');
+      const progressBar = document.getElementById('scrollProgress');
+
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        if (progressBar) progressBar.style.width = scrolled + '%';
+        if (winScroll > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // 3. Mobile Navigation Drawer
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileMenuDrawer');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobile() {
+        const isOpen = mobileDrawer.classList.toggle('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', toggleMobile);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('active')) toggleMobile();
+          });
+        });
+      }
+
+      // 4. Scroll Reveal Observer
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
+      // 5. Hero Knowledge Network Canvas
+      (function initKnowledgeCanvas() {
+        const canvas = document.getElementById('insightsHeroCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let nodes = [];
+
+        function resize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          width = canvas.width = rect.width;
+          height = canvas.height = rect.height;
+          initNodes();
+        }
+
+        function initNodes() {
+          nodes = [];
+          for (let i = 0; i < 28; i++) {
+            nodes.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.6,
+              vy: (Math.random() - 0.5) * 0.6,
+              radius: Math.random() * 2 + 1.2
+            });
+          }
+        }
+
+        function render() {
+          ctx.clearRect(0, 0, width, height);
+
+          for (let i = 0; i < nodes.length; i++) {
+            const p = nodes[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(45, 212, 191, 0.8)';
+            ctx.fill();
+
+            for (let j = i + 1; j < nodes.length; j++) {
+              const p2 = nodes[j];
+              const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+              if (dist < 105) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(56, 189, 248, ${0.18 * (1 - dist / 105)})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(render);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        render();
+      })();
+
+      // 6. CMS / DATA ARCHITECTURE (Sections 14, 15, 17)
+      // Only items with status: "PUBLISHED" will display.
+      const insightsCMS = [
+        {
+          id: "ins-01",
+          slug: "connected-capability",
+          category: "TECHNOLOGY",
+          title: "Building Digital Experiences That Go Beyond Traditional Websites",
+          excerpt: "How modern web platforms synthesize performance, interactive micro-motion, and scalable backend architecture into durable user experiences.",
+          readingTime: "4 MIN READ",
+          publishedAt: "EDITORIAL PERSPECTIVE",
+          tags: ["Web Development", "Digital Experience", "Software Engineering"],
+          status: "PUBLISHED",
+          headings: ["The Evolution Beyond Static Pages", "Architectural Cohesion", "Performance as a Foundation"],
+          bodyHtml: `
+            <h2>The Evolution Beyond Static Pages</h2>
+            <p>Modern web engineering has shifted from standard presentation layers to responsive, application-grade digital destinations. Organizations require systems that immediately articulate authority while remaining lightweight and reliable across viewports.</p>
+            <h2>Architectural Cohesion</h2>
+            <p>By blending modern semantic layout standards with purposeful motion design, digital experiences guide user attention cleanly without superficial decoration.</p>
+            <h2>Performance as a Foundation</h2>
+            <p>Fast render loops, disciplined asset loading, and semantic hierarchies ensure that complex digital portals maintain fluid usability under real-world conditions.</p>
+          `
+        },
+        {
+          id: "ins-02",
+          slug: "us-it-staffing-ecosystem",
+          category: "STAFFING & TALENT",
+          title: "Understanding the Modern US IT Staffing Ecosystem",
+          excerpt: "Navigating technical recruitment, W-2, C2C, and contract models with operational clarity and compliance rigor.",
+          readingTime: "5 MIN READ",
+          publishedAt: "EDITORIAL PERSPECTIVE",
+          tags: ["US IT Staffing", "Bench Sales", "Career Development"],
+          status: "PUBLISHED",
+          headings: ["Navigating Contract Models", "The Screening Difference"],
+          bodyHtml: `
+            <h2>Navigating Contract Models</h2>
+            <p>Technical staffing across the United States requires strict alignment between enterprise procurement guidelines, tax classifications, and work authorization parameters.</p>
+            <h2>The Screening Difference</h2>
+            <p>True technical recruitment focuses on verifying engineering depth and domain fit rather than relying solely on automated keyword matching.</p>
+          `
+        },
+        {
+          id: "ins-03",
+          slug: "professional-identity-beyond-resume",
+          category: "PROFESSIONAL GROWTH",
+          title: "Why Your Professional Identity Needs More Than a Resume",
+          excerpt: "Transforming technical expertise, project case studies, and career milestones into a persistent digital presence.",
+          readingTime: "4 MIN READ",
+          publishedAt: "EDITORIAL PERSPECTIVE",
+          tags: ["Professional Portfolio", "Digital Experience", "Career Development"],
+          status: "PUBLISHED",
+          headings: ["The Limitations of One Document", "Demonstrating Craft Online"],
+          bodyHtml: `
+            <h2>The Limitations of One Document</h2>
+            <p>A static resume summarizes employment dates and responsibilities, but a dedicated professional portfolio provides the space to document actual project challenges, architecture decisions, and code deliverables.</p>
+            <h2>Demonstrating Craft Online</h2>
+            <p>Bringing work history into a clean personal platform builds lasting credibility and distinct professional differentiation.</p>
+          `
+        },
+        {
+          id: "ins-04",
+          slug: "future-of-tech-careers",
+          category: "CAREERS",
+          title: "Skills, Adaptability, and the Future of Technology Careers",
+          excerpt: "Balancing foundational computer science principles with rapid shifts in cloud, automation, and modern full-stack workflows.",
+          readingTime: "5 MIN READ",
+          publishedAt: "EDITORIAL PERSPECTIVE",
+          tags: ["Cloud", "DevOps", "Software Engineering"],
+          status: "PUBLISHED",
+          headings: ["Core Principles Over Transitory Tools", "Continuous Learning Mindsets"],
+          bodyHtml: `
+            <h2>Core Principles Over Transitory Tools</h2>
+            <p>While frameworks and developer tooling evolve rapidly, engineers grounded in distributed systems logic, data integrity, and network fundamentals adapt seamlessly.</p>
+            <h2>Continuous Learning Mindsets</h2>
+            <p>Sustainable career growth stems from curiosity, ownership of outcomes, and structured cross-disciplinary collaboration.</p>
+          `
+        },
+        {
+          id: "ins-05",
+          slug: "technology-meets-storytelling",
+          category: "MEDIA & CREATIVE",
+          title: "When Technology Meets Storytelling",
+          excerpt: "Combining commercial cinematography, visual effects, and format-specific pacing to communicate enterprise value.",
+          readingTime: "4 MIN READ",
+          publishedAt: "EDITORIAL PERSPECTIVE",
+          tags: ["Digital Media", "Digital Experience"],
+          status: "PUBLISHED",
+          headings: ["Narrative Clarity", "Precision Execution"],
+          bodyHtml: `
+            <h2>Narrative Clarity</h2>
+            <p>Visual storytelling becomes impactful when driven by a focused message rather than gratuitous effects. Every frame and cut should serve the core concept.</p>
+            <h2>Precision Execution</h2>
+            <p>From pre-production script development to 4K capture, sound design, and color timing, disciplined craft shapes how audiences engage with visual media.</p>
+          `
+        }
+      ];
+
+      // 7. Reactive Search, Category Filter, and Topic Explorer (Sections 03, 07, 08)
+      const insightsGrid = document.getElementById('insightsGrid');
+      const searchInput = document.getElementById('insightsSearchInput');
+      const categoryButtons = document.querySelectorAll('.cat-btn');
+      const topicTags = document.querySelectorAll('.topic-node-tag');
+      const resultsCountBar = document.getElementById('resultsCountBar');
+
+      let currentCategory = 'ALL';
+      let currentTag = '';
+
+      function renderInsights() {
+        const query = searchInput.value.toLowerCase().trim();
+        const publishedArticles = insightsCMS.filter(a => a.status === 'PUBLISHED');
+
+        const filtered = publishedArticles.filter(item => {
+          const matchesQuery = query === '' ||
+            item.title.toLowerCase().includes(query) ||
+            item.excerpt.toLowerCase().includes(query) ||
+            item.category.toLowerCase().includes(query) ||
+            item.tags.some(t => t.toLowerCase().includes(query));
+
+          const matchesCat = currentCategory === 'ALL' || item.category === currentCategory;
+          const matchesTag = currentTag === '' || item.tags.includes(currentTag);
+
+          return matchesQuery && matchesCat && matchesTag;
+        });
+
+        resultsCountBar.textContent = `${filtered.length} PERSPECTIVE${filtered.length === 1 ? '' : 'S'} FOUND`;
+        insightsGrid.innerHTML = '';
+
+        // Empty state handler (Section 17)
+        if (filtered.length === 0) {
+          insightsGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; padding: 4rem 2rem; background: rgba(2, 6, 23, 0.6); border: 1px dashed var(--border-subtle); border-radius: var(--radius-md); text-align: center;">
+              <div class="eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">INSIGHTS ARE EVOLVING</div>
+              <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">No Matching Perspectives Found</h3>
+              <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 1.5rem auto; font-size: 0.95rem;">
+                Try searching for another topic or explore our broader service and solution categories.
+              </p>
+              <a href="/services" class="btn btn-secondary">Explore TJR Tech &rarr;</a>
+            </div>
+          `;
+          return;
+        }
+
+        filtered.forEach(article => {
+          const card = document.createElement('article');
+          card.className = 'insight-card';
+          card.innerHTML = `
+            <div>
+              <div class="insight-card-thumb">[ ${article.category} ]</div>
+              <div class="insight-card-body">
+                <div>
+                  <div class="insight-cat-tag">${article.category}</div>
+                  <h3 class="insight-card-title">${article.title}</h3>
+                  <p class="insight-card-excerpt">${article.excerpt}</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: 1rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">${article.readingTime}</span>
+                  <button class="inline-link open-article-modal" data-slug="${article.slug}">Read More &rarr;</button>
+                </div>
+              </div>
+            </div>
+          `;
+          insightsGrid.appendChild(card);
+        });
+
+        // Re-bind article modal triggers
+        document.querySelectorAll('.open-article-modal').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const slug = btn.getAttribute('data-slug');
+            openArticleReader(slug);
+          });
+        });
+      }
+
+      // Filter events
+      categoryButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-category');
+          renderInsights();
+        });
+      });
+
+      topicTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+          if (tag.classList.contains('active')) {
+            tag.classList.remove('active');
+            currentTag = '';
+          } else {
+            topicTags.forEach(t => t.classList.remove('active'));
+            tag.classList.add('active');
+            currentTag = tag.getAttribute('data-tag');
+          }
+          renderInsights();
+        });
+      });
+
+      searchInput.addEventListener('input', renderInsights);
+      renderInsights();
+
+      // 8. Article Reading Modal Logic (Sections 09, 10, 11)
+      const articleModal = document.getElementById('articleModal');
+      const closeArticleModalBtn = document.getElementById('closeArticleModalBtn');
+      const modalArticleCategory = document.getElementById('modalArticleCategory');
+      const modalArticleTitle = document.getElementById('modalArticleTitle');
+      const modalArticleIntro = document.getElementById('modalArticleIntro');
+      const modalArticleMeta = document.getElementById('modalArticleMeta');
+      const modalArticleBody = document.getElementById('modalArticleBody');
+      const modalArticleTOC = document.getElementById('modalArticleTOC');
+      const articleModalContent = document.getElementById('articleModalContent');
+      const articleReadingProgress = document.getElementById('articleReadingProgress');
+
+      function openArticleReader(slug) {
+        const article = insightsCMS.find(a => a.slug === slug);
+        if (!article) return;
+
+        modalArticleCategory.textContent = article.category;
+        modalArticleTitle.textContent = article.title;
+        modalArticleIntro.textContent = article.excerpt;
+        modalArticleMeta.textContent = `${article.publishedAt} • ${article.readingTime}`;
+        modalArticleBody.innerHTML = article.bodyHtml;
+
+        // Populate dynamic TOC from headings
+        modalArticleTOC.innerHTML = '';
+        article.headings.forEach((h, idx) => {
+          const li = document.createElement('li');
+          li.textContent = `${idx + 1}. ${h}`;
+          modalArticleTOC.appendChild(li);
+        });
+
+        articleModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeArticleReader() {
+        articleModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      // Reading progress within modal
+      if (articleModalContent && articleReadingProgress) {
+        articleModalContent.addEventListener('scroll', () => {
+          const top = articleModalContent.scrollTop;
+          const total = articleModalContent.scrollHeight - articleModalContent.clientHeight;
+          const pct = total > 0 ? (top / total) * 100 : 0;
+          articleReadingProgress.style.width = `${pct}%`;
+        });
+      }
+
+      if (closeArticleModalBtn) closeArticleModalBtn.addEventListener('click', closeArticleReader);
+      if (articleModal) {
+        articleModal.addEventListener('click', (e) => {
+          if (e.target === articleModal) closeArticleReader();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && articleModal.classList.contains('active')) closeArticleReader();
+      });
+    })();
+  </script>
+</body>
+</html>

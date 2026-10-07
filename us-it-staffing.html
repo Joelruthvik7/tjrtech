@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>US IT Staffing Services | TJR Tech</title>
+  <meta name="description" content="TJR Tech provides US IT staffing solutions across W-2, C2C, full-time, contract, and contract-to-hire engagement models for technology talent and business requirements.">
+  <meta name="keywords" content="US IT Staffing, Technical Recruiting, W-2 Staffing, C2C Staffing, Full-Time Hiring, Contract Staffing, Technology Talent, TJR Tech">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://www.tjrtech.com/services/us-it-staffing">
+
+  <!-- Open Graph / Protocol -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tjrtech.com/services/us-it-staffing">
+  <meta property="og:title" content="US IT Staffing Services | TJR Tech">
+  <meta property="og:description" content="Connecting Technology Talent With Business Opportunities across W-2, C2C, Permanent, and Contract models.">
+  <meta property="og:site_name" content="TJR TECH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="US IT Staffing Services | TJR Tech">
+  <meta name="twitter:description" content="Structured technical recruitment, candidate screening, and opportunity matching across the US IT ecosystem.">
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       01. DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-primary: #020617;        /* Deep void black */
+      --bg-secondary: #070f26;      /* Midnight blue */
+      --bg-tertiary: #0c183d;       /* Dark slate */
+      --bg-surface: #0e1d47;
+      --bg-card: rgba(12, 24, 61, 0.5);
+      --bg-card-hover: rgba(18, 36, 88, 0.78);
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-accent: rgba(45, 212, 191, 0.35);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-accent: #2dd4bf;       /* Controlled Teal Accent */
+      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+
+      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+      --glow-teal: rgba(45, 212, 191, 0.14);
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+
+      --container-max: 1280px;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    /* Reset & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background: var(--bg-primary);
+    }
+
+    /* Scroll Progress Indicator */
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2.5px;
+      background: var(--accent-gradient);
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-spacing {
+      padding: 7.5rem 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 1.5px;
+      background: var(--text-accent);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text-primary);
+    }
+
+    .section-lead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #020617;
+      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .inline-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.2s ease;
+    }
+
+    .inline-link:hover {
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       02. GLOBAL HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
+      height: 86px;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      height: 72px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-accent);
+    }
+
+    .logo-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: -1rem;
+      background: rgba(7, 15, 38, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0;
+      min-width: 250px;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      list-style: none;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .dropdown-item a {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-item a:hover, .dropdown-item a.active-item {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-accent);
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-primary);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem 3rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-nav-list a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .mobile-submenu {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .mobile-submenu a {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       01. HERO SECTION
+       ========================================================================== */
+    .service-hero-section {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 4rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 75% 25%, rgba(14, 29, 71, 0.8) 0%, rgba(2, 6, 23, 1) 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title-main {
+      font-size: clamp(2.5rem, 4.8vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title-main span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead-copy {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-secondary-copy {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .matching-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #heroMatchingCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ==========================================================================
+       02. SERVICE INTRODUCTION
+       ========================================================================== */
+    .intro-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: start;
+    }
+
+    .intro-quote {
+      font-size: 1.35rem;
+      line-height: 1.55;
+      font-weight: 500;
+      color: var(--text-primary);
+      border-left: 2px solid var(--text-accent);
+      padding-left: 1.75rem;
+    }
+
+    .intro-narrative {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       03. ENGAGEMENT MODELS & 04. CONTRACT OPTIONS
+       ========================================================================== */
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .model-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .model-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.35s ease;
+    }
+
+    .model-card:hover {
+      border-color: var(--border-medium);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+    }
+
+    .model-card:hover::before {
+      width: 100%;
+    }
+
+    .model-index {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .model-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .model-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    .use-case-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .use-case-list li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .use-case-list li::before {
+      content: "—";
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    .additional-options-banner {
+      background: rgba(12, 24, 61, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .option-box-title {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .option-box-heading {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .option-box-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       05. TECHNOLOGY DOMAINS & INTERACTIVE NETWORK
+       ========================================================================== */
+    .domains-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .tech-interactive-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3.5rem;
+    }
+
+    .tech-network-field {
+      position: relative;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #techDomainCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .center-hub {
+      position: relative;
+      z-index: 5;
+      padding: 1.25rem 2rem;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--text-accent);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 0 28px var(--glow-teal);
+    }
+
+    .domain-satellite {
+      position: absolute;
+      padding: 0.75rem 1.25rem;
+      background: rgba(12, 24, 61, 0.88);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      z-index: 6;
+    }
+
+    .domain-satellite:hover, .domain-satellite.active {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+      background: rgba(14, 29, 71, 0.95);
+      transform: scale(1.05);
+    }
+
+    /* Positions around central hub */
+    .dom-pos-1 { top: 10%; left: 35%; }
+    .dom-pos-2 { top: 22%; right: 8%; }
+    .dom-pos-3 { bottom: 32%; right: 5%; }
+    .dom-pos-4 { bottom: 10%; left: 40%; }
+    .dom-pos-5 { bottom: 32%; left: 5%; }
+    .dom-pos-6 { top: 22%; left: 8%; }
+    .dom-pos-7 { top: 5%; right: 28%; }
+
+    .domain-detail-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 3rem 2.5rem;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .detail-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+
+    .detail-subskills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .subskill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      padding: 0.4rem 0.85rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       06. STAFFING PROCESS (6 STAGES)
+       ========================================================================== */
+    .process-timeline-wrap {
+      position: relative;
+      margin-top: 4rem;
+    }
+
+    .process-progress-line {
+      position: absolute;
+      top: 42px;
+      left: 3rem;
+      right: 3rem;
+      height: 2px;
+      background: var(--border-subtle);
+      z-index: 1;
+    }
+
+    .process-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.25rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.25rem;
+      transition: var(--transition-smooth);
+    }
+
+    .process-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .process-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--text-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+
+    .process-step-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+
+    .process-step-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       07. FOR CLIENTS & REQUIREMENT FLOW
+       ========================================================================== */
+    .client-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .client-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: start;
+    }
+
+    .capabilities-matrix {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .matrix-item {
+      padding: 0.75rem 1rem;
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .matrix-item::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--text-accent);
+    }
+
+    .flow-card-wrap {
+      background: rgba(12, 24, 61, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+
+    .flow-stepper-title {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-accent-cyan);
+      margin-bottom: 1.75rem;
+    }
+
+    .workflow-sequence {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .workflow-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .workflow-step:hover {
+      border-color: var(--border-accent);
+      transform: translateX(4px);
+    }
+
+    .step-index-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       08. FOR TALENT & TALENT JOURNEY
+       ========================================================================== */
+    .talent-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: start;
+    }
+
+    .horizontal-journey-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .journey-node {
+      padding: 0.75rem 1.15rem;
+      background: rgba(12, 24, 61, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .journey-arrow {
+      color: var(--text-accent);
+      font-size: 0.85rem;
+    }
+
+    /* ==========================================================================
+       09. WHAT WE FOCUS ON & 10. VENDOR ECOSYSTEM
+       ========================================================================== */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+    }
+
+    .focus-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.25rem 1.75rem;
+      transition: var(--transition-smooth);
+    }
+
+    .focus-card:hover {
+      border-color: var(--border-medium);
+      background: var(--bg-card-hover);
+    }
+
+    .focus-num {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent);
+      margin-bottom: 1rem;
+    }
+
+    .focus-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .focus-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .ecosystem-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .ecosystem-flow-box {
+      margin-top: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 3rem 2rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      gap: 1.5rem;
+    }
+
+    .eco-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-width: 170px;
+      z-index: 2;
+    }
+
+    .eco-node-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--border-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .eco-node.highlight .eco-node-circle {
+      border-color: var(--text-accent);
+      box-shadow: 0 0 20px var(--glow-teal);
+    }
+
+    .eco-node-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .eco-node-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .eco-flow-arrow {
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      font-family: var(--font-mono);
+    }
+
+    /* ==========================================================================
+       11. WHY TJR TECH & 12. STAFFING LANDSCAPE
+       ========================================================================== */
+    .why-principles-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+    }
+
+    .why-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .why-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .why-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .why-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .landscape-banner {
+      margin-top: 4.5rem;
+      padding: 3.5rem;
+      background: linear-gradient(135deg, rgba(12, 24, 61, 0.7) 0%, rgba(7, 15, 38, 0.9) 100%);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    /* ==========================================================================
+       13. SERVICE SNAPSHOT & 14. FAQ ACCORDION
+       ========================================================================== */
+    .snapshot-section {
+      background: #020617;
+      text-align: center;
+      padding: 6.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .snapshot-matrix {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem 3.5rem;
+      font-family: var(--font-mono);
+      font-size: clamp(1.2rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+    }
+
+    .snapshot-matrix span {
+      color: var(--text-accent);
+    }
+
+    .faq-accordion-wrap {
+      max-width: 860px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item.active {
+      border-color: var(--border-medium);
+      background: rgba(14, 29, 71, 0.7);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+
+    .faq-indicator {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--text-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-indicator {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 1.75rem;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       15. FINAL CTA & CLOSING VISUAL
+       ========================================================================== */
+    .cta-section {
+      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cta-container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .closing-signature-stream {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .closing-signature-stream strong {
+      color: var(--text-accent-cyan);
+    }
+
+    /* ==========================================================================
+       16. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #01040f;
+      padding: 5.5rem 0 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      color: var(--text-accent);
+      font-family: var(--font-mono);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links-list a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--text-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* Requirement Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 580px;
+      padding: 2.5rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--text-accent);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    /* Scroll Trigger Animation Engine */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .models-grid,
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .process-steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .why-principles-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .process-progress-line {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .intro-grid,
+      .tech-interactive-grid,
+      .client-grid,
+      .talent-grid,
+      .landscape-banner,
+      .additional-options-banner {
+        grid-template-columns: 1fr;
+      }
+      .nav-links, .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: flex;
+      }
+      .matching-canvas-wrap {
+        height: 340px;
+      }
+      .process-steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .why-principles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .models-grid,
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+      .capabilities-matrix {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-spacing {
+        padding: 5rem 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
+        <div class="logo-mark">T</div>
+        <span class="logo-title">TJR TECH</span>
+      </a>
+
+      <nav aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="/services" class="nav-link active">
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/services/us-it-staffing" class="active-item">US IT Staffing</a></li>
+              <li class="dropdown-item"><a href="/services/bench-sales">US IT Bench Sales</a></li>
+              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
+              <li class="dropdown-item"><a href="/services/digital-media">Digital Media &amp; Advertising</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/solutions" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
+          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
+          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-secondary open-requirement-modal" style="padding: 0.65rem 1.25rem;">
+          <span>Submit a Requirement</span>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-link">Home</a></li>
+      <li><a href="/about" class="mobile-link">About Us</a></li>
+      <li>
+        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
+        <ul class="mobile-submenu">
+          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
+          <li><a href="/services/bench-sales" class="mobile-link">US IT Bench Sales</a></li>
+          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
+          <li><a href="/services/digital-media" class="mobile-link">Digital Media &amp; Advertising</a></li>
+        </ul>
+      </li>
+      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
+      <li><a href="/portfolio" class="mobile-link">Work</a></li>
+      <li><a href="/careers" class="mobile-link">Careers</a></li>
+      <li><a href="/insights" class="mobile-link">Insights</a></li>
+      <li><a href="/contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <button class="btn btn-primary open-requirement-modal" style="width: 100%;">Talk to Our Staffing Team</button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         01. PAGE HERO
+         ========================================================================== -->
+    <section class="service-hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">TJR TECH / US IT STAFFING</div>
+          <h1 class="hero-title-main">
+            Connecting Technology Talent <br>
+            <span>With Business Opportunities.</span>
+          </h1>
+          <p class="hero-lead-copy">
+            TJR Tech provides US IT staffing solutions for organizations seeking qualified technology professionals across flexible hiring and engagement models.
+          </p>
+          <p class="hero-secondary-copy">
+            From technical sourcing and screening to submission, interview coordination, and onboarding support, we help create a structured path between technology talent and business requirements.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact" class="btn btn-primary">
+              <span>TALK TO OUR STAFFING TEAM</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <button class="btn btn-secondary open-requirement-modal">
+              <span>SUBMIT A REQUIREMENT</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="matching-canvas-wrap">
+          <canvas id="heroMatchingCanvas" aria-label="Abstract talent matching data flow canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02. SERVICE INTRODUCTION
+         ========================================================================== -->
+    <section class="section-spacing intro-section" id="capability">
+      <div class="container">
+        <div class="intro-grid reveal">
+          <div>
+            <div class="eyebrow">OUR STAFFING CAPABILITY</div>
+            <h2 class="section-title">The Right Talent. The Right Requirement. The Right Connection.</h2>
+          </div>
+          <div class="intro-narrative">
+            <blockquote class="intro-quote">
+              Our focus is on understanding the requirement first and then identifying professionals whose skills and experience align with it.
+            </blockquote>
+            <p>
+              Technology requirements can change quickly. Organizations need access to qualified professionals while maintaining flexibility across different hiring and engagement models.
+            </p>
+            <p>
+              TJR Tech supports the connection between business requirements and technology professionals through structured sourcing, screening, profile positioning, submission, interview coordination, and placement support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03. ENGAGEMENT MODELS & 04. ADDITIONAL OPTIONS
+         ========================================================================== -->
+    <section class="section-spacing" id="models">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">ENGAGEMENT MODELS</div>
+          <h2 class="section-title">Flexible Staffing Models for Different Business Needs.</h2>
+          <p class="section-lead">Aligning technical capabilities with organizational procurement frameworks and contract parameters.</p>
+        </div>
+
+        <div class="models-grid">
+          <!-- Model 01 -->
+          <article class="model-card reveal">
+            <div>
+              <div class="model-index">MODEL 01</div>
+              <h3 class="model-title">W-2 STAFFING</h3>
+              <p class="model-desc">
+                Supporting organizations seeking technology professionals through W-2 employment arrangements.
+              </p>
+              <ul class="use-case-list">
+                <li>Contract staffing</li>
+                <li>Long-term technical assignments</li>
+                <li>Project-based requirements</li>
+                <li>Ongoing consultant engagements</li>
+              </ul>
+            </div>
+            <a href="/contact" class="inline-link">DISCUSS W-2 STAFFING &rarr;</a>
+          </article>
+
+          <!-- Model 02 -->
+          <article class="model-card reveal">
+            <div>
+              <div class="model-index">MODEL 02</div>
+              <h3 class="model-title">C2C STAFFING</h3>
+              <p class="model-desc">
+                Supporting business-to-business technology staffing engagements where appropriate and contractually permitted.
+              </p>
+              <ul class="use-case-list">
+                <li>Specialized technical talent</li>
+                <li>Contract requirements</li>
+                <li>Vendor-based staffing ecosystems</li>
+                <li>Project-based technology resources</li>
+              </ul>
+            </div>
+            <a href="/contact" class="inline-link">DISCUSS C2C STAFFING &rarr;</a>
+          </article>
+
+          <!-- Model 03 -->
+          <article class="model-card reveal">
+            <div>
+              <div class="model-index">MODEL 03</div>
+              <h3 class="model-title">FULL-TIME / PERMANENT</h3>
+              <p class="model-desc">
+                Supporting organizations seeking technology professionals for long-term or permanent employment opportunities.
+              </p>
+              <ul class="use-case-list">
+                <li>Direct hiring</li>
+                <li>Permanent technology positions</li>
+                <li>Specialized technical roles</li>
+                <li>Long-term team expansion</li>
+              </ul>
+            </div>
+            <a href="/contact" class="inline-link">DISCUSS PERMANENT HIRING &rarr;</a>
+          </article>
+        </div>
+
+        <!-- Additional Options -->
+        <div class="additional-options-banner reveal">
+          <div>
+            <div class="option-box-title">ENGAGEMENT EXTENSION</div>
+            <h3 class="option-box-heading">Contract</h3>
+            <p class="option-box-desc">
+              For organizations requiring technical professionals for defined projects, specific deliverables, or temporary workload spikes.
+            </p>
+          </div>
+          <div>
+            <div class="option-box-title">FLEXIBLE TRANSITION</div>
+            <h3 class="option-box-heading">Contract-to-Hire</h3>
+            <p class="option-box-desc">
+              For organizations that want to evaluate a professional during a contract period before considering a longer-term employment arrangement, subject to applicable terms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05. TECHNOLOGY DOMAINS (INTERACTIVE NETWORK)
+         ========================================================================== -->
+    <section class="section-spacing domains-section" id="technology-domains">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">TECHNOLOGY TALENT</div>
+          <h2 class="section-title">Technology Professionals Across Modern IT Domains.</h2>
+          <p class="section-lead">
+            Structured candidate sourcing and technical evaluation across core engineering and infrastructure disciplines.
+          </p>
+        </div>
+
+        <div class="tech-interactive-grid reveal">
+          <div class="tech-network-field">
+            <canvas id="techDomainCanvas"></canvas>
+            <div class="center-hub">TJR TECH</div>
+            <button class="domain-satellite dom-pos-1 active" data-dom="0">SOFTWARE</button>
+            <button class="domain-satellite dom-pos-2" data-dom="1">CLOUD</button>
+            <button class="domain-satellite dom-pos-3" data-dom="2">DATA</button>
+            <button class="domain-satellite dom-pos-4" data-dom="3">DEVOPS</button>
+            <button class="domain-satellite dom-pos-5" data-dom="4">QA</button>
+            <button class="domain-satellite dom-pos-6" data-dom="5">SECURITY</button>
+            <button class="domain-satellite dom-pos-7" data-dom="6">INFRASTRUCTURE</button>
+          </div>
+
+          <div class="domain-detail-card" id="domainDetailCard">
+            <div class="detail-kicker" id="domainKicker">DOMAIN 01</div>
+            <h3 class="detail-title" id="domainTitle">SOFTWARE ENGINEERING</h3>
+            <p id="domainSummary" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;">
+              Full lifecycle application engineering across modern frontend frameworks, scalable backend architectures, and distributed microservices.
+            </p>
+            <div class="detail-subskills" id="domainSkills">
+              <span class="subskill-tag">Cloud &amp; Application Development</span>
+              <span class="subskill-tag">Full Stack Development</span>
+              <span class="subskill-tag">Backend Development</span>
+              <span class="subskill-tag">Frontend Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06. OUR STAFFING PROCESS (6 STAGES)
+         ========================================================================== -->
+    <section class="section-spacing" id="process">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">OUR PROCESS</div>
+          <h2 class="section-title">From Requirement to Placement.</h2>
+          <p class="section-lead">A disciplined six-stage methodology ensuring operational compliance and candidate quality.</p>
+        </div>
+
+        <div class="process-timeline-wrap reveal">
+          <div class="process-progress-line"></div>
+          <div class="process-steps-grid">
+            <div class="process-card">
+              <div class="process-badge">01</div>
+              <h3 class="process-step-title">REQUIREMENT DISCOVERY</h3>
+              <p class="process-step-desc">We understand the role, technical requirements, engagement model, location expectations, timeline, and other relevant requirements.</p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-badge">02</div>
+              <h3 class="process-step-title">TALENT SOURCING</h3>
+              <p class="process-step-desc">We identify technology professionals through recruitment channels, professional networks, candidate databases, and referrals.</p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-badge">03</div>
+              <h3 class="process-step-title">SCREENING &amp; QUALIFICATION</h3>
+              <p class="process-step-desc">We review technical alignment, professional background, communication, availability, and relevant employment authorization information.</p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-badge">04</div>
+              <h3 class="process-step-title">PROFILE POSITIONING</h3>
+              <p class="process-step-desc">We prepare and position the candidate profile according to the specific opportunity and requirement.</p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-badge">05</div>
+              <h3 class="process-step-title">SUBMISSION &amp; INTERVIEW</h3>
+              <p class="process-step-desc">Qualified profiles are submitted through the appropriate staffing or vendor channel, followed by interview coordination and communication.</p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-badge">06</div>
+              <h3 class="process-step-title">PLACEMENT &amp; ONBOARDING</h3>
+              <p class="process-step-desc">Once selected, we support the applicable onboarding and coordination process through the beginning of the engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07. FOR CLIENTS & REQUIREMENT WORKFLOW
+         ========================================================================== -->
+    <section class="section-spacing client-section" id="for-clients">
+      <div class="container">
+        <div class="client-grid reveal">
+          <div>
+            <div class="eyebrow">FOR BUSINESSES</div>
+            <h2 class="section-title">Technology Talent Without Unnecessary Complexity.</h2>
+            <p style="margin-top: 1.25rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              TJR Tech works with organizations and staffing partners seeking technology professionals across different technical domains and engagement models.
+            </p>
+            <p style="margin-top: 0.75rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              We focus on understanding the business requirement, identifying relevant talent, and supporting the process from sourcing through interview coordination and onboarding.
+            </p>
+
+            <div class="capabilities-matrix">
+              <div class="matrix-item">Requirement Understanding</div>
+              <div class="matrix-item">Candidate Sourcing</div>
+              <div class="matrix-item">Technical Profile Screening</div>
+              <div class="matrix-item">Profile Submission</div>
+              <div class="matrix-item">Interview Coordination</div>
+              <div class="matrix-item">Communication Support</div>
+              <div class="matrix-item">Placement Coordination</div>
+              <div class="matrix-item">Engagement Support</div>
+            </div>
+
+            <button class="btn btn-primary open-requirement-modal">
+              <span>SUBMIT A REQUIREMENT</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+
+          <div class="flow-card-wrap">
+            <div class="flow-stepper-title">Client Requirement Execution Flow</div>
+            <div class="workflow-sequence">
+              <div class="workflow-step"><span class="step-index-label">01</span> YOUR REQUIREMENT</div>
+              <div class="workflow-step"><span class="step-index-label">02</span> ROLE UNDERSTANDING</div>
+              <div class="workflow-step"><span class="step-index-label">03</span> TALENT SEARCH</div>
+              <div class="workflow-step"><span class="step-index-label">04</span> SCREENING</div>
+              <div class="workflow-step"><span class="step-index-label">05</span> PROFILE SUBMISSION</div>
+              <div class="workflow-step"><span class="step-index-label">06</span> INTERVIEW COORDINATION</div>
+              <div class="workflow-step"><span class="step-index-label">07</span> SELECTION</div>
+              <div class="workflow-step"><span class="step-index-label">08</span> ONBOARDING SUPPORT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         08. FOR TECHNOLOGY PROFESSIONALS & TALENT JOURNEY
+         ========================================================================== -->
+    <section class="section-spacing" id="for-professionals">
+      <div class="container">
+        <div class="talent-grid reveal">
+          <div>
+            <div class="eyebrow">FOR TECHNOLOGY PROFESSIONALS</div>
+            <h2 class="section-title">Your Skills. The Right Opportunity.</h2>
+            <p style="margin-top: 1.25rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              TJR Tech works with technology professionals seeking relevant opportunities across the US IT staffing ecosystem.
+            </p>
+            <p style="margin-top: 0.75rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              We focus on understanding a professional's technical background, experience, preferred opportunities, availability, and applicable work authorization information before connecting the profile with relevant requirements.
+            </p>
+
+            <div class="capabilities-matrix">
+              <div class="matrix-item">Resume Review</div>
+              <div class="matrix-item">Profile Positioning</div>
+              <div class="matrix-item">Opportunity Matching</div>
+              <div class="matrix-item">Requirement Communication</div>
+              <div class="matrix-item">Submission Coordination</div>
+              <div class="matrix-item">Interview Coordination</div>
+              <div class="matrix-item">Feedback Communication</div>
+              <div class="matrix-item">Placement Support</div>
+            </div>
+
+            <a href="/contact" class="btn btn-secondary">
+              <span>CONNECT WITH OUR TEAM &rarr;</span>
+            </a>
+          </div>
+
+          <div>
+            <div class="flow-card-wrap">
+              <div class="flow-stepper-title">Professional Consultant Journey</div>
+              <div class="horizontal-journey-track">
+                <div class="journey-node">PROFILE <span class="journey-arrow">&rarr;</span></div>
+                <div class="journey-node">SKILL ALIGNMENT <span class="journey-arrow">&rarr;</span></div>
+                <div class="journey-node">OPPORTUNITY MATCH <span class="journey-arrow">&rarr;</span></div>
+                <div class="journey-node">SUBMISSION <span class="journey-arrow">&rarr;</span></div>
+                <div class="journey-node">INTERVIEW <span class="journey-arrow">&rarr;</span></div>
+                <div class="journey-node">SELECTION <span class="journey-arrow">&rarr;</span></div>
+                <div class="journey-node" style="border-color: var(--text-accent);">ONBOARDING</div>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6;">
+                Note: Services are structured consultant representation and marketing coordination. TJR Tech does not make claims of guaranteed employment or placement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         09. WHAT WE FOCUS ON & 10. VENDOR ECOSYSTEM
+         ========================================================================== -->
+    <section class="section-spacing" id="focus">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">OUR FOCUS</div>
+          <h2 class="section-title">Quality of Connection Matters.</h2>
+          <p class="section-lead">The guiding operational principles behind our candidate submissions and vendor communication.</p>
+        </div>
+
+        <div class="focus-grid reveal">
+          <div class="focus-card">
+            <div class="focus-num">01</div>
+            <h3 class="focus-title">REQUIREMENT UNDERSTANDING</h3>
+            <p class="focus-desc">We focus on understanding what the organization actually needs.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-num">02</div>
+            <h3 class="focus-title">TECHNICAL ALIGNMENT</h3>
+            <p class="focus-desc">We look beyond keywords and consider the technical context of the requirement.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-num">03</div>
+            <h3 class="focus-title">COMMUNICATION</h3>
+            <p class="focus-desc">Clear communication helps keep clients, vendors, and professionals aligned throughout the process.</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-num">04</div>
+            <h3 class="focus-title">RESPONSIVE EXECUTION</h3>
+            <p class="focus-desc">Staffing requirements can move quickly, so structured and timely execution matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Flow -->
+    <section class="section-spacing ecosystem-section" id="ecosystem">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3rem auto;">
+          <div class="eyebrow" style="justify-content: center;">STAFFING ECOSYSTEM</div>
+          <h2 class="section-title">Connected to the US IT Staffing Supply Chain.</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">
+            TJR Tech operates within the broader US IT staffing ecosystem, working with staffing partners and vendor channels to connect technology professionals with relevant requirements.
+          </p>
+        </div>
+
+        <div class="ecosystem-flow-box reveal">
+          <div class="eco-node">
+            <div class="eco-node-circle">01</div>
+            <div class="eco-node-name">END CLIENT</div>
+            <div class="eco-node-sub">Technical Requirement</div>
+          </div>
+          <span class="eco-flow-arrow">&rarr;</span>
+          <div class="eco-node">
+            <div class="eco-node-circle">02</div>
+            <div class="eco-node-name">PRIME VENDOR</div>
+            <div class="eco-node-sub">Staffing Partner Channel</div>
+          </div>
+          <span class="eco-flow-arrow">&rarr;</span>
+          <div class="eco-node highlight">
+            <div class="eco-node-circle" style="background: var(--bg-surface); color: var(--text-accent);">TJR</div>
+            <div class="eco-node-name" style="color: var(--text-accent);">TJR TECH</div>
+            <div class="eco-node-sub">Sourcing &amp; Screening Hub</div>
+          </div>
+          <span class="eco-flow-arrow">&rarr;</span>
+          <div class="eco-node">
+            <div class="eco-node-circle">04</div>
+            <div class="eco-node-name">TECH TALENT</div>
+            <div class="eco-node-sub">Qualified Professional</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. WHY TJR TECH & 12. STAFFING LANDSCAPE
+         ========================================================================== -->
+    <section class="section-spacing" id="why-tjr">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">WHY TJR TECH</div>
+          <h2 class="section-title">Why Organizations Work With TJR Tech.</h2>
+        </div>
+
+        <div class="why-principles-grid reveal">
+          <div class="why-card">
+            <h3 class="why-title">PEOPLE-FOCUSED</h3>
+            <p class="why-desc">We recognize that successful staffing is ultimately about people, not just profiles.</p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">REQUIREMENT-DRIVEN</h3>
+            <p class="why-desc">We begin with the actual requirement before searching for talent.</p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">STRUCTURED PROCESS</h3>
+            <p class="why-desc">A clear workflow helps keep sourcing, screening, submission, and communication organized.</p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">TECHNOLOGY UNDERSTANDING</h3>
+            <p class="why-desc">Our staffing capabilities are built around modern technology roles and technical requirements.</p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">PROFESSIONAL COMMUNICATION</h3>
+            <p class="why-desc">We maintain clear communication throughout the staffing process.</p>
+          </div>
+        </div>
+
+        <!-- 12. Staffing Landscape Editorial -->
+        <div class="landscape-banner reveal">
+          <div>
+            <div class="eyebrow">INDUSTRY CONTEXT</div>
+            <h2 class="section-title" style="font-size: 2.2rem;">Technology Hiring Is Evolving.</h2>
+          </div>
+          <div>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+              Modern organizations often need specialized technology capabilities without building every skill internally.
+            </p>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              Flexible staffing models can help organizations respond to changing project requirements, technical initiatives, and workforce needs. TJR Tech operates within this environment by helping connect technology professionals with organizations and staffing partners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         13. SERVICE SNAPSHOT
+         ========================================================================== -->
+    <section class="snapshot-section" aria-label="Service Overview Snapshot">
+      <div class="container reveal">
+        <div class="snapshot-matrix">
+          <div>W-2 <span>•</span> C2C <span>•</span> FULL-TIME</div>
+          <div>SOFTWARE <span>•</span> CLOUD <span>•</span> DATA <span>•</span> DEVOPS <span>•</span> QA <span>•</span> SECURITY</div>
+          <div>SOURCE <span>•</span> SCREEN <span>•</span> SUBMIT <span>•</span> COORDINATE <span>•</span> PLACE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         14. FAQ ACCORDION
+         ========================================================================== -->
+    <section class="section-spacing" id="faq">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">CLARITY &amp; INFORMATION</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">Key details regarding engagement terms, candidate representation, and domain coverage.</p>
+        </div>
+
+        <div class="faq-accordion-wrap reveal">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What staffing models does TJR Tech support?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>TJR Tech supports W-2, C2C, full-time/permanent, contract, and contract-to-hire staffing requirements where applicable.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What technology roles do you support?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We support staffing requirements across software engineering, cloud and DevOps, data and analytics, quality engineering, infrastructure, networking, cybersecurity, and related technology areas.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Do you work with businesses and staffing partners?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. TJR Tech can work within appropriate business and staffing relationships to support technology talent requirements.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Do you guarantee placement?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Staffing outcomes depend on the specific requirement, candidate alignment, client/vendor selection processes, and other commercial factors.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can technology professionals contact TJR Tech?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Technology professionals can contact TJR Tech to discuss their background, opportunity preferences, and applicable requirements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         15. FINAL CALL TO ACTION
+         ========================================================================== -->
+    <section class="section-spacing cta-section" id="cta">
+      <div class="container">
+        <div class="cta-container reveal">
+          <div class="eyebrow" style="justify-content: center;">READY TO CONNECT?</div>
+          <h2 class="section-title" style="margin-bottom: 1.25rem;">Let's Talk About Your Technology Requirement.</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
+            Tell us what you are looking for and our team can discuss the appropriate staffing approach.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <button class="btn btn-primary open-requirement-modal">
+              <span>SUBMIT A REQUIREMENT</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="/contact" class="btn btn-secondary">
+              <span>TALK TO OUR TEAM</span>
+            </a>
+          </div>
+
+          <div class="closing-signature-stream">
+            <span>REQUIREMENT</span>
+            <span>&rarr;</span>
+            <span>CONNECTION</span>
+            <span>&rarr;</span>
+            <span>TALENT</span>
+            <span>&rarr;</span>
+            <span>OPPORTUNITY</span>
+            <span>&bull;</span>
+            <strong>TJR TECH</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       16. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">TJR TECH</div>
+          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
+          <p class="footer-desc">
+            A technology and professional services organization bringing together talent solutions, technical systems, web development, and digital media.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/directors">Leadership</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links-list">
+            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
+            <li><a href="/services/bench-sales">US IT Bench Sales</a></li>
+            <li><a href="/services/web-development">Web Development</a></li>
+            <li><a href="/services/digital-media">Digital Media &amp; Advertising</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links-list">
+            <li><a href="/solutions">Solutions</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/insights">Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Operations</div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Hyderabad, Telangana, India
+          </p>
+          <p style="margin-top: 0.5rem; color: var(--text-accent); font-family: var(--font-mono); font-size: 0.8125rem;">
+            Global Delivery &amp; Services
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms &amp; Conditions</a>
+          <a href="/cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Requirement Submission Modal -->
+  <div class="modal-overlay" id="requirementModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+      <div class="eyebrow">STAFFING INQUIRY</div>
+      <h3 id="modalHeading" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Submit a Technical Requirement</h3>
+      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Provide your role specifications, technical parameters, and preferred engagement model.
+      </p>
+
+      <form id="requirementForm" onsubmit="handleFormSubmission(event)">
+        <div class="form-group">
+          <label class="form-label" for="clientName">Full Name / Organization</label>
+          <input class="form-input" type="text" id="clientName" required placeholder="e.g. Acme Corp / Alex Mercer">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="clientEmail">Corporate Email</label>
+          <input class="form-input" type="email" id="clientEmail" required placeholder="alex@acmecorp.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="staffingModelSelect">Engagement Model</label>
+          <select class="form-select" id="staffingModelSelect" required>
+            <option value="" disabled selected>Select staffing model</option>
+            <option value="w2">W-2 Staffing</option>
+            <option value="c2c">C2C Staffing</option>
+            <option value="perm">Full-Time / Permanent</option>
+            <option value="contract">Contract / Contract-to-Hire</option>
+            <option value="other">General Staffing Consultation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="requirementDetails">Requirement Overview</label>
+          <textarea class="form-textarea" id="requirementDetails" required placeholder="Role title, tech stack, duration, location expectations..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>Transmit Requirement</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODULAR VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Dynamic Copyright Year
+      const yearHolder = document.getElementById('yearHolder');
+      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+
+      // 2. Navigation Scroll Treatment & Progress Bar
+      const header = document.getElementById('mainHeader');
+      const progressBar = document.getElementById('scrollProgress');
+
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        if (progressBar) progressBar.style.width = scrolled + '%';
+        if (winScroll > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // 3. Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileMenuDrawer');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobile() {
+        const isOpen = mobileDrawer.classList.toggle('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', toggleMobile);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('active')) toggleMobile();
+          });
+        });
+      }
+
+      // 4. Scroll Reveal Trigger
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
+      // 5. Hero Talent Matching Flow Canvas
+      (function initHeroMatchingCanvas() {
+        const canvas = document.getElementById('heroMatchingCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let packets = [];
+
+        function setSize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          width = canvas.width = rect.width;
+          height = canvas.height = rect.height;
+          initPackets();
+        }
+
+        function initPackets() {
+          packets = [];
+          for (let i = 0; i < 28; i++) {
+            packets.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.7,
+              vy: (Math.random() - 0.5) * 0.7,
+              radius: Math.random() * 2 + 1.2,
+              glow: Math.random() > 0.5
+            });
+          }
+        }
+
+        function render() {
+          ctx.clearRect(0, 0, width, height);
+
+          // Connecting vectors
+          for (let i = 0; i < packets.length; i++) {
+            const p = packets[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = p.glow ? 'rgba(45, 212, 191, 0.9)' : 'rgba(56, 189, 248, 0.7)';
+            ctx.fill();
+
+            for (let j = i + 1; j < packets.length; j++) {
+              const p2 = packets[j];
+              const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+              if (dist < 100) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(45, 212, 191, ${0.16 * (1 - dist / 100)})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(render);
+        }
+
+        window.addEventListener('resize', setSize);
+        setSize();
+        render();
+      })();
+
+      // 6. Interactive Technology Domain Ecosystem
+      (function initDomainEcosystem() {
+        const domainData = [
+          {
+            kicker: 'DOMAIN 01',
+            title: 'SOFTWARE ENGINEERING',
+            summary: 'Full lifecycle application engineering across modern frontend frameworks, scalable backend architectures, and distributed microservices.',
+            skills: ['Cloud & Application Development', 'Full Stack Development', 'Backend Development', 'Frontend Development']
+          },
+          {
+            kicker: 'DOMAIN 02',
+            title: 'CLOUD & DEVOPS',
+            summary: 'Cloud migration execution, containerization topologies, infrastructure-as-code paradigms, and automated deployment architectures.',
+            skills: ['Cloud Engineering', 'DevOps', 'Infrastructure', 'Automation']
+          },
+          {
+            kicker: 'DOMAIN 03',
+            title: 'DATA & ANALYTICS',
+            summary: 'Data platform engineering, ETL pipeline coordination, analytics infrastructure, and business intelligence models.',
+            skills: ['Data Engineering', 'Data Platforms', 'Analytics', 'Business Intelligence']
+          },
+          {
+            kicker: 'DOMAIN 04',
+            title: 'QUALITY ENGINEERING',
+            summary: 'Continuous verification systems, test automation frameworks, SDET deployment, and functional reliability assurance.',
+            skills: ['QA', 'Test Automation', 'SDET', 'Quality Engineering']
+          },
+          {
+            kicker: 'DOMAIN 05',
+            title: 'CYBERSECURITY',
+            summary: 'Information assurance protocols, security operations coordination, identity governance, and vulnerability management.',
+            skills: ['Security Engineering', 'Security Operations', 'Information Security']
+          },
+          {
+            kicker: 'DOMAIN 06',
+            title: 'INFRASTRUCTURE & NETWORKING',
+            summary: 'High-availability server infrastructure, enterprise network topologies, systems administration, and technical operations.',
+            skills: ['Infrastructure', 'Networking', 'Systems', 'Technical Operations']
+          },
+          {
+            kicker: 'DOMAIN 07',
+            title: 'TECHNICAL OPERATIONS',
+            summary: 'Site reliability engineering, platform stability workflows, operational monitoring, and technical ecosystem governance.',
+            skills: ['Platform Reliability', 'Systems Monitoring', 'Incident Management', 'Technical Operations']
+          }
+        ];
+
+        const buttons = document.querySelectorAll('.domain-satellite');
+        const kickerEl = document.getElementById('domainKicker');
+        const titleEl = document.getElementById('domainTitle');
+        const summaryEl = document.getElementById('domainSummary');
+        const skillsEl = document.getElementById('domainSkills');
+        const canvas = document.getElementById('techDomainCanvas');
+        const ctx = canvas ? canvas.getContext('2d') : null;
+
+        function updateCanvasLines() {
+          if (!canvas || !ctx) return;
+          const wrap = canvas.parentElement;
+          canvas.width = wrap.offsetWidth;
+          canvas.height = wrap.offsetHeight;
+
+          const centerHub = wrap.querySelector('.center-hub');
+          if (!centerHub) return;
+          const cRect = centerHub.getBoundingClientRect();
+          const wRect = wrap.getBoundingClientRect();
+          const cx = cRect.left + cRect.width / 2 - wRect.left;
+          const cy = cRect.top + cRect.height / 2 - wRect.top;
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          buttons.forEach(btn => {
+            const bRect = btn.getBoundingClientRect();
+            const bx = bRect.left + bRect.width / 2 - wRect.left;
+            const by = bRect.top + bRect.height / 2 - wRect.top;
+
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(bx, by);
+            ctx.strokeStyle = btn.classList.contains('active')
+              ? 'rgba(45, 212, 191, 0.65)'
+              : 'rgba(255, 255, 255, 0.08)';
+            ctx.lineWidth = btn.classList.contains('active') ? 1.5 : 1;
+            ctx.setLineDash([4, 4]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+          });
+        }
+
+        buttons.forEach(btn => {
+          btn.addEventListener('mouseenter', () => {
+            const idx = parseInt(btn.getAttribute('data-dom'), 10);
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if (domainData[idx]) {
+              kickerEl.textContent = domainData[idx].kicker;
+              titleEl.textContent = domainData[idx].title;
+              summaryEl.textContent = domainData[idx].summary;
+
+              skillsEl.innerHTML = '';
+              domainData[idx].skills.forEach(skill => {
+                const tag = document.createElement('span');
+                tag.className = 'subskill-tag';
+                tag.textContent = skill;
+                skillsEl.appendChild(tag);
+              });
+            }
+            updateCanvasLines();
+          });
+        });
+
+        window.addEventListener('resize', updateCanvasLines);
+        setTimeout(updateCanvasLines, 300);
+      })();
+
+      // 7. FAQ Accordion Interaction
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        const ans = item.querySelector('.faq-answer');
+
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(otherItem => {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            otherItem.querySelector('.faq-question-btn').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            ans.style.maxHeight = ans.scrollHeight + 30 + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 8. Requirement Submission Modal Handlers
+      const requirementModal = document.getElementById('requirementModal');
+      const openModalButtons = document.querySelectorAll('.open-requirement-modal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+
+      function openModal(e) {
+        if (e) e.preventDefault();
+        requirementModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        requirementModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (requirementModal) {
+        requirementModal.addEventListener('click', (e) => {
+          if (e.target === requirementModal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && requirementModal.classList.contains('active')) closeModal();
+      });
+
+      window.handleFormSubmission = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your staffing requirement. A technical recruitment practice lead will review the specifications and follow up directly.');
+        closeModal();
+        e.target.reset();
+      };
+    })();
+  </script>
+</body>
+</html>

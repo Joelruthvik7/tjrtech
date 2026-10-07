@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>Professional Digital Solutions | TJR Tech</title>
+  <meta name="description" content="TJR Tech helps professionals build modern digital portfolios, personal websites, professional profiles, and digital identities around their experience and expertise.">
+  <meta name="keywords" content="Professional Portfolio, Personal Brand Website, Digital Identity, Career Showcase, Resume to Portfolio, Professional Web Presence, TJR Tech">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://www.tjrtech.com/solutions/for-professionals">
+
+  <!-- Open Graph / Protocol -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tjrtech.com/solutions/for-professionals">
+  <meta property="og:title" content="Professional Digital Solutions | TJR Tech">
+  <meta property="og:description" content="Your Professional Story Deserves a Digital Experience. Transform your experience, expertise, projects, and identity into a modern digital presence.">
+  <meta property="og:site_name" content="TJR TECH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Professional Digital Solutions | TJR Tech">
+  <meta name="twitter:description" content="Your resume communicates information. A professional digital experience brings your capabilities, work, and identity together.">
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       01. DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-primary: #020617;        /* Void black */
+      --bg-secondary: #070f26;      /* Deep midnight blue */
+      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
+      --bg-surface: #0e1d47;
+      --bg-card: rgba(12, 24, 61, 0.45);
+      --bg-card-hover: rgba(18, 36, 88, 0.75);
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-accent: rgba(45, 212, 191, 0.35);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-accent: #2dd4bf;       /* Teal Accent */
+      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+
+      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+      --glow-teal: rgba(45, 212, 191, 0.14);
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+
+      --container-max: 1280px;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    /* Reset & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background: var(--bg-primary);
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2.5px;
+      background: var(--accent-gradient);
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-spacing {
+      padding: 7.5rem 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 1.5px;
+      background: var(--text-accent);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text-primary);
+    }
+
+    .section-lead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #020617;
+      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .inline-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.2s ease;
+    }
+
+    .inline-link:hover {
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       02. GLOBAL HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
+      height: 86px;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      height: 72px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-accent);
+    }
+
+    .logo-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: -1rem;
+      background: rgba(7, 15, 38, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0;
+      min-width: 250px;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      list-style: none;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .dropdown-item a {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-item a:hover, .dropdown-item a.active-item {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-accent);
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-primary);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem 3rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-nav-list a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .mobile-submenu {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .mobile-submenu a {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       SECTION 01 — HERO
+       ========================================================================== */
+    .pro-hero-section {
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 4.5rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title-main {
+      font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title-main span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-supporting-copy {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-secondary-copy {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .pro-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #proHeroCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ==========================================================================
+       SECTION 02 — INTRODUCTION
+       ========================================================================== */
+    .intro-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .statement-box {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .narrative-stream {
+      font-family: var(--font-mono);
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .narrative-stream span {
+      color: var(--text-accent);
+    }
+
+    /* ==========================================================================
+       SECTION 03 — THE MODERN PROFESSIONAL (MERGE VISUALIZATION)
+       ========================================================================== */
+    .modern-pro-box {
+      background: rgba(12, 24, 61, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3.5rem;
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    .elements-scatter-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.85rem;
+      margin: 2.5rem 0;
+    }
+
+    .scatter-chip {
+      padding: 0.65rem 1.25rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      transition: var(--transition-smooth);
+    }
+
+    .scatter-chip:hover {
+      border-color: var(--border-accent);
+      color: var(--text-accent);
+      transform: translateY(-2px);
+    }
+
+    .converged-target {
+      padding: 1.25rem 2.5rem;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--text-accent);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      display: inline-block;
+      box-shadow: 0 0 25px var(--glow-teal);
+    }
+
+    /* ==========================================================================
+       SECTION 04 — PROFESSIONAL SOLUTIONS (6 CARDS)
+       ========================================================================== */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .solution-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .solution-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.35s ease;
+    }
+
+    .solution-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+    }
+
+    .solution-card:hover::before {
+      width: 100%;
+    }
+
+    .card-num {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION 05 — WHAT WE CAN BUILD & 06. DIGITAL IDENTITY
+       ========================================================================== */
+    .arch-chips-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .arch-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transition: var(--transition-smooth);
+    }
+
+    .arch-chip:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-2px);
+    }
+
+    .identity-stream-banner {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 4rem 2rem;
+      margin-top: 4.5rem;
+      text-align: center;
+    }
+
+    .identity-chain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      font-family: var(--font-mono);
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .identity-chain span {
+      color: var(--text-accent);
+    }
+
+    /* ==========================================================================
+       SECTION 07 — PROFESSIONAL PORTFOLIO & 08. PERSONAL WEBSITE
+       ========================================================================== */
+    .dual-showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      margin-top: 4rem;
+    }
+
+    .showcase-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .showcase-panel:hover {
+      border-color: var(--border-accent);
+    }
+
+    .pipeline-schematic-box {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    /* ==========================================================================
+       SECTION 09 — BRANDING & 10. RESPONSIVE DIGITAL PRESENCE
+       ========================================================================== */
+    .device-viewport-frame {
+      max-width: 960px;
+      margin: 3.5rem auto 0 auto;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      background: #01040f;
+      padding: 2.5rem 2rem;
+      min-height: 300px;
+      transition: max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .device-switcher-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .device-toggle-btn {
+      padding: 0.65rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      background: rgba(2, 6, 23, 0.7);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .device-toggle-btn.active, .device-toggle-btn:hover {
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+      background: var(--bg-tertiary);
+    }
+
+    .preview-wireframe-content {
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .wire-bar {
+      height: 12px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* ==========================================================================
+       SECTION 11 — FEATURES & 12. STORYTELLING & 13. CAREER FORMATS
+       ========================================================================== */
+    .features-8-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .feature-node {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2rem 1.5rem;
+    }
+
+    .storytelling-stream-wrap {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3rem 2rem;
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    .story-step-sequence {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      font-family: var(--font-mono);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .story-step-sequence span {
+      color: var(--text-accent);
+    }
+
+    .formats-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .format-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+    }
+
+    /* ==========================================================================
+       SECTION 14 — LIFECYCLE & 15. WEB DEV LINK & 16. DASHBOARD
+       ========================================================================== */
+    .lifecycle-progression {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem 2.25rem;
+      margin-top: 3.5rem;
+      font-family: var(--font-mono);
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .lifecycle-progression span {
+      color: var(--text-accent);
+    }
+
+    .web-dev-bridge-box {
+      background: linear-gradient(135deg, rgba(12, 24, 61, 0.7) 0%, rgba(7, 15, 38, 0.9) 100%);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 3.5rem;
+      margin-top: 4.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .dashboard-profile-hud {
+      background: rgba(2, 6, 23, 0.75);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .hud-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent);
+    }
+
+    .hud-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .hud-module {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+    }
+
+    /* ==========================================================================
+       SECTION 17 — WHY TJR TECH & 18. IDENTITY VISUAL
+       ========================================================================== */
+    .why-pro-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .why-p-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .why-p-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .identity-cinematic-section {
+      padding: 7rem 0;
+      text-align: center;
+      background: #020617;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .identity-lead-line {
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+
+    .identity-lead-line span {
+      color: var(--text-accent);
+    }
+
+    /* ==========================================================================
+       SECTION 19 — FAQ ACCORDION & 20. FINAL CTA & 21. STATEMENT
+       ========================================================================== */
+    .faq-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .faq-accordion-wrap {
+      max-width: 860px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item.active {
+      border-color: var(--border-medium);
+      background: rgba(14, 29, 71, 0.7);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+
+    .faq-indicator {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--text-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-indicator {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 1.75rem;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.5rem;
+    }
+
+    .cta-section {
+      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cta-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .brand-statement-section {
+      padding: 6.5rem 0;
+      text-align: center;
+      background: #020617;
+    }
+
+    .statement-headline-triad {
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .statement-brand-line {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--text-accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       SECTION 22 — FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #01040f;
+      padding: 5.5rem 0 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      color: var(--text-accent);
+      font-family: var(--font-mono);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links-list a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--text-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 580px;
+      padding: 2.5rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--text-accent);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    /* Scroll Trigger Animation Engine */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .solutions-grid,
+      .features-8-grid,
+      .formats-matrix-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .arch-chips-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hud-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .why-pro-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .dual-showcase-grid,
+      .web-dev-bridge-box {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links, .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: flex;
+      }
+      .pro-canvas-wrap {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .solutions-grid,
+      .features-8-grid,
+      .formats-matrix-grid,
+      .arch-chips-grid,
+      .hud-grid,
+      .why-pro-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-spacing {
+        padding: 5rem 0;
+      }
+      .modern-pro-box,
+      .web-dev-bridge-box {
+        padding: 2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
+        <div class="logo-mark">T</div>
+        <span class="logo-title">TJR TECH</span>
+      </a>
+
+      <nav aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="/services" class="nav-link">
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
+              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
+              <li class="dropdown-item"><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/solutions" class="nav-link active">
+              Solutions
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/solutions/for-businesses">For Businesses</a></li>
+              <li class="dropdown-item"><a href="/solutions/for-consultants">For Consultants</a></li>
+              <li class="dropdown-item"><a href="/solutions/for-professionals" class="active-item">For Professionals</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
+          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
+          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-secondary open-pro-modal" style="padding: 0.65rem 1.25rem;">
+          <span>Build My Digital Presence</span>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-link">Home</a></li>
+      <li><a href="/about" class="mobile-link">About Us</a></li>
+      <li>
+        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
+        <ul class="mobile-submenu">
+          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
+          <li><a href="/services/us-it-bench-sales" class="mobile-link">US IT Bench Sales</a></li>
+          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
+          <li><a href="/services/ads-digital-media" class="mobile-link">Ads &amp; Digital Media</a></li>
+        </ul>
+      </li>
+      <li>
+        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Solutions</span>
+        <ul class="mobile-submenu">
+          <li><a href="/solutions/for-businesses" class="mobile-link">For Businesses</a></li>
+          <li><a href="/solutions/for-consultants" class="mobile-link">For Consultants</a></li>
+          <li><a href="/solutions/for-professionals" class="mobile-link">For Professionals</a></li>
+        </ul>
+      </li>
+      <li><a href="/portfolio" class="mobile-link">Work</a></li>
+      <li><a href="/careers" class="mobile-link">Careers</a></li>
+      <li><a href="/insights" class="mobile-link">Insights</a></li>
+      <li><a href="/contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <button class="btn btn-primary open-pro-modal" style="width: 100%;">Build My Digital Presence</button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 01 — HERO
+         ========================================================================== -->
+    <section class="pro-hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">TJR TECH / SOLUTIONS FOR PROFESSIONALS</div>
+          <h1 class="hero-title-main">
+            Your Professional Story <br>
+            <span>Deserves a Digital Experience.</span>
+          </h1>
+          <p class="hero-supporting-copy">
+            Transform your experience, expertise, projects, and professional identity into a modern digital presence.
+          </p>
+          <p class="hero-secondary-copy">
+            Your resume communicates information. A professional digital experience can bring your story, capabilities, work, and identity together in one structured destination.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary open-pro-modal">
+              <span>Build My Digital Presence</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="#solutions" class="btn btn-secondary">
+              <span>Explore Professional Solutions</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pro-canvas-wrap">
+          <canvas id="proHeroCanvas" aria-label="Futuristic digital professional profile node interface"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02 — INTRODUCTION
+         ========================================================================== -->
+    <section class="section-spacing intro-section" id="intro">
+      <div class="container">
+        <div class="intro-grid reveal">
+          <div>
+            <div class="eyebrow">BROADER SPATIAL PRESENCE</div>
+            <h2 class="section-title">More Than a Resume.</h2>
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              <p>
+                A resume is designed to summarize professional experience. A digital presence can provide a broader space to communicate who you are, what you know, what you have built, and how people can connect with you.
+              </p>
+              <p>
+                TJR Tech helps professionals structure their information and turn it into modern digital experiences that can evolve as their careers grow.
+              </p>
+            </div>
+          </div>
+
+          <div class="statement-box">
+            <div class="narrative-stream">
+              <div>INFORMATION</div>
+              <div>&darr;</div>
+              <div>STORY</div>
+              <div>&darr;</div>
+              <div><span>EXPERIENCE</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03 — THE MODERN PROFESSIONAL
+         ========================================================================== -->
+    <section class="section-spacing" id="modern-professional">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 1.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">CAREER CONVERGENCE</div>
+          <h2 class="section-title">Your Career Is Bigger Than One Document.</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">
+            Synthesize fragmented professional assets into one cohesive, high-authority digital destination.
+          </p>
+        </div>
+
+        <div class="modern-pro-box reveal">
+          <div class="elements-scatter-grid">
+            <div class="scatter-chip">Resume Summary</div>
+            <div class="scatter-chip">Technical Skills</div>
+            <div class="scatter-chip">Career Experience</div>
+            <div class="scatter-chip">Production Projects</div>
+            <div class="scatter-chip">Education History</div>
+            <div class="scatter-chip">Verified Certifications</div>
+            <div class="scatter-chip">Key Achievements</div>
+            <div class="scatter-chip">Domain Interests</div>
+            <div class="scatter-chip">Direct Contact</div>
+          </div>
+
+          <div style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--text-accent); margin-bottom: 1.5rem;">&darr;</div>
+
+          <div class="converged-target">
+            DIGITAL PROFESSIONAL PRESENCE
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04 — PROFESSIONAL SOLUTIONS (6 CARDS)
+         ========================================================================== -->
+    <section class="section-spacing" id="solutions" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">SOLUTION PATHWAYS</div>
+          <h2 class="section-title">Build the Digital Presence You Need.</h2>
+          <p class="section-lead">Tailored frameworks designed to highlight your specific discipline, level of depth, and personal brand.</p>
+        </div>
+
+        <div class="solutions-grid">
+          <div class="solution-card reveal">
+            <div>
+              <div class="card-num">01</div>
+              <h3 class="card-title">Professional Portfolio</h3>
+              <p class="card-desc">Present your projects, experience, skills, achievements, and professional story through a dedicated digital experience.</p>
+            </div>
+            <button class="inline-link open-pro-modal">Inquire for Portfolio &rarr;</button>
+          </div>
+
+          <div class="solution-card reveal">
+            <div>
+              <div class="card-num">02</div>
+              <h3 class="card-title">Personal Website</h3>
+              <p class="card-desc">Create a professional website centered around your name, expertise, work, and personal identity.</p>
+            </div>
+            <button class="inline-link open-pro-modal">Inquire for Personal Site &rarr;</button>
+          </div>
+
+          <div class="solution-card reveal">
+            <div>
+              <div class="card-num">03</div>
+              <h3 class="card-title">Career Portfolio</h3>
+              <p class="card-desc">Organize professional experience and project history into a structured digital portfolio.</p>
+            </div>
+            <button class="inline-link open-pro-modal">Inquire for Career Portfolio &rarr;</button>
+          </div>
+
+          <div class="solution-card reveal">
+            <div>
+              <div class="card-num">04</div>
+              <h3 class="card-title">Professional Profile</h3>
+              <p class="card-desc">Create a clear digital representation of your skills, background, and capabilities.</p>
+            </div>
+            <button class="inline-link open-pro-modal">Inquire for Profile &rarr;</button>
+          </div>
+
+          <div class="solution-card reveal">
+            <div>
+              <div class="card-num">05</div>
+              <h3 class="card-title">Personal Brand Experience</h3>
+              <p class="card-desc">Bring your professional identity, visual style, content, and online presence together.</p>
+            </div>
+            <button class="inline-link open-pro-modal">Inquire for Brand Site &rarr;</button>
+          </div>
+
+          <div class="solution-card reveal">
+            <div>
+              <div class="card-num">06</div>
+              <h3 class="card-title">Custom Digital Experience</h3>
+              <p class="card-desc">Build a tailored digital solution around your specific professional goals and requirements.</p>
+            </div>
+            <button class="inline-link open-pro-modal">Inquire for Custom Scope &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05 — WHAT WE CAN BUILD & 06. DIGITAL IDENTITY
+         ========================================================================== -->
+    <section class="section-spacing" id="what-we-build">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PORTFOLIO ARCHITECTURE</div>
+          <h2 class="section-title">From Professional Information to Digital Experience.</h2>
+          <p class="section-lead">A modular content architecture designed around your verified history and materials.</p>
+        </div>
+
+        <div class="arch-chips-grid reveal">
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">01 / ABOUT</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Professional Summary</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Introduction and narrative background.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">02 / EXPERIENCE</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Career History</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Relevant positions and role context.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">03 / SKILLS</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Technical Depth</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Categorized proficiencies and stacks.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">04 / PROJECTS</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Selected Work</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Case studies and deliverables.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">05 / ACHIEVEMENTS</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Key Milestones</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Verified professional benchmarks.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">06 / EDUCATION</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Academic Context</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Verified institutional background.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">07 / CERTIFICATIONS</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Credentials</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Industry credentials provided by you.</p>
+          </div>
+
+          <div class="arch-chip">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">08 / CONTACT</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Direct Channels</strong>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Communication endpoints and socials.</p>
+          </div>
+        </div>
+
+        <!-- Section 06: Digital Identity Chain -->
+        <div class="identity-stream-banner reveal">
+          <div class="eyebrow" style="justify-content: center; margin-bottom: 1.5rem;">COHESIVE RECOGNITION</div>
+          <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 2rem;">Create a Professional Identity, Not Just a Website.</h3>
+          <div class="identity-chain">
+            <div>NAME</div>
+            <span>&rarr;</span>
+            <div>IDENTITY</div>
+            <span>&rarr;</span>
+            <div>EXPERTISE</div>
+            <span>&rarr;</span>
+            <div>EXPERIENCE</div>
+            <span>&rarr;</span>
+            <div>WORK</div>
+            <span>&rarr;</span>
+            <div style="color: var(--text-accent);">DIGITAL PRESENCE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 07 — PROFESSIONAL PORTFOLIO & 08. PERSONAL WEBSITE
+       ========================================================================== -->
+    <section class="section-spacing" id="portfolio-and-website" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="dual-showcase-grid reveal">
+          <!-- Portfolio Showcase -->
+          <div class="showcase-panel">
+            <div>
+              <div class="eyebrow">CASE STUDY STRUCTURE</div>
+              <h3 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Show the Work Behind the Experience.</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Transform bullet-point resume items into structured project case studies detailing context, technical implementation, and deliverables.
+              </p>
+              <div class="pipeline-schematic-box">
+                <div>[ CASE STUDY FRAMEWORK ]</div>
+                <div>PROJECT TITLE &rarr; ROLE &rarr; TECHNOLOGY</div>
+                <div style="color: var(--text-accent);">&darr; CHALLENGE &rarr; APPROACH &rarr; DELIVERABLE</div>
+              </div>
+            </div>
+            <button class="btn btn-primary open-pro-modal">Create My Portfolio</button>
+          </div>
+
+          <!-- Personal Website Showcase -->
+          <div class="showcase-panel">
+            <div>
+              <div class="eyebrow">DEDICATED DESTINATION</div>
+              <h3 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Your Name Can Have a Digital Home.</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                A personal website provides a dedicated place to present your professional identity, experience, work, skills, and contact information under clean domain integration.
+              </p>
+              <div class="pipeline-schematic-box">
+                <div>[ NAVIGATION PATTERN ]</div>
+                <div>HOME &bull; ABOUT &bull; EXPERIENCE &bull; SKILLS &bull; PROJECTS &bull; CONTACT</div>
+                <div style="color: var(--text-accent);">&darr; ADAPTIVE VIEWPORT DEPLOYMENT</div>
+              </div>
+            </div>
+            <a href="/services/web-development" class="btn btn-secondary">Build My Website &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 09 — BRANDING & 10. RESPONSIVE DIGITAL PRESENCE
+       ========================================================================== -->
+    <section class="section-spacing" id="responsive-branding">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 2rem auto;">
+          <div class="eyebrow" style="justify-content: center;">ADAPTIVE SYSTEM</div>
+          <h2 class="section-title">Your Professional Presence. Everywhere.</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">
+            Modern professional experiences should remain accessible, legible, and visually balanced across devices.
+          </p>
+        </div>
+
+        <div class="device-switcher-nav reveal">
+          <button class="device-toggle-btn active" data-viewport="960px">DESKTOP</button>
+          <button class="device-toggle-btn" data-viewport="680px">TABLET</button>
+          <button class="device-toggle-btn" data-viewport="380px">MOBILE</button>
+        </div>
+
+        <div class="device-viewport-frame reveal" id="proViewport">
+          <div class="preview-wireframe-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div class="wire-bar" style="width: 120px; background: var(--text-accent);"></div>
+              <div class="wire-bar" style="width: 180px;"></div>
+            </div>
+            <div class="wire-bar" style="width: 55%; height: 22px; background: #fff;"></div>
+            <div class="wire-bar" style="width: 80%;"></div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+              <div style="height: 80px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 2px;"></div>
+              <div style="height: 80px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 2px;"></div>
+              <div style="height: 80px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 2px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 11 — FEATURES & 12. STORYTELLING & 13. CAREER FORMATS
+       ========================================================================== -->
+    <section class="section-spacing" id="features-and-story" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <!-- Section 11: Features -->
+        <div class="section-header reveal">
+          <div class="eyebrow">EXPERIENCE CRAFT</div>
+          <h2 class="section-title">Designed Around the Person.</h2>
+        </div>
+
+        <div class="features-8-grid reveal">
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Responsive Design</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Optimized across ultra-wide, laptop, and mobile screens.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Interactive Feedback</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Micro-interactions that make the platform feel responsive.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Professional Typography</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Crisp spatial scale tailored for executive readability.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Project Showcase</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Structured case studies highlighting technologies used.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Experience Timeline</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Visual career progression mapping milestones clearly.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Contact Experience</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Direct inquiry endpoints and verified professional profiles.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">SEO Foundation</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Semantic HTML and metadata supporting personal name discovery.</p></div>
+          <div class="feature-node"><strong style="color: #fff; font-size: 1.05rem;">Fast Performance</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.4rem;">Lightweight assets and optimized rendering loops.</p></div>
+        </div>
+
+        <!-- Section 12: Storytelling Sequence -->
+        <div class="storytelling-stream-wrap reveal">
+          <div class="eyebrow" style="justify-content: center; margin-bottom: 1.5rem;">NARRATIVE PROGRESSION</div>
+          <h3 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Content That Tells Your Story.</h3>
+          <div class="story-step-sequence">
+            <div>WHO YOU ARE</div>
+            <span>&rarr;</span>
+            <div>WHAT YOU KNOW</div>
+            <span>&rarr;</span>
+            <div>WHAT YOU HAVE DONE</div>
+            <span>&rarr;</span>
+            <div>WHAT YOU HAVE BUILT</div>
+            <span>&rarr;</span>
+            <div style="color: var(--text-accent);">WHERE YOU ARE GOING</div>
+          </div>
+        </div>
+
+        <!-- Section 13: Career Formats -->
+        <div class="section-header reveal" style="margin-top: 5.5rem;">
+          <div class="eyebrow">VERSATILE EXPRESSION</div>
+          <h2 class="section-title">Different Careers. Different Digital Needs.</h2>
+        </div>
+
+        <div class="formats-matrix-grid reveal">
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Career Portfolio</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Structured work and career milestones.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Personal Website</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Dedicated hub for articles, bio, and contact.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Professional Profile</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Streamlined digital capability statement.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Executive Presence</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Authority-led leadership documentation.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Technology Portfolio</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Code repositories and architectural reviews.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Project Showcase</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Visual media and case study highlights.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Personal Brand</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Cohesive typography and visual style.</p></div>
+          <div class="format-item-card"><strong style="color: #fff; font-size: 1rem;">Landing Page</strong><p style="color: var(--text-secondary); font-size: 0.8125rem; margin-top: 0.4rem;">Single focused executive profile page.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 14 — LIFECYCLE & 15. WEB DEV & 16. DASHBOARD
+         ========================================================================== -->
+    <section class="section-spacing" id="lifecycle-and-tech">
+      <div class="container">
+        <!-- Section 14: Lifecycle -->
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 2rem auto;">
+          <div class="eyebrow" style="justify-content: center;">CONTINUOUS EVOLUTION</div>
+          <h2 class="section-title">Build Once. Evolve With Your Career.</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">
+            Your professional experience changes over time. A digital portfolio can evolve with new projects, skills, achievements, roles, and career milestones.
+          </p>
+        </div>
+
+        <div class="lifecycle-progression reveal">
+          <div>CREATE</div>
+          <span>&rarr;</span>
+          <div>LAUNCH</div>
+          <span>&rarr;</span>
+          <div>UPDATE</div>
+          <span>&rarr;</span>
+          <div>EXPAND</div>
+          <span>&rarr;</span>
+          <div style="color: var(--text-accent);">EVOLVE</div>
+        </div>
+
+        <!-- Section 15: Web Dev Connection -->
+        <div class="web-dev-bridge-box reveal">
+          <div>
+            <div class="eyebrow">ENGINEERING INTEGRATION</div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Powered by Modern Web Technology.</h3>
+            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
+              Professional digital experiences can be developed using responsive design, modern frontend technologies, animation, interactive interfaces, and performance-focused implementation.
+            </p>
+            <a href="/services/web-development" class="btn btn-secondary">Explore Web Development &rarr;</a>
+          </div>
+
+          <div style="background: rgba(2, 6, 23, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.5rem; font-family: var(--font-mono); font-size: 0.8125rem; display: flex; flex-direction: column; gap: 0.5rem; text-align: center;">
+            <div>DESIGN</div>
+            <div style="color: var(--text-accent);">&darr;</div>
+            <div>FRONTEND &bull; TS &bull; REACT</div>
+            <div style="color: var(--text-accent);">&darr;</div>
+            <div>INTERACTION &bull; MOTION</div>
+            <div style="color: var(--text-accent);">&darr;</div>
+            <div style="color: #fff; font-weight: 700;">PERFORMANCE LAUNCH</div>
+          </div>
+        </div>
+
+        <!-- Section 16: Profile Dashboard HUD -->
+        <div class="dashboard-profile-hud reveal">
+          <div class="hud-header">
+            <span>UNIFIED PROFESSIONAL DESTINATION</span>
+            <span>STATUS: READY FOR DEPLOYMENT</span>
+          </div>
+          <div class="hud-grid">
+            <div class="hud-module"><strong style="color: #fff;">Interactive Resume</strong><p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.25rem;">Downloadable &amp; viewable.</p></div>
+            <div class="hud-module"><strong style="color: #fff;">Case Study Portfolio</strong><p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.25rem;">Live preview links.</p></div>
+            <div class="hud-module"><strong style="color: #fff;">Network Profiles</strong><p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.25rem;">LinkedIn &amp; GitHub.</p></div>
+            <div class="hud-module"><strong style="color: #fff;">Direct Communication</strong><p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.25rem;">Verified inquiry endpoint.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 17 — WHY TJR TECH & 18. IDENTITY VISUAL
+         ========================================================================== -->
+    <section class="section-spacing" id="why-tjr" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">CORE PRINCIPLES</div>
+          <h2 class="section-title">Technology With a Human Perspective.</h2>
+        </div>
+
+        <div class="why-pro-grid reveal">
+          <div class="why-p-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">01</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">People First</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">The professional remains at the center of the experience.</p>
+          </div>
+          <div class="why-p-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">02</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Personalized</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Digital experiences structured around individual goals and identity.</p>
+          </div>
+          <div class="why-p-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">03</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Tech Driven</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Modern web technology enables richer professional experiences.</p>
+          </div>
+          <div class="why-p-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">04</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Design Conscious</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Visual design and information structure work together.</p>
+          </div>
+          <div class="why-p-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">05</div>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Built to Evolve</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Your digital presence can grow as your journey changes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 18: Full-Screen Identity Visual -->
+    <section class="identity-cinematic-section" aria-label="Identity Progression Sequence">
+      <div class="container reveal">
+        <div class="eyebrow" style="justify-content: center; margin-bottom: 1.5rem;">EXECUTIVE CLARITY</div>
+        <div class="identity-lead-line">
+          YOUR NAME &bull; <span>YOUR EXPERIENCE</span> &bull; YOUR WORK
+        </div>
+        <div class="identity-lead-line" style="font-size: clamp(1.8rem, 3.5vw, 3rem); color: var(--text-secondary);">
+          YOUR STORY &rarr; <span style="color: #fff;">YOUR DIGITAL PRESENCE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 19 — FAQ & 20. FINAL CTA & 21. BRAND STATEMENT
+         ========================================================================== -->
+    <section class="section-spacing faq-section" id="faq">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">TRANSPARENCY &amp; DETAILS</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion-wrap reveal">
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What is a professional digital presence?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>It is a structured online representation of your professional identity, which can include your experience, skills, projects, achievements, education, certifications, and contact information.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can TJR Tech build a personal professional website?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. TJR Tech's web development capabilities can be used to create personal websites and professional digital experiences.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I showcase my projects?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Projects can be presented with descriptions, roles, technologies, visuals, and other information supplied by you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I include my certifications and achievements?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Verified certifications and professional achievements can be included when the relevant information is provided.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can the website be updated later?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Professional websites can be maintained and updated as your experience, projects, skills, and career develop.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can the website work on mobile?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Responsive design can be used so the professional experience adapts across desktop, tablet, and mobile devices.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I use my own domain?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, where technically supported, a professional website can be connected to a domain owned by the professional.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Will a professional website guarantee a job or career opportunity?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. A digital presence can help communicate professional information, but TJR Tech does not guarantee employment, interviews, clients, business opportunities, or other specific outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 20: Final CTA -->
+    <section class="section-spacing cta-section" id="cta">
+      <div class="container">
+        <div class="cta-container reveal">
+          <div class="eyebrow" style="justify-content: center;">INITIATE BUILD</div>
+          <h2 class="section-title" style="margin-bottom: 1.25rem;">Your Experience Deserves a Place of Its Own.</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
+            Bring your experience, projects, skills, and professional story together in a digital experience built around you.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <button class="btn btn-primary open-pro-modal">
+              <span>Build My Digital Presence</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="/contact" class="btn btn-secondary">
+              <span>Talk to TJR Tech</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 21: Brand Closing Statement -->
+    <section class="brand-statement-section" aria-label="Brand Signature Closing">
+      <div class="container reveal">
+        <div class="statement-headline-triad">
+          <span>Your Experience.</span>
+          <span>Your Expertise.</span>
+          <span>Your Identity.</span>
+        </div>
+        <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 1rem auto 2rem auto;">
+          Make It Digital.
+        </p>
+        <div class="statement-brand-line">TJR TECH — Technology. Talent. Digital Growth.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 22 — FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">TJR TECH</div>
+          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
+          <p class="footer-desc">
+            A technology and professional services organization delivering integrated solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links-list">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/directors">Leadership</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links-list">
+            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
+            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+            <li><a href="/services/web-development">Web Development</a></li>
+            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <ul class="footer-links-list">
+            <li><a href="/solutions/for-businesses">For Businesses</a></li>
+            <li><a href="/solutions/for-consultants">For Consultants</a></li>
+            <li><a href="/solutions/for-professionals">For Professionals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Work</div>
+          <ul class="footer-links-list">
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/services/ads-digital-media#selected-work">Selected Work</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Professional Digital Intake Modal -->
+  <div class="modal-overlay" id="proModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+      <div class="eyebrow">DIGITAL PRESENCE INTAKE</div>
+      <h3 id="modalHeading" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Build My Digital Presence</h3>
+      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Tell us about your background, career milestones, and preferred digital presence format.
+      </p>
+
+      <form id="proForm" onsubmit="handleFormSubmission(event)">
+        <div class="form-group">
+          <label class="form-label" for="proName">Full Name</label>
+          <input class="form-input" type="text" id="proName" required placeholder="e.g. Jordan Hayes">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="proEmail">Email Address</label>
+          <input class="form-input" type="email" id="proEmail" required placeholder="jordan@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="proSpecialization">Professional Role / Title</label>
+          <input class="form-input" type="text" id="proSpecialization" required placeholder="e.g. Senior Product Designer / Enterprise Architect">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="presenceFormatSelect">Format Preference</label>
+          <select class="form-select" id="presenceFormatSelect" required>
+            <option value="" disabled selected>Select format scope</option>
+            <option value="portfolio">Professional Portfolio Case Study Site</option>
+            <option value="personal">Personal Domain Website</option>
+            <option value="profile">Interactive Executive Profile</option>
+            <option value="brand">Comprehensive Personal Brand Platform</option>
+            <option value="custom">Custom Professional Solution</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="proBrief">Key Goals &amp; Highlights</label>
+          <textarea class="form-textarea" id="proBrief" required placeholder="Outline your key projects, career goals, target audience, or desired timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>Submit Project Inquiry</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODULAR VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Dynamic Year
+      const yearHolder = document.getElementById('yearHolder');
+      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+
+      // 2. Navigation Scroll & Progress Bar
+      const header = document.getElementById('mainHeader');
+      const progressBar = document.getElementById('scrollProgress');
+
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        if (progressBar) progressBar.style.width = scrolled + '%';
+        if (winScroll > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // 3. Mobile Navigation Drawer
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileMenuDrawer');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobile() {
+        const isOpen = mobileDrawer.classList.toggle('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', toggleMobile);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('active')) toggleMobile();
+          });
+        });
+      }
+
+      // 4. Scroll Reveal Observer
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
+      // 5. Hero Professional Profile Node Canvas
+      (function initProHeroCanvas() {
+        const canvas = document.getElementById('proHeroCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let angle = 0;
+
+        function resize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          width = canvas.width = rect.width;
+          height = canvas.height = rect.height;
+        }
+
+        const nodes = [
+          { label: 'EXPERIENCE', offset: 0 },
+          { label: 'SKILLS', offset: (2 * Math.PI) / 8 },
+          { label: 'PROJECTS', offset: (4 * Math.PI) / 8 },
+          { label: 'ACHIEVEMENTS', offset: (6 * Math.PI) / 8 },
+          { label: 'EDUCATION', offset: (8 * Math.PI) / 8 },
+          { label: 'CERTIFICATIONS', offset: (10 * Math.PI) / 8 },
+          { label: 'PORTFOLIO', offset: (12 * Math.PI) / 8 },
+          { label: 'CONTACT', offset: (14 * Math.PI) / 8 }
+        ];
+
+        function render() {
+          ctx.clearRect(0, 0, width, height);
+
+          const cx = width / 2;
+          const cy = height / 2;
+          const radius = Math.min(width, height) * 0.38;
+
+          // Central Profile Core
+          ctx.beginPath();
+          ctx.arc(cx, cy, 32, 0, Math.PI * 2);
+          ctx.fillStyle = '#0c183d';
+          ctx.fill();
+          ctx.strokeStyle = '#2dd4bf';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          ctx.font = '10px Space Grotesk, monospace';
+          ctx.fillStyle = '#fff';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText('PROFESSIONAL', cx, cy - 6);
+          ctx.fillText('IDENTITY', cx, cy + 8);
+
+          // Connected Attribute Nodes
+          nodes.forEach(node => {
+            const rad = node.offset + angle;
+            const nx = cx + Math.cos(rad) * radius;
+            const ny = cy + Math.sin(rad) * radius;
+
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(nx, ny);
+            ctx.strokeStyle = 'rgba(45, 212, 191, 0.22)';
+            ctx.lineWidth = 1;
+            ctx.setLineDash([4, 4]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            ctx.beginPath();
+            ctx.arc(nx, ny, 16, 0, Math.PI * 2);
+            ctx.fillStyle = '#070f26';
+            ctx.fill();
+            ctx.strokeStyle = '#38bdf8';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            ctx.font = '9px Space Grotesk, monospace';
+            ctx.fillStyle = '#94a3b8';
+            const labelY = ny > cy ? ny + 24 : ny - 24;
+            ctx.fillText(node.label, nx, labelY);
+          });
+
+          angle += 0.002;
+          requestAnimationFrame(render);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        render();
+      })();
+
+      // 6. Device Viewport Scaler
+      const deviceButtons = document.querySelectorAll('.device-toggle-btn');
+      const proViewport = document.getElementById('proViewport');
+
+      deviceButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          deviceButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const width = btn.getAttribute('data-viewport');
+          if (proViewport) {
+            proViewport.style.maxWidth = width;
+          }
+        });
+      });
+
+      // 7. FAQ Accordion Interaction
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        const ans = item.querySelector('.faq-answer');
+
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(other => {
+            other.classList.remove('active');
+            other.querySelector('.faq-answer').style.maxHeight = null;
+            other.querySelector('.faq-question-btn').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            ans.style.maxHeight = ans.scrollHeight + 30 + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 8. Professional Digital Intake Modal Handlers
+      const proModal = document.getElementById('proModal');
+      const openModalButtons = document.querySelectorAll('.open-pro-modal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+
+      function openModal(e) {
+        if (e) e.preventDefault();
+        proModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        proModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (proModal) {
+        proModal.addEventListener('click', (e) => {
+          if (e.target === proModal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && proModal.classList.contains('active')) closeModal();
+      });
+
+      window.handleFormSubmission = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your details. A digital engineering lead from TJR Tech will review your career materials and follow up directly.');
+        closeModal();
+        e.target.reset();
+      };
+    })();
+  </script>
+</body>
+</html>

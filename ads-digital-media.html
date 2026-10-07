@@ -1,0 +1,2777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>Ads &amp; Digital Media Services | TJR Tech</title>
+  <meta name="description" content="TJR Tech delivers creative direction, video production, editing, motion graphics, visual effects, digital advertising, and modern media content for businesses and brands.">
+  <meta name="keywords" content="Video Production, Digital Media, Motion Graphics, Visual Effects, Creative Agency, Commercial Video, Digital Advertising, Short Form Video, TJR Tech">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://www.tjrtech.com/services/ads-digital-media">
+
+  <!-- Open Graph / Protocol -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tjrtech.com/services/ads-digital-media">
+  <meta property="og:title" content="Ads &amp; Digital Media Services | TJR Tech">
+  <meta property="og:description" content="Ideas That Move People. Creative Stories. Digital Experiences. Powerful Visual Communication.">
+  <meta property="og:site_name" content="TJR TECH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ads &amp; Digital Media Services | TJR Tech">
+  <meta name="twitter:description" content="Creative direction, commercial video production, motion graphics, and visual effects engineered with purposeful storytelling.">
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       01. DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-primary: #020617;        /* Near black void */
+      --bg-secondary: #070f26;      /* Deep midnight blue */
+      --bg-tertiary: #0c183d;       /* Dark graphite / slate */
+      --bg-surface: #0e1d47;
+      --bg-card: rgba(12, 24, 61, 0.45);
+      --bg-card-hover: rgba(18, 36, 88, 0.75);
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-accent: rgba(45, 212, 191, 0.35);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-accent: #2dd4bf;       /* Teal Accent */
+      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+
+      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+      --glow-teal: rgba(45, 212, 191, 0.14);
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+
+      --container-max: 1280px;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    /* Reset & Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background: var(--bg-primary);
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2.5px;
+      background: var(--accent-gradient);
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-spacing {
+      padding: 7.5rem 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 1.5px;
+      background: var(--text-accent);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text-primary);
+    }
+
+    .section-lead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #020617;
+      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .inline-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.2s ease;
+    }
+
+    .inline-link:hover {
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       02. GLOBAL HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
+      height: 86px;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      height: 72px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-accent);
+    }
+
+    .logo-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: -1rem;
+      background: rgba(7, 15, 38, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0;
+      min-width: 250px;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      list-style: none;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .dropdown-item a {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-item a:hover, .dropdown-item a.active-item {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-accent);
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-primary);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem 3rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-nav-list a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .mobile-submenu {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .mobile-submenu a {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       SECTION 01 — HERO
+       ========================================================================== */
+    .media-hero-section {
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 120px;
+      padding-bottom: 4.5rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title-main {
+      font-size: clamp(2.5rem, 4.8vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title-main span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-supporting-copy {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-secondary-copy {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .cinematic-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #mediaHeroCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ==========================================================================
+       SECTION 02 — INTRODUCTION
+       ========================================================================== */
+    .intro-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .narrative-stream {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .narrative-word {
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .narrative-word.active {
+      color: var(--text-accent);
+      text-shadow: 0 0 20px var(--glow-teal);
+    }
+
+    .narrative-arrow {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ==========================================================================
+       SECTION 03 — WHAT WE DO
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+      margin-top: 3.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.35s ease;
+    }
+
+    .service-card:hover {
+      border-color: var(--border-medium);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::before {
+      width: 100%;
+    }
+
+    .service-index {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SECTION 04 — CREATIVE PROCESS (HORIZONTAL TIMELINE)
+       ========================================================================== */
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+      margin-top: 3.5rem;
+    }
+
+    .process-step-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.75rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+
+    .process-step-box:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .step-index-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-title-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .step-bullet-list li::before {
+      content: "• ";
+      color: var(--text-accent);
+    }
+
+    /* ==========================================================================
+       SECTION 05 — CREATIVE CAPABILITIES
+       ========================================================================== */
+    .capabilities-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .capability-node {
+      background: rgba(12, 24, 61, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .capability-node:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .cap-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .cap-sub {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       SECTION 06 — SELECTED WORK & VIDEO GALLERY
+       ========================================================================== */
+    .gallery-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .gallery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .gallery-card:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-4px);
+    }
+
+    .gallery-card.span-7 { grid-column: span 7; }
+    .gallery-card.span-5 { grid-column: span 5; }
+    .gallery-card.span-6 { grid-column: span 6; }
+    .gallery-card.span-3 { grid-column: span 3; }
+
+    .video-thumb-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #01040f;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-thumb-frame.vertical {
+      aspect-ratio: 9 / 16;
+    }
+
+    .video-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery-card:hover .video-thumb-img {
+      transform: scale(1.05);
+    }
+
+    .play-trigger {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(2, 6, 23, 0.85);
+      border: 1.5px solid var(--text-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 0 20px var(--glow-teal);
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-card:hover .play-trigger {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--text-accent);
+      color: #020617;
+    }
+
+    .play-icon-svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      margin-left: 2px;
+    }
+
+    .gallery-info {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .gallery-cat {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+
+    .gallery-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ==========================================================================
+       SECTION 07 — SHORT-FORM CONTENT (9:16 CAROUSEL)
+       ========================================================================== */
+    .shorts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .short-phone-card {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .short-phone-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-6px);
+    }
+
+    .short-inner-screen {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: #01040f;
+      cursor: pointer;
+    }
+
+    .short-tag-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      background: rgba(2, 6, 23, 0.85);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.25rem 0.5rem;
+      color: var(--text-accent);
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       SECTION 08 — VIDEO PRODUCTION PIPELINE & 09. POST-PRODUCTION LAYERS
+       ========================================================================== */
+    .production-stepper {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0.75rem;
+      margin-top: 3.5rem;
+    }
+
+    .prod-step-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem 0.75rem;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .prod-step-pill:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .timeline-layers-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 3.5rem;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+    }
+
+    .timeline-track-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+    }
+
+    .track-name {
+      width: 100px;
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    .track-bar {
+      flex-grow: 1;
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(45, 212, 191, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .track-bar::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 70%;
+      background: var(--accent-gradient);
+    }
+
+    /* ==========================================================================
+       SECTION 10 — ADVERTISING & 11. CONTENT FORMATS & 12. CREATIVE TECH
+       ========================================================================== */
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 3.5rem;
+    }
+
+    .platform-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.25rem 2rem;
+      transition: var(--transition-smooth);
+    }
+
+    .platform-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .formats-stream {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 3.5rem;
+      font-family: var(--font-mono);
+      font-size: clamp(0.95rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .formats-stream span {
+      color: var(--text-accent);
+    }
+
+    .tech-wall-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 2.5rem;
+    }
+
+    .tech-wall-pill {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      padding: 0.55rem 1.1rem;
+      background: rgba(12, 24, 61, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       SECTION 13 — AGENCY DIRECTOR & 14. CREATIVE TEAM
+       ========================================================================== */
+    .director-editorial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 3.5rem;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3.5rem;
+    }
+
+    .director-portrait-ph {
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(135deg, #0c183d 0%, #020617 100%);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .director-monogram {
+      font-family: var(--font-mono);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .director-tagline-quote {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      border-left: 2px solid var(--text-accent);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .team-roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .team-role-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION 15 — WHO WE CREATE FOR & 16. WORKFLOW & 17. WHY TJR TECH
+       ========================================================================== */
+    .audiences-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .audience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2rem 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .audience-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    .workflow-strip {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.85rem;
+      margin-top: 3.5rem;
+    }
+
+    .workflow-node {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .workflow-node:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-4px);
+    }
+
+    .why-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    .why-unit {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .why-unit:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+    }
+
+    /* ==========================================================================
+       SECTION 18 — FEATURED WORK CTA & 19. FAQ ACCORDION
+       ========================================================================== */
+    .featured-work-banner {
+      background: linear-gradient(135deg, rgba(12, 24, 61, 0.7) 0%, rgba(7, 15, 38, 0.9) 100%);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 4rem 3rem;
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+
+    .faq-accordion-wrap {
+      max-width: 860px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item.active {
+      border-color: var(--border-medium);
+      background: rgba(14, 29, 71, 0.7);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+
+    .faq-indicator {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--text-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-indicator {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 1.75rem;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       SECTION 20 — FINAL CTA & 21. BRAND STATEMENT
+       ========================================================================== */
+    .cta-section {
+      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cta-container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .brand-statement-section {
+      padding: 6.5rem 0;
+      text-align: center;
+      background: #020617;
+    }
+
+    .statement-headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+
+    .statement-brand-line {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--text-accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       SECTION 22 — FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #01040f;
+      padding: 5.5rem 0 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      color: var(--text-accent);
+      font-family: var(--font-mono);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links-list a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--text-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* Lightbox Modal & Project Modal */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.94);
+      backdrop-filter: blur(16px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .lightbox-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .lightbox-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+    }
+
+    .lightbox-player-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-medium);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-player-box.vertical {
+      max-width: 440px;
+      aspect-ratio: 9 / 16;
+      margin: 0 auto;
+    }
+
+    .lightbox-player-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: -3.5rem;
+      right: 0;
+      color: var(--text-muted);
+      font-size: 1.75rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .lightbox-close-btn:hover {
+      color: #fff;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 580px;
+      padding: 2.5rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--text-accent);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    /* Scroll Trigger Animation Engine */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .services-grid,
+      .platforms-grid,
+      .team-roles-grid,
+      .audiences-grid,
+      .why-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-card.span-7,
+      .gallery-card.span-5,
+      .gallery-card.span-6,
+      .gallery-card.span-3 {
+        grid-column: span 6;
+      }
+      .shorts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .process-timeline,
+      .workflow-strip,
+      .production-stepper {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .intro-grid,
+      .director-editorial-card {
+        grid-template-columns: 1fr;
+      }
+      .nav-links, .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: flex;
+      }
+      .cinematic-canvas-wrap {
+        height: 360px;
+      }
+      .gallery-card.span-7,
+      .gallery-card.span-5,
+      .gallery-card.span-6,
+      .gallery-card.span-3 {
+        grid-column: span 12;
+      }
+      .shorts-grid {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 1.5rem;
+        gap: 1.25rem;
+        scroll-snap-type: x mandatory;
+      }
+      .short-phone-card {
+        min-width: 260px;
+        scroll-snap-align: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid,
+      .platforms-grid,
+      .team-roles-grid,
+      .audiences-grid,
+      .why-cards-grid,
+      .process-timeline,
+      .workflow-strip,
+      .production-stepper {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-spacing {
+        padding: 5rem 0;
+      }
+      .director-editorial-card {
+        padding: 2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
+        <div class="logo-mark">T</div>
+        <span class="logo-title">TJR TECH</span>
+      </a>
+
+      <nav aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="/services" class="nav-link active">
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
+              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
+              <li class="dropdown-item"><a href="/services/ads-digital-media" class="active-item">Ads &amp; Digital Media</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/solutions" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
+          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
+          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-secondary open-project-modal" style="padding: 0.65rem 1.25rem;">
+          <span>Start a Creative Project</span>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-link">Home</a></li>
+      <li><a href="/about" class="mobile-link">About Us</a></li>
+      <li>
+        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
+        <ul class="mobile-submenu">
+          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
+          <li><a href="/services/us-it-bench-sales" class="mobile-link">US IT Bench Sales</a></li>
+          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
+          <li><a href="/services/ads-digital-media" class="mobile-link">Ads &amp; Digital Media</a></li>
+        </ul>
+      </li>
+      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
+      <li><a href="/portfolio" class="mobile-link">Work</a></li>
+      <li><a href="/careers" class="mobile-link">Careers</a></li>
+      <li><a href="/insights" class="mobile-link">Insights</a></li>
+      <li><a href="/contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <button class="btn btn-primary open-project-modal" style="width: 100%;">Start a Creative Project</button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 01 — HERO
+         ========================================================================== -->
+    <section class="media-hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">TJR TECH / ADS &amp; DIGITAL MEDIA</div>
+          <h1 class="hero-title-main">
+            Ideas That <span>Move People.</span>
+          </h1>
+          <p class="hero-supporting-copy">
+            Creative Stories. Digital Experiences. Powerful Visual Communication.
+          </p>
+          <p class="hero-secondary-copy">
+            TJR Tech brings together creative direction, visual storytelling, digital media, advertising, video production, motion, and technology to create content designed to capture attention and communicate with purpose.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary open-project-modal">
+              <span>Start a Creative Project</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="#selected-work" class="btn btn-secondary">
+              <span>View Our Work</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="cinematic-canvas-wrap">
+          <canvas id="mediaHeroCanvas" aria-label="Abstract cinematic lens and timeline visualization"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02 — INTRODUCTION
+         ========================================================================== -->
+    <section class="section-spacing intro-section" id="intro">
+      <div class="container">
+        <div class="intro-grid reveal">
+          <div>
+            <div class="eyebrow">CREATIVE PHILOSOPHY</div>
+            <h2 class="section-title">Where Creativity Meets Technology.</h2>
+            <div class="narrative-stream">
+              <span class="narrative-word active">IDEA</span>
+              <span class="narrative-arrow">&rarr;</span>
+              <span class="narrative-word">STORY</span>
+              <span class="narrative-arrow">&rarr;</span>
+              <span class="narrative-word">VISUAL</span>
+              <span class="narrative-arrow">&rarr;</span>
+              <span class="narrative-word">IMPACT</span>
+            </div>
+          </div>
+
+          <div style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; display: flex; flex-direction: column; gap: 1.25rem;">
+            <p>
+              Modern brands need more than advertising. They need stories, visuals, experiences, and content that people can understand, remember, and engage with.
+            </p>
+            <p>
+              TJR Tech approaches digital media by bringing creative thinking and technology together — from concept development and production to post-production, visual effects, digital advertising, and content delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03 — WHAT WE DO
+         ========================================================================== -->
+    <section class="section-spacing" id="what-we-do">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">STUDIO PRACTICE AREAS</div>
+          <h2 class="section-title">An End-to-End Creative &amp; Digital Media Studio.</h2>
+          <p class="section-lead">A unified pipeline covering every stage of commercial media engineering and visual storytelling.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-index">01</span>
+            <h3 class="service-title">Creative Strategy</h3>
+            <p class="service-desc">Develop the creative direction, message, visual language, and content approach around the objective.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">02</span>
+            <h3 class="service-title">Concept Development</h3>
+            <p class="service-desc">Turn an idea, campaign objective, or business message into a clear, viable creative concept.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">03</span>
+            <h3 class="service-title">Script &amp; Storytelling</h3>
+            <p class="service-desc">Develop scripts, narratives, voice-over structures, and storyboards for visual communication.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">04</span>
+            <h3 class="service-title">Video Production</h3>
+            <p class="service-desc">Develop video content for campaigns, brands, organizations, products, and digital platforms.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">05</span>
+            <h3 class="service-title">Video Editing</h3>
+            <p class="service-desc">Transform raw footage into structured, engaging, polished, and rhythmically cohesive visual content.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">06</span>
+            <h3 class="service-title">Motion Graphics</h3>
+            <p class="service-desc">Create animated graphics, titles, transitions, explainers, and visual communication elements.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">07</span>
+            <h3 class="service-title">Visual Effects</h3>
+            <p class="service-desc">Use compositing, effects, digital environments, and visual enhancements where appropriate.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-index">08</span>
+            <h3 class="service-title">Digital Advertising</h3>
+            <p class="service-desc">Create visual advertising assets designed for digital campaigns and high-performing online distribution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04 — OUR CREATIVE PROCESS
+         ========================================================================== -->
+    <section class="section-spacing" id="process" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PRODUCTION PIPELINE</div>
+          <h2 class="section-title">From an Idea to a Finished Story.</h2>
+          <p class="section-lead">A structured six-stage progression ensuring narrative cohesion and technical polish.</p>
+        </div>
+
+        <div class="process-timeline reveal">
+          <div class="process-step-box">
+            <span class="step-index-label">01</span>
+            <h3 class="step-title-name">DISCOVER</h3>
+            <ul class="step-bullet-list">
+              <li>Brand</li>
+              <li>Audience</li>
+              <li>Objective</li>
+              <li>Message</li>
+              <li>Platform</li>
+            </ul>
+          </div>
+
+          <div class="process-step-box">
+            <span class="step-index-label">02</span>
+            <h3 class="step-title-name">CONCEPT</h3>
+            <ul class="step-bullet-list">
+              <li>Creative direction</li>
+              <li>Story</li>
+              <li>Visual concept</li>
+              <li>Mood</li>
+              <li>Format</li>
+            </ul>
+          </div>
+
+          <div class="process-step-box">
+            <span class="step-index-label">03</span>
+            <h3 class="step-title-name">PRE-PROD</h3>
+            <ul class="step-bullet-list">
+              <li>Script</li>
+              <li>Storyboard</li>
+              <li>Shot planning</li>
+              <li>Production needs</li>
+            </ul>
+          </div>
+
+          <div class="process-step-box">
+            <span class="step-index-label">04</span>
+            <h3 class="step-title-name">PRODUCTION</h3>
+            <ul class="step-bullet-list">
+              <li>Video</li>
+              <li>Photography</li>
+              <li>Interviews</li>
+              <li>Campaign assets</li>
+            </ul>
+          </div>
+
+          <div class="process-step-box">
+            <span class="step-index-label">05</span>
+            <h3 class="step-title-name">POST-PROD</h3>
+            <ul class="step-bullet-list">
+              <li>Editing</li>
+              <li>Color treatment</li>
+              <li>Sound design</li>
+              <li>Motion graphics</li>
+            </ul>
+          </div>
+
+          <div class="process-step-box" style="border-color: var(--border-accent);">
+            <span class="step-index-label" style="color: var(--text-accent-cyan);">06</span>
+            <h3 class="step-title-name">DELIVERY</h3>
+            <ul class="step-bullet-list">
+              <li>YouTube</li>
+              <li>Social media</li>
+              <li>Websites</li>
+              <li>Digital campaigns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05 — CREATIVE CAPABILITIES
+         ========================================================================== -->
+    <section class="section-spacing" id="capabilities">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">CAPABILITY SPECTRUM</div>
+          <h2 class="section-title">Built for Modern Visual Communication.</h2>
+        </div>
+
+        <div class="capabilities-matrix reveal">
+          <div class="capability-node"><div class="cap-name">Creative Direction</div><p class="cap-sub">Strategic vision and cohesive visual guidance.</p></div>
+          <div class="capability-node"><div class="cap-name">Storytelling</div><p class="cap-sub">Clear narrative structures that engage viewers.</p></div>
+          <div class="capability-node"><div class="cap-name">Video Production</div><p class="cap-sub">On-location and studio visual capture.</p></div>
+          <div class="capability-node"><div class="cap-name">Video Editing</div><p class="cap-sub">Pacing, visual rhythm, and editorial assembly.</p></div>
+          <div class="capability-node"><div class="cap-name">Motion Graphics</div><p class="cap-sub">Kinetic typography and informational graphics.</p></div>
+          <div class="capability-node"><div class="cap-name">Visual Effects</div><p class="cap-sub">Seamless compositing and digital environments.</p></div>
+          <div class="capability-node"><div class="cap-name">Digital Advertising</div><p class="cap-sub">Targeted campaign creative engineering.</p></div>
+          <div class="capability-node"><div class="cap-name">Social Content</div><p class="cap-sub">Format-specific assets optimized for engagement.</p></div>
+          <div class="capability-node"><div class="cap-name">Corporate Videos</div><p class="cap-sub">Brand overviews and executive profiles.</p></div>
+          <div class="capability-node"><div class="cap-name">Promotional Videos</div><p class="cap-sub">Compelling teasers and product launches.</p></div>
+          <div class="capability-node"><div class="cap-name">Product Videos</div><p class="cap-sub">Feature demonstrations and product cinema.</p></div>
+          <div class="capability-node"><div class="cap-name">Technology Videos</div><p class="cap-sub">Complex technical workflows made accessible.</p></div>
+          <div class="capability-node"><div class="cap-name">Explainer Videos</div><p class="cap-sub">Clear visual breakdowns of services and products.</p></div>
+          <div class="capability-node"><div class="cap-name">Short-Form Content</div><p class="cap-sub">High-impact 9:16 mobile storytelling.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06 — SELECTED WORK (VIDEO GALLERY)
+         ========================================================================== -->
+    <section class="section-spacing gallery-section" id="selected-work">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PORTFOLIO DEMONSTRATION</div>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-lead">Stories we've created. Ideas we've brought to life.</p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <!-- Video 01 -->
+          <div class="gallery-card span-7">
+            <div class="video-thumb-frame" data-vid="U9dea5OP42w" data-type="landscape" role="button" aria-label="Play Project 01 video">
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/U9dea5OP42w/hqdefault.jpg" alt="Project 01 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="gallery-info">
+              <div>
+                <span class="gallery-cat">Commercial Media</span>
+                <h3 class="gallery-title">PROJECT 01</h3>
+                <p class="gallery-desc">Full spectrum visual production highlighting narrative direction, dynamic camera pacing, and color grading.</p>
+              </div>
+              <button class="inline-link play-link-btn" data-vid="U9dea5OP42w" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Video 02 -->
+          <div class="gallery-card span-5">
+            <div class="video-thumb-frame" data-vid="RMOhxN2nn4w" data-type="landscape" role="button" aria-label="Play Project 02 video">
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/RMOhxN2nn4w/hqdefault.jpg" alt="Project 02 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="gallery-info">
+              <div>
+                <span class="gallery-cat">Brand Narrative</span>
+                <h3 class="gallery-title">PROJECT 02</h3>
+                <p class="gallery-desc">Editorial storytelling structured around focused character pacing, sound design, and atmospheric lighting.</p>
+              </div>
+              <button class="inline-link play-link-btn" data-vid="RMOhxN2nn4w" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Video 03 -->
+          <div class="gallery-card span-5">
+            <div class="video-thumb-frame" data-vid="E5hWPLW-JJw" data-type="landscape" role="button" aria-label="Play Project 03 video">
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/E5hWPLW-JJw/hqdefault.jpg" alt="Project 03 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="gallery-info">
+              <div>
+                <span class="gallery-cat">Promotional Production</span>
+                <h3 class="gallery-title">PROJECT 03</h3>
+                <p class="gallery-desc">Dynamic visual sequencing engineered for high audience retention across digital streaming channels.</p>
+              </div>
+              <button class="inline-link play-link-btn" data-vid="E5hWPLW-JJw" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Video 04 -->
+          <div class="gallery-card span-7">
+            <div class="video-thumb-frame" data-vid="OAo6PeYvj8s" data-type="landscape" role="button" aria-label="Play Project 04 video">
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/OAo6PeYvj8s/hqdefault.jpg" alt="Project 04 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div class="gallery-info">
+              <div>
+                <span class="gallery-cat">Digital Campaign</span>
+                <h3 class="gallery-title">PROJECT 04</h3>
+                <p class="gallery-desc">Comprehensive commercial video combining on-location cinematography with tailored motion graphics.</p>
+              </div>
+              <button class="inline-link play-link-btn" data-vid="OAo6PeYvj8s" data-type="landscape">Watch Project &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 07 — SHORT-FORM CONTENT (9:16)
+         ========================================================================== -->
+    <section class="section-spacing" id="short-form">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">VERTICAL CINEMA</div>
+          <h2 class="section-title">Built for the Attention Economy.</h2>
+          <p class="section-lead">High-retention, short-form storytelling engineered natively for YouTube Shorts and mobile digital distribution.</p>
+        </div>
+
+        <div class="shorts-grid reveal">
+          <!-- Short 01 -->
+          <div class="short-phone-card">
+            <div class="short-inner-screen" data-vid="dWP5LNV6LLI" data-type="vertical" role="button" aria-label="Play Short Form 01">
+              <span class="short-tag-badge">SHORT FORM 01</span>
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/dWP5LNV6LLI/hqdefault.jpg" alt="Short Form 01 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div style="padding: 1rem 0.5rem 0.5rem 0.5rem; text-align: center;">
+              <button class="inline-link play-link-btn" data-vid="dWP5LNV6LLI" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Short 02 -->
+          <div class="short-phone-card">
+            <div class="short-inner-screen" data-vid="Q2qLX9zTXUs" data-type="vertical" role="button" aria-label="Play Short Form 02">
+              <span class="short-tag-badge">SHORT FORM 02</span>
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/Q2qLX9zTXUs/hqdefault.jpg" alt="Short Form 02 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div style="padding: 1rem 0.5rem 0.5rem 0.5rem; text-align: center;">
+              <button class="inline-link play-link-btn" data-vid="Q2qLX9zTXUs" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Short 03 -->
+          <div class="short-phone-card">
+            <div class="short-inner-screen" data-vid="_HLdnOSh4tM" data-type="vertical" role="button" aria-label="Play Short Form 03">
+              <span class="short-tag-badge">SHORT FORM 03</span>
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/_HLdnOSh4tM/hqdefault.jpg" alt="Short Form 03 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div style="padding: 1rem 0.5rem 0.5rem 0.5rem; text-align: center;">
+              <button class="inline-link play-link-btn" data-vid="_HLdnOSh4tM" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Short 04 -->
+          <div class="short-phone-card">
+            <div class="short-inner-screen" data-vid="JaXnrG5Phmk" data-type="vertical" role="button" aria-label="Play Short Form 04">
+              <span class="short-tag-badge">SHORT FORM 04</span>
+              <img class="video-thumb-img" src="https://img.youtube.com/vi/JaXnrG5Phmk/hqdefault.jpg" alt="Short Form 04 thumbnail" loading="lazy">
+              <div class="play-trigger"><svg class="play-icon-svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+            </div>
+            <div style="padding: 1rem 0.5rem 0.5rem 0.5rem; text-align: center;">
+              <button class="inline-link play-link-btn" data-vid="JaXnrG5Phmk" data-type="vertical">Watch Short &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 08 — VIDEO PRODUCTION PIPELINE
+         ========================================================================== -->
+    <section class="section-spacing" id="video-production" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PHYSICAL &amp; DIGITAL CAPTURE</div>
+          <h2 class="section-title">From Camera to Final Cut.</h2>
+          <p class="section-lead">
+            Every production is shaped by the story, audience, platform, and intended outcome. The process can combine planning, production, editing, sound, graphics, and visual effects.
+          </p>
+        </div>
+
+        <div class="production-stepper reveal">
+          <div class="prod-step-pill"><span class="step-index-label">01</span><br><strong style="color: #fff; font-size: 0.8125rem;">CONCEPT</strong></div>
+          <div class="prod-step-pill"><span class="step-index-label">02</span><br><strong style="color: #fff; font-size: 0.8125rem;">SCRIPT</strong></div>
+          <div class="prod-step-pill"><span class="step-index-label">03</span><br><strong style="color: #fff; font-size: 0.8125rem;">CAMERA</strong></div>
+          <div class="prod-step-pill"><span class="step-index-label">04</span><br><strong style="color: #fff; font-size: 0.8125rem;">FOOTAGE</strong></div>
+          <div class="prod-step-pill"><span class="step-index-label">05</span><br><strong style="color: #fff; font-size: 0.8125rem;">EDIT</strong></div>
+          <div class="prod-step-pill"><span class="step-index-label">06</span><br><strong style="color: #fff; font-size: 0.8125rem;">COLOR</strong></div>
+          <div class="prod-step-pill"><span class="step-index-label">07</span><br><strong style="color: #fff; font-size: 0.8125rem;">SOUND</strong></div>
+          <div class="prod-step-pill" style="border-color: var(--border-accent);"><span class="step-index-label" style="color: var(--text-accent);">08</span><br><strong style="color: var(--text-accent); font-size: 0.8125rem;">FINAL CUT</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 09 — POST-PRODUCTION LAYERS
+         ========================================================================== -->
+    <section class="section-spacing" id="post-production">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">EDITORIAL CRAFT</div>
+          <h2 class="section-title">Where the Story Takes Shape.</h2>
+          <p class="section-lead">
+            Multitrack editing, precision color timing, audio sculpting, and motion design layered into a unified master.
+          </p>
+        </div>
+
+        <div class="timeline-layers-grid reveal">
+          <div class="timeline-track-row"><span class="track-name">VFX</span><div class="track-bar"></div></div>
+          <div class="timeline-track-row"><span class="track-name">GRAPHICS</span><div class="track-bar"></div></div>
+          <div class="timeline-track-row"><span class="track-name">COLOR</span><div class="track-bar"></div></div>
+          <div class="timeline-track-row"><span class="track-name">VIDEO</span><div class="track-bar"></div></div>
+          <div class="timeline-track-row"><span class="track-name">AUDIO</span><div class="track-bar"></div></div>
+          <div class="timeline-track-row"><span class="track-name">TEXT</span><div class="track-bar"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10 — ADVERTISING & 11. CONTENT FORMATS & 12. CREATIVE TECH
+         ========================================================================== -->
+    <section class="section-spacing" id="advertising" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">DISTRIBUTION ASSETS</div>
+          <h2 class="section-title">Creative Built for Distribution.</h2>
+          <p class="section-lead">
+            A strong creative idea needs the right format and delivery strategy. TJR Tech can develop visual content for digital advertising and online communication across multiple platforms.
+          </p>
+        </div>
+
+        <div class="platforms-grid reveal">
+          <div class="platform-card"><h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">YouTube</h3><p style="color: var(--text-secondary); font-size: 0.9rem;">Preroll, midroll, and dedicated brand cinema content.</p></div>
+          <div class="platform-card"><h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Social Media</h3><p style="color: var(--text-secondary); font-size: 0.9rem;">High-engagement feeds, stories, and algorithmic short-form clips.</p></div>
+          <div class="platform-card"><h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Websites</h3><p style="color: var(--text-secondary); font-size: 0.9rem;">High-definition hero background reels and embedded case study films.</p></div>
+          <div class="platform-card"><h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Digital Campaigns</h3><p style="color: var(--text-secondary); font-size: 0.9rem;">Multi-asset creative suites mapped across targeted digital funnels.</p></div>
+          <div class="platform-card"><h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Corporate Presentations</h3><p style="color: var(--text-secondary); font-size: 0.9rem;">Keynotes, executive video profiles, and annual conference reels.</p></div>
+          <div class="platform-card"><h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Promotional Channels</h3><p style="color: var(--text-secondary); font-size: 0.9rem;">Commercial spots tailored for direct outreach and brand communication.</p></div>
+        </div>
+
+        <!-- Section 11: Content Formats -->
+        <div class="section-header reveal" style="margin-top: 5.5rem; text-align: center;">
+          <div class="eyebrow" style="justify-content: center;">ADAPTIVE ASSET MULTIPLICATION</div>
+          <h2 class="section-title">One Idea. Multiple Formats.</h2>
+          <p class="section-lead" style="margin: 1rem auto 0 auto;">
+            A single creative concept can be adapted into multiple formats depending on platform, audience, and campaign requirements.
+          </p>
+        </div>
+
+        <div class="formats-stream reveal">
+          <div>ONE CREATIVE IDEA <span>&rarr;</span></div>
+          <div>LONG-FORM VIDEO <span>&rarr;</span></div>
+          <div>SHORT-FORM VIDEO <span>&rarr;</span></div>
+          <div>SOCIAL CUT <span>&rarr;</span></div>
+          <div>WEB VIDEO <span>&rarr;</span></div>
+          <div>ADVERTISEMENT <span>&rarr;</span></div>
+          <div style="color: var(--text-accent);">PROMOTIONAL ASSET</div>
+        </div>
+
+        <!-- Section 12: Creative Technology -->
+        <div class="section-header reveal" style="margin-top: 5.5rem;">
+          <div class="eyebrow">EXPANDED CAPABILITY</div>
+          <h2 class="section-title">Technology Behind the Creative.</h2>
+          <p class="section-lead">
+            Where appropriate, modern creative technologies and AI-assisted workflows can support ideation, production, experimentation, and content development.
+          </p>
+        </div>
+
+        <div class="tech-wall-pills reveal">
+          <span class="tech-wall-pill">Motion Design</span>
+          <span class="tech-wall-pill">3D Visualization</span>
+          <span class="tech-wall-pill">WebGL</span>
+          <span class="tech-wall-pill">Interactive Experiences</span>
+          <span class="tech-wall-pill">Digital Compositing</span>
+          <span class="tech-wall-pill">Animation</span>
+          <span class="tech-wall-pill">Visual Effects</span>
+          <span class="tech-wall-pill">AI-Assisted Creative Workflows</span>
+          <span class="tech-wall-pill">Digital Production</span>
+          <span class="tech-wall-pill">Content Optimization</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 13 — AGENCY DIRECTOR & 14. CREATIVE TEAM
+         ========================================================================== -->
+    <section class="section-spacing" id="leadership">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">EXECUTIVE GOVERNANCE</div>
+          <h2 class="section-title">Creative Direction &amp; Leadership</h2>
+          <p class="section-lead">Driven by Vision. Built Through Execution.</p>
+        </div>
+
+        <div class="director-editorial-card reveal">
+          <div class="director-portrait-ph">
+            <div class="director-monogram">JR</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Executive Portrait</div>
+          </div>
+
+          <div>
+            <div class="eyebrow">LEADERSHIP PROFILE</div>
+            <h3 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.25rem;">JOEL RUTHVIK</h3>
+            <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-accent); text-transform: uppercase; margin-bottom: 1.5rem;">
+              Director — Ads &amp; Digital Media
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+              The Director leads the creative and operational direction of the Ads &amp; Digital Media division, overseeing creative concepts, production planning, visual storytelling, post-production, digital content, and delivery.
+            </p>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
+              Responsible for overseeing the complete creative workflow — from concept development and production planning to execution, post-production, content delivery, and client coordination.
+            </p>
+
+            <blockquote class="director-tagline-quote">
+              Create with purpose. Execute with precision.
+            </blockquote>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+              <span class="tech-wall-pill" style="font-size: 0.75rem;">Creative Direction</span>
+              <span class="tech-wall-pill" style="font-size: 0.75rem;">Production Planning</span>
+              <span class="tech-wall-pill" style="font-size: 0.75rem;">Visual Storytelling</span>
+              <span class="tech-wall-pill" style="font-size: 0.75rem;">Team Coordination</span>
+              <span class="tech-wall-pill" style="font-size: 0.75rem;">Content Strategy</span>
+              <span class="tech-wall-pill" style="font-size: 0.75rem;">Post-Production Oversight</span>
+            </div>
+
+            <button class="btn btn-primary open-project-modal">Work With Our Creative Team</button>
+          </div>
+        </div>
+
+        <!-- Section 14: Creative Team -->
+        <div class="section-header reveal" style="margin-top: 5.5rem;">
+          <div class="eyebrow">COLLABORATIVE ROLES</div>
+          <h2 class="section-title">Creative Thinking. Technical Execution.</h2>
+        </div>
+
+        <div class="team-roles-grid reveal">
+          <div class="team-role-card"><strong style="color: #fff;">Creative Direction</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Holistic visual and thematic oversight.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Script &amp; Story</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Narrative development and screenwriting.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Production</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Logistics, camera rigging, and on-set operations.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Cinematography</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Framing, lighting design, and camera movement.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Editing</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Visual rhythm, pacing, and editorial structure.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Motion Graphics</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Dynamic titles, UI animation, and vector graphics.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Visual Effects</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Compositing, cleanup, and CG enhancement.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Digital Media</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Multi-platform format transcoding and optimization.</p></div>
+          <div class="team-role-card"><strong style="color: #fff;">Client Coordination</strong><p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Clear review milestones and stakeholder alignment.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 15 — WHO WE CREATE FOR & 16. WORKFLOW & 17. WHY TJR TECH
+         ========================================================================== -->
+    <section class="section-spacing" id="audiences" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PARTNERS &amp; STAKEHOLDERS</div>
+          <h2 class="section-title">Built for Brands, Businesses &amp; Ideas.</h2>
+          <p class="section-lead">Creative requirements vary from project to project. The approach begins by understanding the message, audience, platform, and desired outcome.</p>
+        </div>
+
+        <div class="audiences-grid reveal">
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Businesses</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Commercial promotions and company storytelling.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Organizations</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Mission films and institutional documentation.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Tech Companies</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Product architecture and software explainer cinema.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Professional Brands</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Executive presence and personal brand documentation.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Products</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Cinematic feature launches and promotional reels.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Campaigns</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Multi-phase digital ad and marketing creative suites.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Events</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">High-energy highlights and keynote video assets.</p></div>
+          <div class="audience-card"><h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.4rem;">Digital Creators</h3><p style="color: var(--text-secondary); font-size: 0.85rem;">Premium visual packaging and short-form acceleration.</p></div>
+        </div>
+
+        <!-- Section 16: Project Workflow -->
+        <div class="section-header reveal" style="margin-top: 5.5rem;">
+          <div class="eyebrow">ENGAGEMENT LIFECYCLE</div>
+          <h2 class="section-title">From Brief to Broadcast.</h2>
+        </div>
+
+        <div class="workflow-strip reveal">
+          <div class="workflow-node"><span class="step-index-label">01</span><br><strong style="color: #fff;">BRIEF</strong></div>
+          <div class="workflow-node"><span class="step-index-label">02</span><br><strong style="color: #fff;">CONCEPT</strong></div>
+          <div class="workflow-node"><span class="step-index-label">03</span><br><strong style="color: #fff;">SCRIPT</strong></div>
+          <div class="workflow-node"><span class="step-index-label">04</span><br><strong style="color: #fff;">PRODUCTION</strong></div>
+          <div class="workflow-node"><span class="step-index-label">05</span><br><strong style="color: #fff;">EDIT</strong></div>
+          <div class="workflow-node"><span class="step-index-label">06</span><br><strong style="color: #fff;">REVIEW</strong></div>
+          <div class="workflow-node" style="border-color: var(--border-accent);"><span class="step-index-label" style="color: var(--text-accent);">07</span><br><strong style="color: var(--text-accent);">DELIVERY</strong></div>
+        </div>
+
+        <!-- Section 17: Why TJR Tech -->
+        <div class="section-header reveal" style="margin-top: 5.5rem;">
+          <div class="eyebrow">OUR ADVANTAGE</div>
+          <h2 class="section-title">Creative Thinking With Technology at the Core.</h2>
+        </div>
+
+        <div class="why-cards-grid reveal">
+          <div class="why-unit"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Story First</h3><p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Every strong visual begins with a clear idea.</p></div>
+          <div class="why-unit"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Technology Driven</h3><p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Modern creative tools can expand what is possible.</p></div>
+          <div class="why-unit"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Detail Oriented</h3><p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Small visual and editorial decisions shape the final experience.</p></div>
+          <div class="why-unit"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Platform Aware</h3><p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Content can be designed around the environment where it will be consumed.</p></div>
+          <div class="why-unit"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Execution Focused</h3><p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Creative ideas become valuable when they are executed effectively.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 18 — FEATURED WORK CTA & 19. FAQ ACCORDION
+         ========================================================================== -->
+    <section class="section-spacing" id="faq">
+      <div class="container">
+        <div class="featured-work-banner reveal">
+          <div class="eyebrow" style="justify-content: center;">SHOWCASE EXPLORATION</div>
+          <h2 class="section-title" style="margin-bottom: 1rem;">Seen Enough?</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">Explore the work. Experience the story.</p>
+          <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <a href="#selected-work" class="btn btn-secondary">View Selected Work</a>
+            <button class="btn btn-primary open-project-modal">Start a Project</button>
+          </div>
+        </div>
+
+        <!-- Section 19: FAQ -->
+        <div class="section-header reveal" style="text-align: center; margin: 5.5rem auto 3.5rem auto;">
+          <div class="eyebrow" style="justify-content: center;">CLARITY &amp; INFORMATION</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion-wrap reveal">
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What kind of media content can TJR Tech create?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>TJR Tech can support creative concepts, video production, editing, motion graphics, visual effects, digital advertising content, social content, promotional videos, and other digital media requirements based on project scope.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you create short-form videos?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Short-form content can be developed for digital and social platforms depending on the project requirements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you handle a complete video project?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Projects can be structured across concept development, scripting, production, editing, graphics, visual effects, and final delivery depending on scope.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you edit existing footage?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Existing footage can be reviewed and edited into a final video or adapted into different formats where technically appropriate.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you create advertising creatives?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Visual assets and video content can be developed for digital advertising campaigns and promotional communication.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can you create content for YouTube and social media?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Content can be formatted and adapted for different digital platforms and content requirements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Do you guarantee advertising results?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Campaign performance depends on creative quality, audience, targeting, platform behavior, budget, market conditions, and other factors. TJR Tech does not guarantee specific advertising outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 20 — FINAL CTA & 21. BRAND STATEMENT
+         ========================================================================== -->
+    <section class="section-spacing cta-section" id="cta">
+      <div class="container">
+        <div class="cta-container reveal">
+          <div class="eyebrow" style="justify-content: center;">COMMISSION PRODUCTION</div>
+          <h2 class="section-title" style="margin-bottom: 1.25rem;">Have an Idea Worth Showing?</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
+            Bring us the idea. We'll help turn it into a visual experience.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <button class="btn btn-primary open-project-modal">
+              <span>Start a Creative Project</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="/contact" class="btn btn-secondary">
+              <span>Contact TJR Tech</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-statement-section" aria-label="Brand Signature Closing">
+      <div class="container reveal">
+        <div class="statement-headline">
+          Stories create attention. <br>
+          Experiences create connection.
+        </div>
+        <div class="statement-brand-line">
+          TJR TECH — Technology. Talent. Digital Growth.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 22 — FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">TJR TECH</div>
+          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
+          <p class="footer-desc">
+            A technology and professional services organization delivering solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links-list">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/directors">Leadership</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links-list">
+            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
+            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
+            <li><a href="/services/web-development">Web Development</a></li>
+            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Work</div>
+          <ul class="footer-links-list">
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="#selected-work">Selected Work</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Resources</div>
+          <ul class="footer-links-list">
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       VIDEO LIGHTBOX MODAL (LAZY-LOADED ON-DEMAND PLAYER)
+       ========================================================================== -->
+  <div class="lightbox-overlay" id="videoLightbox" role="dialog" aria-modal="true" aria-label="Video Player Lightbox">
+    <div class="lightbox-wrapper">
+      <button class="lightbox-close-btn" id="closeLightboxBtn" aria-label="Close video player">&times;</button>
+      <div class="lightbox-player-box" id="lightboxPlayerContainer">
+        <!-- iframe dynamically injected here to prevent preloading overhead -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Creative Project Inquiry Modal -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+      <div class="eyebrow">CREATIVE BRIEF</div>
+      <h3 id="modalHeading" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Start a Creative Project</h3>
+      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Describe your campaign, target audience, format preferences, and production objectives.
+      </p>
+
+      <form id="projectForm" onsubmit="handleFormSubmission(event)">
+        <div class="form-group">
+          <label class="form-label" for="clientName">Full Name / Organization</label>
+          <input class="form-input" type="text" id="clientName" required placeholder="e.g. Apex Dynamics / Morgan Ellis">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="clientEmail">Email Address</label>
+          <input class="form-input" type="email" id="clientEmail" required placeholder="morgan@apexdynamics.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="mediaFormatSelect">Media Discipline</label>
+          <select class="form-select" id="mediaFormatSelect" required>
+            <option value="" disabled selected>Select production scope</option>
+            <option value="commercial">Commercial Video Production</option>
+            <option value="brand">Brand Narrative / Corporate Film</option>
+            <option value="shorts">Short-Form Content / Reels</option>
+            <option value="post">Post-Production / Editing &amp; VFX</option>
+            <option value="motion">Motion Graphics &amp; 3D</option>
+            <option value="ads">Digital Campaign Creatives</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="projectBrief">Project Outline</label>
+          <textarea class="form-textarea" id="projectBrief" required placeholder="Message, creative tone, delivery timeline, target platforms..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>Transmit Creative Brief</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODULAR VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Dynamic Year
+      const yearHolder = document.getElementById('yearHolder');
+      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+
+      // 2. Navigation Scroll & Progress Bar
+      const header = document.getElementById('mainHeader');
+      const progressBar = document.getElementById('scrollProgress');
+
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        if (progressBar) progressBar.style.width = scrolled + '%';
+        if (winScroll > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // 3. Mobile Navigation Drawer
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileMenuDrawer');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobile() {
+        const isOpen = mobileDrawer.classList.toggle('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', toggleMobile);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('active')) toggleMobile();
+          });
+        });
+      }
+
+      // 4. Scroll Reveal Observer
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
+      // 5. Hero Cinematic Lens Canvas (Abstract aperture rings, crosshairs & timeline lines)
+      (function initCinematicCanvas() {
+        const canvas = document.getElementById('mediaHeroCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let angle = 0;
+
+        function resize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          width = canvas.width = rect.width;
+          height = canvas.height = rect.height;
+        }
+
+        function render() {
+          ctx.clearRect(0, 0, width, height);
+
+          const cx = width / 2;
+          const cy = height / 2;
+          const maxR = Math.min(width, height) * 0.42;
+
+          ctx.save();
+          ctx.translate(cx, cy);
+
+          // Rotating outer aperture ring
+          ctx.beginPath();
+          ctx.arc(0, 0, maxR, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(45, 212, 191, 0.25)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([8, 12]);
+          ctx.stroke();
+
+          // Second counter-rotating ring
+          ctx.beginPath();
+          ctx.arc(0, 0, maxR * 0.75, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
+          ctx.lineWidth = 1.2;
+          ctx.setLineDash([4, 8]);
+          ctx.stroke();
+
+          // Inner solid target circle
+          ctx.beginPath();
+          ctx.arc(0, 0, maxR * 0.45, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([]);
+          ctx.stroke();
+
+          // Reticle crosshair ticks
+          for (let i = 0; i < 12; i++) {
+            const rad = (i * Math.PI) / 6 + angle;
+            const x1 = Math.cos(rad) * (maxR - 10);
+            const y1 = Math.sin(rad) * (maxR - 10);
+            const x2 = Math.cos(rad) * (maxR + 5);
+            const y2 = Math.sin(rad) * (maxR + 5);
+
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = 'rgba(45, 212, 191, 0.45)';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          }
+
+          // Center recording dot
+          ctx.beginPath();
+          ctx.arc(0, 0, 5, 0, Math.PI * 2);
+          ctx.fillStyle = '#2dd4bf';
+          ctx.shadowColor = '#2dd4bf';
+          ctx.shadowBlur = 12;
+          ctx.fill();
+
+          ctx.restore();
+
+          angle += 0.003;
+          requestAnimationFrame(render);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        render();
+      })();
+
+      // 6. Video Lightbox Player System (Lazy loading on demand)
+      const lightbox = document.getElementById('videoLightbox');
+      const playerContainer = document.getElementById('lightboxPlayerContainer');
+      const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+
+      function openVideoPlayer(videoId, type) {
+        if (!videoId) return;
+        playerContainer.innerHTML = ''; // clear any active iframe
+
+        if (type === 'vertical') {
+          playerContainer.classList.add('vertical');
+        } else {
+          playerContainer.classList.remove('vertical');
+        }
+
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        playerContainer.appendChild(iframe);
+
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeVideoPlayer() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          playerContainer.innerHTML = '';
+        }, 350);
+      }
+
+      // Attach triggers for thumbnail cards and text buttons
+      document.querySelectorAll('[data-vid]').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const vidId = trigger.getAttribute('data-vid');
+          const vidType = trigger.getAttribute('data-type') || 'landscape';
+          openVideoPlayer(vidId, vidType);
+        });
+      });
+
+      closeLightboxBtn.addEventListener('click', closeVideoPlayer);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeVideoPlayer();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeVideoPlayer();
+        }
+      });
+
+      // 7. FAQ Accordion Interaction
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        const ans = item.querySelector('.faq-answer');
+
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(other => {
+            other.classList.remove('active');
+            other.querySelector('.faq-answer').style.maxHeight = null;
+            other.querySelector('.faq-question-btn').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            ans.style.maxHeight = ans.scrollHeight + 30 + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 8. Project Inquiry Modal Handlers
+      const projectModal = document.getElementById('projectModal');
+      const openModalButtons = document.querySelectorAll('.open-project-modal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+
+      function openModal(e) {
+        if (e) e.preventDefault();
+        projectModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        projectModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (projectModal) {
+        projectModal.addEventListener('click', (e) => {
+          if (e.target === projectModal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && projectModal.classList.contains('active')) closeModal();
+      });
+
+      window.handleFormSubmission = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your creative brief. A director from TJR Tech Ads & Digital Media will review your project parameters and follow up directly.');
+        closeModal();
+        e.target.reset();
+      };
+    })();
+  </script>
+</body>
+</html>
