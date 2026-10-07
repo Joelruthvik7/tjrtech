@@ -3,66 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TJR TECH — Digital Technology Ecosystem • Engineering • Talent • Media</title>
+  <meta name="description" content="TJR Tech is an advanced digital technology organization operating across IT Consulting, Software & Web Engineering, US IT Staffing, US IT Bench Sales, and Digital Media.">
+  <meta name="theme-color" content="#01040d">
 
-  <!-- SEO Metadata -->
-  <title>About TJR Tech | Technology, Talent &amp; Digital Solutions</title>
-  <meta name="description" content="Learn about TJR Tech, a technology and professional services company focused on US IT staffing, consultant services, web development, and digital media solutions.">
-  <meta name="keywords" content="About TJR Tech, Technology Organization, US IT Staffing, IT Consultant Services, Web Development, Digital Media, Leadership">
-  <meta name="theme-color" content="#05070A">
-  <link rel="canonical" href="https://www.tjrtech.com/about">
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tjrtech.com/about">
-  <meta property="og:title" content="About TJR Tech | Technology, Talent &amp; Digital Solutions">
-  <meta property="og:description" content="More Than Technology. A Company Built Around People. Discover our story, mission, approach, and leadership.">
-  <meta property="og:site_name" content="TJR TECH">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About TJR Tech | Technology, Talent &amp; Digital Solutions">
-  <meta name="twitter:description" content="Building opportunities through people, technology, and disciplined digital innovation.">
-
-  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Typography: Space Grotesk & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       01. DESIGN SYSTEM & CSS VARIABLES
+       01. ADVANCED DESIGN SYSTEM — ROYAL & ELECTRIC BLUE LIVING UNIVERSE
        ========================================================================== */
     :root {
-      --bg-primary: #05070A;        /* Deep void black */
-      --bg-secondary: #0B0F14;      /* Graphite Black */
-      --bg-tertiary: #111820;       /* Dark Steel / Graphite */
-      --bg-surface: #1A222B;
-      --bg-card: rgba(17, 24, 32, 0.65);
-      --bg-card-hover: rgba(26, 34, 43, 0.85);
+      --bg-void: #01040d;
+      --bg-midnight: #020617;
+      --bg-navy-deep: #050b1e;
+      --bg-navy-surface: #0a1432;
+      --bg-card: rgba(6, 14, 38, 0.76);
+      --bg-card-hover: rgba(14, 28, 70, 0.92);
 
+      --electric-blue: #3b82f6;
+      --bright-blue: #2563eb;
+      --royal-blue: #1d4ed8;
+      --deep-cobalt: #1e40af;
+      --ice-blue: #60a5fa;
+      --cyan-luminescence: #93c5fd;
+      --pure-white: #ffffff;
+      --off-white: #f8fafc;
+      --text-muted: #64748b;
+      --text-secondary: #94a3b8;
+
+      --blue-gradient: linear-gradient(135deg, #60a5fa 0%, #2563eb 50%, #1d4ed8 100%);
+      --surface-gradient: linear-gradient(180deg, rgba(30, 64, 175, 0.12) 0%, rgba(2, 6, 23, 0.4) 100%);
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-medium: rgba(255, 255, 255, 0.16);
-      --border-accent: rgba(174, 183, 191, 0.35);
-
-      --text-primary: #FFFFFF;
-      --text-secondary: #AEB7BF;
-      --text-muted: #66737F;
-      --text-accent: #D5D9DD;       /* Metallic Light Silver */
-      --text-accent-cyan: #F2F4F5;  /* Silver White Accent */
-
-      --accent-gradient: linear-gradient(135deg, #AEB7BF 0%, #FFFFFF 100%);
-      --glow-teal: rgba(213, 217, 221, 0.15);
+      --border-glow: rgba(59, 130, 246, 0.3);
+      --border-bright: rgba(96, 165, 250, 0.6);
 
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-mono: 'Space Grotesk', monospace;
 
-      --container-max: 1280px;
-      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 14px;
+      --radius-xs: 4px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --container-max: 1340px;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: all 0.4s var(--ease-out-expo);
     }
 
-    /* CSS Reset */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -71,30 +61,333 @@
 
     html {
       scroll-behavior: smooth;
+      background-color: var(--bg-void);
+      color: var(--off-white);
       font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
     }
 
     body {
       font-family: var(--font-sans);
       line-height: 1.65;
+      background: var(--bg-void);
+      overflow-x: hidden;
+      position: relative;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      background: var(--bg-primary);
     }
 
-    /* Scroll Progress Indicator */
+    /* System Atmospheric Lighting Modes (Controlled by Local Time) */
+    body.time-morning { --bg-void: #010614; --bg-midnight: #030a21; }
+    body.time-day { --bg-void: #020718; --bg-midnight: #040d2a; }
+    body.time-evening { --bg-void: #010411; --bg-midnight: #02081d; }
+    body.time-night { --bg-void: #00030a; --bg-midnight: #010514; }
+
+    /* Custom Tech Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-void); }
+    ::-webkit-scrollbar-thumb { background: #13244d; border-radius: 4px; border: 1px solid var(--border-glow); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--bright-blue); }
+
+    /* Living Perspective Tech Grid */
+    .tech-grid-stage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background-image: 
+        linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+      background-size: 54px 54px;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      opacity: 0.8;
+      transition: opacity 0.5s ease;
+    }
+
+    .tech-grid-scanline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.035) 50%, transparent 100%);
+      background-size: 100% 280px;
+      animation: scanGrid 12s linear infinite;
+    }
+
+    @keyframes scanGrid {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    /* Ambient Cursor Spotlight */
+    #ambientSpotlight {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 580px;
+      height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.14) 0%, rgba(29, 78, 216, 0.04) 40%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      will-change: transform;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Precision Dual-Cursor System */
+    #cursorDot, #cursorRing {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      will-change: transform, width, height, background;
+      transition: opacity 0.2s ease;
+    }
+
+    #cursorDot {
+      width: 6px;
+      height: 6px;
+      background: #ffffff;
+      box-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6;
+    }
+
+    #cursorRing {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(96, 165, 250, 0.6);
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.25);
+      transition: width 0.25s var(--ease-out-expo), height 0.25s var(--ease-out-expo), border-color 0.25s ease, background-color 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #cursorRing.hover-active {
+      width: 58px;
+      height: 58px;
+      border-color: #ffffff;
+      background: rgba(37, 99, 235, 0.25);
+      backdrop-filter: blur(2px);
+    }
+
+    #cursorLabel {
+      font-family: var(--font-mono);
+      font-size: 8px;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+      font-weight: 700;
+      opacity: 0;
+      transform: scale(0.6);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    #cursorRing.hover-active #cursorLabel {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Scroll Journey Progress Bar */
     #scrollProgress {
       position: fixed;
       top: 0;
       left: 0;
       width: 0%;
-      height: 2.5px;
-      background: var(--accent-gradient);
-      z-index: 10000;
+      height: 3px;
+      background: linear-gradient(90deg, #1d4ed8, #3b82f6, #93c5fd);
+      z-index: 10001;
+      box-shadow: 0 0 12px #60a5fa;
       transition: width 0.1s linear;
+    }
+
+    /* ==========================================================================
+       02. CINEMATIC BOOT-UP SYSTEM (0.8 - 1.4s)
+       ========================================================================== */
+    #bootupOverlay {
+      position: fixed;
+      inset: 0;
+      background: #010309;
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      transition: opacity 0.5s cubic-bezier(0.85, 0, 0.15, 1), visibility 0.5s;
+    }
+
+    #bootupOverlay.booted {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .boot-matrix-card {
+      width: 90%;
+      max-width: 520px;
+      background: rgba(4, 11, 31, 0.85);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-sm);
+      padding: 2.25rem;
+      box-shadow: 0 0 50px rgba(29, 78, 216, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .boot-matrix-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--blue-gradient);
+    }
+
+    .boot-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.75rem;
+    }
+
+    .boot-logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+    }
+
+    .boot-status-pill {
+      font-size: 0.7rem;
+      color: var(--ice-blue);
+      letter-spacing: 0.15em;
+    }
+
+    .boot-terminal-log {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      min-height: 120px;
+    }
+
+    .boot-line {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .boot-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .boot-line .val {
+      color: var(--ice-blue);
+      font-weight: 600;
+    }
+
+    .boot-progress-bar-wrap {
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin-top: 1.5rem;
+      overflow: hidden;
+    }
+
+    .boot-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: var(--blue-gradient);
+      box-shadow: 0 0 10px #60a5fa;
+      transition: width 0.1s linear;
+    }
+
+    /* Ambient System Broadcast Toast */
+    #ambientBroadcast {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      z-index: 1000;
+      background: rgba(3, 9, 26, 0.9);
+      border: 1px solid var(--border-glow);
+      backdrop-filter: blur(14px);
+      border-radius: var(--radius-xs);
+      padding: 0.55rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 0.5s var(--ease-out-expo), opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    #ambientBroadcast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .ambient-dot-pulse {
+      width: 7px;
+      height: 7px;
+      background: var(--ice-blue);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--ice-blue);
+      animation: ambientPulse 1.8s infinite;
+    }
+
+    @keyframes ambientPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.8); }
+    }
+
+    /* ==========================================================================
+       03. SITE HEADER & IMMERSIVE MEGA-SYSTEM NAV
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 84px;
+      z-index: 1000;
+      background: rgba(1, 4, 13, 0.8);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: height 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      height: 72px;
+      background: rgba(1, 4, 13, 0.94);
+      border-bottom-color: var(--border-glow);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
     }
 
     .container {
@@ -102,325 +395,527 @@
       max-width: var(--container-max);
       margin: 0 auto;
       padding: 0 2rem;
-    }
-
-    .section-spacing {
-      padding: 7.5rem 0;
       position: relative;
-    }
-
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-accent);
-      margin-bottom: 0.85rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 12px;
-      height: 1.5px;
-      background: var(--text-accent);
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 3.5vw, 3.25rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      color: var(--text-primary);
-    }
-
-    .section-lead {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 680px;
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 0.95rem 1.85rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      border-radius: var(--radius-sm);
-      transition: var(--transition-smooth);
-      cursor: pointer;
-      text-decoration: none;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--accent-gradient);
-      color: #05070A;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 6px 26px rgba(213, 217, 221, 0.25);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-primary);
-      border-color: var(--border-medium);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .inline-link {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-accent);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: gap 0.2s ease;
-    }
-
-    .inline-link:hover {
-      gap: 0.75rem;
-    }
-
-    /* ==========================================================================
-       02. GLOBAL HEADER & NAVIGATION
-       ========================================================================== */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: 1px solid transparent;
-      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
-      height: 86px;
-      display: flex;
-      align-items: center;
-    }
-
-    .site-header.scrolled {
-      background: rgba(5, 7, 10, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      height: 72px;
+      z-index: 2;
     }
 
     .nav-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.85rem;
       text-decoration: none;
     }
 
     .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #0a173e 0%, #1d4ed8 100%);
+      border: 1px solid var(--ice-blue);
+      border-radius: var(--radius-xs);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text-accent);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #ffffff;
+      box-shadow: 0 0 18px rgba(59, 130, 246, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: translateX(-100%);
+      animation: logoSweep 6s infinite;
+    }
+
+    @keyframes logoSweep {
+      20%, 100% { transform: translateX(100%); }
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
     }
 
     .logo-title {
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
+      letter-spacing: 0.08em;
+      color: #ffffff;
       line-height: 1;
+    }
+
+    .logo-subtitle {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ice-blue);
+      margin-top: 0.25rem;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.75rem;
       list-style: none;
+      height: 84px;
     }
 
     .nav-item {
       position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
 
     .nav-link {
+      font-family: var(--font-mono);
       font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.04em;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      transition: color 0.2s ease;
+      color: var(--text-secondary);
+      transition: color 0.25s ease;
       display: flex;
       align-items: center;
       gap: 0.35rem;
       padding: 0.5rem 0;
+      position: relative;
     }
 
     .nav-link:hover, .nav-link.active {
-      color: var(--text-primary);
+      color: #ffffff;
     }
 
     .nav-link.active::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 22px;
       left: 0;
       width: 100%;
       height: 2px;
-      background: var(--text-accent);
+      background: var(--ice-blue);
+      box-shadow: 0 0 10px var(--ice-blue);
     }
 
-    .dropdown-menu {
+    /* Living Interactive Mega Panels */
+    .mega-menu-panel {
       position: absolute;
-      top: calc(100% + 8px);
-      left: -1rem;
-      background: rgba(11, 15, 20, 0.98);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 0.75rem 0;
-      min-width: 250px;
+      top: calc(100% - 2px);
+      left: 50%;
+      transform: translateX(-50%) translateY(14px);
+      background: rgba(3, 9, 27, 0.98);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-sm);
       opacity: 0;
-      transform: translateY(10px);
       pointer-events: none;
-      transition: all 0.25s ease;
-      list-style: none;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      transition: opacity 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(37, 99, 235, 0.2);
+      z-index: 1000;
+      overflow: hidden;
     }
 
-    .nav-item:hover .dropdown-menu {
+    .nav-item:hover .mega-menu-panel {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(-50%) translateY(0);
       pointer-events: all;
     }
 
-    .dropdown-item a {
-      display: block;
-      padding: 0.65rem 1.25rem;
+    .mega-services-grid {
+      width: 780px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+    }
+
+    .mega-solutions-grid {
+      width: 700px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+    }
+
+    .mega-left-sidebar {
+      background: rgba(6, 14, 40, 0.6);
+      border-right: 1px solid var(--border-subtle);
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .mega-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ice-blue);
+    }
+
+    .mega-hero-heading {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-top: 0.5rem;
+    }
+
+    .mega-dynamic-preview-box {
+      margin-top: 1.5rem;
+      padding: 0.85rem;
+      background: rgba(2, 6, 23, 0.75);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xs);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      min-height: 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: border-color 0.3s ease;
+    }
+
+    .mega-right-items {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .mega-entry {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      padding: 1rem 1.15rem;
+      background: rgba(8, 18, 48, 0.4);
+      border: 1px solid transparent;
+      border-radius: var(--radius-xs);
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .mega-entry:hover {
+      background: rgba(29, 78, 216, 0.22);
+      border-color: var(--border-bright);
+      transform: translateX(5px);
+    }
+
+    .mega-num-box {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--ice-blue);
+      padding: 0.25rem 0.55rem;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xs);
+    }
+
+    .mega-info {
+      flex: 1;
+    }
+
+    .mega-entry-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mega-entry-sub {
       font-size: 0.8125rem;
       color: var(--text-secondary);
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
+      margin-top: 0.2rem;
+      line-height: 1.35;
     }
 
-    .dropdown-item a:hover {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-accent);
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
     }
 
-    .mobile-toggle {
+    /* Live Local System Clock UI */
+    .system-clock-widget {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      border-right: 1px solid var(--border-subtle);
+      padding-right: 1.25rem;
+    }
+
+    .clock-time {
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.08em;
+    }
+
+    .clock-date {
+      font-size: 0.65rem;
+      color: var(--ice-blue);
+      letter-spacing: 0.05em;
+    }
+
+    /* Mobile Hamburger */
+    .mobile-nav-toggle {
       display: none;
       flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
+      gap: 6px;
       padding: 0.5rem;
+      cursor: pointer;
     }
 
-    .mobile-toggle span {
-      display: block;
-      width: 24px;
+    .mobile-nav-toggle span {
+      width: 26px;
       height: 2px;
-      background: var(--text-primary);
+      background: #ffffff;
       transition: var(--transition-smooth);
     }
 
-    .mobile-menu {
+    /* Mobile Drawer */
+    .mobile-menu-drawer {
       position: fixed;
-      top: 0;
+      top: 84px;
       left: 0;
       width: 100%;
-      height: 100vh;
-      background: var(--bg-primary);
-      z-index: 999;
+      height: calc(100vh - 84px);
+      background: var(--bg-void);
+      border-top: 1px solid var(--border-glow);
+      padding: 2rem 1.75rem 4rem 1.75rem;
       display: flex;
       flex-direction: column;
-      padding: 6rem 2rem 3rem 2rem;
+      justify-content: space-between;
       transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s var(--ease-out-expo), opacity 0.4s ease;
+      z-index: 999;
       overflow-y: auto;
     }
 
-    .mobile-menu.active {
+    .mobile-menu-drawer.active {
       transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
     }
 
-    .mobile-nav-list {
+    .mob-links-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 1.25rem;
     }
 
-    .mobile-nav-list a {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-primary);
+    .mob-link {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mob-accordion-btn {
+      width: 100%;
+      background: none;
+      color: inherit;
+      text-align: left;
+      font: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      border: none;
+    }
+
+    .mob-sub-list {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      gap: 0.85rem;
+      padding: 1rem 0 0.5rem 1rem;
+    }
+
+    .mob-sub-list.open {
+      display: flex;
+    }
+
+    .mob-sub-link {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--ice-blue);
       text-decoration: none;
     }
 
-    .mobile-submenu {
-      list-style: none;
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+    /* ==========================================================================
+       04. BUTTONS & MAGNETIC INTERACTIONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 2rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius-xs);
+      transition: transform 0.25s var(--ease-out-expo), box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+      text-decoration: none;
+      border: none;
+      outline: none;
+      will-change: transform;
     }
 
-    .mobile-submenu a {
-      font-size: 0.95rem;
+    .btn-primary {
+      background: var(--electric-blue);
+      color: #ffffff;
+      box-shadow: 0 0 25px rgba(37, 99, 235, 0.45);
+      border: 1px solid var(--ice-blue);
+    }
+
+    .btn-primary:hover {
+      background: var(--bright-blue);
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.7);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: rgba(10, 23, 62, 0.5);
+      color: var(--off-white);
+      border: 1px solid var(--border-glow);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(29, 78, 216, 0.22);
+      border-color: var(--ice-blue);
+      color: #ffffff;
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-icon {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.25s ease;
+    }
+
+    .btn:hover .btn-icon {
+      transform: translateX(4px);
+    }
+
+    .inline-link {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ice-blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.25s ease, color 0.25s ease;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .inline-link:hover {
+      gap: 0.85rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px var(--ice-blue);
+    }
+
+    /* System Section Architecture */
+    .world-section {
+      position: relative;
+      z-index: 2;
+      padding: 9rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-kicker-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ice-blue);
+      margin-bottom: 1rem;
+    }
+
+    .section-num-tag {
+      padding: 0.2rem 0.5rem;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xs);
+    }
+
+    .section-heading-lg {
+      font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    .section-heading-lg span {
+      background: var(--blue-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-lead-text {
+      font-size: 1.15rem;
       color: var(--text-secondary);
-      font-weight: 400;
+      max-width: 680px;
+      margin-top: 1.25rem;
+      line-height: 1.65;
     }
 
     /* ==========================================================================
-       01. ABOUT HERO
+       05. WORLD 01 — HERO DIGITAL CORE
        ========================================================================== */
-    .about-hero-section {
-      min-height: 90vh;
+    .hero-world {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
-      padding-top: 120px;
-      padding-bottom: 4rem;
+      padding-top: 110px;
       overflow: hidden;
-      background: radial-gradient(circle at 80% 25%, rgba(26, 34, 43, 0.75) 0%, rgba(5, 7, 10, 1) 70%);
+      background: radial-gradient(circle at 75% 30%, rgba(29, 78, 216, 0.3) 0%, rgba(1, 4, 13, 0.98) 70%);
+      border-bottom: 1px solid var(--border-glow);
     }
 
-    .about-hero-grid {
+    .hero-layout {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       align-items: center;
@@ -429,740 +924,887 @@
       z-index: 2;
     }
 
-    .hero-title-main {
-      font-size: clamp(2.5rem, 4.8vw, 4.2rem);
+    /* Live Month & Telemetry Pulse Bar */
+    .hero-telemetry-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: rgba(6, 15, 42, 0.7);
+      border: 1px solid var(--border-glow);
+      padding: 0.45rem 1.25rem;
+      border-radius: var(--radius-xs);
+      margin-bottom: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--cyan-luminescence);
+    }
+
+    .telemetry-node {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .telemetry-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ice-blue);
+      box-shadow: 0 0 10px var(--ice-blue);
+      animation: ambientPulse 2s infinite;
+    }
+
+    /* Kinetic Transforming Typography */
+    .hero-kinetic-title {
+      font-size: clamp(3rem, 5.5vw, 5.2rem);
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.08;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
       color: #ffffff;
       margin-bottom: 1.5rem;
     }
 
-    .hero-title-main span {
-      background: var(--accent-gradient);
+    .kinetic-word-slider {
+      display: inline-block;
+      position: relative;
+      color: var(--ice-blue);
+      background: var(--blue-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      border-bottom: 2px solid var(--border-bright);
+      min-width: 260px;
     }
 
-    .hero-supporting-copy {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.45;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-secondary-copy {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 2.25rem;
-    }
-
-    .about-hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-    }
-
-    .evolution-canvas-wrap {
-      position: relative;
-      width: 100%;
-      height: 480px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #evolutionCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* ==========================================================================
-       02. OUR STORY & 03. STORY TIMELINE
-       ========================================================================== */
-    .story-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: start;
-      margin-bottom: 4.5rem;
-    }
-
-    .story-narrative {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      font-size: 1.0625rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    .story-focus-quote {
-      font-size: 1.35rem;
-      line-height: 1.55;
-      font-weight: 500;
-      color: var(--text-primary);
-      border-left: 2px solid var(--text-accent);
-      padding-left: 1.75rem;
-    }
-
-    /* Story Evolution Stepper */
-    .story-stepper-wrap {
-      margin-top: 3rem;
-      padding-top: 3rem;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .stepper-header {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-accent-cyan);
-      margin-bottom: 2rem;
-    }
-
-    .story-stepper {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1rem;
-      position: relative;
-    }
-
-    .stepper-node {
-      background: rgba(5, 7, 10, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.5rem 1rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    .stepper-node.destination {
-      border-color: var(--border-accent);
-      background: var(--bg-tertiary);
-    }
-
-    .stepper-node:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-4px);
-    }
-
-    .stepper-step {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      color: var(--text-accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .stepper-title {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: 0.05em;
-    }
-
-    /* ==========================================================================
-       04. WHY WE EXIST & 05. PHILOSOPHY
-       ========================================================================== */
-    .exist-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .exist-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 2rem;
-    }
-
-    .exist-pill {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      padding: 0.5rem 1.1rem;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-    }
-
-    .philosophy-banner {
-      margin-top: 5rem;
-      background: linear-gradient(135deg, rgba(17, 24, 32, 0.7) 0%, rgba(11, 15, 20, 0.9) 100%);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      padding: 4rem 3rem;
-      text-align: center;
-    }
-
-    .philosophy-words {
-      font-family: var(--font-mono);
-      font-size: clamp(1.75rem, 3.8vw, 3.25rem);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: #fff;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .philosophy-word span {
-      color: var(--text-accent);
-    }
-
-    .philosophy-explanation {
-      max-width: 820px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    /* ==========================================================================
-       06. VISION & 07. MISSION
-       ========================================================================== */
-    .vision-mission-section {
-      background: #05070A;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .vm-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-    }
-
-    .vm-block {
-      padding: 3rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .vm-statement {
+    .hero-statement {
       font-size: 1.25rem;
+      color: var(--text-secondary);
       line-height: 1.6;
-      color: var(--text-primary);
-      margin-top: 1.5rem;
+      max-width: 600px;
+      margin-bottom: 2.75rem;
     }
 
-    /* ==========================================================================
-       08. OUR VALUES (INTERACTIVE VALUES ECOSYSTEM)
-       ========================================================================== */
-    .values-section {
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .values-interactive-wrap {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3.5rem;
+    .hero-btn-row {
+      display: flex;
       align-items: center;
-      margin-top: 3rem;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
-    .values-radial-field {
+    /* Interactive Living Digital Core Canvas Wrapper */
+    .hero-core-canvas-stage {
       position: relative;
-      height: 480px;
+      width: 100%;
+      height: 560px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    #valuesCanvas {
+    #digitalCoreCanvas {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      pointer-events: none;
+      pointer-events: auto;
+      cursor: crosshair;
     }
 
-    .values-core-node {
-      position: relative;
-      z-index: 5;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
+    .hero-floating-hud {
+      position: absolute;
+      bottom: 6%;
+      left: 2%;
+      background: rgba(4, 11, 32, 0.88);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-xs);
+      padding: 0.9rem 1.4rem;
+      backdrop-filter: blur(14px);
+      z-index: 3;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+      pointer-events: none;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 1rem;
+    }
+
+    .hud-glyph {
       font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ice-blue);
+    }
+
+    .hud-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-secondary);
+    }
+
+    .hud-title {
       font-size: 0.95rem;
       font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 25px var(--glow-teal);
-    }
-
-    .val-node {
-      position: absolute;
-      padding: 0.75rem 1.25rem;
-      background: rgba(17, 24, 32, 0.85);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      letter-spacing: 0.08em;
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: var(--transition-smooth);
-      z-index: 6;
-    }
-
-    .val-node:hover, .val-node.active {
-      border-color: var(--text-accent);
-      color: var(--text-accent);
-      background: rgba(26, 34, 43, 0.95);
-      transform: scale(1.06);
-    }
-
-    .val-pos-1 { top: 10%; left: 35%; }
-    .val-pos-2 { top: 32%; right: 8%; }
-    .val-pos-3 { bottom: 12%; right: 18%; }
-    .val-pos-4 { bottom: 12%; left: 18%; }
-    .val-pos-5 { top: 32%; left: 8%; }
-
-    .values-display-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.5rem;
-      min-height: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .val-display-kicker {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent);
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-
-    .val-display-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-
-    .val-display-desc {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
+      color: #ffffff;
     }
 
     /* ==========================================================================
-       09. OUR APPROACH (5-STEP PROGRESS TIMELINE)
+       06. WORLD 02 — THE TECHNOLOGY ECOSYSTEM MATRIX
        ========================================================================== */
-    .approach-timeline-wrap {
-      position: relative;
+    .world-tech-matrix {
+      background: var(--bg-midnight);
+    }
+
+    .matrix-domains-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
       margin-top: 4rem;
     }
 
-    .approach-progress-bar {
-      position: absolute;
-      top: 42px;
-      left: 3rem;
-      right: 3rem;
-      height: 2px;
-      background: var(--border-subtle);
-      z-index: 1;
-    }
-
-    .approach-timeline-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.5rem;
+    .matrix-node-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2.25rem 1.5rem;
       position: relative;
-      z-index: 2;
-    }
-
-    .approach-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.5rem;
+      overflow: hidden;
       transition: var(--transition-smooth);
+      cursor: pointer;
     }
 
-    .approach-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .approach-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-
-    .approach-step-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .approach-step-desc {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    /* ==========================================================================
-       10. OUR CAPABILITIES
-       ========================================================================== */
-    .capabilities-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.75rem;
-    }
-
-    .capability-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition-smooth);
-    }
-
-    .capability-card:hover {
-      border-color: var(--border-medium);
-      background: var(--bg-card-hover);
-      transform: translateY(-4px);
-    }
-
-    .capability-index {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
-      margin-bottom: 1.25rem;
-    }
-
-    .capability-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.75rem;
-    }
-
-    .capability-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    /* ==========================================================================
-       11. BUILT TO EVOLVE & 12. LEADERSHIP
-       ========================================================================== */
-    .evolution-section {
-      background: radial-gradient(circle at 20% 50%, rgba(17, 24, 32, 0.7) 0%, rgba(5, 7, 10, 1) 80%);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .evolution-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .leadership-editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
-      max-width: 1060px;
-      margin: 3.5rem auto 0 auto;
-    }
-
-    .leader-editorial-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    .leader-editorial-card::before {
+    .matrix-node-card::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 2px;
-      height: 0;
-      background: var(--accent-gradient);
-      transition: height 0.35s ease;
+      width: 100%;
+      height: 2px;
+      background: var(--blue-gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
-    .leader-editorial-card:hover {
-      border-color: var(--border-accent);
+    .matrix-node-card:hover, .matrix-node-card.active-lit {
+      border-color: var(--border-bright);
       background: var(--bg-card-hover);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(59, 130, 246, 0.25);
     }
 
-    .leader-editorial-card:hover::before {
-      height: 100%;
+    .matrix-node-card:hover::before, .matrix-node-card.active-lit::before {
+      opacity: 1;
     }
 
-    .leader-monogram {
-      width: 58px;
-      height: 58px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
+    .node-code-id {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .node-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .node-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .node-related-tags {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .node-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 0.15rem 0.45rem;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 2px;
+      color: var(--cyan-luminescence);
+    }
+
+    /* ==========================================================================
+       07. WORLD 03 — FOUR MAJOR SERVICES ECOSYSTEM
+       ========================================================================== */
+    .world-services {
+      background: var(--bg-void);
+    }
+
+    .services-ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+      margin-top: 4.5rem;
+    }
+
+    .service-system-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-md);
+      padding: 2.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 520px;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-system-card:hover {
+      border-color: var(--border-bright);
+      background: var(--bg-card-hover);
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(37, 99, 235, 0.3);
+    }
+
+    .card-num-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-accent);
+      justify-content: space-between;
       margin-bottom: 1.75rem;
     }
 
-    .leader-name {
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.25rem;
-    }
-
-    .leader-title {
+    .card-sys-id {
       font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--ice-blue);
+      font-weight: 700;
+      letter-spacing: 0.15em;
     }
 
-    .leader-bio {
+    .card-pulse-node {
+      width: 7px;
+      height: 7px;
+      background: var(--electric-blue);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--ice-blue);
+    }
+
+    .card-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .card-subline {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-desc {
       font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 2.25rem;
-    }
-
-    /* ==========================================================================
-       13. WHAT DEFINES US & 14. GLOBAL CONNECTION
-       ========================================================================== */
-    .defines-section {
-      background: #05070A;
-      text-align: center;
-      padding: 6.5rem 0;
-    }
-
-    .defines-stream {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem 3rem;
-      font-family: var(--font-mono);
-      font-size: clamp(1.25rem, 2.5vw, 2.25rem);
-      font-weight: 800;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      line-height: 1.6;
       margin-bottom: 2rem;
     }
 
-    .defines-item.active {
-      color: var(--text-accent);
-      text-shadow: 0 0 20px var(--glow-teal);
-    }
-
-    .global-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .global-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .global-schematic {
-      height: 320px;
-      background: rgba(5, 7, 10, 0.7);
+    /* Interactive Pipeline Visual Preview */
+    .card-flow-preview {
+      background: rgba(2, 6, 23, 0.8);
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      position: relative;
+      border-radius: var(--radius-xs);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .flow-step-row {
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      padding: 2rem;
+      justify-content: space-between;
+      gap: 0.5rem;
     }
 
-    .ecosystem-hub {
-      text-align: center;
-      z-index: 2;
+    .flow-node-step {
+      padding: 0.25rem 0.45rem;
+      background: rgba(59, 130, 246, 0.15);
+      border-radius: 2px;
+      color: var(--cyan-luminescence);
+      font-weight: 600;
     }
 
-    .hub-node {
-      width: 60px;
-      height: 60px;
+    .flow-arrow-step {
+      color: var(--border-bright);
+    }
+
+    .card-footer-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .service-system-card:hover .card-footer-cta {
+      color: var(--ice-blue);
+    }
+
+    /* ==========================================================================
+       08. WORLD 04 — INTERACTIVE DEVELOPER LABORATORY
+       ========================================================================== */
+    .world-developer-lab {
+      background: radial-gradient(circle at 20% 50%, rgba(29, 78, 216, 0.22) 0%, rgba(2, 6, 23, 1) 75%);
+    }
+
+    .dev-lab-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: center;
+      gap: 4.5rem;
+    }
+
+    .lab-ide-window {
+      background: #020716;
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(37, 99, 235, 0.25);
+    }
+
+    .ide-header-bar {
+      background: #061130;
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ide-traffic-lights {
+      display: flex;
+      gap: 6px;
+    }
+
+    .traffic-dot {
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
+    }
+
+    .td-red { background: #ef4444; }
+    .td-yellow { background: #f59e0b; }
+    .td-green { background: #10b981; }
+
+    .ide-tab-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      letter-spacing: 0.05em;
+    }
+
+    .ide-body {
+      padding: 1.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+
+    .ide-token-kw { color: #60a5fa; font-weight: 600; }
+    .ide-token-fn { color: #93c5fd; }
+    .ide-token-str { color: #a5f3fc; }
+    .ide-token-cm { color: #475569; font-style: italic; }
+
+    /* Live Terminal Streaming Log */
+    .terminal-sub-panel {
+      margin-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1.25rem;
+    }
+
+    .term-title {
+      font-size: 0.7rem;
+      color: var(--ice-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+    }
+
+    .term-log-stream {
+      font-size: 0.8125rem;
+      color: #38bdf8;
+      min-height: 90px;
+      line-height: 1.6;
+    }
+
+    /* Lifecycle Step Pillars */
+    .dev-phases-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .phase-tile {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xs);
+      padding: 1.25rem;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .phase-tile:hover {
+      border-color: var(--border-bright);
+      background: rgba(29, 78, 216, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .phase-idx {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--ice-blue);
+      margin-bottom: 0.35rem;
+    }
+
+    .phase-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .phase-sub {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       09. WORLD 05 — TALENT NETWORK LIVING CONVERGENCE
+       ========================================================================== */
+    .world-talent-network {
+      background: var(--bg-void);
+    }
+
+    .talent-network-visual-stage {
+      margin-top: 4.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+      position: relative;
+    }
+
+    .talent-node-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2.5rem 1.75rem;
+      transition: var(--transition-smooth);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .talent-node-card:hover {
+      border-color: var(--border-bright);
+      background: var(--bg-card-hover);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(59, 130, 246, 0.2);
+    }
+
+    .talent-badge-role {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .talent-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.85rem;
+    }
+
+    .talent-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       10. WORLD 06 — SOLUTIONS DESTINATIONS
+       ========================================================================== */
+    .world-solutions {
+      background: var(--bg-midnight);
+    }
+
+    .solutions-tri-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4.5rem;
+    }
+
+    .solution-destination-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-md);
+      padding: 3.25rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 460px;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .solution-destination-card:hover {
+      border-color: var(--border-bright);
+      background: var(--bg-card-hover);
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(59, 130, 246, 0.25);
+    }
+
+    .sol-dest-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 1.25rem;
+    }
+
+    .sol-dest-heading {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .sol-dest-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+
+    /* ==========================================================================
+       11. WORLD 07 — DIGITAL GALLERY (PORTFOLIO PREVIEWS)
+       ========================================================================== */
+    .world-portfolio {
+      background: var(--bg-void);
+    }
+
+    .portfolio-gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .gallery-artifact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-artifact-card:hover {
+      border-color: var(--border-bright);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(37, 99, 235, 0.2);
+    }
+
+    .artifact-visual-stage {
+      height: 230px;
+      background: linear-gradient(135deg, #050d24 0%, #0b193d 100%);
+      border-bottom: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 0.75rem auto;
+      position: relative;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    .artifact-visual-stage::before {
+      content: "";
+      position: absolute;
+      width: 140%;
+      height: 140%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 60%);
+    }
+
+    .artifact-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
       font-family: var(--font-mono);
-      font-weight: 700;
-      color: #fff;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      background: rgba(1, 4, 13, 0.85);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xs);
+      color: var(--ice-blue);
+      letter-spacing: 0.08em;
     }
 
-    .hub-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #fff;
+    .artifact-schematic-text {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: #ffffff;
+      letter-spacing: 0.1em;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0.85rem 1.25rem;
+      background: rgba(4, 11, 31, 0.65);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xs);
     }
 
-    .hub-sub {
+    .artifact-body {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .artifact-category {
       font-family: var(--font-mono);
       font-size: 0.75rem;
-      color: var(--text-muted);
+      color: var(--ice-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.5rem;
     }
 
-    .hub-vector {
-      position: absolute;
-      top: 50%;
-      left: 30%;
-      right: 30%;
-      height: 2px;
-      background: repeating-linear-gradient(90deg, var(--text-accent-cyan), var(--text-accent-cyan) 6px, transparent 6px, transparent 12px);
-      transform: translateY(-50%);
-      z-index: 1;
+    .artifact-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .artifact-synopsis {
+      font-size: 0.925rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
 
     /* ==========================================================================
-       15. SIGNATURE BRAND & 16. FINAL CTA
+       12. WORLD 08 — EDITORIAL INSIGHTS
        ========================================================================== */
-    .signature-brand-section {
-      padding: 7rem 0;
-      text-align: center;
-      background: #05070A;
+    .world-insights {
+      background: var(--bg-midnight);
     }
 
-    .sig-words-chain {
-      font-size: clamp(2rem, 4.5vw, 4rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-      margin-bottom: 1.5rem;
+    .insights-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4.5rem;
+      margin-bottom: 3.5rem;
     }
 
-    .sig-words-chain span {
-      color: var(--text-accent);
+    .editorial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
     }
 
-    .sig-brand-target {
+    .editorial-card:hover {
+      border-color: var(--border-bright);
+      background: var(--bg-card-hover);
+      transform: translateY(-6px);
+    }
+
+    .editorial-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       font-family: var(--font-mono);
-      font-size: 1.5rem;
-      letter-spacing: 0.25em;
+      font-size: 0.75rem;
+      color: var(--ice-blue);
       text-transform: uppercase;
-      color: var(--text-accent-cyan);
       margin-bottom: 1.5rem;
     }
 
-    .sig-subline {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
-      max-width: 650px;
-      margin: 0 auto;
+    .editorial-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.35;
+      margin-bottom: 1rem;
     }
 
-    .cta-section {
-      background: radial-gradient(circle at 50% 50%, rgba(17, 24, 32, 0.9) 0%, rgba(5, 7, 10, 1) 100%);
-      text-align: center;
+    .editorial-excerpt {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* ==========================================================================
+       13. WORLD 09 — CAREERS & ABOUT TEASER
+       ========================================================================== */
+    .world-careers {
+      background: linear-gradient(180deg, var(--bg-midnight) 0%, #030a21 100%);
+    }
+
+    .careers-banner-box {
+      background: rgba(6, 15, 42, 0.75);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-lg);
+      padding: 5rem 4rem;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 3.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(37, 99, 235, 0.2);
+    }
+
+    .about-teaser-strip {
+      padding: 6rem 0;
+      background: radial-gradient(circle at 80% 50%, rgba(29, 78, 216, 0.2) 0%, var(--bg-void) 70%);
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
     }
 
-    .cta-container {
-      max-width: 780px;
-      margin: 0 auto;
+    .about-teaser-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 4rem;
     }
 
     /* ==========================================================================
-       17. FOOTER
+       14. WORLD 10 — THE NEXT MOVE (FINAL CONVERSION CTA)
+       ========================================================================== */
+    .world-final-cta {
+      background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.25) 0%, var(--bg-void) 80%);
+      text-align: center;
+      padding: 9rem 0;
+    }
+
+    .cta-inner-stage {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .cta-pathways-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin: 4rem 0;
+      text-align: left;
+    }
+
+    .pathway-box {
+      background: rgba(6, 14, 38, 0.85);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xs);
+      padding: 1.75rem 1.4rem;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+      display: block;
+    }
+
+    .pathway-box:hover {
+      border-color: var(--border-bright);
+      background: rgba(29, 78, 216, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .pathway-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+    }
+
+    .pathway-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      margin-bottom: 1rem;
+    }
+
+    .pathway-link-text {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ice-blue);
+      text-transform: uppercase;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* ==========================================================================
+       15. SITE FOOTER
        ========================================================================== */
     .site-footer {
-      background-color: #05070A;
-      padding: 5.5rem 0 2.5rem 0;
+      background-color: #010309;
+      padding: 6.5rem 0 2.5rem 0;
       border-top: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 2;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-      gap: 3.5rem;
+      grid-template-columns: 1.6fr 1fr 1.2fr 1.2fr 1fr 1.2fr;
+      gap: 2.5rem;
       margin-bottom: 4.5rem;
     }
 
-    .footer-brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: #fff;
-      margin-bottom: 0.5rem;
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .footer-tagline {
-      font-size: 0.875rem;
-      color: var(--text-accent);
       font-family: var(--font-mono);
-      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--ice-blue);
     }
 
     .footer-desc {
@@ -1175,27 +1817,27 @@
       font-family: var(--font-mono);
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
+      letter-spacing: 0.18em;
+      color: #ffffff;
+      margin-bottom: 1.35rem;
     }
 
-    .footer-links-list {
+    .footer-links {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
+      gap: 0.8rem;
     }
 
-    .footer-links-list a {
-      font-size: 0.875rem;
+    .footer-link {
+      font-size: 0.845rem;
       color: var(--text-secondary);
-      text-decoration: none;
       transition: color 0.2s ease;
+      text-decoration: none;
     }
 
-    .footer-links-list a:hover {
-      color: var(--text-accent);
+    .footer-link:hover {
+      color: var(--ice-blue);
     }
 
     .footer-bottom {
@@ -1210,150 +1852,443 @@
       gap: 1rem;
     }
 
-    .footer-bottom-links {
+    /* Back To Top Action */
+    #backToTop {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-xs);
+      background: rgba(6, 15, 42, 0.85);
+      border: 1px solid var(--border-glow);
+      color: var(--ice-blue);
       display: flex;
-      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
     }
 
-    .footer-bottom-links a {
+    #backToTop.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #backToTop:hover {
+      background: var(--electric-blue);
+      color: #ffffff;
+      border-color: var(--ice-blue);
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       16. CONTACT MODAL OVERLAY
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(1, 4, 13, 0.88);
+      backdrop-filter: blur(16px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-card {
+      background: var(--bg-navy-surface);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-sm);
+      width: 100%;
+      max-width: 580px;
+      padding: 2.75rem;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(37, 99, 235, 0.25);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
       color: var(--text-muted);
-      text-decoration: none;
+      font-size: 1.4rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
       transition: color 0.2s ease;
     }
 
-    .footer-bottom-links a:hover {
+    .modal-close:hover {
+      color: #ffffff;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.785rem;
+      font-family: var(--font-mono);
       color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    /* Scroll Trigger Animation */
-    .reveal {
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: rgba(2, 6, 23, 0.85);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xs);
+      color: var(--off-white);
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--ice-blue);
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.35);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Scroll Animation Observer Class */
+    .reveal-elem {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(30px);
+      transition: opacity 0.85s var(--ease-out-expo), transform 0.85s var(--ease-out-expo);
     }
 
-    .reveal.active {
+    .reveal-elem.active {
       opacity: 1;
       transform: translateY(0);
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       17. RESPONSIVE ARCHITECTURE
        ========================================================================== */
-    @media (max-width: 1080px) {
-      .capabilities-grid {
+    @media (max-width: 1200px) {
+      .services-ecosystem-grid,
+      .matrix-domains-grid,
+      .talent-network-visual-stage,
+      .cta-pathways-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .story-stepper {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .approach-timeline-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .approach-progress-bar {
-        display: none;
-      }
       .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media (max-width: 900px) {
-      .about-hero-grid,
-      .story-grid,
-      .exist-grid,
-      .vm-grid,
-      .values-interactive-wrap,
-      .evolution-grid,
-      .leadership-editorial-grid,
-      .global-grid {
+    @media (max-width: 992px) {
+      .hero-layout,
+      .dev-lab-grid,
+      .careers-banner-box,
+      .about-teaser-grid {
         grid-template-columns: 1fr;
       }
-      .nav-links, .nav-cta {
+      .hero-core-canvas-stage {
+        height: 440px;
+      }
+      .solutions-tri-grid,
+      .portfolio-gallery-strip,
+      .insights-editorial-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links, .nav-actions .system-clock-widget {
         display: none;
       }
-      .mobile-toggle {
+      .mobile-nav-toggle {
         display: flex;
       }
-      .evolution-canvas-wrap {
-        height: 340px;
-      }
-      .approach-timeline-grid {
-        grid-template-columns: 1fr;
+      .mega-menu-panel {
+        display: none !important;
       }
     }
 
-    @media (max-width: 640px) {
-      .capabilities-grid,
-      .story-stepper {
+    @media (max-width: 680px) {
+      .services-ecosystem-grid,
+      .matrix-domains-grid,
+      .talent-network-visual-stage,
+      .cta-pathways-grid,
+      .dev-phases-list {
         grid-template-columns: 1fr;
       }
       .footer-grid {
         grid-template-columns: 1fr;
       }
-      .section-spacing {
-        padding: 5rem 0;
+      .world-section {
+        padding: 6rem 0;
+      }
+      .careers-banner-box {
+        padding: 3rem 1.75rem;
+      }
+      .hero-telemetry-badge {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
       }
-      .reveal {
+      .reveal-elem {
         opacity: 1 !important;
         transform: none !important;
+      }
+      #cursorDot, #cursorRing, #ambientSpotlight {
+        display: none !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Indicator -->
+  <!-- Ambient Cursor Spotlight -->
+  <div id="ambientSpotlight" aria-hidden="true"></div>
+
+  <!-- Living Tech Grid Stage -->
+  <div class="tech-grid-stage" aria-hidden="true">
+    <div class="tech-grid-scanline"></div>
+  </div>
+
+  <!-- Dual Precision Cursor -->
+  <div id="cursorDot" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true">
+    <span id="cursorLabel">EXPLORE</span>
+  </div>
+
+  <!-- Scroll Journey Progress Bar -->
   <div id="scrollProgress" aria-hidden="true"></div>
 
+  <!-- Ambient System Broadcast Toast -->
+  <div id="ambientBroadcast" role="status" aria-live="polite">
+    <span class="ambient-dot-pulse"></span>
+    <span id="ambientBroadcastMsg">SYSTEM INITIALIZED // ONLINE</span>
+  </div>
+
   <!-- ==========================================================================
-       GLOBAL NAVIGATION
+       02. CINEMATIC BOOT-UP SYSTEM (FAST ~1.2s)
        ========================================================================== -->
-  <header class="site-header" id="mainHeader">
+  <div id="bootupOverlay">
+    <div class="boot-matrix-card">
+      <div class="boot-header">
+        <div class="boot-logo-brand">
+          <span style="color: #60a5fa;">[TJR]</span>
+          <span>TECH // OS</span>
+        </div>
+        <div class="boot-status-pill" id="bootCyclePill">INITIALIZING...</div>
+      </div>
+      <div class="boot-terminal-log">
+        <div class="boot-line" id="bline1"><span>&gt; KERNEL_LOAD: CORE ARCHITECTURE</span><span class="val">OK</span></div>
+        <div class="boot-line" id="bline2"><span>&gt; TALENT_GRID: CONNECTING NODES</span><span class="val">ACTIVE</span></div>
+        <div class="boot-line" id="bline3"><span>&gt; DIGITAL_SYSTEMS: VERIFYING PROTOCOLS</span><span class="val">SYNCHRONIZED</span></div>
+        <div class="boot-line" id="bline4"><span>&gt; EXPERIENCE: DIGITAL UNIVERSE</span><span class="val">READY</span></div>
+      </div>
+      <div class="boot-progress-bar-wrap">
+        <div class="boot-progress-bar" id="bootBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       03. SITE HEADER & IMMERSIVE MEGA NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
     <div class="container nav-container">
-      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
+      <a href="index.html" class="logo-container" aria-label="TJR Tech Homepage" data-cursor="HOME">
         <div class="logo-mark">T</div>
-        <span class="logo-title">TJR TECH</span>
+        <div class="logo-text">
+          <span class="logo-title">TJR TECH</span>
+          <span class="logo-subtitle">Technology &amp; Systems</span>
+        </div>
       </a>
 
-      <nav aria-label="Desktop Navigation">
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary Navigation">
         <ul class="nav-links">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link active">About Us</a></li>
           <li class="nav-item">
-            <a href="/services" class="nav-link">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-cursor="ABOUT">About</a>
+          </li>
+
+          <!-- SERVICES MEGA PANEL -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link" aria-haspopup="true" aria-expanded="false" data-cursor="OPEN">
               Services
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
-              <li class="dropdown-item"><a href="/services/bench-sales">US IT Bench Sales</a></li>
-              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
-              <li class="dropdown-item"><a href="/services/digital-media">Digital Media &amp; Advertising</a></li>
-            </ul>
+            <div class="mega-menu-panel mega-services-grid" role="region" aria-label="Services Mega Menu">
+              <div class="mega-left-sidebar">
+                <div>
+                  <span class="mega-badge">SYSTEM // 03</span>
+                  <h3 class="mega-hero-heading">PRACTICE DIVISIONS</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Mission-critical talent, engineering, and digital systems built for enterprise scale.
+                  </p>
+                </div>
+                <div class="mega-dynamic-preview-box" id="megaServicePreview">
+                  <span style="font-weight: 700; color: #ffffff;">SELECT DIVISION</span>
+                  <span style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 0.2rem;">Hover practice area to inspect architecture preview.</span>
+                </div>
+              </div>
+              <div class="mega-right-items">
+                <!-- 01 -->
+                <a href="us-it-staffing.html" class="mega-entry" data-service-type="staffing" data-cursor="EXPLORE">
+                  <span class="mega-num-box">01</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>US IT Staffing</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">High-caliber technical engineers, architects, and specialized technology talent.</p>
+                  </div>
+                </a>
+                <!-- 02 -->
+                <a href="us-it-bench-sales.html" class="mega-entry" data-service-type="bench" data-cursor="EXPLORE">
+                  <span class="mega-num-box">02</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>US IT Bench Sales</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">Consultant representation, profile positioning, and direct prime vendor matching.</p>
+                  </div>
+                </a>
+                <!-- 03 -->
+                <a href="web-development.html" class="mega-entry" data-service-type="web" data-cursor="EXPLORE">
+                  <span class="mega-num-box">03</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>Web Development</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">Engineered web platforms, high-performance portals, and cloud web architectures.</p>
+                  </div>
+                </a>
+                <!-- 04 -->
+                <a href="ads-digital-media.html" class="mega-entry" data-service-type="media" data-cursor="EXPLORE">
+                  <span class="mega-num-box">04</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>Ads &amp; Digital Media</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">Commercial brand cinema, executive productions, and high-impact digital campaigns.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="nav-item"><a href="/solutions" class="nav-link">Solutions</a></li>
-          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
-          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
-          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
-          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+
+          <!-- SOLUTIONS MEGA PANEL -->
+          <li class="nav-item">
+            <a href="solutions.html" class="nav-link" aria-haspopup="true" aria-expanded="false" data-cursor="OPEN">
+              Solutions
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="mega-menu-panel mega-solutions-grid" role="region" aria-label="Solutions Mega Menu">
+              <div class="mega-left-sidebar">
+                <div>
+                  <span class="mega-badge">SYSTEM // 05</span>
+                  <h3 class="mega-hero-heading">ENGAGEMENT PATHWAYS</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Bespoke pathways architected specifically around consultants, professionals, and businesses.
+                  </p>
+                </div>
+                <div class="mega-dynamic-preview-box">
+                  <span style="font-weight: 700; color: #ffffff;">CLIENT PATHS</span>
+                  <span style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 0.2rem;">Select your engagement model to begin.</span>
+                </div>
+              </div>
+              <div class="mega-right-items">
+                <a href="for-consultants.html" class="mega-entry" data-cursor="EXPLORE">
+                  <span class="mega-num-box">01</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>For Consultants</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">Representation, prime project access, and marketing support.</p>
+                  </div>
+                </a>
+                <a href="for-professionals.html" class="mega-entry" data-cursor="EXPLORE">
+                  <span class="mega-num-box">02</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>For Professionals</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">Personal brand platforms, technical portfolios, and career reach.</p>
+                  </div>
+                </a>
+                <a href="for-businesses.html" class="mega-entry" data-cursor="EXPLORE">
+                  <span class="mega-num-box">03</span>
+                  <div class="mega-info">
+                    <div class="mega-entry-title">
+                      <span>For Businesses</span>
+                      <span>&rarr;</span>
+                    </div>
+                    <p class="mega-entry-sub">Rapid engineering squads, corporate portals, and brand creative.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="portfolio.html" class="nav-link" data-cursor="VIEW">Portfolio</a></li>
+          <li class="nav-item"><a href="insights.html" class="nav-link" data-cursor="READ">Insights</a></li>
+          <li class="nav-item"><a href="careers.html" class="nav-link" data-cursor="JOIN">Careers</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" data-cursor="TALK">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="nav-cta">
-        <a href="/contact" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">
-          <span>Start a Conversation</span>
-        </a>
+      <!-- Nav Actions & Clock Widget -->
+      <div class="nav-actions">
+        <div class="system-clock-widget">
+          <span class="clock-time" id="systemClockDisplay">00:00:00 UTC</span>
+          <span class="clock-date" id="systemDateDisplay">SYSTEM TIME</span>
+        </div>
+        <button class="btn btn-secondary trigger-modal" data-modal="contact" data-magnetic data-cursor="TALK">
+          <span>Talk to TJR Tech</span>
+        </button>
       </div>
 
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+      <!-- Mobile Toggle -->
+      <button class="mobile-nav-toggle" id="mobNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -1362,118 +2297,176 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
-    <ul class="mobile-nav-list">
-      <li><a href="/" class="mobile-link">Home</a></li>
-      <li><a href="/about" class="mobile-link">About Us</a></li>
+  <div class="mobile-menu-drawer" id="mobMenuDrawer" aria-hidden="true">
+    <ul class="mob-links-list">
+      <li><a href="index.html" class="mob-link">Home</a></li>
+      <li><a href="about.html" class="mob-link">About</a></li>
       <li>
-        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
-        <ul class="mobile-submenu">
-          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
-          <li><a href="/services/bench-sales" class="mobile-link">US IT Bench Sales</a></li>
-          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
-          <li><a href="/services/digital-media" class="mobile-link">Digital Media &amp; Advertising</a></li>
+        <button class="mob-accordion-btn" id="mobServicesAccordion">
+          <span>Services</span>
+          <svg width="12" height="8" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="mob-sub-list" id="mobServicesList">
+          <li><a href="services.html" class="mob-sub-link">&bull; All Services</a></li>
+          <li><a href="us-it-staffing.html" class="mob-sub-link">&bull; US IT Staffing</a></li>
+          <li><a href="us-it-bench-sales.html" class="mob-sub-link">&bull; US IT Bench Sales</a></li>
+          <li><a href="web-development.html" class="mob-sub-link">&bull; Web Development</a></li>
+          <li><a href="ads-digital-media.html" class="mob-sub-link">&bull; Ads &amp; Digital Media</a></li>
         </ul>
       </li>
-      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
-      <li><a href="/portfolio" class="mobile-link">Work</a></li>
-      <li><a href="/careers" class="mobile-link">Careers</a></li>
-      <li><a href="/insights" class="mobile-link">Insights</a></li>
-      <li><a href="/contact" class="mobile-link">Contact</a></li>
+      <li>
+        <button class="mob-accordion-btn" id="mobSolutionsAccordion">
+          <span>Solutions</span>
+          <svg width="12" height="8" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="mob-sub-list" id="mobSolutionsList">
+          <li><a href="solutions.html" class="mob-sub-link">&bull; All Solutions</a></li>
+          <li><a href="for-consultants.html" class="mob-sub-link">&bull; For Consultants</a></li>
+          <li><a href="for-professionals.html" class="mob-sub-link">&bull; For Professionals</a></li>
+          <li><a href="for-businesses.html" class="mob-sub-link">&bull; For Businesses</a></li>
+        </ul>
+      </li>
+      <li><a href="portfolio.html" class="mob-link">Portfolio</a></li>
+      <li><a href="insights.html" class="mob-link">Insights</a></li>
+      <li><a href="careers.html" class="mob-link">Careers</a></li>
+      <li><a href="contact.html" class="mob-link">Contact</a></li>
     </ul>
-    <a href="/contact" class="btn btn-primary" style="width: 100%;">Talk to TJR Tech</a>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Initiate Contact</a>
+    </div>
   </div>
 
-  <main>
+  <main id="mainExperience">
     <!-- ==========================================================================
-         01. ABOUT HERO
+         WORLD 01 — HERO DIGITAL CORE
          ========================================================================== -->
-    <section class="about-hero-section" id="hero">
-      <div class="container about-hero-grid">
-        <div class="about-hero-content">
-          <div class="eyebrow">ABOUT TJR TECH</div>
-          <h1 class="hero-title-main">
-            More Than Technology. <br>
-            <span>A Company Built Around People.</span>
+    <section class="hero-world" id="hero-world">
+      <div class="container hero-layout">
+        <div class="reveal-elem">
+          <!-- Dynamic System Status Telemetry -->
+          <div class="hero-telemetry-badge">
+            <div class="telemetry-node">
+              <span class="telemetry-pulse"></span>
+              <span id="heroTelemetryMonth">SYSTEM / ACTIVE</span>
+            </div>
+            <div class="telemetry-node">
+              <span class="telemetry-pulse"></span>
+              <span>GRID // SYNCHRONIZED</span>
+            </div>
+            <div class="telemetry-node">
+              <span class="telemetry-pulse"></span>
+              <span>NETWORK // CONNECTED</span>
+            </div>
+          </div>
+
+          <!-- Kinetic Transforming Typography -->
+          <h1 class="hero-kinetic-title">
+            Engineering Systems.<br>
+            Connecting Talent.<br>
+            Building <span class="kinetic-word-slider" id="kineticWord">DIGITAL FUTURES</span>
           </h1>
-          <p class="hero-supporting-copy">
-            TJR Tech brings together talent, technology, digital development, and creative capabilities to help businesses and professionals move forward.
+
+          <p class="hero-statement">
+            TJR Tech operates at the nexus of technical consulting, software engineering, verified talent infrastructure, and commercial brand media.
           </p>
-          <p class="hero-secondary-copy">
-            Built from practical experience and driven by a long-term vision, TJR Tech is developing a professional technology and services organization focused on meaningful relationships, disciplined execution, and modern digital solutions.
-          </p>
-          <div class="about-hero-actions">
-            <a href="#our-story" class="btn btn-primary">
-              <span>EXPLORE OUR STORY</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+          <div class="hero-btn-row">
+            <a href="services.html" class="btn btn-primary" data-magnetic data-cursor="EXPLORE">
+              <span>Explore Ecosystem</span>
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
-            <a href="#leadership" class="btn btn-secondary">
-              <span>MEET OUR LEADERSHIP</span>
+            <a href="contact.html" class="btn btn-secondary" data-magnetic data-cursor="TALK">
+              <span>Start a Project</span>
+            </a>
+            <a href="about.html" class="inline-link" data-cursor="ABOUT">
+              <span>Enter TJR Tech &rarr;</span>
             </a>
           </div>
         </div>
 
-        <div class="evolution-canvas-wrap">
-          <canvas id="evolutionCanvas" aria-label="Abstract organizational genesis visualization"></canvas>
+        <!-- Interactive Living Digital Core Visualizer -->
+        <div class="hero-core-canvas-stage reveal-elem">
+          <canvas id="digitalCoreCanvas" aria-label="Interactive Living Digital Core Network Visualizer"></canvas>
+          <div class="hero-floating-hud">
+            <span class="hud-glyph">&#9670;</span>
+            <div>
+              <div class="hud-label">Operating Core</div>
+              <div class="hud-title">TJR Tech Multi-Vector Grid</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         02. OUR STORY & 03. STORY TIMELINE
+         WORLD 02 — THE TECHNOLOGY ECOSYSTEM MATRIX
          ========================================================================== -->
-    <section class="section-spacing story-section" id="our-story">
+    <section class="world-section world-tech-matrix" id="tech-matrix">
       <div class="container">
-        <div class="story-grid reveal">
-          <div>
-            <div class="eyebrow">OUR STORY</div>
-            <h2 class="section-title">From Practical Experience to a New Digital Organization.</h2>
-            <div style="margin-top: 2rem;">
-              <blockquote class="story-focus-quote">
-                The purpose is to build an independent organization with its own professional identity, structured operations, long-term relationships, and scalable technology capabilities.
-              </blockquote>
-            </div>
-          </div>
-          <div class="story-narrative">
-            <p>
-              TJR Tech is being established to bring together practical experience in US IT staffing, technical recruitment, consultant coordination, business operations, and digital development under one professional corporate identity.
-            </p>
-            <p>
-              The team has previously worked across US IT staffing workflows, candidate sourcing, consultant communication, placement coordination, and digital development through private business arrangements.
-            </p>
-            <p>
-              These experiences shaped the foundation for TJR Tech. Built on direct operational execution, the organization prioritizes predictability, relationship integrity, and engineering rigor over unnecessary complexity.
-            </p>
-          </div>
+        <div class="section-kicker-bar reveal-elem">
+          <span class="section-num-tag">02 / DOMAINS</span>
+          <span>ENTERPRISE ARCHITECTURE MATRIX</span>
         </div>
+        <h2 class="section-heading-lg reveal-elem">
+          The Technology <span>Ecosystem.</span>
+        </h2>
+        <p class="section-lead-text reveal-elem">
+          Hover over nodes to illuminate interdependent digital frameworks, engineering streams, and delivery pipelines.
+        </p>
 
-        <!-- 03. Interactive Story Timeline -->
-        <div class="story-stepper-wrap reveal">
-          <div class="stepper-header">Organizational Genesis &amp; Progression</div>
-          <div class="story-stepper">
-            <div class="stepper-node">
-              <div class="stepper-step">STAGE 01</div>
-              <div class="stepper-title">EXPERIENCE</div>
+        <div class="matrix-domains-grid reveal-elem" id="matrixDomainsGrid">
+          <!-- Node 01 -->
+          <div class="matrix-node-card" data-domain="cloud" data-cursor="INSPECT">
+            <div class="node-code-id">&lt;SYS_01&gt;</div>
+            <h3 class="node-title">CLOUD</h3>
+            <p class="node-desc">Distributed architectures, hybrid migrations, and serverless clusters.</p>
+            <div class="node-related-tags">
+              <span class="node-tag">AWS</span>
+              <span class="node-tag">Azure</span>
+              <span class="node-tag">K8s</span>
             </div>
-            <div class="stepper-node">
-              <div class="stepper-step">STAGE 02</div>
-              <div class="stepper-title">US IT STAFFING</div>
+          </div>
+          <!-- Node 02 -->
+          <div class="matrix-node-card" data-domain="data" data-cursor="INSPECT">
+            <div class="node-code-id">&lt;SYS_02&gt;</div>
+            <h3 class="node-title">DATA</h3>
+            <p class="node-desc">Real-time pipelines, relational models, and analytics infrastructure.</p>
+            <div class="node-related-tags">
+              <span class="node-tag">ETL</span>
+              <span class="node-tag">Postgres</span>
+              <span class="node-tag">Kafka</span>
             </div>
-            <div class="stepper-node">
-              <div class="stepper-step">STAGE 03</div>
-              <div class="stepper-title">TECHNICAL RECRUITMENT</div>
+          </div>
+          <!-- Node 03 -->
+          <div class="matrix-node-card" data-domain="web" data-cursor="INSPECT">
+            <div class="node-code-id">&lt;SYS_03&gt;</div>
+            <h3 class="node-title">WEB</h3>
+            <p class="node-desc">High-performance applications, interactive portals, and modern UI tokens.</p>
+            <div class="node-related-tags">
+              <span class="node-tag">React</span>
+              <span class="node-tag">Next.js</span>
+              <span class="node-tag">TypeScript</span>
             </div>
-            <div class="stepper-node">
-              <div class="stepper-step">STAGE 04</div>
-              <div class="stepper-title">CONSULTANT NETWORKS</div>
+          </div>
+          <!-- Node 04 -->
+          <div class="matrix-node-card" data-domain="devops" data-cursor="INSPECT">
+            <div class="node-code-id">&lt;SYS_04&gt;</div>
+            <h3 class="node-title">DEVOPS</h3>
+            <p class="node-desc">Continuous deployment pipelines, container orchestration, and telemetry.</p>
+            <div class="node-related-tags">
+              <span class="node-tag">CI/CD</span>
+              <span class="node-tag">Docker</span>
+              <span class="node-tag">Terraform</span>
             </div>
-            <div class="stepper-node">
-              <div class="stepper-step">STAGE 05</div>
-              <div class="stepper-title">DIGITAL DEVELOPMENT</div>
-            </div>
-            <div class="stepper-node destination">
-              <div class="stepper-step" style="color: var(--text-accent-cyan);">STAGE 06</div>
-              <div class="stepper-title">TJR TECH</div>
+          </div>
+          <!-- Node 05 -->
+          <div class="matrix-node-card" data-domain="media" data-cursor="INSPECT">
+            <div class="node-code-id">&lt;SYS_05&gt;</div>
+            <h3 class="node-title">DIGITAL MEDIA</h3>
+            <p class="node-desc">High-resolution brand cinema, narrative pacing, and motion graphics.</p>
+            <div class="node-related-tags">
+              <span class="node-tag">Cinema 4K</span>
+              <span class="node-tag">Creative Direction</span>
             </div>
           </div>
         </div>
@@ -1481,362 +2474,580 @@
     </section>
 
     <!-- ==========================================================================
-         04. WHY WE EXIST & 05. OUR PHILOSOPHY
+         WORLD 03 — FOUR MAJOR SERVICES ECOSYSTEM
          ========================================================================== -->
-    <section class="section-spacing" id="why-we-exist">
+    <section class="world-section world-services" id="services-world">
       <div class="container">
-        <div class="exist-grid reveal">
-          <div>
-            <div class="eyebrow">WHY WE EXIST</div>
-            <h2 class="section-title">Turning Practical Capability Into Something Built to Last.</h2>
-          </div>
-          <div>
-            <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
-              The technology and staffing ecosystem continues to evolve, creating new opportunities for businesses, technology professionals, and digital service providers.
-            </p>
-            <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
-              TJR Tech exists to bring practical capabilities together within one structured organization. Our focus is to create meaningful connections between:
-            </p>
-            <div class="exist-points">
-              <span class="exist-pill">People</span>
-              <span class="exist-pill">Technology</span>
-              <span class="exist-pill">Business</span>
-              <span class="exist-pill">Opportunity</span>
-              <span class="exist-pill">Digital Experience</span>
-            </div>
-          </div>
+        <div class="section-kicker-bar reveal-elem">
+          <span class="section-num-tag">03 / CAPABILITY</span>
+          <span>CORE PRACTICE DIVISIONS</span>
         </div>
-
-        <!-- 05. The TJR Tech Philosophy -->
-        <div class="philosophy-banner reveal">
-          <div class="eyebrow" style="justify-content: center; margin-bottom: 1.5rem;">OUR OPERATIONAL PHILOSOPHY</div>
-          <div class="philosophy-words">
-            <span class="philosophy-word">UNDERSTAND<span>.</span></span>
-            <span class="philosophy-word">BUILD<span>.</span></span>
-            <span class="philosophy-word">DELIVER<span>.</span></span>
-            <span class="philosophy-word">EVOLVE<span>.</span></span>
-          </div>
-          <p class="philosophy-explanation">
-            We begin by understanding the requirement. We build the appropriate solution. We deliver with professional discipline. And we continue to evolve as technology, businesses, and people change.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       06. OUR VISION & 07. OUR MISSION
-       ========================================================================== -->
-    <section class="section-spacing vision-mission-section" id="vision-mission">
-      <div class="container">
-        <div class="vm-grid">
-          <!-- 06. Vision -->
-          <div class="vm-block reveal">
-            <div>
-              <div class="eyebrow">OUR VISION</div>
-              <h2 class="section-title" style="font-size: 2.2rem;">Building a Technology Organization Connected to Global Opportunity.</h2>
-            </div>
-            <p class="vm-statement">
-              To establish TJR Tech as an agile and recognized technology services and staffing organization connecting global talent with business demand, supported by predictable operations, professional service delivery, and transparent corporate practices.
-            </p>
-          </div>
-
-          <!-- 07. Mission -->
-          <div class="vm-block reveal">
-            <div>
-              <div class="eyebrow">OUR MISSION</div>
-              <h2 class="section-title" style="font-size: 2.2rem;">Creating Opportunity Through People and Technology.</h2>
-            </div>
-            <p class="vm-statement">
-              Our mission is to deliver practical staffing, consultant, technology, and digital solutions that help businesses and professionals move forward. We aim to support technical professionals through structured opportunity services while creating high-quality digital experiences for businesses, professionals, and organizations.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       08. OUR VALUES (INTERACTIVE VALUE SYSTEM)
-       ========================================================================== -->
-    <section class="section-spacing values-section" id="our-values">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">WHAT WE BELIEVE</div>
-          <h2 class="section-title">Principles That Shape How We Work.</h2>
-          <p class="section-lead">A foundation built on candor, structured discipline, and durable professional relationships.</p>
-        </div>
-
-        <div class="values-interactive-wrap reveal">
-          <div class="values-radial-field">
-            <canvas id="valuesCanvas"></canvas>
-            <div class="values-core-node">TJR TECH</div>
-            <button class="val-node val-pos-1 active" data-val="0">CANDOR</button>
-            <button class="val-node val-pos-2" data-val="1">FOCUS</button>
-            <button class="val-node val-pos-3" data-val="2">PEOPLE</button>
-            <button class="val-node val-pos-4" data-val="3">PARTNERSHIP</button>
-            <button class="val-node val-pos-5" data-val="4">EVOLUTION</button>
-          </div>
-
-          <div class="values-display-card" id="valuesDisplay">
-            <div class="val-display-kicker" id="valKicker">PRINCIPLE 01</div>
-            <h3 class="val-display-title" id="valTitle">OPERATIONAL CANDOR</h3>
-            <p class="val-display-desc" id="valDesc">
-              We believe in communicating clearly and responsibly. We aim to understand business realities, communicate expectations honestly, and avoid unnecessary exaggeration.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       09. OUR APPROACH (5-STAGE EXECUTION)
-       ========================================================================== -->
-    <section class="section-spacing" id="our-approach">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">OUR APPROACH</div>
-          <h2 class="section-title">Structured Thinking. Human Execution.</h2>
-          <p class="section-lead">A disciplined five-step delivery model designed for repeatability and quality.</p>
-        </div>
-
-        <div class="approach-timeline-wrap reveal">
-          <div class="approach-progress-bar"></div>
-          <div class="approach-timeline-grid">
-            <div class="approach-card">
-              <div class="approach-badge">01</div>
-              <h3 class="approach-step-title">UNDERSTAND</h3>
-              <p class="approach-step-desc">We begin by understanding the requirement, objective, and context.</p>
-            </div>
-            <div class="approach-card">
-              <div class="approach-badge">02</div>
-              <h3 class="approach-step-title">PLAN</h3>
-              <p class="approach-step-desc">We define the appropriate approach, scope, resources, and execution path.</p>
-            </div>
-            <div class="approach-card">
-              <div class="approach-badge">03</div>
-              <h3 class="approach-step-title">BUILD</h3>
-              <p class="approach-step-desc">We develop, source, create, or deliver the required solution.</p>
-            </div>
-            <div class="approach-card">
-              <div class="approach-badge">04</div>
-              <h3 class="approach-step-title">REFINE</h3>
-              <p class="approach-step-desc">We review the outcome, respond to feedback, and improve the result.</p>
-            </div>
-            <div class="approach-card">
-              <div class="approach-badge">05</div>
-              <h3 class="approach-step-title">DELIVER</h3>
-              <p class="approach-step-desc">We complete the work professionally and maintain the relationship beyond delivery where appropriate.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       10. OUR CAPABILITIES
-       ========================================================================== -->
-    <section class="section-spacing" id="capabilities" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">OUR CAPABILITIES</div>
-          <h2 class="section-title">Four Capabilities. One Connected Organization.</h2>
-          <p class="section-lead">A high-level view of our integrated practice divisions.</p>
-        </div>
-
-        <div class="capabilities-grid">
-          <div class="capability-card reveal">
-            <div>
-              <div class="capability-index">DIVISION 01</div>
-              <h3 class="capability-title">US IT STAFFING</h3>
-              <p class="capability-desc">Talent acquisition and staffing solutions supporting organizations seeking technology professionals.</p>
-            </div>
-            <a href="/services/us-it-staffing" class="inline-link">LEARN MORE &rarr;</a>
-          </div>
-
-          <div class="capability-card reveal">
-            <div>
-              <div class="capability-index">DIVISION 02</div>
-              <h3 class="capability-title">US IT BENCH SALES</h3>
-              <p class="capability-desc">Professional consultant representation and opportunity support for eligible IT consultants.</p>
-            </div>
-            <a href="/services/bench-sales" class="inline-link">LEARN MORE &rarr;</a>
-          </div>
-
-          <div class="capability-card reveal">
-            <div>
-              <div class="capability-index">DIVISION 03</div>
-              <h3 class="capability-title">WEB DEVELOPMENT</h3>
-              <p class="capability-desc">Digital experiences ranging from professional portfolios to business websites and custom digital platforms.</p>
-            </div>
-            <a href="/services/web-development" class="inline-link">LEARN MORE &rarr;</a>
-          </div>
-
-          <div class="capability-card reveal">
-            <div>
-              <div class="capability-index">DIVISION 04</div>
-              <h3 class="capability-title">DIGITAL MEDIA &amp; ADVERTISING</h3>
-              <p class="capability-desc">Professional visual content, reels, advertising, and production services.</p>
-            </div>
-            <a href="/services/digital-media" class="inline-link">LEARN MORE &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       11. BUILT TO EVOLVE
-       ========================================================================== -->
-    <section class="section-spacing evolution-section" id="evolution">
-      <div class="container">
-        <div class="evolution-grid reveal">
-          <div>
-            <div class="eyebrow">ORGANIZATIONAL DEVELOPMENT</div>
-            <h2 class="section-title">Built to Evolve.</h2>
-            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
-              <p>TJR Tech is being developed with a long-term perspective.</p>
-              <p>Our foundation begins with staffing and professional services while our technology and digital capabilities continue to expand.</p>
-              <p>The organization is designed to grow responsibly by strengthening its people, processes, technology, client relationships, and service capabilities.</p>
-            </div>
-          </div>
-          <div style="position: relative; height: 320px; display: flex; align-items: center; justify-content: center;">
-            <canvas id="expandingNetworkCanvas" style="width: 100%; height: 100%;"></canvas>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       12. LEADERSHIP INTRODUCTION
-       ========================================================================== -->
-<section class="section-spacing" id="leadership">
-  <div class="container">
-    <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
-      <div class="eyebrow" style="justify-content: center;">LEADERSHIP</div>
-      <h2 class="section-title">The People Behind TJR Tech.</h2>
-      <p class="section-lead" style="margin: 1rem auto 0 auto;">
-        TJR Tech is guided by leadership with practical experience across technology staffing, recruitment, business operations, consultant coordination, digital development, and professional services.
-      </p>
-    </div>
-
-    <div class="leadership-editorial-grid">
-      <!-- Manimala Swarna Latha -->
-      <div class="leader-editorial-card reveal">
-        <div>
-          <div class="leader-monogram">ML</div>
-          <h3 class="leader-name">MANIMALA SWARNA LATHA</h3>
-          <div class="leader-title">Director</div>
-          <p class="leader-bio">
-            Manimala Swarna Latha is a seasoned enterprise technology professional and Director at TJR TECH, with over six years of specialized experience in large-scale IT consulting and mission-critical software engineering at Tier-1 leaders including NTT DATA, Capgemini, and HCL. She spearheads TJR TECH's enterprise technology roadmap and delivery governance, providing strategic oversight in translating enterprise-grade engineering benchmarks into high-performance client solutions.
-          </p>
-        </div>
-        <a href="/directors" class="inline-link">VIEW FULL PROFILE &rarr;</a>
-      </div>
-
-      <!-- Joshua Rohit -->
-      <div class="leader-editorial-card reveal">
-        <div>
-          <div class="leader-monogram">JR</div>
-          <h3 class="leader-name">JOSHUA ROHIT</h3>
-          <div class="leader-title">Business &amp; Contract Operations</div>
-          <p class="leader-bio">
-            Joshua Rohit focuses on business and contract operations, supporting commercial relationships, operational coordination, and the execution of TJR Tech's business activities. His role contributes to building structured business relationships and supporting the organization's operational development.
-          </p>
-        </div>
-        <a href="/directors" class="inline-link">VIEW FULL PROFILE &rarr;</a>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
-      <a href="/directors" class="btn btn-secondary">MEET OUR LEADERSHIP &rarr;</a>
-    </div>
-  </div>
-</section>
-
-    <!-- ==========================================================================
-       13. WHAT DEFINES US
-       ========================================================================== -->
-    <section class="defines-section" aria-label="Company Character">
-      <div class="container reveal">
-        <div class="eyebrow" style="justify-content: center; margin-bottom: 1.5rem;">WHAT DEFINES US</div>
-        <div class="defines-stream">
-          <span class="defines-item active">PRACTICAL.</span>
-          <span class="defines-item">PROFESSIONAL.</span>
-          <span class="defines-item">PEOPLE-FOCUSED.</span>
-          <span class="defines-item">TECHNOLOGY-DRIVEN.</span>
-          <span class="defines-item">ADAPTABLE.</span>
-        </div>
-        <p style="max-width: 720px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.65;">
-          We are building TJR Tech around practical capability, professional relationships, modern technology, and a commitment to continuous improvement.
+        <h2 class="section-heading-lg reveal-elem">
+          What We Do: <span>Integrated Systems.</span>
+        </h2>
+        <p class="section-lead-text reveal-elem">
+          Four specialized practice engines engineered to function independently or converge as a unified enterprise accelerator.
         </p>
-      </div>
-    </section>
 
-    <!-- ==========================================================================
-       14. GLOBAL CONNECTION
-       ========================================================================== -->
-    <section class="section-spacing global-section" id="global">
-      <div class="container">
-        <div class="global-grid reveal">
-          <div>
-            <div class="eyebrow">GLOBAL REACH &amp; ECOSYSTEM</div>
-            <h2 class="section-title">Connected to a Global Technology Ecosystem.</h2>
-            <p style="margin-top: 1.5rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
-              TJR Tech operates with a focus on the connection between technology professionals, businesses, staffing networks, and digital services across India and the US technology ecosystem.
-            </p>
-            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-              Through structured workflows and continuous communication, we facilitate opportunities that bridge regional talent with North American enterprise demands.
-            </p>
-          </div>
-
-          <div class="global-schematic">
-            <div class="hub-vector"></div>
-            <div class="ecosystem-hub">
-              <div class="hub-node">IN</div>
-              <div class="hub-name">India Operations</div>
-              <div class="hub-sub">Hyderabad Delivery Hub</div>
+        <div class="services-ecosystem-grid">
+          <!-- 01: US IT Staffing -->
+          <article class="service-system-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="card-num-row">
+                <span class="card-sys-id">01 // TALENT</span>
+                <span class="card-pulse-node"></span>
+              </div>
+              <h3 class="card-title">US IT Staffing</h3>
+              <div class="card-subline">Technical Talent Infrastructure</div>
+              <p class="card-desc">
+                Connecting technology organizations with verified engineers, cloud architects, and data practitioners across contract, C2C, and permanent models.
+              </p>
+              <div class="card-flow-preview">
+                <div class="flow-step-row">
+                  <span class="flow-node-step">Talent Pool</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Tech Screen</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Deploy</span>
+                </div>
+              </div>
             </div>
-            <div class="ecosystem-hub">
-              <div class="hub-node">US</div>
-              <div class="hub-name">US IT Ecosystem</div>
-              <div class="hub-sub">Enterprise &amp; Consultant Grid</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       15. SIGNATURE BRAND STATEMENT
-       ========================================================================== -->
-    <section class="signature-brand-section" aria-label="Brand Signature Sequence">
-      <div class="container reveal">
-        <div class="sig-words-chain">
-          PEOPLE<span>.</span> TECHNOLOGY<span>.</span> DIGITAL<span>.</span> OPPORTUNITY<span>.</span>
-        </div>
-        <div class="sig-brand-target">TJR TECH</div>
-        <p class="sig-subline">
-          Building opportunities through people, technology, and digital innovation.
-        </p>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       16. FINAL CALL TO ACTION
-       ========================================================================== -->
-    <section class="section-spacing cta-section" id="cta">
-      <div class="container">
-        <div class="cta-container reveal">
-          <div class="eyebrow" style="justify-content: center;">WORK WITH TJR TECH</div>
-          <h2 class="section-title" style="margin-bottom: 1.25rem;">Let's Build What's Next.</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
-            Whether you are looking for technology talent, a digital solution, professional consultant support, or a creative partner, TJR Tech is ready to understand your requirement and explore how we can work together.
-          </p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-            <a href="/services" class="btn btn-primary">
-              <span>EXPLORE OUR SERVICES</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            <a href="us-it-staffing.html" class="card-footer-cta">
+              <span>Explore Staffing</span>
+              <span>&rarr;</span>
             </a>
-            <a href="/contact" class="btn btn-secondary">
-              <span>CONTACT TJR TECH</span>
+          </article>
+
+          <!-- 02: US IT Bench Sales -->
+          <article class="service-system-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="card-num-row">
+                <span class="card-sys-id">02 // CONSULTANTS</span>
+                <span class="card-pulse-node"></span>
+              </div>
+              <h3 class="card-title">US IT Bench Sales</h3>
+              <div class="card-subline">Consultant Representation</div>
+              <p class="card-desc">
+                Structured candidate marketing, resume optimization, active prime vendor management, and rate negotiation for work-authorized technical consultants.
+              </p>
+              <div class="card-flow-preview">
+                <div class="flow-step-row">
+                  <span class="flow-node-step">Consultant</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Prime Vendor</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Project</span>
+                </div>
+              </div>
+            </div>
+            <a href="us-it-bench-sales.html" class="card-footer-cta">
+              <span>Explore Bench Sales</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- 03: Web Development -->
+          <article class="service-system-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="card-num-row">
+                <span class="card-sys-id">03 // ENGINEERING</span>
+                <span class="card-pulse-node"></span>
+              </div>
+              <h3 class="card-title">Web Development</h3>
+              <div class="card-subline">Custom Digital Engineering</div>
+              <p class="card-desc">
+                Engineered digital experiences, high-performance web applications, executive portfolios, and reliable lifecycle maintenance optimized for speed.
+              </p>
+              <div class="card-flow-preview">
+                <div class="flow-step-row">
+                  <span class="flow-node-step">Code</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Architecture</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Release</span>
+                </div>
+              </div>
+            </div>
+            <a href="web-development.html" class="card-footer-cta">
+              <span>Explore Web Engineering</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- 04: Ads & Digital Media -->
+          <article class="service-system-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="card-num-row">
+                <span class="card-sys-id">04 // MEDIA</span>
+                <span class="card-pulse-node"></span>
+              </div>
+              <h3 class="card-title">Ads &amp; Digital Media</h3>
+              <div class="card-subline">Commercial Brand Cinema</div>
+              <p class="card-desc">
+                Operating via TJR Media to engineer corporate brand cinema, executive shoots, short-form motion campaigns, and digital brand positioning.
+              </p>
+              <div class="card-flow-preview">
+                <div class="flow-step-row">
+                  <span class="flow-node-step">Narrative</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Cinema 4K</span>
+                  <span class="flow-arrow-step">&rarr;</span>
+                  <span class="flow-node-step">Impact</span>
+                </div>
+              </div>
+            </div>
+            <a href="ads-digital-media.html" class="card-footer-cta">
+              <span>Explore Digital Media</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 04 — INTERACTIVE DEVELOPER LABORATORY
+         ========================================================================== -->
+    <section class="world-section world-developer-lab" id="dev-lab">
+      <div class="container dev-lab-grid">
+        <div class="reveal-elem">
+          <div class="section-kicker-bar">
+            <span class="section-num-tag">04 / CODE</span>
+            <span>ENGINEERING LABORATORY</span>
+          </div>
+          <h2 class="section-heading-lg">
+            We Build <span>Digital Experiences.</span>
+          </h2>
+          <p class="section-lead-text">
+            We do not just assemble websites. We engineer end-to-end digital architectures, modular client portals, and performance-tuned software stacks.
+          </p>
+
+          <div class="dev-phases-list">
+            <div class="phase-tile">
+              <div class="phase-idx">01 // CODE</div>
+              <div class="phase-name">Architect</div>
+              <div class="phase-sub">Component models &amp; state engines</div>
+            </div>
+            <div class="phase-tile">
+              <div class="phase-idx">02 // CLOUD</div>
+              <div class="phase-name">Integrate</div>
+              <div class="phase-sub">Edge routers &amp; API pipelines</div>
+            </div>
+            <div class="phase-tile">
+              <div class="phase-idx">03 // PROD</div>
+              <div class="phase-name">Deploy</div>
+              <div class="phase-sub">Zero-downtime global delivery</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2.5rem;">
+            <a href="web-development.html" class="btn btn-secondary" data-magnetic data-cursor="EXPLORE">
+              <span>View Platform Capabilities</span>
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Fake IDE Terminal Visual Window -->
+        <div class="lab-ide-window reveal-elem">
+          <div class="ide-header-bar">
+            <div class="ide-traffic-lights">
+              <span class="traffic-dot td-red"></span>
+              <span class="traffic-dot td-yellow"></span>
+              <span class="traffic-dot td-green"></span>
+            </div>
+            <div class="ide-tab-label">TJRTech_CoreEngine.ts</div>
+            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: #475569;">UTF-8</div>
+          </div>
+          <div class="ide-body">
+            <p><span class="ide-token-cm">// Initializing TJR Tech Digital Architecture</span></p>
+            <p><span class="ide-token-kw">import</span> { EnterpriseSystem, TalentGrid } <span class="ide-token-kw">from</span> <span class="ide-token-str">'@tjr/core'</span>;</p>
+            <p>&nbsp;</p>
+            <p><span class="ide-token-kw">export async function</span> <span class="ide-token-fn">deployExperience</span>(client: Enterprise) {</p>
+            <p>&nbsp;&nbsp;<span class="ide-token-kw">const</span> engine = <span class="ide-token-kw">new</span> <span class="ide-token-fn">EnterpriseSystem</span>({</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;performance: <span class="ide-token-str">'ultra-high'</span>,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;mesh: TalentGrid.<span class="ide-token-fn">connect</span>()</p>
+            <p>&nbsp;&nbsp;});</p>
+            <p>&nbsp;&nbsp;<span class="ide-token-kw">await</span> engine.<span class="ide-token-fn">scale</span>();</p>
+            <p>&nbsp;&nbsp;<span class="ide-token-kw">return</span> engine.<span class="ide-token-fn">status</span>();</p>
+            <p>}</p>
+
+            <div class="terminal-sub-panel">
+              <div class="term-title">&gt; Live System Execution Log</div>
+              <div class="term-log-stream" id="ideTerminalLog">
+                &gt; compiling modules...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 05 — TALENT NETWORK LIVING CONVERGENCE
+         ========================================================================== -->
+    <section class="world-section world-talent-network" id="talent-network">
+      <div class="container">
+        <div class="section-kicker-bar reveal-elem">
+          <span class="section-num-tag">05 / NETWORK</span>
+          <span>HUMAN CAPITAL CONVERGENCE</span>
+        </div>
+        <h2 class="section-heading-lg reveal-elem">
+          The Talent <span>Network.</span>
+        </h2>
+        <p class="section-lead-text reveal-elem">
+          Advanced technology requires exceptional practitioners. We bridge technical constraints with disciplined leadership and seasoned engineers.
+        </p>
+
+        <div class="talent-network-visual-stage reveal-elem">
+          <!-- Node 01 -->
+          <div class="talent-node-card" data-cursor="INSPECT">
+            <div class="talent-badge-role">NODE 01 // TALENT</div>
+            <h3 class="talent-title">Consultants</h3>
+            <p class="talent-desc">
+              Independent technical specialists represented with transparency for prime vendor and direct corporate project engagements.
+            </p>
+          </div>
+          <!-- Node 02 -->
+          <div class="talent-node-card" data-cursor="INSPECT">
+            <div class="talent-badge-role">NODE 02 // CAREER</div>
+            <h3 class="talent-title">Professionals</h3>
+            <p class="talent-desc">
+              Senior software practitioners and tech managers seeking elevated positioning, modern portfolios, and high-visibility roles.
+            </p>
+          </div>
+          <!-- Node 03 -->
+          <div class="talent-node-card" data-cursor="INSPECT">
+            <div class="talent-badge-role">NODE 03 // BUILDERS</div>
+            <h3 class="talent-title">Engineers</h3>
+            <p class="talent-desc">
+              Full-stack, cloud, and DevOps builders assembled into agile squads ready for rapid project deployment and scaling.
+            </p>
+          </div>
+          <!-- Node 04 -->
+          <div class="talent-node-card" data-cursor="INSPECT">
+            <div class="talent-badge-role">NODE 04 // ENTERPRISE</div>
+            <h3 class="talent-title">Businesses</h3>
+            <p class="talent-desc">
+              Commercial enterprises acquiring verified tech talent, tailored web systems, and brand media to establish market dominance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 06 — SOLUTIONS DESTINATIONS
+         ========================================================================== -->
+    <section class="world-section world-solutions" id="solutions-world">
+      <div class="container">
+        <div class="section-kicker-bar reveal-elem">
+          <span class="section-num-tag">06 / PATHWAYS</span>
+          <span>TAILORED ENGAGEMENT PATHWAYS</span>
+        </div>
+        <h2 class="section-heading-lg reveal-elem">
+          Solutions Built Around <span>People &amp; Business.</span>
+        </h2>
+        <p class="section-lead-text reveal-elem">
+          Distinct operating environments designed to solve specific challenges for each audience tier.
+        </p>
+
+        <div class="solutions-tri-grid">
+          <!-- Consultants -->
+          <article class="solution-destination-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="sol-dest-kicker">TALENT OPPORTUNITY</div>
+              <h3 class="sol-dest-heading">For Consultants</h3>
+              <p class="sol-dest-body">
+                Structured candidate representation, profile positioning, rate negotiation assistance, and direct connections to verified prime vendor openings.
+              </p>
+            </div>
+            <a href="for-consultants.html" class="inline-link">
+              <span>Enter Consultant Path &rarr;</span>
+            </a>
+          </article>
+
+          <!-- Professionals -->
+          <article class="solution-destination-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="sol-dest-kicker">INDIVIDUAL ELEVATION</div>
+              <h3 class="sol-dest-heading">For Professionals</h3>
+              <p class="sol-dest-body">
+                Showcase engineering capabilities through custom portfolio development, executive digital profiles, and tailored career branding strategies.
+              </p>
+            </div>
+            <a href="for-professionals.html" class="inline-link">
+              <span>Enter Professional Path &rarr;</span>
+            </a>
+          </article>
+
+          <!-- Businesses -->
+          <article class="solution-destination-card reveal-elem" data-cursor="EXPLORE">
+            <div>
+              <div class="sol-dest-kicker">ENTERPRISE VELOCITY</div>
+              <h3 class="sol-dest-heading">For Businesses</h3>
+              <p class="sol-dest-body">
+                Vetted IT staffing pipelines, custom web engineering, interactive enterprise portals, and commercial brand cinema to accelerate commercial growth.
+              </p>
+            </div>
+            <a href="for-businesses.html" class="inline-link">
+              <span>Enter Business Path &rarr;</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 07 — DIGITAL GALLERY (PORTFOLIO PREVIEWS)
+         ========================================================================== -->
+    <section class="world-section world-portfolio" id="portfolio-world">
+      <div class="container">
+        <div class="section-kicker-bar reveal-elem">
+          <span class="section-num-tag">07 / GALLERY</span>
+          <span>SELECTED WORK &amp; SYSTEM PROOFS</span>
+        </div>
+        <h2 class="section-heading-lg reveal-elem">
+          Built to be <span>Experienced.</span>
+        </h2>
+        <p class="section-lead-text reveal-elem">
+          Representative conceptual artifacts demonstrating technical versatility across engineering, staffing, and creative digital cinema.
+        </p>
+
+        <div class="portfolio-gallery-strip">
+          <!-- Work 01 -->
+          <article class="gallery-artifact-card reveal-elem" data-cursor="VIEW">
+            <div class="artifact-visual-stage">
+              <span class="artifact-tag">Web Platforms</span>
+              <div class="artifact-schematic-text">[ Enterprise Operations Dashboard ]</div>
+            </div>
+            <div class="artifact-body">
+              <div>
+                <div class="artifact-category">Platform Engineering</div>
+                <h3 class="artifact-title">Consultant Operations Dashboard</h3>
+                <p class="artifact-synopsis">
+                  Dynamic web platform engineered for real-time timesheet validation, contractor document tracking, and prime vendor communications.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Work 02 -->
+          <article class="gallery-artifact-card reveal-elem" data-cursor="VIEW">
+            <div class="artifact-visual-stage">
+              <span class="artifact-tag">Staffing Deployment</span>
+              <div class="artifact-schematic-text">[ Cloud Infrastructure Squad ]</div>
+            </div>
+            <div class="artifact-body">
+              <div>
+                <div class="artifact-category">Talent Acquisition</div>
+                <h3 class="artifact-title">Cloud Infrastructure Squad Deployment</h3>
+                <p class="artifact-synopsis">
+                  Curated deployment of seasoned AWS DevOps and Kubernetes specialists to accelerate mission-critical cloud migrations.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Work 03 -->
+          <article class="gallery-artifact-card reveal-elem" data-cursor="VIEW">
+            <div class="artifact-visual-stage">
+              <span class="artifact-tag">Brand Cinema</span>
+              <div class="artifact-schematic-text">[ TJR Media Suite ]</div>
+            </div>
+            <div class="artifact-body">
+              <div>
+                <div class="artifact-category">Digital Media Production</div>
+                <h3 class="artifact-title">Corporate Narrative &amp; Brand Cinema</h3>
+                <p class="artifact-synopsis">
+                  Commercial production encompassing creative narrative scripting, 4K executive cinematography, sound engineering, and targeted releases.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="reveal-elem" style="text-align: center;">
+          <a href="portfolio.html" class="btn btn-secondary" data-magnetic data-cursor="VIEW">
+            <span>Enter Full Portfolio</span>
+            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 08 — EDITORIAL INSIGHTS
+         ========================================================================== -->
+    <section class="world-section world-insights" id="insights-world">
+      <div class="container">
+        <div class="section-kicker-bar reveal-elem">
+          <span class="section-num-tag">08 / EDITORIAL</span>
+          <span>IDEAS BEYOND THE BUILD</span>
+        </div>
+        <h2 class="section-heading-lg reveal-elem">
+          Perspectives &amp; <span>Analysis.</span>
+        </h2>
+        <p class="section-lead-text reveal-elem">
+          Commentary on modern software engineering, talent infrastructure trends, and high-impact digital storytelling.
+        </p>
+
+        <div class="insights-editorial-grid">
+          <!-- Article 01 -->
+          <article class="editorial-card reveal-elem" data-cursor="READ">
+            <div>
+              <div class="editorial-meta">
+                <span>01 // STAFFING</span>
+                <span>Talent Protocol</span>
+              </div>
+              <h3 class="editorial-title">Architecting Predictable Technical Recruiting Pipelines</h3>
+              <p class="editorial-excerpt">
+                How technical screening standards and structured candidate communication eliminate delays in enterprise software delivery schedules.
+              </p>
+            </div>
+            <a href="insights.html" class="inline-link">Read Perspective &rarr;</a>
+          </article>
+
+          <!-- Article 02 -->
+          <article class="editorial-card reveal-elem" data-cursor="READ">
+            <div>
+              <div class="editorial-meta">
+                <span>02 // ENGINEERING</span>
+                <span>Web Performance</span>
+              </div>
+              <h3 class="editorial-title">The Shift Toward Performance-First Web Architecture</h3>
+              <p class="editorial-excerpt">
+                Why modern modular frontend architectures and Core Web Vitals directly determine corporate conversion velocity.
+              </p>
+            </div>
+            <a href="insights.html" class="inline-link">Read Perspective &rarr;</a>
+          </article>
+
+          <!-- Article 03 -->
+          <article class="editorial-card reveal-elem" data-cursor="READ">
+            <div>
+              <div class="editorial-meta">
+                <span>03 // MEDIA</span>
+                <span>Brand Cinema</span>
+              </div>
+              <h3 class="editorial-title">Cinematic Storytelling in Modern Business Technology</h3>
+              <p class="editorial-excerpt">
+                How 4K corporate video and short-form digital assets elevate technology brands beyond generic market competitors.
+              </p>
+            </div>
+            <a href="insights.html" class="inline-link">Read Perspective &rarr;</a>
+          </article>
+        </div>
+
+        <div class="reveal-elem" style="text-align: center;">
+          <a href="insights.html" class="btn btn-secondary" data-magnetic data-cursor="READ">
+            <span>Explore All Insights</span>
+            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 09 — CAREERS & ABOUT TEASER
+         ========================================================================== -->
+    <section class="world-section world-careers" id="careers-world">
+      <div class="container">
+        <div class="careers-banner-box reveal-elem">
+          <div>
+            <div class="section-kicker-bar">
+              <span class="section-num-tag">09 // CAREERS</span>
+              <span>TALENT COMMUNITY</span>
+            </div>
+            <h2 class="section-heading-lg">
+              Build What Comes <span>Next.</span>
+            </h2>
+            <p class="section-lead-text" style="margin-top: 1rem;">
+              We welcome ambitious technologists, recruiters, designers, and creative directors ready to shape tomorrow's technology landscape.
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <a href="careers.html" class="btn btn-primary" style="padding: 1.15rem 2.6rem;" data-magnetic data-cursor="JOIN">
+              <span>Explore Careers</span>
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High-Level About Teaser -->
+    <section class="about-teaser-strip" id="about-teaser">
+      <div class="container">
+        <div class="about-teaser-grid reveal-elem">
+          <div>
+            <div class="section-kicker-bar">
+              <span class="section-num-tag">CORE IDENTITY</span>
+              <span>PHILOSOPHY</span>
+            </div>
+            <h2 class="section-heading-lg" style="font-size: 2.2rem;">
+              Built at the Intersection of Technology, <span>Talent and Execution.</span>
+            </h2>
+            <p class="section-lead-text" style="margin-top: 1rem; font-size: 1rem;">
+              Technology is only part of the story. Disciplined execution, structured communication, and enduring relationships complete it.
+            </p>
+          </div>
+          <div>
+            <a href="about.html" class="btn btn-secondary" data-magnetic data-cursor="ABOUT">
+              <span>Discover Our Story &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORLD 10 — THE NEXT MOVE (FINAL CONVERSION CTA)
+         ========================================================================== -->
+    <section class="world-final-cta" id="final-cta">
+      <div class="container">
+        <div class="cta-inner-stage reveal-elem">
+          <div class="section-kicker-bar" style="justify-content: center;">
+            <span class="section-num-tag">10 // CONVERGE</span>
+            <span>DIRECT ACTION</span>
+          </div>
+          <h2 class="section-heading-lg" style="font-size: clamp(2.6rem, 4.8vw, 4.2rem);">
+            Ready to Build <span>What's Next?</span>
+          </h2>
+          <p class="section-lead-text" style="margin: 1.25rem auto 0 auto;">
+            Technology challenge? Talent requirement? Platform engineering? Commercial media? Let's connect.
+          </p>
+
+          <div class="cta-pathways-grid">
+            <a href="for-businesses.html" class="pathway-box" data-cursor="EXPLORE">
+              <div class="pathway-title">For Businesses</div>
+              <div class="pathway-desc">Deploy tech talent or build enterprise systems.</div>
+              <div class="pathway-link-text">Explore &rarr;</div>
+            </a>
+            <a href="for-consultants.html" class="pathway-box" data-cursor="CONNECT">
+              <div class="pathway-title">For Consultants</div>
+              <div class="pathway-desc">Consultant marketing &amp; rate negotiation.</div>
+              <div class="pathway-link-text">Connect &rarr;</div>
+            </a>
+            <a href="web-development.html" class="pathway-box" data-cursor="BUILD">
+              <div class="pathway-title">Web Projects</div>
+              <div class="pathway-desc">Engineer custom web &amp; software applications.</div>
+              <div class="pathway-link-text">Build &rarr;</div>
+            </a>
+            <a href="ads-digital-media.html" class="pathway-box" data-cursor="PRODUCE">
+              <div class="pathway-title">Digital Media</div>
+              <div class="pathway-desc">Commission commercial video &amp; media campaigns.</div>
+              <div class="pathway-link-text">Produce &rarr;</div>
+            </a>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary" style="padding: 1.2rem 2.8rem;" data-magnetic data-cursor="TALK">
+              <span>Start a Conversation</span>
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="services.html" class="btn btn-secondary" data-magnetic data-cursor="EXPLORE">
+              <span>Explore The Ecosystem</span>
             </a>
           </div>
         </div>
@@ -1845,170 +3056,640 @@
   </main>
 
   <!-- ==========================================================================
-       17. FOOTER
+       15. SITE FOOTER
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand-title">TJR TECH</div>
-          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <div class="logo-container">
+            <div class="logo-mark">T</div>
+            <div class="logo-text">
+              <span class="logo-title">TJR TECH</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Technology • Consulting • Talent • Media</p>
           <p class="footer-desc">
-            A technology and professional services organization bringing together talent solutions, technical systems, web development, and digital media.
+            An advanced digital technology organization delivering enterprise solutions across IT Consulting, Software Engineering, US IT Staffing, and Digital Media.
           </p>
         </div>
 
+        <!-- Col 1: Company -->
         <div>
           <div class="footer-heading">Company</div>
-          <ul class="footer-links-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/directors">Leadership</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/contact">Contact</a></li>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="insights.html" class="footer-link">Insights</a></li>
+            <li><a href="careers.html" class="footer-link">Careers</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
+        <!-- Col 2: Services -->
         <div>
           <div class="footer-heading">Services</div>
-          <ul class="footer-links-list">
-            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
-            <li><a href="/services/bench-sales">US IT Bench Sales</a></li>
-            <li><a href="/services/web-development">Web Development</a></li>
-            <li><a href="/services/digital-media">Digital Media &amp; Advertising</a></li>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Overview</a></li>
+            <li><a href="us-it-staffing.html" class="footer-link">US IT Staffing</a></li>
+            <li><a href="us-it-bench-sales.html" class="footer-link">US IT Bench Sales</a></li>
+            <li><a href="web-development.html" class="footer-link">Web Development</a></li>
+            <li><a href="ads-digital-media.html" class="footer-link">Ads &amp; Digital Media</a></li>
           </ul>
         </div>
 
+        <!-- Col 3: Solutions -->
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <ul class="footer-links">
+            <li><a href="solutions.html" class="footer-link">Overview</a></li>
+            <li><a href="for-consultants.html" class="footer-link">For Consultants</a></li>
+            <li><a href="for-professionals.html" class="footer-link">For Professionals</a></li>
+            <li><a href="for-businesses.html" class="footer-link">For Businesses</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Explore -->
         <div>
           <div class="footer-heading">Explore</div>
-          <ul class="footer-links-list">
-            <li><a href="/solutions">Solutions</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/insights">Insights</a></li>
+          <ul class="footer-links">
+            <li><a href="portfolio.html" class="footer-link">Work</a></li>
+            <li><a href="insights.html" class="footer-link">Perspectives</a></li>
+            <li><a href="careers.html" class="footer-link">Careers</a></li>
           </ul>
         </div>
 
+        <!-- Col 5: Connect -->
         <div>
-          <div class="footer-heading">Operations</div>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+          <div class="footer-heading">Connect</div>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
             Hyderabad, Telangana, India
           </p>
-          <p style="margin-top: 0.5rem; color: var(--text-accent); font-family: var(--font-mono); font-size: 0.8125rem;">
-            Global Delivery &amp; Services
+          <p style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--ice-blue);">
+            Global Delivery Hub
           </p>
+          <div style="margin-top: 1rem;">
+            <a href="contact.html" class="inline-link" style="font-size: 0.775rem;">Contact Us &rarr;</a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms &amp; Conditions</a>
-          <a href="/cookies">Cookie Policy</a>
-        </div>
+        <div>&copy; <span id="currentYear"></span> TJR Tech. All rights reserved.</div>
+        <div>Technology • Consulting • Software • Talent • Digital</div>
       </div>
     </div>
   </footer>
 
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Scroll back to top">
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
   <!-- ==========================================================================
-       MODULAR VANILLA JAVASCRIPT
+       16. CONTACT MODAL OVERLAY
+       ========================================================================== -->
+  <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+      <div class="section-kicker-bar">
+        <span class="section-num-tag">DIRECT CHANNEL</span>
+        <span>COMMUNICATION</span>
+      </div>
+      <h3 id="modalHeading" style="font-size: 1.6rem; margin-bottom: 0.5rem; color: #fff;">Talk to TJR Tech</h3>
+      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Specify your requirements across IT Consulting, Staffing, Bench Sales, Web Development, or TJR Media.
+      </p>
+
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="userName">Full Name</label>
+          <input class="form-input" type="text" id="userName" required placeholder="e.g., Alexander Hayes">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="userEmail">Official Email Address</label>
+          <input class="form-input" type="email" id="userEmail" required placeholder="alex@company.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="serviceSelect">Practice Area of Interest</label>
+          <select class="form-select" id="serviceSelect" required>
+            <option value="" disabled selected>Select practice area</option>
+            <option value="staffing">US IT Staffing</option>
+            <option value="bench">US IT Bench Sales / Consultant Representation</option>
+            <option value="web">Web &amp; Software Engineering</option>
+            <option value="media">Ads &amp; Digital Media (TJR Media)</option>
+            <option value="consulting">IT Consulting</option>
+            <option value="other">General Corporate Inquiries</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="userMessage">Requirement Outline</label>
+          <textarea class="form-textarea" id="userMessage" required placeholder="Describe your talent requirement, software scope, or timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>Submit Inquiry</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       17. MASTER LIVING ENGINE & INTERACTION SCRIPTS
        ========================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      // 1. Dynamic Copyright Year
-      const yearHolder = document.getElementById('yearHolder');
-      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+      // 1. Dynamic System Time & Date Awareness
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonthIndex = now.getMonth();
+      const currentHour = now.getHours();
 
-      // 2. Navigation Scroll Treatment & Progress Bar
-      const header = document.getElementById('mainHeader');
-      const progressBar = document.getElementById('scrollProgress');
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = currentYear;
+
+      // 2. Day / Night Atmosphere Engine
+      const body = document.body;
+      if (currentHour >= 5 && currentHour < 11) {
+        body.classList.add('time-morning');
+      } else if (currentHour >= 11 && currentHour < 17) {
+        body.classList.add('time-day');
+      } else if (currentHour >= 17 && currentHour < 21) {
+        body.classList.add('time-evening');
+      } else {
+        body.classList.add('time-night');
+      }
+
+      // 3. Month-Aware System Evolution Themes
+      const monthThemes = [
+        "CYCLE // REBOOT",      // Jan
+        "CONNECTION // ACTIVE", // Feb
+        "BUILD // ACCELERATE",  // Mar
+        "EVOLVE // SYSTEM",     // Apr
+        "EXPANSION // SCALE",   // May
+        "VELOCITY // VECTOR",   // Jun
+        "CONVERGENCE // GRID",  // Jul
+        "OPTIMIZE // PROTOCOL", // Aug
+        "DEPLOY // HORIZON",    // Sep
+        "STRENGTH // CORE",     // Oct
+        "FUTURE // SYNERGY",    // Nov
+        "HORIZON // NEXUS"      // Dec
+      ];
+
+      const heroTelemetryMonth = document.getElementById('heroTelemetryMonth');
+      if (heroTelemetryMonth) {
+        heroTelemetryMonth.textContent = `SYSTEM / ${monthThemes[currentMonthIndex]}`;
+      }
+
+      // 4. Live Local System Clock UI
+      const clockTimeEl = document.getElementById('systemClockDisplay');
+      const clockDateEl = document.getElementById('systemDateDisplay');
+      const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+      function updateSystemClock() {
+        const d = new Date();
+        const hrs = String(d.getHours()).padStart(2, '0');
+        const mins = String(d.getMinutes()).padStart(2, '0');
+        const secs = String(d.getSeconds()).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        const mon = monthNames[d.getMonth()];
+        const yr = d.getFullYear();
+
+        if (clockTimeEl) clockTimeEl.textContent = `${hrs}:${mins}:${secs} LOC`;
+        if (clockDateEl) clockDateEl.textContent = `${day} ${mon} ${yr}`;
+      }
+      setInterval(updateSystemClock, 1000);
+      updateSystemClock();
+
+      // 5. Cinematic Fast Boot-Up Sequence (~1.1s)
+      const bootupOverlay = document.getElementById('bootupOverlay');
+      const bootBar = document.getElementById('bootBar');
+      const bline1 = document.getElementById('bline1');
+      const bline2 = document.getElementById('bline2');
+      const bline3 = document.getElementById('bline3');
+      const bline4 = document.getElementById('bline4');
+      const bootPill = document.getElementById('bootCyclePill');
+
+      const isReturningVisitor = sessionStorage.getItem('tjr_booted');
+      const bootDuration = isReturningVisitor ? 450 : 1100;
+
+      setTimeout(() => { if (bline1) bline1.classList.add('visible'); if (bootBar) bootBar.style.width = '30%'; }, isReturningVisitor ? 50 : 200);
+      setTimeout(() => { if (bline2) bline2.classList.add('visible'); if (bootBar) bootBar.style.width = '60%'; }, isReturningVisitor ? 120 : 450);
+      setTimeout(() => { if (bline3) bline3.classList.add('visible'); if (bootBar) bootBar.style.width = '85%'; }, isReturningVisitor ? 200 : 700);
+      setTimeout(() => { 
+        if (bline4) bline4.classList.add('visible'); 
+        if (bootBar) bootBar.style.width = '100%'; 
+        if (bootPill) bootPill.textContent = 'ONLINE';
+      }, isReturningVisitor ? 300 : 900);
+
+      setTimeout(() => {
+        if (bootupOverlay) bootupOverlay.classList.add('booted');
+        sessionStorage.setItem('tjr_booted', 'true');
+      }, bootDuration);
+
+      // 6. Kinetic Words Morphing Slider
+      const kineticWord = document.getElementById('kineticWord');
+      const kineticCycle = [
+        "DIGITAL FUTURES",
+        "ENGINEERED SYSTEMS",
+        "MISSION TEAMS",
+        "ENTERPRISE CODE",
+        "BRAND CINEMA"
+      ];
+      let kIndex = 0;
+      setInterval(() => {
+        if (!kineticWord) return;
+        kineticWord.style.opacity = '0';
+        kineticWord.style.transform = 'translateY(10px)';
+        setTimeout(() => {
+          kIndex = (kIndex + 1) % kineticCycle.length;
+          kineticWord.textContent = kineticCycle[kIndex];
+          kineticWord.style.opacity = '1';
+          kineticWord.style.transform = 'translateY(0)';
+        }, 300);
+      }, 3500);
+
+      // 7. Ambient System Broadcast Events (Non-spammy every 14s)
+      const broadcastEl = document.getElementById('ambientBroadcast');
+      const broadcastMsg = document.getElementById('ambientBroadcastMsg');
+      const systemEvents = [
+        "TALENT GRID // 12 NODES SYNCHRONIZED",
+        "ENTERPRISE WEB // ZERO-DOWNTIME ACTIVE",
+        "MEDIA SUITE // 4K STREAMING READY",
+        "SYSTEM HEALTH // 100% OPERATIONAL",
+        "GLOBAL HUB // HYDERABAD ONLINE"
+      ];
+      let evIdx = 0;
+      setInterval(() => {
+        if (!broadcastEl || !broadcastMsg) return;
+        evIdx = (evIdx + 1) % systemEvents.length;
+        broadcastMsg.textContent = systemEvents[evIdx];
+        broadcastEl.classList.add('show');
+        setTimeout(() => {
+          broadcastEl.classList.remove('show');
+        }, 4000);
+      }, 16000);
+
+      // 8. Custom Dual Precision Cursor & Spotlight Engine
+      const cursorDot = document.getElementById('cursorDot');
+      const cursorRing = document.getElementById('cursorRing');
+      const cursorLabel = document.getElementById('cursorLabel');
+      const spotlight = document.getElementById('ambientSpotlight');
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let ringX = mouseX;
+      let ringY = mouseY;
+
+      const hasPointer = window.matchMedia('(pointer: fine)').matches;
+
+      if (hasPointer) {
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (cursorDot) cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+          if (spotlight) spotlight.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+        }, { passive: true });
+
+        function renderCursorRing() {
+          ringX += (mouseX - ringX) * 0.16;
+          ringY += (mouseY - ringY) * 0.16;
+          if (cursorRing) cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+          requestAnimationFrame(renderCursorRing);
+        }
+        renderCursorRing();
+
+        // Cursor Label States
+        const cursorTargets = document.querySelectorAll('[data-cursor]');
+        cursorTargets.forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            const label = el.getAttribute('data-cursor') || 'OPEN';
+            if (cursorLabel) cursorLabel.textContent = label;
+            if (cursorRing) cursorRing.classList.add('hover-active');
+          });
+          el.addEventListener('mouseleave', () => {
+            if (cursorRing) cursorRing.classList.remove('hover-active');
+          });
+        });
+
+        // 9. Magnetic Interactions on Buttons
+        const magneticBtns = document.querySelectorAll('[data-magnetic]');
+        magneticBtns.forEach(btn => {
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const relX = e.clientX - (rect.left + rect.width / 2);
+            const relY = e.clientY - (rect.top + rect.height / 2);
+            btn.style.transform = `translate(${relX * 0.28}px, ${relY * 0.28}px)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+          });
+        });
+      } else {
+        if (cursorDot) cursorDot.style.display = 'none';
+        if (cursorRing) cursorRing.style.display = 'none';
+      }
+
+      // 10. Sticky Header & Scroll Journey Progress
+      const siteHeader = document.getElementById('siteHeader');
+      const scrollProgressBar = document.getElementById('scrollProgress');
+      const backToTopBtn = document.getElementById('backToTop');
 
       window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
+        const top = window.scrollY || document.documentElement.scrollTop;
+        const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = max > 0 ? (top / max) * 100 : 0;
 
-        if (progressBar) progressBar.style.width = scrolled + '%';
-        if (winScroll > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
+        if (scrollProgressBar) scrollProgressBar.style.width = progress + '%';
+
+        if (siteHeader) {
+          if (top > 40) siteHeader.classList.add('scrolled');
+          else siteHeader.classList.remove('scrolled');
+        }
+
+        if (backToTopBtn) {
+          if (top > 450) backToTopBtn.classList.add('visible');
+          else backToTopBtn.classList.remove('visible');
         }
       }, { passive: true });
 
-      // 3. Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileDrawer = document.getElementById('mobileMenuDrawer');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function toggleMobile() {
-        const isOpen = mobileDrawer.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      }
-
-      if (mobileMenuBtn && mobileDrawer) {
-        mobileMenuBtn.addEventListener('click', toggleMobile);
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (mobileDrawer.classList.contains('active')) toggleMobile();
-          });
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
 
-      // 4. Scroll Reveal Engine (IntersectionObserver)
-      const reveals = document.querySelectorAll('.reveal');
+      // 11. Mobile Drawer Navigation & Accordion Controls
+      const mobToggle = document.getElementById('mobNavToggle');
+      const mobDrawer = document.getElementById('mobMenuDrawer');
+      const mobServBtn = document.getElementById('mobServicesAccordion');
+      const mobServList = document.getElementById('mobServicesList');
+      const mobSolBtn = document.getElementById('mobSolutionsAccordion');
+      const mobSolList = document.getElementById('mobSolutionsList');
+
+      function toggleMobileDrawer() {
+        const isOpen = mobDrawer.classList.toggle('active');
+        mobToggle.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      if (mobToggle) mobToggle.addEventListener('click', toggleMobileDrawer);
+
+      if (mobServBtn && mobServList) {
+        mobServBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          mobServList.classList.toggle('open');
+        });
+      }
+
+      if (mobSolBtn && mobSolList) {
+        mobSolBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          mobSolList.classList.toggle('open');
+        });
+      }
+
+      // 12. Mega Menu Dynamic Interactive Sidebar
+      const megaServiceEntries = document.querySelectorAll('[data-service-type]');
+      const megaPreviewBox = document.getElementById('megaServicePreview');
+      const previewData = {
+        staffing: { title: "US IT STAFFING", desc: "Access screening protocols, verified architects, and North American talent pipelines." },
+        bench: { title: "BENCH SALES", desc: "Structured consultant marketing, vendor tier-1 representation, and rate optimization." },
+        web: { title: "WEB ENGINEERING", desc: "Enterprise platform engineering, dynamic dashboards, and modular architecture stacks." },
+        media: { title: "ADS & DIGITAL MEDIA", desc: "TJR Media brand cinema, 4K production, narrative design, and executive showcases." }
+      };
+
+      megaServiceEntries.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const type = item.getAttribute('data-service-type');
+          if (previewData[type] && megaPreviewBox) {
+            megaPreviewBox.innerHTML = `
+              <span style="font-weight: 700; color: #60a5fa;">${previewData[type].title}</span>
+              <span style="font-size: 0.72rem; color: #cbd5e1; margin-top: 0.25rem;">${previewData[type].desc}</span>
+            `;
+            megaPreviewBox.style.borderColor = 'rgba(96, 165, 250, 0.7)';
+          }
+        });
+      });
+
+      // 13. Technology Matrix Dynamic Node Illumination
+      const matrixCards = document.querySelectorAll('.matrix-node-card');
+      matrixCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          matrixCards.forEach(c => {
+            if (c !== card) c.style.opacity = '0.45';
+          });
+        });
+        card.addEventListener('mouseleave', () => {
+          matrixCards.forEach(c => c.style.opacity = '1');
+        });
+      });
+
+      // 14. Fake IDE Live Terminal Output Simulator
+      const ideTerminalLog = document.getElementById('ideTerminalLog');
+      const terminalLogs = [
+        "&gt; [INFO] Initializing GraphQL edge endpoints...",
+        "&gt; [SUCCESS] Talent mesh connected: 2,400+ nodes active",
+        "&gt; [OPTIMIZE] Tree-shaking 14 bundles, latency 12ms",
+        "&gt; [DEPLOY] Cloud clusters synchronized across US-East",
+        "&gt; [STATUS] All systems running at maximum performance"
+      ];
+      let logIndex = 0;
+      setInterval(() => {
+        if (!ideTerminalLog) return;
+        logIndex = (logIndex + 1) % terminalLogs.length;
+        ideTerminalLog.innerHTML = `
+          &gt; running runtime test...<br>
+          ${terminalLogs[logIndex]}<br>
+          <span style="color: #60a5fa;">&gt; ready for enterprise traffic.</span>
+        `;
+      }, 3800);
+
+      // 15. Scroll Reveal Engine (IntersectionObserver)
+      const revealElements = document.querySelectorAll('.reveal-elem');
       if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries, obs) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('active');
-              observer.unobserve(entry.target);
+              obs.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-        reveals.forEach(el => revealObserver.observe(el));
+        revealElements.forEach(el => observer.observe(el));
       } else {
-        reveals.forEach(el => el.classList.add('active'));
+        revealElements.forEach(el => el.classList.add('active'));
       }
 
-      // 5. Hero Evolution Canvas Animation (Experience -> People -> Tech -> TJR Tech)
-      (function initEvolutionCanvas() {
-        const canvas = document.getElementById('evolutionCanvas');
+      // 16. Contact Modal Overlay Handlers
+      const contactModal = document.getElementById('contactModal');
+      const modalTriggers = document.querySelectorAll('.trigger-modal');
+      const closeModalBtn = document.getElementById('closeModal');
+
+      function openModal() {
+        if (contactModal) {
+          contactModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          if (mobDrawer && mobDrawer.classList.contains('active')) toggleMobileDrawer();
+        }
+      }
+
+      function closeModal() {
+        if (contactModal) {
+          contactModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      modalTriggers.forEach(btn => btn.addEventListener('click', openModal));
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+          if (e.target === contactModal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && contactModal && contactModal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+
+      window.handleFormSubmit = function (e) {
+        e.preventDefault();
+        alert('Thank you for contacting TJR Tech. An operational lead will review your requirement and follow up shortly.');
+        closeModal();
+        e.target.reset();
+      };
+
+      // 17. Interactive Living Digital Core Canvas Visualizer
+      (function initDigitalCore() {
+        const canvas = document.getElementById('digitalCoreCanvas');
         if (!canvas) return;
         const ctx = canvas.getContext('2d');
         let width, height;
         let particles = [];
-        const stages = ['EXPERIENCE', 'PEOPLE', 'TECHNOLOGY', 'TJR TECH'];
+        let isVisible = true;
+        let mouse = { x: null, y: null, radius: 150 };
+
+        const systemNodes = [
+          { label: 'TJR TECH', angle: 0, distance: 0, isCore: true },
+          { label: 'TECHNOLOGY', angle: 0, distance: 115 },
+          { label: 'TALENT', angle: 1.05, distance: 140 },
+          { label: 'SOFTWARE', angle: 2.09, distance: 125 },
+          { label: 'CONSULTING', angle: 3.14, distance: 135 },
+          { label: 'DIGITAL', angle: 4.19, distance: 120 },
+          { label: 'BUSINESS', angle: 5.24, distance: 130 }
+        ];
 
         function resize() {
           const rect = canvas.parentElement.getBoundingClientRect();
           width = canvas.width = rect.width;
           height = canvas.height = rect.height;
-          init();
+          createMeshParticles();
         }
 
-        function init() {
+        function createMeshParticles() {
           particles = [];
-          for (let i = 0; i < 40; i++) {
+          const count = Math.min(Math.floor((width * height) / 9500), 60);
+          for (let i = 0; i < count; i++) {
             particles.push({
               x: Math.random() * width,
               y: Math.random() * height,
-              vx: (Math.random() - 0.5) * 0.5,
-              vy: (Math.random() - 0.5) * 0.5,
-              radius: Math.random() * 2 + 1
+              vx: (Math.random() - 0.5) * 0.45,
+              vy: (Math.random() - 0.5) * 0.45,
+              r: Math.random() * 2 + 1
             });
           }
         }
 
-        function render() {
+        if ('IntersectionObserver' in window) {
+          const canvasObs = new IntersectionObserver((entries) => {
+            isVisible = entries[0].isIntersecting;
+          });
+          canvasObs.observe(canvas);
+        }
+
+        window.addEventListener('resize', resize);
+        canvas.addEventListener('mousemove', (e) => {
+          const rect = canvas.getBoundingClientRect();
+          mouse.x = e.clientX - rect.left;
+          mouse.y = e.clientY - rect.top;
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+          mouse.x = null;
+          mouse.y = null;
+        });
+
+        let rotationSpeed = 0;
+
+        function animateCore() {
+          if (!isVisible) {
+            requestAnimationFrame(animateCore);
+            return;
+          }
+
           ctx.clearRect(0, 0, width, height);
 
-          // Connecting lines
+          const centerX = width * 0.5;
+          const centerY = height * 0.5;
+          rotationSpeed += 0.0022;
+
+          // 1. Orbital Rings
+          ctx.beginPath();
+          ctx.arc(centerX, centerY, 130, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(59, 130, 246, 0.14)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([4, 6]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // 2. Render Core Nodes
+          const renderedNodes = systemNodes.map(node => {
+            if (node.isCore) {
+              return { x: centerX, y: centerY, label: node.label, isCore: true };
+            }
+            const currentAngle = node.angle + rotationSpeed;
+            return {
+              x: centerX + Math.cos(currentAngle) * node.distance,
+              y: centerY + Math.sin(currentAngle) * node.distance,
+              label: node.label,
+              isCore: false
+            };
+          });
+
+          // Draw links to Core
+          renderedNodes.forEach(node => {
+            if (!node.isCore) {
+              ctx.beginPath();
+              ctx.moveTo(centerX, centerY);
+              ctx.lineTo(node.x, node.y);
+              ctx.strokeStyle = 'rgba(59, 130, 246, 0.3)';
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+
+            // Draw Node Dots
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.isCore ? 16 : 5.5, 0, Math.PI * 2);
+            ctx.fillStyle = node.isCore ? '#1d4ed8' : '#60a5fa';
+            ctx.shadowColor = '#60a5fa';
+            ctx.shadowBlur = node.isCore ? 24 : 10;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            // Draw Node Text
+            ctx.font = node.isCore ? '700 13px Space Grotesk, monospace' : '600 11px Space Grotesk, monospace';
+            ctx.fillStyle = node.isCore ? '#ffffff' : '#94a3b8';
+            ctx.fillText(node.label, node.x + 12, node.y + 4);
+          });
+
+          // 3. Render Dynamic Particle Mesh
           for (let i = 0; i < particles.length; i++) {
             const p = particles[i];
             p.x += p.vx;
@@ -2017,188 +3698,40 @@
             if (p.x < 0 || p.x > width) p.vx *= -1;
             if (p.y < 0 || p.y > height) p.vy *= -1;
 
+            if (mouse.x !== null) {
+              const dx = mouse.x - p.x;
+              const dy = mouse.y - p.y;
+              const dist = Math.hypot(dx, dy);
+              if (dist < mouse.radius) {
+                p.x -= dx * 0.025;
+                p.y -= dy * 0.025;
+              }
+            }
+
             ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(213, 217, 221, 0.7)';
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(96, 165, 250, 0.6)';
             ctx.fill();
 
             for (let j = i + 1; j < particles.length; j++) {
               const p2 = particles[j];
               const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-              if (dist < 95) {
+              if (dist < 85) {
                 ctx.beginPath();
                 ctx.moveTo(p.x, p.y);
                 ctx.lineTo(p2.x, p2.y);
-                ctx.strokeStyle = `rgba(174, 183, 191, ${0.15 * (1 - dist / 95)})`;
+                ctx.strokeStyle = `rgba(59, 130, 246, ${0.2 * (1 - dist / 85)})`;
                 ctx.stroke();
               }
             }
           }
-          requestAnimationFrame(render);
+
+          requestAnimationFrame(animateCore);
         }
 
-        window.addEventListener('resize', resize);
         resize();
-        render();
+        animateCore();
       })();
-
-      // 6. Interactive Values Radial System
-      (function initValuesEcosystem() {
-        const valuesData = [
-          {
-            kicker: 'PRINCIPLE 01',
-            title: 'OPERATIONAL CANDOR',
-            desc: 'We believe in communicating clearly and responsibly. We aim to understand business realities, communicate expectations honestly, and avoid unnecessary exaggeration.'
-          },
-          {
-            kicker: 'PRINCIPLE 02',
-            title: 'SYSTEMATIC FOCUS',
-            desc: 'We believe strong organizations are built through consistent execution. We focus on understanding requirements, building structured processes, and improving them over time.'
-          },
-          {
-            kicker: 'PRINCIPLE 03',
-            title: 'PEOPLE FIRST',
-            desc: 'Technology ultimately exists to serve people. We value the relationships we build with consultants, professionals, clients, partners, and our internal teams.'
-          },
-          {
-            kicker: 'PRINCIPLE 04',
-            title: 'PARTNER ALIGNMENT',
-            desc: 'Long-term relationships require trust, communication, and shared understanding. We aim to build professional relationships based on transparency, responsibility, and mutual value.'
-          },
-          {
-            kicker: 'PRINCIPLE 05',
-            title: 'CONTINUOUS EVOLUTION',
-            desc: 'Technology and business never stand still. We continuously look for ways to improve our capabilities, services, processes, and digital experiences.'
-          }
-        ];
-
-        const buttons = document.querySelectorAll('.val-node');
-        const kickerEl = document.getElementById('valKicker');
-        const titleEl = document.getElementById('valTitle');
-        const descEl = document.getElementById('valDesc');
-        const canvas = document.getElementById('valuesCanvas');
-        const ctx = canvas ? canvas.getContext('2d') : null;
-
-        function updateCanvasLines() {
-          if (!canvas || !ctx) return;
-          const wrap = canvas.parentElement;
-          canvas.width = wrap.offsetWidth;
-          canvas.height = wrap.offsetHeight;
-
-          const core = wrap.querySelector('.values-core-node');
-          if (!core) return;
-          const cRect = core.getBoundingClientRect();
-          const wRect = wrap.getBoundingClientRect();
-          const cx = cRect.left + cRect.width / 2 - wRect.left;
-          const cy = cRect.top + cRect.height / 2 - wRect.top;
-
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-          buttons.forEach(btn => {
-            const bRect = btn.getBoundingClientRect();
-            const bx = bRect.left + bRect.width / 2 - wRect.left;
-            const by = bRect.top + bRect.height / 2 - wRect.top;
-
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(bx, by);
-            ctx.strokeStyle = btn.classList.contains('active')
-              ? 'rgba(213, 217, 221, 0.55)'
-              : 'rgba(255, 255, 255, 0.08)';
-            ctx.lineWidth = btn.classList.contains('active') ? 1.5 : 1;
-            ctx.setLineDash([4, 4]);
-            ctx.stroke();
-            ctx.setLineDash([]);
-          });
-        }
-
-        buttons.forEach(btn => {
-          btn.addEventListener('mouseenter', () => {
-            const idx = parseInt(btn.getAttribute('data-val'), 10);
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            if (valuesData[idx]) {
-              kickerEl.textContent = valuesData[idx].kicker;
-              titleEl.textContent = valuesData[idx].title;
-              descEl.textContent = valuesData[idx].desc;
-            }
-            updateCanvasLines();
-          });
-        });
-
-        window.addEventListener('resize', updateCanvasLines);
-        setTimeout(updateCanvasLines, 350);
-      })();
-
-      // 7. Expanding Network Canvas (Built to Evolve)
-      (function initExpandingNetwork() {
-        const canvas = document.getElementById('expandingNetworkCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        let width, height;
-
-        function setSize() {
-          const rect = canvas.parentElement.getBoundingClientRect();
-          width = canvas.width = rect.width;
-          height = canvas.height = rect.height;
-        }
-
-        const nodes = [
-          { name: 'TJR TECH', x: 0.5, y: 0.5, main: true },
-          { name: 'TALENT', x: 0.25, y: 0.25 },
-          { name: 'STAFFING', x: 0.75, y: 0.2 },
-          { name: 'TECHNOLOGY', x: 0.82, y: 0.6 },
-          { name: 'WEB', x: 0.6, y: 0.8 },
-          { name: 'MEDIA', x: 0.2, y: 0.75 },
-          { name: 'BUSINESS', x: 0.18, y: 0.45 }
-        ];
-
-        function draw() {
-          ctx.clearRect(0, 0, width, height);
-
-          const cx = width * 0.5;
-          const cy = height * 0.5;
-
-          nodes.forEach(n => {
-            const nx = width * n.x;
-            const ny = height * n.y;
-
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(nx, ny);
-            ctx.strokeStyle = 'rgba(174, 183, 191, 0.25)';
-            ctx.lineWidth = 1;
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.arc(nx, ny, n.main ? 18 : 6, 0, Math.PI * 2);
-            ctx.fillStyle = n.main ? '#111820' : '#D5D9DD';
-            ctx.fill();
-            ctx.strokeStyle = '#D5D9DD';
-            ctx.stroke();
-
-            ctx.font = '11px Space Grotesk, monospace';
-            ctx.fillStyle = '#AEB7BF';
-            ctx.fillText(n.name, nx + 10, ny + 4);
-          });
-        }
-
-        window.addEventListener('resize', () => { setSize(); draw(); });
-        setSize();
-        draw();
-      })();
-
-      // 8. "What Defines Us" Sequential Word Cycler
-      const definesWords = document.querySelectorAll('.defines-item');
-      if (definesWords.length > 0) {
-        let currentIdx = 0;
-        setInterval(() => {
-          definesWords[currentIdx].classList.remove('active');
-          currentIdx = (currentIdx + 1) % definesWords.length;
-          definesWords[currentIdx].classList.add('active');
-        }, 2200);
-      }
     })();
   </script>
 </body>
