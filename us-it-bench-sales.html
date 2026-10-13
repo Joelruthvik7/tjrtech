@@ -5,86 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO Metadata -->
-  <title>US IT Bench Sales | TJR Tech</title>
-  <meta name="description" content="TJR Tech provides structured US IT bench sales support, helping technology professionals position their profiles, align with relevant opportunities, and navigate the submission and interview process.">
-  <meta name="keywords" content="US IT Bench Sales, Consultant Representation, Technical Profile Positioning, Requirement Alignment, Candidate Submission, IT Opportunity Matching, TJR Tech">
-  <meta name="theme-color" content="#020617">
-  <link rel="canonical" href="https://www.tjrtech.com/services/us-it-bench-sales">
+  <title>US IT Bench Sales — Systems Platform • TJR Tech</title>
+  <meta name="description" content="TJR Tech provides structured US IT bench sales representation, technical profile positioning, Tier-1 prime vendor matching, rate negotiation, and submission coordination for IT consultants.">
+  <meta name="keywords" content="US IT Bench Sales, Consultant Representation, Candidate Marketing, Prime Vendor Matching, Rate Negotiation, Profile Optimization, C2C Staffing, TJR Tech">
+  <link rel="canonical" href="us-it-bench-sales.html">
 
-  <!-- Open Graph / Protocol -->
+  <!-- Open Graph / Meta Protocol -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tjrtech.com/services/us-it-bench-sales">
-  <meta property="og:title" content="US IT Bench Sales | TJR Tech">
-  <meta property="og:description" content="Positioning Talent for the Right Technology Opportunities. Structured market positioning and submission coordination for IT consultants.">
+  <meta property="og:url" content="us-it-bench-sales.html">
+  <meta property="og:title" content="US IT Bench Sales — Systems Platform • TJR Tech">
+  <meta property="og:description" content="Positioning Talent for the Right Technology Opportunities. Structured candidate marketing and Tier-1 submittal coordination for technical consultants.">
   <meta property="og:site_name" content="TJR TECH">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="US IT Bench Sales | TJR Tech">
-  <meta name="twitter:description" content="Connecting experienced technology professionals with relevant opportunities across the US IT staffing ecosystem.">
-
-  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk (Exact Match to Master Dashboard) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       01. DESIGN SYSTEM & CSS VARIABLES
+       01. DESIGN TOKENS & MASTER COLOR SYSTEM (EXACT MATCH TO INDEX & REDESIGNED PAGES)
        ========================================================================== */
     :root {
-      --bg-primary: #020617;        /* Near-black / void */
-      --bg-secondary: #070f26;      /* Deep midnight blue */
-      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
-      --bg-surface: #0e1d47;
-      --bg-card: rgba(12, 24, 61, 0.45);
-      --bg-card-hover: rgba(18, 36, 88, 0.75);
+      /* Surfaces & Canvases */
+      --app-bg: #F3F6FA;
+      --workspace-bg: #F8FAFD;
+      --card-bg: #FFFFFF;
+      --card-bg-hover: #FCFDFF;
+      --surface-border: #D7E0EC;
+      --surface-border-light: #E7EDF6;
 
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-medium: rgba(255, 255, 255, 0.16);
-      --border-accent: rgba(45, 212, 191, 0.35);
+      /* Primary Brand Royal Blues */
+      --brand-blue: #315FCE;
+      --brand-blue-deep: #23479D;
+      --brand-blue-secondary: #527FE0;
+      --soft-blue-surface: #E6EDFF;
+      --soft-blue-hover: #DCE6FD;
 
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
-      --text-accent: #2dd4bf;       /* Teal Accent */
-      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+      /* High-Contrast Typography */
+      --strong-text: #17253B;
+      --secondary-text: #596A82;
+      --muted-text: #8696AD;
+      --white-text: #FFFFFF;
 
-      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
-      --glow-teal: rgba(45, 212, 191, 0.14);
+      /* Semantic Practice Accents (Bench Sales Primary: Accent Teal) */
+      --accent-teal: #168C87;
+      --soft-teal: #E0F4F1;
+      --soft-teal-hover: #D0EFEA;
+      --accent-copper: #C47A4A;
+      --soft-copper: #F8EADF;
+      --accent-violet: #7766C8;
+      --soft-violet: #EEEAFE;
+      --active-green: #1F9268;
 
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-mono: 'Space Grotesk', monospace;
+      /* Dimensions & Layout */
+      --topbar-height: 64px;
+      --sidebar-width: 260px;
+      --right-panel-width: 350px;
+      --app-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --tech-font: 'Space Grotesk', monospace;
 
-      --container-max: 1280px;
-      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 14px;
+      /* Shadows & Motion */
+      --shadow-sm: 0 2px 6px rgba(23, 37, 59, 0.04);
+      --shadow-card: 0 4px 18px rgba(23, 37, 59, 0.05), 0 1px 3px rgba(23, 37, 59, 0.03);
+      --shadow-hover: 0 12px 28px rgba(35, 71, 157, 0.11), 0 3px 8px rgba(23, 37, 59, 0.04);
+      --shadow-panel: -4px 0 24px rgba(23, 37, 59, 0.06);
+      --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.22s var(--ease-bounce);
     }
 
-    /* CSS Reset */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-    }
-
-    body {
-      font-family: var(--font-sans);
-      line-height: 1.65;
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--app-bg);
+      color: var(--strong-text);
+      font-family: var(--app-font);
+      font-size: 14px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      background: var(--bg-primary);
     }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E4; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-teal); }
 
     /* Scroll Progress Bar */
     #scrollProgress {
@@ -92,57 +105,176 @@
       top: 0;
       left: 0;
       width: 0%;
-      height: 2.5px;
-      background: var(--accent-gradient);
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-teal) 0%, var(--brand-blue) 100%);
       z-index: 10000;
       transition: width 0.1s linear;
     }
 
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 2rem;
+    /* ==========================================================================
+       02. THREE-PANEL MASTER APPLICATION SHELL
+       ========================================================================== */
+    .app-shell {
+      display: grid;
+      grid-template-rows: var(--topbar-height) 1fr;
+      grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
+      grid-template-areas:
+        "top top top"
+        "side main panel";
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transition: grid-template-columns 0.28s var(--ease-bounce);
     }
 
-    .section-spacing {
-      padding: 7.5rem 0;
+    .app-shell.panel-collapsed {
+      grid-template-columns: var(--sidebar-width) 1fr 0px;
+    }
+
+    /* ==========================================================================
+       03. TOP COMMAND NAVIGATION BAR
+       ========================================================================== */
+    .app-topbar {
+      grid-area: top;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .brand-id {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
+      border-radius: 7px;
+      color: #ffffff;
+      font-family: var(--tech-font);
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 8px rgba(49, 95, 206, 0.28);
       position: relative;
+      overflow: hidden;
     }
 
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 100%);
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--strong-text);
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      font-family: var(--tech-font);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--text-accent);
-      margin-bottom: 0.85rem;
-      display: inline-flex;
+    }
+
+    .topbar-search-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      color: var(--secondary-text);
+      font-size: 0.825rem;
+      cursor: pointer;
+      width: 310px;
+      transition: var(--transition);
+      box-shadow: inset 0 1px 2px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-search-trigger:hover {
+      background: #ffffff;
+      border-color: var(--brand-blue);
+      color: var(--strong-text);
+      box-shadow: 0 2px 8px rgba(49, 95, 206, 0.08);
+    }
+
+    .kbd-shortcut {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--surface-border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: var(--secondary-text);
+      margin-left: auto;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .telemetry-chip {
+      display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      background: var(--app-bg);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 12px;
-      height: 1.5px;
-      background: var(--text-accent);
+    .pulse-dot-teal {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      box-shadow: 0 0 0 2px rgba(22, 140, 135, 0.25);
+      animation: pulseGlowTeal 2.4s infinite;
     }
 
-    .section-title {
-      font-size: clamp(2rem, 3.5vw, 3.25rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      color: var(--text-primary);
-    }
-
-    .section-lead {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 680px;
-      margin-top: 1rem;
-      line-height: 1.6;
+    @keyframes pulseGlowTeal {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     /* Buttons */
@@ -150,578 +282,664 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
-      padding: 0.95rem 1.85rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      border-radius: var(--radius-sm);
-      transition: var(--transition-smooth);
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
+      transition: var(--transition);
       border: 1px solid transparent;
+      outline: none;
       white-space: nowrap;
+      user-select: none;
     }
 
-    .btn-primary {
-      background: var(--accent-gradient);
-      color: #020617;
-      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    .btn-teal {
+      background: var(--accent-teal);
+      color: var(--white-text);
+      border-color: var(--accent-teal);
+      box-shadow: 0 2px 6px rgba(22, 140, 135, 0.24);
     }
 
-    .btn-primary:hover {
-      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
-      transform: translateY(-2px);
+    .btn-teal:hover {
+      background: #11706c;
+      border-color: #11706c;
+      box-shadow: 0 4px 12px rgba(22, 140, 135, 0.32);
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-primary);
-      border-color: var(--border-medium);
+      background: var(--card-bg);
+      color: var(--strong-text);
+      border-color: var(--surface-border);
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
+      background: var(--soft-teal);
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
     }
 
-    .inline-link {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-accent);
-      text-decoration: none;
+    .btn-sm {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: gap 0.2s ease;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      color: var(--secondary-text);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
-    .inline-link:hover {
-      gap: 0.75rem;
+    .icon-btn:hover {
+      background: var(--soft-teal);
+      color: var(--accent-teal);
+      border-color: var(--accent-teal);
     }
 
     /* ==========================================================================
-       02. GLOBAL HEADER & NAVIGATION
+       04. PERSISTENT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER)
        ========================================================================== */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: 1px solid transparent;
-      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
-      height: 86px;
+    .app-sidebar {
+      grid-area: side;
+      background: #FFFFFF;
+      border-right: 1px solid var(--surface-border);
       display: flex;
-      align-items: center;
-    }
-
-    .site-header.scrolled {
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      height: 72px;
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      width: 100%;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text-accent);
-    }
-
-    .logo-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.5rem 0;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: var(--text-primary);
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: -1rem;
-      background: rgba(7, 15, 38, 0.96);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 0.75rem 0;
-      min-width: 250px;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
-      transition: all 0.25s ease;
-      list-style: none;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-
-    .nav-item:hover .dropdown-menu {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
-    .dropdown-item a {
-      display: block;
-      padding: 0.65rem 1.25rem;
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .dropdown-item a:hover, .dropdown-item a.active-item {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-accent);
-    }
-
-    .mobile-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0.5rem;
-    }
-
-    .mobile-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      transition: var(--transition-smooth);
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: var(--bg-primary);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      padding: 6rem 2rem 3rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 1.25rem 0.85rem;
       overflow-y: auto;
     }
 
-    .mobile-menu.active {
-      transform: translateX(0);
+    .nav-group-title {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.6rem 0.75rem 0.3rem 0.75rem;
     }
 
-    .mobile-nav-list {
+    .nav-menu {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 0.2rem;
     }
 
-    .mobile-nav-list a {
-      font-size: 1.25rem;
+    .nav-item-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 0.85rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: var(--secondary-text);
+      font-size: 0.835rem;
       font-weight: 600;
-      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
       text-decoration: none;
     }
 
-    .mobile-submenu {
-      list-style: none;
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+    .nav-item-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, stroke 0.2s ease;
     }
 
-    .mobile-submenu a {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      font-weight: 400;
+    .nav-item-btn:hover {
+      background: var(--app-bg);
+      color: var(--strong-text);
+    }
+
+    .nav-item-btn:hover svg {
+      stroke: var(--accent-teal);
+    }
+
+    .nav-item-btn.active {
+      background: var(--soft-teal);
+      color: var(--accent-teal);
+      font-weight: 700;
+      border-color: rgba(22, 140, 135, 0.2);
+    }
+
+    .nav-item-btn.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3.5px;
+      background: var(--accent-teal);
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Submenus */
+    .nav-toggle-btn {
+      justify-content: flex-start;
+    }
+
+    .nav-chevron {
+      margin-left: auto;
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s var(--ease-bounce);
+    }
+
+    .nav-toggle-btn[aria-expanded="true"] .nav-chevron {
+      transform: rotate(90deg);
+    }
+
+    .nav-submenu {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-left: 2rem;
+      margin: 0.15rem 0 0.35rem 0;
+    }
+
+    .nav-submenu.open {
+      display: flex;
+    }
+
+    .nav-sub-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      color: var(--secondary-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .nav-sub-link:hover {
+      background: var(--app-bg);
+      color: var(--accent-teal);
+    }
+
+    .nav-sub-link.active-sub {
+      color: var(--accent-teal);
+      background: var(--soft-teal);
+      font-weight: 700;
+    }
+
+    .nav-sub-bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--muted-text);
+      flex-shrink: 0;
+      transition: background 0.2s ease;
+    }
+
+    .nav-sub-link:hover .nav-sub-bullet,
+    .nav-sub-link.active-sub .nav-sub-bullet {
+      background: var(--accent-teal);
+    }
+
+    .sidebar-footer-card {
+      background: linear-gradient(180deg, var(--workspace-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.85rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1.5rem;
+    }
+
+    .sf-header {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sf-sub {
+      color: var(--secondary-text);
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      line-height: 1.4;
     }
 
     /* ==========================================================================
-       SECTION 01 — HERO
+       05. MAIN WORKSPACE WITH BLUEPRINT GRID BACKGROUND
        ========================================================================== */
-    .bench-hero-section {
-      min-height: 94vh;
-      display: flex;
-      align-items: center;
+    .app-workspace {
+      grid-area: main;
+      background: var(--workspace-bg);
+      overflow-y: auto;
+      padding: 2.25rem 2.5rem;
       position: relative;
-      padding-top: 120px;
-      padding-bottom: 4.5rem;
-      overflow: hidden;
-      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+      background-image: 
+        radial-gradient(circle at 100% 0%, rgba(22, 140, 135, 0.035) 0%, transparent 45%),
+        linear-gradient(to right, rgba(215, 224, 236, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(215, 224, 236, 0.25) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 3.5rem;
+    .ws-section {
+      margin-bottom: 3.5rem;
       position: relative;
-      z-index: 2;
     }
 
-    .hero-title-main {
-      font-size: clamp(2.5rem, 4.8vw, 4.2rem);
+    .ws-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--soft-teal);
+      border: 1px solid rgba(22, 140, 135, 0.2);
+      border-radius: 5px;
+      padding: 0.25rem 0.65rem;
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.65rem;
+    }
+
+    .ws-title {
+      font-size: 2.15rem;
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.08;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--strong-text);
+      line-height: 1.18;
     }
 
-    .hero-title-main span {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .ws-title span {
+      color: var(--accent-teal);
     }
 
-    .hero-supporting-copy {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.45;
-      margin-bottom: 1.25rem;
+    .ws-subtitle {
+      font-size: 1rem;
+      color: var(--secondary-text);
+      margin-top: 0.6rem;
+      max-width: 780px;
+      line-height: 1.65;
     }
 
-    .hero-secondary-copy {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 2.25rem;
-    }
-
-    .hero-actions {
+    .ws-action-ribbon {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
       flex-wrap: wrap;
     }
 
-    .network-canvas-wrap {
+    .ws-subhead-bar {
+      font-family: var(--tech-font);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--secondary-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Cards & Grids */
+    .division-app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+
+    .division-app-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-teal);
+      opacity: 0.85;
+      transition: height 0.2s ease, opacity 0.2s ease;
+    }
+
+    .division-app-card.accent-blue::before { background: var(--brand-blue); }
+    .division-app-card.accent-violet::before { background: var(--accent-violet); }
+    .division-app-card.accent-copper::before { background: var(--accent-copper); }
+
+    .division-app-card:hover {
+      border-color: rgba(22, 140, 135, 0.35);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      background: var(--card-bg-hover);
+    }
+
+    .division-app-card:hover::before {
+      height: 4px;
+      opacity: 1;
+    }
+
+    .div-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .div-card-id {
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border-light);
+    }
+
+    .div-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.45rem;
+      letter-spacing: -0.01em;
+    }
+
+    .div-card-desc {
+      font-size: 0.875rem;
+      color: var(--secondary-text);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+    }
+
+    .div-card-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .chip-tag {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .division-app-card:hover .chip-tag {
+      background: #FFFFFF;
+      color: var(--strong-text);
+    }
+
+    .div-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px dashed var(--surface-border);
+      padding-top: 0.95rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+    }
+
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-4-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .grid-5-col {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+    .grid-6-col {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.85rem;
+    }
+
+    .grid-7-col {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.75rem;
+    }
+
+    /* Hero Network Visualizer Canvas Stage */
+    .hero-network-canvas-wrap {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: 380px;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.75rem;
+      overflow: hidden;
     }
 
     #benchNetworkCanvas {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
     }
 
-    .scroll-indicator {
+    .canvas-hud-overlay {
       position: absolute;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      bottom: 1rem;
+      left: 1.25rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      color: var(--secondary-text);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid var(--surface-border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Narrative Boxquote */
+    .story-focus-quote {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--strong-text);
+      border-left: 3.5px solid var(--accent-teal);
+      padding: 1.25rem 1.5rem;
+      background: var(--card-bg);
+      border-radius: 0 8px 8px 0;
+      box-shadow: var(--shadow-card);
+      margin: 1.25rem 0;
+      border-top: 1px solid var(--surface-border-light);
+      border-right: 1px solid var(--surface-border-light);
+      border-bottom: 1px solid var(--surface-border-light);
+    }
+
+    /* HUD Profile Card */
+    .profile-hud-card {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.85rem;
+      box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .scroll-indicator:hover {
-      color: var(--text-accent);
-    }
-
-    /* ==========================================================================
-       SECTION 02 — INTRODUCTION
-       ========================================================================== */
-    .intro-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .profile-hud-card {
-      background: rgba(2, 6, 23, 0.75);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-md);
-      padding: 2.25rem;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      gap: 0.75rem;
     }
 
     .hud-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 1rem;
-      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--surface-border-light);
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .hud-label {
-      font-family: var(--font-mono);
+      font-family: var(--tech-font);
       font-size: 0.75rem;
-      color: var(--text-accent);
-      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: var(--accent-teal);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     .hud-status {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent-cyan);
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--active-green);
+      background: rgba(31, 146, 104, 0.1);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
     }
 
     .hud-row {
       display: flex;
       justify-content: space-between;
-      padding: 0.55rem 0;
-      font-size: 0.875rem;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+      align-items: center;
+      font-size: 0.835rem;
+      padding: 0.4rem 0.6rem;
+      background: var(--app-bg);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
     }
 
     .hud-key {
-      color: var(--text-muted);
-      font-family: var(--font-mono);
+      color: var(--secondary-text);
+      font-family: var(--tech-font);
+      font-size: 0.75rem;
     }
 
     .hud-val {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    /* ==========================================================================
-       SECTION 03 — WHAT IS US IT BENCH SALES?
-       ========================================================================== */
-    .bench-def-flow {
-      margin-top: 3.5rem;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 0.75rem;
-    }
-
-    .flow-node {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.5rem 0.85rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    .flow-node:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .flow-index {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      color: var(--text-accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .flow-name {
-      font-size: 0.8125rem;
+      color: var(--strong-text);
       font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: 0.04em;
     }
 
-    /* ==========================================================================
-       SECTION 04 — WHO WE SUPPORT
-       ========================================================================== */
-    .support-grid {
+    /* Stepper Nodes for Process */
+    .stepper-node {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stepper-node:hover {
+      border-color: var(--accent-teal);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .stepper-step {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      margin-bottom: 0.35rem;
+    }
+
+    .stepper-title {
+      font-size: 0.925rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .stepper-desc {
+      font-size: 0.785rem;
+      color: var(--secondary-text);
+      line-height: 1.45;
+    }
+
+    /* Interactive Technology Constellation Ecosystem */
+    .tech-interactive-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 2rem;
-    }
-
-    .support-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 2rem;
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    .support-card:hover {
-      border-color: var(--border-accent);
-      background: var(--bg-card-hover);
-      transform: translateY(-4px);
-    }
-
-    .support-num {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
-      margin-bottom: 1.25rem;
-    }
-
-    .support-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.75rem;
-    }
-
-    .support-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       SECTION 05 — PROFILE POSITIONING TRANSFORMATION
-       ========================================================================== */
-    .transform-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .transform-timeline {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1rem;
-      margin-top: 3.5rem;
-    }
-
-    .transform-step {
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.75rem 1rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .transform-step.final {
-      border-color: var(--border-accent);
-      background: var(--bg-tertiary);
-    }
-
-    .transform-step:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-4px);
-    }
-
-    .transform-pill-matrix {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 2.5rem;
-      justify-content: center;
-    }
-
-    .data-pill {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      padding: 0.5rem 1rem;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-    }
-
-    /* ==========================================================================
-       SECTION 06 — TECHNOLOGY CONSTELLATION
-       ========================================================================== */
-    .constellation-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 4rem;
       align-items: center;
-      margin-top: 3.5rem;
+      margin-top: 1.5rem;
     }
 
-    .constellation-field {
+    .tech-network-field {
       position: relative;
-      height: 480px;
+      height: 420px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     #constellationCanvas {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
@@ -730,1814 +948,1568 @@
     .constellation-hub {
       position: relative;
       z-index: 5;
-      padding: 1.25rem 2rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 28px var(--glow-teal);
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #11706c 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--tech-font);
+      font-size: 0.95rem;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(22, 140, 135, 0.32);
+      border: 3px solid #ffffff;
+      text-align: center;
     }
 
     .domain-btn {
       position: absolute;
-      padding: 0.75rem 1.25rem;
-      background: rgba(12, 24, 61, 0.88);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      letter-spacing: 0.08em;
-      color: var(--text-secondary);
+      padding: 0.65rem 1.15rem;
+      background: var(--card-bg);
+      border: 1.5px solid var(--surface-border);
+      border-radius: 6px;
+      font-family: var(--tech-font);
+      font-size: 0.785rem;
+      font-weight: 700;
+      color: var(--secondary-text);
       cursor: pointer;
-      transition: var(--transition-smooth);
+      transition: var(--transition);
       z-index: 6;
+      box-shadow: var(--shadow-sm);
+      outline: none;
     }
 
     .domain-btn:hover, .domain-btn.active {
-      border-color: var(--text-accent);
-      color: var(--text-accent);
-      background: rgba(14, 29, 71, 0.95);
-      transform: scale(1.05);
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+      background: var(--soft-teal);
+      transform: scale(1.06);
+      box-shadow: 0 4px 14px rgba(22, 140, 135, 0.2);
     }
 
-    .dpos-1 { top: 10%; left: 35%; }
-    .dpos-2 { top: 25%; right: 8%; }
-    .dpos-3 { bottom: 25%; right: 8%; }
-    .dpos-4 { bottom: 10%; left: 35%; }
-    .dpos-5 { bottom: 25%; left: 8%; }
-    .dpos-6 { top: 25%; left: 8%; }
+    .dpos-1 { top: 8%; left: 38%; }
+    .dpos-2 { top: 25%; right: 6%; }
+    .dpos-3 { bottom: 25%; right: 6%; }
+    .dpos-4 { bottom: 8%; left: 38%; }
+    .dpos-5 { bottom: 25%; left: 6%; }
+    .dpos-6 { top: 25%; left: 6%; }
 
     .domain-focus-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.5rem;
-      min-height: 320px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 2.25rem 2rem;
+      min-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      box-shadow: var(--shadow-card);
     }
 
-    .tag-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-top: 1.25rem;
-    }
-
-    .tech-tag {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      padding: 0.4rem 0.85rem;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-    }
-
-    /* ==========================================================================
-       SECTION 07 — BENCH SALES PROCESS (9 STAGES)
-       ========================================================================== */
-    .process-timeline-wrap {
-      position: relative;
-      margin-top: 4rem;
-    }
-
-    .process-line {
-      position: absolute;
-      top: 42px;
-      left: 2rem;
-      right: 2rem;
-      height: 2px;
-      background: var(--border-subtle);
-      z-index: 1;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .process-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.75rem;
-      transition: var(--transition-smooth);
-    }
-
-    .process-item:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .process-item-num {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1.25rem;
-    }
-
-    .process-item-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .process-item-desc {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    /* ==========================================================================
-       SECTION 08 — CONSULTANT JOURNEY
-       ========================================================================== */
-    .journey-track {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-top: 2.5rem;
-      justify-content: center;
-    }
-
-    .journey-node {
-      padding: 0.85rem 1.25rem;
-      background: rgba(12, 24, 61, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .journey-arrow {
-      color: var(--text-accent);
-      font-size: 0.85rem;
-    }
-
-    /* ==========================================================================
-       SECTION 09 — REQUIREMENT MATCHING INTERFACE
-       ========================================================================== */
-    .matching-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
+    /* Requirement Matching Comparator */
     .matching-hud-grid {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
       align-items: center;
-      margin-top: 3.5rem;
+      margin-top: 1.75rem;
     }
 
     .matching-panel {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
-    }
-
-    .panel-kicker {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent-cyan);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.85rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
     .match-connector-column {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 0.5rem;
     }
 
     .alignment-badge {
-      padding: 1rem 1.5rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 25px var(--glow-teal);
-      text-align: center;
-    }
-
-    /* ==========================================================================
-       SECTION 10 — COMMUNICATION & 11. FOR CONSULTANTS & 12. PARTNERS
-       ========================================================================== */
-    .comm-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 3rem;
-    }
-
-    .comm-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.5rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .comm-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .comm-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .comm-desc {
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    .dual-stakeholder-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      margin-top: 4rem;
-    }
-
-    .stakeholder-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    /* ==========================================================================
-       SECTION 13 — WORK AUTHORIZATION & 14. WHY STRUCTURE MATTERS
-       ========================================================================== */
-    .auth-banner {
-      background: rgba(12, 24, 61, 0.4);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem;
-      margin-top: 3.5rem;
-      text-align: center;
-    }
-
-    .auth-badges-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
-      margin: 2rem 0;
-    }
-
-    .auth-badge-node {
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      padding: 0.6rem 1.25rem;
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-    }
-
-    .structure-scroll-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .structure-statement-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
-      transition: var(--transition-smooth);
-    }
-
-    .structure-statement-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .structure-num {
-      font-family: var(--font-mono);
-      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #11706c 100%);
+      color: #ffffff;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      font-family: var(--tech-font);
+      font-size: 0.785rem;
       font-weight: 800;
-      color: var(--text-accent);
-      margin-bottom: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(22, 140, 135, 0.28);
     }
 
-    .structure-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    /* ==========================================================================
-       SECTION 15 — TJR TECH DIFFERENCE & 16. VISUAL ECOSYSTEM
-       ========================================================================== */
-    .difference-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 3.5rem;
-    }
-
-    .diff-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.5rem;
-      transition: var(--transition-smooth);
-    }
-
-    .diff-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .diff-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.75rem;
-    }
-
-    .diff-desc {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    .ecosystem-canvas-box {
-      position: relative;
-      height: 440px;
-      margin-top: 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-    }
-
-    #ecosystemCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-
-    .eco-core {
-      position: relative;
-      z-index: 5;
-      padding: 1.25rem 2.25rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 25px var(--glow-teal);
-    }
-
-    .eco-satellite {
-      position: absolute;
-      padding: 0.65rem 1.15rem;
-      background: rgba(12, 24, 61, 0.88);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      color: var(--text-secondary);
-    }
-
-    .esat-1 { top: 12%; left: 24%; }
-    .esat-2 { top: 12%; right: 24%; }
-    .esat-3 { bottom: 12%; right: 22%; }
-    .esat-4 { bottom: 12%; left: 22%; }
-    .esat-5 { top: 50%; left: 8%; transform: translateY(-50%); }
-    .esat-6 { top: 50%; right: 8%; transform: translateY(-50%); }
-    .esat-7 { bottom: 6%; left: 45%; }
-
-    /* ==========================================================================
-       SECTION 17 — FAQ ACCORDION
-       ========================================================================== */
+    /* FAQ Accordion */
     .faq-accordion-wrap {
-      max-width: 860px;
-      margin: 3.5rem auto 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
     }
 
     .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
       overflow: hidden;
-      transition: var(--transition-smooth);
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
     .faq-item.active {
-      border-color: var(--border-medium);
-      background: rgba(14, 29, 71, 0.7);
+      border-color: var(--accent-teal);
+      box-shadow: 0 4px 14px rgba(22, 140, 135, 0.08);
     }
 
     .faq-question-btn {
       width: 100%;
-      padding: 1.5rem 1.75rem;
+      padding: 1.25rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background: none;
       border: none;
-      color: var(--text-primary);
-      font-size: 1.05rem;
-      font-weight: 600;
+      color: var(--strong-text);
+      font-size: 0.95rem;
+      font-weight: 700;
       text-align: left;
       cursor: pointer;
-      font-family: var(--font-sans);
+      font-family: var(--app-font);
     }
 
     .faq-indicator {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--text-accent);
-      transition: transform 0.3s ease;
+      font-family: var(--tech-font);
+      font-size: 1.1rem;
+      color: var(--accent-teal);
+      transition: transform 0.2s var(--ease-bounce);
+      border-radius: 4px;
+      background: var(--soft-teal);
     }
 
     .faq-item.active .faq-indicator {
       transform: rotate(45deg);
+      background: var(--accent-teal);
+      color: #ffffff;
     }
 
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
-      padding: 0 1.75rem;
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    .faq-item.active .faq-answer {
-      padding-bottom: 1.5rem;
-    }
-
-    /* ==========================================================================
-       SECTION 18 — CONSULTANT CTA & 19. BRAND STATEMENT
-       ========================================================================== */
-    .cta-section {
-      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
-      text-align: center;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .cta-container {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    .brand-statement-section {
-      padding: 6.5rem 0;
-      text-align: center;
-      background: #020617;
-    }
-
-    .statement-headline {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-
-    .statement-brand-line {
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--text-accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    /* ==========================================================================
-       SECTION 20 — FOOTER
-       ========================================================================== */
-    .site-footer {
-      background-color: #01040f;
-      padding: 5.5rem 0 2.5rem 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-      gap: 3.5rem;
-      margin-bottom: 4.5rem;
-    }
-
-    .footer-brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-tagline {
-      font-size: 0.875rem;
-      color: var(--text-accent);
-      font-family: var(--font-mono);
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-desc {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
+      transition: max-height 0.28s cubic-bezier(0.16, 1, 0.3, 1), padding 0.28s ease;
+      padding: 0 1.5rem;
+      font-size: 0.885rem;
+      color: var(--secondary-text);
       line-height: 1.6;
     }
 
-    .footer-heading {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.25rem;
     }
 
-    .footer-links-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
+    /* Snapshot Grid Card */
+    .snapshot-matrix-card {
+      background: linear-gradient(135deg, var(--card-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 2.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.5rem;
     }
 
-    .footer-links-list a {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links-list a:hover {
-      color: var(--text-accent);
-    }
-
-    .footer-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-bottom-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--text-secondary);
-    }
-
-    /* Modal Styling */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(12px);
-      z-index: 2000;
+    .snapshot-stream {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
+      flex-wrap: wrap;
+      gap: 1.5rem 3rem;
+      font-family: var(--tech-font);
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: 0.04em;
     }
 
-    .modal-overlay.active {
+    .snapshot-stream span {
+      color: var(--accent-teal);
+    }
+
+    /* ==========================================================================
+       06. CONTEXTUAL RIGHT PANEL (INSPECTOR)
+       ========================================================================== */
+    .app-right-panel {
+      grid-area: panel;
+      background: #FFFFFF;
+      border-left: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      transition: var(--transition);
+      box-shadow: var(--shadow-panel);
+    }
+
+    .panel-header {
+      padding: 1.25rem 1.4rem;
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--workspace-bg);
+    }
+
+    .panel-kicker {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .panel-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: -0.01em;
+      margin-top: 0.15rem;
+    }
+
+    .panel-content {
+      padding: 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .panel-section-label {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .panel-specs-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .panel-spec-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--app-bg);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
+    }
+
+    .panel-spec-row span:first-child { color: var(--secondary-text); }
+    .panel-spec-row span:last-child {
+      font-weight: 700;
+      color: var(--accent-teal);
+      font-family: var(--tech-font);
+    }
+
+    .panel-footer-actions {
+      padding: 1.25rem 1.4rem;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      background: var(--workspace-bg);
+    }
+
+    /* ==========================================================================
+       07. GLOBAL SEARCH COMMAND & BENCH INTAKE MODAL
+       ========================================================================== */
+    .search-modal-backdrop, .contact-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 37, 59, 0.45);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .search-modal-backdrop {
+      align-items: flex-start;
+      padding-top: 12vh;
+    }
+
+    .search-modal-backdrop.open, .contact-modal-backdrop.open {
       opacity: 1;
       pointer-events: all;
     }
 
-    .modal-box {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      width: 100%;
-      max-width: 580px;
-      padding: 2.5rem;
-      position: relative;
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
+    .search-modal-card {
+      width: 90%;
+      max-width: 560px;
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: 0 20px 48px rgba(23, 37, 59, 0.18);
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition: var(--transition);
     }
 
-    .modal-overlay.active .modal-box {
+    .search-modal-backdrop.open .search-modal-card {
       transform: translateY(0);
     }
 
-    .modal-close {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      color: var(--text-muted);
-      font-size: 1.5rem;
-      background: none;
+    .search-input-row {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.35rem;
+      border-bottom: 1px solid var(--surface-border);
+      gap: 0.85rem;
+    }
+
+    .search-input-row input {
+      flex: 1;
       border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: var(--app-font);
+      color: var(--strong-text);
+    }
+
+    .search-results-list {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .search-result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.95rem;
+      border-radius: 6px;
       cursor: pointer;
-      line-height: 1;
+      transition: var(--transition);
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .modal-close:hover {
-      color: #fff;
+    .search-result-row:hover {
+      background: var(--soft-teal);
+      color: var(--accent-teal);
     }
 
-    .form-group {
-      margin-bottom: 1.25rem;
+    .s-tag {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      padding: 0.15rem 0.45rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border-light);
     }
+
+    .contact-modal-dialog {
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.25rem;
+      box-shadow: 0 24px 50px rgba(23, 37, 59, 0.2);
+    }
+
+    .form-group { margin-bottom: 1.15rem; }
 
     .form-label {
       display: block;
+      font-family: var(--tech-font);
       font-size: 0.75rem;
-      font-family: var(--font-mono);
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.35rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
-    .form-input, .form-select, .form-textarea {
+    .form-input, .form-textarea, .form-select {
       width: 100%;
-      padding: 0.85rem 1rem;
-      background: rgba(2, 6, 23, 0.8);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-      font-size: 0.9375rem;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-family: var(--app-font);
       outline: none;
-      transition: border-color 0.2s ease;
+      transition: var(--transition);
+      background: #FFFFFF;
     }
 
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--text-accent);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    /* Scroll Trigger Animation Engine */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 0 3px rgba(22, 140, 135, 0.15);
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       08. RESPONSIVE BREAKPOINTS
        ========================================================================== */
-    @media (max-width: 1080px) {
-      .support-grid,
-      .process-grid,
-      .structure-scroll-grid,
-      .difference-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .bench-def-flow {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .transform-timeline {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .comm-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .matching-hud-grid {
-        grid-template-columns: 1fr;
-      }
-      .process-line {
-        display: none;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    @media (max-width: 1100px) {
+      .app-shell { grid-template-columns: var(--sidebar-width) 1fr 0px; }
+      .app-right-panel { display: none; }
+      .grid-4-col, .grid-5-col, .grid-6-col, .grid-7-col { grid-template-columns: repeat(3, 1fr); }
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .intro-grid,
-      .constellation-grid,
-      .dual-stakeholder-grid {
+    @media (max-width: 768px) {
+      .app-shell { grid-template-columns: 0px 1fr 0px; }
+      .app-sidebar {
+        position: fixed;
+        top: var(--topbar-height);
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.25s var(--ease-bounce);
+        box-shadow: 8px 0 24px rgba(23, 37, 59, 0.12);
+      }
+      .app-sidebar.mobile-open { transform: translateX(0); }
+      .grid-2-col, .grid-3-col, .grid-4-col, .grid-5-col, .grid-6-col, .grid-7-col,
+      .tech-interactive-grid, .matching-hud-grid {
         grid-template-columns: 1fr;
       }
-      .nav-links, .nav-cta {
-        display: none;
-      }
-      .mobile-toggle {
-        display: flex;
-      }
-      .network-canvas-wrap {
-        height: 340px;
-      }
-      .constellation-field {
-        height: 360px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .support-grid,
-      .process-grid,
-      .structure-scroll-grid,
-      .difference-grid,
-      .bench-def-flow,
-      .transform-timeline,
-      .comm-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .section-spacing {
-        padding: 5rem 0;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-      }
+      .topbar-search-trigger { width: 180px; }
+      .app-workspace { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Bar -->
+  <!-- Top Scroll Progress Bar -->
   <div id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ==========================================================================
-       GLOBAL NAVIGATION
+       APPLICATION SHELL
        ========================================================================== -->
-  <header class="site-header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
-        <div class="logo-mark">T</div>
-        <span class="logo-title">TJR TECH</span>
-      </a>
+  <div class="app-shell" id="appShell">
 
-      <nav aria-label="Desktop Navigation">
-        <ul class="nav-links">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-          <li class="nav-item">
-            <a href="/services" class="nav-link active">
-              Services
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
-              <li class="dropdown-item"><a href="/services/us-it-bench-sales" class="active-item">US IT Bench Sales</a></li>
-              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
-              <li class="dropdown-item"><a href="/services/digital-media">Digital Media &amp; Advertising</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="/solutions" class="nav-link">Solutions</a></li>
-          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
-          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
-          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
-          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- TOP NAVIGATION COMMAND BAR -->
+    <header class="app-topbar">
+      <div class="topbar-left">
+        <button class="icon-btn" id="mobileMenuToggle" style="display: none;" aria-label="Toggle Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
 
-      <div class="nav-cta">
-        <button class="btn btn-secondary open-bench-modal" style="padding: 0.65rem 1.25rem;">
-          <span>Market Your Profile</span>
+        <a class="brand-id" href="index.html">
+          <div class="brand-mark">T</div>
+          <div class="brand-title-wrap">
+            <span class="brand-title">TJR TECH</span>
+            <span class="brand-tagline">Bench Systems</span>
+          </div>
+        </a>
+
+        <!-- Global Command Search Trigger (Ctrl+K) -->
+        <div class="topbar-search-trigger" id="searchTriggerBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search bench sales...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="telemetry-chip">
+          <span class="pulse-dot-teal"></span>
+          <span>DIVISION // US IT BENCH SALES</span>
+        </div>
+
+        <a href="index.html" class="btn btn-secondary btn-sm">Home Dashboard</a>
+        <button class="btn btn-teal btn-sm" onclick="openBenchModal()">Market Profile</button>
+
+        <button class="icon-btn" id="togglePanelBtn" title="Toggle Contextual Inspector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
         </button>
       </div>
+    </header>
 
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
-    <ul class="mobile-nav-list">
-      <li><a href="/" class="mobile-link">Home</a></li>
-      <li><a href="/about" class="mobile-link">About Us</a></li>
-      <li>
-        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
-        <ul class="mobile-submenu">
-          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
-          <li><a href="/services/us-it-bench-sales" class="mobile-link">US IT Bench Sales</a></li>
-          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
-          <li><a href="/services/digital-media" class="mobile-link">Digital Media &amp; Advertising</a></li>
-        </ul>
-      </li>
-      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
-      <li><a href="/portfolio" class="mobile-link">Work</a></li>
-      <li><a href="/careers" class="mobile-link">Careers</a></li>
-      <li><a href="/insights" class="mobile-link">Insights</a></li>
-      <li><a href="/contact" class="mobile-link">Contact</a></li>
-    </ul>
-    <button class="btn btn-primary open-bench-modal" style="width: 100%;">Market Your Profile</button>
-  </div>
-
-  <main>
-    <!-- ==========================================================================
-         SECTION 01 — HERO
-         ========================================================================== -->
-    <section class="bench-hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="eyebrow">TJR TECH / US IT BENCH SALES</div>
-          <h1 class="hero-title-main">
-            Positioning Talent for the <span>Right Technology Opportunities.</span>
-          </h1>
-          <p class="hero-supporting-copy">
-            Connecting experienced technology professionals with relevant opportunities across the US IT staffing ecosystem.
-          </p>
-          <p class="hero-secondary-copy">
-            TJR Tech helps technology professionals strengthen their market positioning, align their profiles with relevant requirements, and navigate the opportunity and submission process with structured support.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-primary open-bench-modal">
-              <span>Market Your Profile</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-            <a href="/contact" class="btn btn-secondary">
-              <span>Talk to TJR Tech</span>
+    <!-- PERSISTENT LEFT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER) -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div>
+        <div class="nav-group-title">WORKSPACE</div>
+        <ul class="nav-menu">
+          <!-- 1. HOME -->
+          <li>
+            <a href="index.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Home</span>
             </a>
-          </div>
-        </div>
+          </li>
 
-        <div class="network-canvas-wrap">
-          <canvas id="benchNetworkCanvas" aria-label="Interactive consultant network visualizer"></canvas>
-        </div>
+          <!-- 2. ABOUT -->
+          <li>
+            <a href="about.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>About</span>
+            </a>
+          </li>
+
+          <!-- 3. SERVICES (ACTIVE & EXPANDED) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn active" id="servicesToggleBtn" aria-expanded="true" onclick="toggleSidebarMenu('servicesSubmenu', 'servicesToggleBtn')">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Services</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu open" id="servicesSubmenu">
+              <li>
+                <a href="us-it-staffing.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Staffing</span>
+                </a>
+              </li>
+              <li>
+                <a href="us-it-bench-sales.html" class="nav-sub-link active-sub">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Bench Sales</span>
+                </a>
+              </li>
+              <li>
+                <a href="web-development.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Web Development</span>
+                </a>
+              </li>
+              <li>
+                <a href="ads-digital-media.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Ads &amp; Digital Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 4. SOLUTIONS (COLLAPSIBLE) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn" id="solutionsToggleBtn" aria-expanded="false" onclick="toggleSidebarMenu('solutionsSubmenu', 'solutionsToggleBtn')">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Solutions</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu" id="solutionsSubmenu">
+              <li>
+                <a href="solutions.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Solutions Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-consultants.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Consultants</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-professionals.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Professionals</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-businesses.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Businesses</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 5. PORTFOLIO -->
+          <li>
+            <a href="portfolio.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span>Portfolio</span>
+            </a>
+          </li>
+
+          <!-- 6. INSIGHTS -->
+          <li>
+            <a href="insights.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Insights</span>
+            </a>
+          </li>
+
+          <!-- 7. CAREERS -->
+          <li>
+            <a href="careers.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3v4M8 3v4"/></svg>
+              <span>Careers</span>
+            </a>
+          </li>
+
+          <!-- 8. CONTACT -->
+          <li>
+            <a href="contact.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- PAGE CHAPTER ANCHORS -->
+        <div class="nav-group-title" style="margin-top: 1.25rem;">BENCH CHAPTERS</div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#intro" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Positioning Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#definition" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Bench Flow Definition</span>
+            </a>
+          </li>
+          <li>
+            <a href="#who-we-support" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Who We Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="#positioning" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Profile Optimization</span>
+            </a>
+          </li>
+          <li>
+            <a href="#technology-constellation" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Technical Constellation</span>
+            </a>
+          </li>
+          <li>
+            <a href="#process" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>9-Stage Execution</span>
+            </a>
+          </li>
+          <li>
+            <a href="#matching" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Requirement Matching</span>
+            </a>
+          </li>
+          <li>
+            <a href="#coordination" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Stakeholder Alignment</span>
+            </a>
+          </li>
+          <li>
+            <a href="#work-auth" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Work Authorization</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Bench Sales FAQs</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <button class="scroll-indicator" id="scrollDownBtn" aria-label="Explore bench sales details">
-        <span>Explore Bench Sales</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-      </button>
-    </section>
+      <div class="sidebar-footer-card">
+        <div class="sf-header">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 6 12 12 16 14"/></svg>
+          <span>Bench Desk Hub</span>
+        </div>
+        <div class="sf-sub">Hyderabad &bull; US Tier-1 Vendor Reach</div>
+      </div>
+    </aside>
 
-    <!-- ==========================================================================
-         SECTION 02 — INTRODUCTION
-         ========================================================================== -->
-    <section class="section-spacing intro-section" id="intro">
-      <div class="container">
-        <div class="intro-grid reveal">
+    <!-- CENTRAL WORKSPACE (BLUEPRINT CANVAS) -->
+    <main class="app-workspace" id="mainWorkspace">
+
+      <!-- ==================== 01. HERO SECTION ==================== -->
+      <section class="ws-section" id="hero">
+        <div class="ws-kicker-badge">
+          <span>PRACTICE DIVISION // SYS_02</span>
+        </div>
+        <h1 class="ws-title">
+          Positioning Talent for the <br>
+          <span>Right Technology Opportunities.</span>
+        </h1>
+        <p class="ws-subtitle" style="font-weight: 600; color: var(--strong-text);">
+          Connecting experienced technology professionals with relevant contract requirements across the US IT staffing ecosystem.
+        </p>
+        <p class="ws-subtitle">
+          TJR Tech helps technology professionals strengthen their market positioning, align their profiles with verified Tier-1 openings, manage rate parameters, and navigate the entire submittal journey with dedicated recruiter representation.
+        </p>
+
+        <div class="ws-action-ribbon">
+          <button class="btn btn-teal" onclick="openBenchModal()">Market Your Profile</button>
+          <a href="#definition" class="btn btn-secondary">Explore Representation</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Bench Desk</a>
+        </div>
+
+        <!-- Interactive Bench Network Visualizer Canvas -->
+        <div class="hero-network-canvas-wrap">
+          <canvas id="benchNetworkCanvas" aria-label="Interactive digital consultant network canvas"></canvas>
+          <div class="canvas-hud-overlay">
+            <span class="pulse-dot-teal"></span>
+            <span>BENCH GRID: <strong style="color: var(--accent-teal);">ONLINE</strong> &bull; TIER-1 PRIME VENDOR CHANNELS ACTIVE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 02. POSITIONING OVERVIEW ==================== -->
+      <section class="ws-section" id="intro">
+        <div class="ws-subhead-bar">01 / OVERVIEW // POSITIONING ENGINE</div>
+        <div class="grid-2-col">
           <div>
-            <div class="eyebrow">US IT BENCH SALES</div>
-            <h2 class="section-title">Your Skills Need the Right Market Position.</h2>
-            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
-              <p>
-                Technology professionals can have strong technical experience and still struggle to reach the right opportunities when their profile, positioning, communication, and market alignment are not structured effectively.
-              </p>
-              <p>
-                TJR Tech provides a structured bench sales support process focused on understanding the consultant's background, presenting relevant technical experience, identifying aligned opportunities, and coordinating communication throughout the submission journey.
-              </p>
-            </div>
-            <div style="margin-top: 2rem; font-family: var(--font-mono); font-size: 1.15rem; color: var(--text-accent); font-weight: 700;">
-              Skills &rarr; Positioning &rarr; Opportunity
+            <h2 class="ws-title" style="font-size: 1.85rem;">
+              Your Skills Need the <span>Right Market Position.</span>
+            </h2>
+            <blockquote class="story-focus-quote">
+              Technology practitioners often hold strong engineering depth but struggle to reach prime vendor opportunities when their resume narrative, rate expectations, and submittal channels lack structured representation.
+            </blockquote>
+            <p style="font-size: 0.925rem; color: var(--secondary-text); line-height: 1.65; margin-top: 1rem;">
+              TJR Tech provides structured bench sales representation focused on understanding consultant depth, re-framing technical accomplishments, identifying aligned direct accounts, and managing interview communication from submittal to onboarding.
+            </p>
+            <div style="margin-top: 1.25rem;">
+              <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700; font-size: 0.785rem; padding: 0.35rem 0.75rem;">
+                SKILLS &rarr; POSITIONING &rarr; DIRECT SUBMISSION &rarr; CONTRACT
+              </span>
             </div>
           </div>
 
+          <!-- Consultant Positioning Node HUD -->
           <div class="profile-hud-card">
             <div class="hud-header">
-              <span class="hud-label">Consultant Positioning Node</span>
-              <span class="hud-status">Status: Active Representation</span>
+              <span class="hud-label">CONSULTANT POSITIONING NODE</span>
+              <span class="hud-status">STATUS: ACTIVE DESK</span>
             </div>
             <div class="hud-row"><span class="hud-key">Professional Profile</span><span class="hud-val">Cloud &amp; Distributed Systems</span></div>
-            <div class="hud-row"><span class="hud-key">Technical Skills</span><span class="hud-val">Java, Spring, AWS, Docker</span></div>
-            <div class="hud-row"><span class="hud-key">Experience Record</span><span class="hud-val">Enterprise Architect Level</span></div>
-            <div class="hud-row"><span class="hud-key">Geographic Scope</span><span class="hud-val">Remote / Hybrid (US Timezones)</span></div>
-            <div class="hud-row"><span class="hud-key">Work Authorization</span><span class="hud-val">Work-Authorized Status</span></div>
-            <div class="hud-row"><span class="hud-key">Availability</span><span class="hud-val">Immediate / 2 Weeks Notice</span></div>
-            <div class="hud-row"><span class="hud-key">Target Opportunities</span><span class="hud-val">Mid-to-Senior Tier Contracts</span></div>
+            <div class="hud-row"><span class="hud-key">Core Stacks</span><span class="hud-val">Java 17, Spring Boot, AWS, K8s</span></div>
+            <div class="hud-row"><span class="hud-key">Experience Depth</span><span class="hud-val">Senior Technical Architect</span></div>
+            <div class="hud-row"><span class="hud-key">Geographic Target</span><span class="hud-val">US Remote / Hybrid EST/CST/PST</span></div>
+            <div class="hud-row"><span class="hud-key">Work Authorization</span><span class="hud-val">Work-Authorized (Verified)</span></div>
+            <div class="hud-row"><span class="hud-key">Engagement Preference</span><span class="hud-val">Direct C2C / Contract</span></div>
+            <div class="hud-row"><span class="hud-key">Rate Realization</span><span class="hud-val">Transparent Market Tier</span></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 03 — WHAT IS US IT BENCH SALES?
-         ========================================================================== -->
-    <section class="section-spacing" id="definition">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">PRACTICE DEFINITION</div>
-          <h2 class="section-title">What We Mean by Bench Sales</h2>
-          <p class="section-lead">
-            US IT Bench Sales is the process of marketing and positioning available technology consultants for relevant contract and staffing opportunities in the US market.
-          </p>
-          <p style="margin-top: 1rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
-            At TJR Tech, the process focuses on presenting a consultant's technical background clearly, aligning the profile with relevant requirements, communicating with staffing contacts, coordinating submissions, and supporting the consultant through interview and placement stages.
-          </p>
-        </div>
+      <!-- ==================== 03. PRACTICE DEFINITION & BENCH FLOW ==================== -->
+      <section class="ws-section" id="definition">
+        <div class="ws-subhead-bar">02 / DEFINITION // THE 7-STEP BENCH FLOW</div>
+        <h2 class="ws-title">What We Mean by <span>Bench Sales.</span></h2>
+        <p class="ws-subtitle">
+          US IT Bench Sales is the disciplined process of marketing and positioning available technical consultants for relevant enterprise contract openings across North American staffing ecosystems.
+        </p>
 
-        <div class="bench-def-flow reveal">
-          <div class="flow-node">
-            <div class="flow-index">01</div>
-            <div class="flow-name">AVAILABLE CONSULTANT</div>
+        <div class="grid-7-col" style="margin-top: 1.75rem;">
+          <div class="stepper-node">
+            <div class="stepper-step">01 // INTAKE</div>
+            <div class="stepper-title">Available Consultant</div>
+            <p class="stepper-desc">Intake of technical background, target stacks, and preferred rates.</p>
           </div>
-          <div class="flow-node">
-            <div class="flow-index">02</div>
-            <div class="flow-name">PROFILE REVIEW</div>
+          <div class="stepper-node">
+            <div class="stepper-step">02 // AUDIT</div>
+            <div class="stepper-title">Profile Review</div>
+            <p class="stepper-desc">Deep technical evaluation of projects and system contributions.</p>
           </div>
-          <div class="flow-node">
-            <div class="flow-index">03</div>
-            <div class="flow-name">MARKET POSITIONING</div>
+          <div class="stepper-node">
+            <div class="stepper-step">03 // REFINE</div>
+            <div class="stepper-title">Market Positioning</div>
+            <p class="stepper-desc">Resume narrative framing for Tier-1 vendor review standards.</p>
           </div>
-          <div class="flow-node">
-            <div class="flow-index">04</div>
-            <div class="flow-name">REQUIREMENT MATCHING</div>
+          <div class="stepper-node">
+            <div class="stepper-step">04 // SOURCING</div>
+            <div class="stepper-title">Req Matching</div>
+            <p class="stepper-desc">Mapping profile attributes directly against live prime client openings.</p>
           </div>
-          <div class="flow-node">
-            <div class="flow-index">05</div>
-            <div class="flow-name">PROFILE SUBMISSION</div>
+          <div class="stepper-node">
+            <div class="stepper-step">05 // OUTREACH</div>
+            <div class="stepper-title">Direct Submittal</div>
+            <p class="stepper-desc">Compliant profile submittal with confirmed rates and availability.</p>
           </div>
-          <div class="flow-node">
-            <div class="flow-index">06</div>
-            <div class="flow-name">INTERVIEW COORDINATION</div>
+          <div class="stepper-node">
+            <div class="stepper-step">06 // STAGE</div>
+            <div class="stepper-title">Interviews</div>
+            <p class="stepper-desc">Coordinating technical screenings, manager rounds, and prep briefs.</p>
           </div>
-          <div class="flow-node" style="border-color: var(--text-accent);">
-            <div class="flow-index">07</div>
-            <div class="flow-name" style="color: var(--text-accent);">PLACEMENT SUPPORT</div>
+          <div class="stepper-node" style="border-color: var(--accent-teal); background: var(--soft-teal);">
+            <div class="stepper-step" style="color: #11706c;">07 // ONBOARD</div>
+            <div class="stepper-title" style="color: var(--accent-teal);">Placement</div>
+            <p class="stepper-desc">Commercial contract signing, onboarding checks, and start date.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 04 — WHO WE SUPPORT
-         ========================================================================== -->
-    <section class="section-spacing" id="who-we-support" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">STAKEHOLDER FOCUS</div>
-          <h2 class="section-title">Built Around Technology Professionals</h2>
-          <p class="section-lead">
-            Our bench sales support is designed around the needs of technology professionals who are actively seeking relevant opportunities in the US IT market.
-          </p>
-        </div>
+      <!-- ==================== 04. WHO WE SUPPORT ==================== -->
+      <section class="ws-section" id="who-we-support">
+        <div class="ws-subhead-bar">03 / STAKEHOLDERS // CONSULTANT PROFILES SERVED</div>
+        <h2 class="ws-title">Built Around <span>Technology Professionals.</span></h2>
+        <p class="ws-subtitle">
+          Dedicated representation tailored to technical specialists seeking high-visibility contract engagements across US enterprises.
+        </p>
 
-        <div class="support-grid">
-          <div class="support-card reveal">
-            <div class="support-num">01</div>
-            <h3 class="support-title">Experienced Technology Consultants</h3>
-            <p class="support-desc">Senior engineers, technical architects, and domain specialists seeking structured representation across prime contracting assignments.</p>
-          </div>
-
-          <div class="support-card reveal">
-            <div class="support-num">02</div>
-            <h3 class="support-title">Contract Technology Professionals</h3>
-            <p class="support-desc">Consultants completing current projects and planning their next engagement transition with minimized bench time.</p>
-          </div>
-
-          <div class="support-card reveal">
-            <div class="support-num">03</div>
-            <h3 class="support-title">Consultants Seeking New Opportunities</h3>
-            <p class="support-desc">Engineers looking for targeted alignment with specific technology stacks, cloud topologies, and business sectors.</p>
+        <div class="grid-3-col" style="margin-top: 1.75rem;">
+          <div class="division-app-card" onclick="inspectBench('experienced')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">PROFILE 01</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">TIER // SR</span>
+              </div>
+              <h3 class="div-card-title">Experienced Technology Consultants</h3>
+              <p class="div-card-desc">Senior software engineers, enterprise cloud architects, and data leads seeking structured representation across prime contracting assignments.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">10+ Yrs Depth</span>
+                <span class="chip-tag">Architect Level</span>
+                <span class="chip-tag">Prime Vendor Tier-1</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Profile Specs</span>
+              <span>&rarr;</span>
+            </div>
           </div>
 
-          <div class="support-card reveal">
-            <div class="support-num">04</div>
-            <h3 class="support-title">Professionals Returning to the Market</h3>
-            <p class="support-desc">Consultants requiring refreshed resume framing, market alignment, and structured vendor outreach to re-engage actively.</p>
+          <div class="division-app-card" onclick="inspectBench('contractors')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">PROFILE 02</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">TIER // MID-SR</span>
+              </div>
+              <h3 class="div-card-title">Rolling Contract Professionals</h3>
+              <p class="div-card-desc">Consultants completing active engagements seeking seamless transitions to minimize non-billable bench downtime between project phases.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Zero Bench Lag</span>
+                <span class="chip-tag">Immediate Notice</span>
+                <span class="chip-tag">C2C Contracting</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Profile Specs</span>
+              <span>&rarr;</span>
+            </div>
           </div>
 
-          <div class="support-card reveal">
-            <div class="support-num">05</div>
-            <h3 class="support-title">Technology Specialists With In-Demand Skills</h3>
-            <p class="support-desc">Cloud architects, DevOps leads, Snowflake specialists, and SDETs seeking roles aligned with their specific tier of competence.</p>
-          </div>
-
-          <div class="support-card reveal">
-            <div class="support-num">06</div>
-            <h3 class="support-title">Consultants Seeking Structured Support</h3>
-            <p class="support-desc">Professionals who want clear submission tracking, dedicated interview coordination, and transparent commercial communication.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 05 — PROFILE POSITIONING
-         ========================================================================== -->
-    <section class="section-spacing transform-section" id="positioning">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">OPTIMIZATION ENGINE</div>
-          <h2 class="section-title">From Resume to Market-Ready Profile.</h2>
-          <p class="section-lead">
-            Strong technical experience needs to be communicated clearly. We help organize consultant information so that relevant technical capabilities and professional experience can be presented effectively to staffing contacts and potential opportunities.
-          </p>
-        </div>
-
-        <div class="transform-timeline reveal">
-          <div class="transform-step">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">PHASE 01</div>
-            <strong style="color: #fff; font-size: 0.875rem;">RAW PROFILE</strong>
-          </div>
-          <div class="transform-step">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">PHASE 02</div>
-            <strong style="color: #fff; font-size: 0.875rem;">PROFILE REVIEW</strong>
-          </div>
-          <div class="transform-step">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">PHASE 03</div>
-            <strong style="color: #fff; font-size: 0.875rem;">TECHNICAL EXPERIENCE</strong>
-          </div>
-          <div class="transform-step">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">PHASE 04</div>
-            <strong style="color: #fff; font-size: 0.875rem;">SKILL ALIGNMENT</strong>
-          </div>
-          <div class="transform-step">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">PHASE 05</div>
-            <strong style="color: #fff; font-size: 0.875rem;">MARKET POSITIONING</strong>
-          </div>
-          <div class="transform-step final">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">PHASE 06</div>
-            <strong style="color: var(--text-accent); font-size: 0.875rem;">SUBMISSION-READY</strong>
+          <div class="division-app-card" onclick="inspectBench('specialists')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">PROFILE 03</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">TIER // NICHE</span>
+              </div>
+              <h3 class="div-card-title">In-Demand Technical Specialists</h3>
+              <p class="div-card-desc">Cloud migration specialists, Kubernetes architects, Snowflake data engineers, and SDET automation specialists targeting rate-optimized contracts.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">High-Demand Stacks</span>
+                <span class="chip-tag">Rate Premium</span>
+                <span class="chip-tag">Verified Proof</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Profile Specs</span>
+              <span>&rarr;</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="transform-pill-matrix reveal">
-          <span class="data-pill">Technical Skills</span>
-          <span class="data-pill">Years of Experience</span>
-          <span class="data-pill">Project Experience</span>
-          <span class="data-pill">Industry Exposure</span>
-          <span class="data-pill">Location</span>
-          <span class="data-pill">Work Authorization</span>
-          <span class="data-pill">Availability</span>
-          <span class="data-pill">Preferred Engagement</span>
-          <span class="data-pill">Target Technology</span>
+      <!-- ==================== 05. PROFILE POSITIONING ==================== -->
+      <section class="ws-section" id="positioning">
+        <div class="ws-subhead-bar">04 / OPTIMIZATION // RESUME TO MARKET-READY PROFILE</div>
+        <div class="grid-2-col">
+          <div>
+            <h2 class="ws-title" style="font-size: 1.85rem;">
+              From Raw Resume to <span>Market-Ready Position.</span>
+            </h2>
+            <p style="margin-top: 0.85rem; font-size: 0.925rem; color: var(--secondary-text); line-height: 1.65;">
+              Strong engineering capabilities must be communicated clearly and concisely. We eliminate fluff and re-structure consultant profiles into clean, impact-driven dossiers that pass strict vendor vetting.
+            </p>
+            <div style="display: flex; gap: 0.85rem; margin-top: 1.5rem;">
+              <button class="btn btn-teal" onclick="openBenchModal()">Submit Resume for Review</button>
+              <a href="for-consultants.html" class="btn btn-secondary">Consultant Overview &rarr;</a>
+            </div>
+          </div>
+
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.85rem; box-shadow: var(--shadow-card);">
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--accent-teal); font-weight: 700; margin-bottom: 0.85rem;">
+              CORE ATTRIBUTES PREPARED FOR SUBMITTAL
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.65rem;">
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Verified Technical Stack</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Total Years of Experience</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Architectural Contributions</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Industry &amp; Domain Depth</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Location &amp; Remote Scope</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Work Authorization Status</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Realized Rate Bracket</div>
+              <div class="chip-tag" style="padding: 0.5rem 0.75rem;">Immediate Availability Date</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 06 — TECHNOLOGY DOMAINS
-         ========================================================================== -->
-    <section class="section-spacing" id="technology-constellation">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">TECHNICAL COVERAGE</div>
-          <h2 class="section-title">Technology Across the Modern IT Landscape</h2>
-          <p class="section-lead">
-            Bench sales activity can span a broad range of technical requirements. TJR Tech works with profiles across multiple technology domains.
-          </p>
+      <!-- ==================== 06. TECHNOLOGY CONSTELLATION ==================== -->
+      <section class="ws-section" id="technology-constellation">
+        <div class="ws-kicker-badge">
+          <span>05 / DOMAINS // INTERACTIVE BENCH CONSTELLATION</span>
         </div>
+        <h2 class="ws-title">Technology Across the <span>Modern IT Landscape.</span></h2>
+        <p class="ws-subtitle">
+          Bench sales marketing spans deep enterprise engineering stacks. Click any domain node to explore active consultant submittal specializations.
+        </p>
 
-        <div class="constellation-grid reveal">
-          <div class="constellation-field">
+        <div class="tech-interactive-grid">
+          <div class="tech-network-field">
             <canvas id="constellationCanvas"></canvas>
-            <div class="constellation-hub">TJR TECH</div>
+            <div class="constellation-hub">TJR TECH<br><span style="font-size: 0.65rem; opacity: 0.85;">BENCH DESK</span></div>
             <button class="domain-btn dpos-1 active" data-const="0">SOFTWARE</button>
             <button class="domain-btn dpos-2" data-const="1">CLOUD &amp; DEVOPS</button>
-            <button class="domain-btn dpos-3" data-const="2">DATA &amp; ANALYTICS</button>
-            <button class="domain-btn dpos-4" data-const="3">QUALITY ENG.</button>
+            <button class="domain-btn dpos-3" data-const="2">DATA &amp; AI</button>
+            <button class="domain-btn dpos-4" data-const="3">QUALITY ENG</button>
             <button class="domain-btn dpos-5" data-const="4">INFRASTRUCTURE</button>
             <button class="domain-btn dpos-6" data-const="5">CYBERSECURITY</button>
           </div>
 
           <div class="domain-focus-card" id="constDetailCard">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); text-transform: uppercase;" id="constKicker">DOMAIN 01</div>
-            <h3 style="font-size: 1.55rem; font-weight: 700; color: #fff; margin: 0.5rem 0 1rem 0;" id="constTitle">SOFTWARE ENGINEERING</h3>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;" id="constDesc">
-              Core architecture, microservices, and distributed application platforms engineered in enterprise environments.
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--accent-teal); font-weight: 700; margin-bottom: 0.35rem;" id="constKicker">DOMAIN 01</div>
+            <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--strong-text); margin-bottom: 0.65rem;" id="constTitle">SOFTWARE ENGINEERING</h3>
+            <p style="font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6;" id="constDesc">
+              Core architecture, microservices, and distributed application platforms engineered in enterprise Java, .NET, and Python environments.
             </p>
-            <div class="tag-cloud" id="constTags">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">.NET Core</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Full Stack</span>
-              <span class="tech-tag">Backend</span>
-              <span class="tech-tag">Frontend</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.25rem;" id="constTags">
+              <span class="chip-tag">Java 17 / Spring Boot</span>
+              <span class="chip-tag">.NET Core / C#</span>
+              <span class="chip-tag">Python Microservices</span>
+              <span class="chip-tag">Full-Stack React / Node</span>
+            </div>
+            <div style="margin-top: 1.75rem;">
+              <button class="btn btn-teal btn-sm" onclick="openBenchModal()">Market Profiles in this Domain</button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 07 — THE BENCH SALES PROCESS (9 STAGES)
-         ========================================================================== -->
-    <section class="section-spacing" id="process" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">STRUCTURED EXECUTION</div>
-          <h2 class="section-title">A Structured Path From Availability to Opportunity.</h2>
-          <p class="section-lead">A step-by-step workflow connecting consultant readiness with vendor and client requirements.</p>
-        </div>
-
-        <div class="process-timeline-wrap reveal">
-          <div class="process-grid">
-            <div class="process-item">
-              <div class="process-item-num">01</div>
-              <h3 class="process-item-title">Consultant Intake</h3>
-              <p class="process-item-desc">Understand background, experience, availability, location, work authorization, and preferred opportunities.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">02</div>
-              <h3 class="process-item-title">Profile Review</h3>
-              <p class="process-item-desc">Review the consultant's professional profile and technical experience to identify core strengths.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">03</div>
-              <h3 class="process-item-title">Market Positioning</h3>
-              <p class="process-item-desc">Prepare and format the profile according to current US enterprise hiring expectations.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">04</div>
-              <h3 class="process-item-title">Requirement Discovery</h3>
-              <p class="process-item-desc">Identify relevant requirements through staffing relationships and verified open opportunities.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">05</div>
-              <h3 class="process-item-title">Opportunity Matching</h3>
-              <p class="process-item-desc">Compare the consultant's technical background and location parameters with the requirement.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">06</div>
-              <h3 class="process-item-title">Submission</h3>
-              <p class="process-item-desc">Present the consultant profile with rate parameters and availability details for consideration.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">07</div>
-              <h3 class="process-item-title">Interview Coordination</h3>
-              <p class="process-item-desc">Support technical screening schedules, client interview prep, and video coordination.</p>
-            </div>
-
-            <div class="process-item">
-              <div class="process-item-num">08</div>
-              <h3 class="process-item-title">Feedback &amp; Follow-Up</h3>
-              <p class="process-item-desc">Maintain structured communication and follow up proactively on each open submission.</p>
-            </div>
-
-            <div class="process-item" style="border-color: var(--border-accent);">
-              <div class="process-item-num" style="background: var(--bg-surface); color: var(--text-accent);">09</div>
-              <h3 class="process-item-title">Placement Support</h3>
-              <p class="process-item-desc">Support the consultant through onboarding, background coordination, and assignment start.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 08 — CONSULTANT JOURNEY
-         ========================================================================== -->
-    <section class="section-spacing" id="journey">
-      <div class="container reveal" style="text-align: center;">
-        <div class="eyebrow" style="justify-content: center;">IMMERSIVE PATHWAY</div>
-        <h2 class="section-title">One Consultant. One Structured Journey.</h2>
-        <p class="section-lead" style="margin: 1rem auto 0 auto;">
-          TJR Tech's role is to help create a structured connection between the consultant's capabilities and relevant market opportunities while maintaining professional communication throughout the process.
+      <!-- ==================== 07. NINE-STAGE BENCH SALES PROCESS ==================== -->
+      <section class="ws-section" id="process">
+        <div class="ws-subhead-bar">06 / LIFECYCLE // 9-STAGE EXECUTION MODEL</div>
+        <h2 class="ws-title">From Availability to <span>Project Placement.</span></h2>
+        <p class="ws-subtitle">
+          A structured lifecycle connecting candidate readiness with verified vendor requirements without gaps or delays.
         </p>
 
-        <div class="journey-track">
-          <div class="journey-node">PROFILE <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">SKILL ALIGNMENT <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">MARKET POSITIONING <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">REQUIREMENT <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">SUBMISSION <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">INTERVIEW <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">FEEDBACK <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node">SELECTION <span class="journey-arrow">&rarr;</span></div>
-          <div class="journey-node" style="border-color: var(--text-accent); color: var(--text-accent);">ONBOARDING</div>
+        <div class="grid-3-col" style="margin-top: 1.75rem;">
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 01 // INTAKE</div>
+            <div class="stepper-title">Consultant Onboarding</div>
+            <p class="stepper-desc">Understand background, tech stacks, location limits, work authorization, and billing expectations.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 02 // VETTING</div>
+            <div class="stepper-title">Profile Evaluation</div>
+            <p class="stepper-desc">Review professional experience and code/architecture history to establish authentic seniority.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 03 // FRAMING</div>
+            <div class="stepper-title">Market Positioning</div>
+            <p class="stepper-desc">Format and optimize resume artifacts according to current North American enterprise standards.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 04 // PIPELINE</div>
+            <div class="stepper-title">Requirement Sourcing</div>
+            <p class="stepper-desc">Discover active, funded openings across Tier-1 prime vendors and direct enterprise accounts.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 05 // COMPATIBILITY</div>
+            <div class="stepper-title">Opportunity Matching</div>
+            <p class="stepper-desc">Verify technical alignment, rate parameters, and time zone compatibility before submittal.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 06 // TRANSMISSION</div>
+            <div class="stepper-title">Direct Submission</div>
+            <p class="stepper-desc">Submit formal candidate packages directly through verified vendor management portals.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 07 // BRIEFING</div>
+            <div class="stepper-title">Interview Coordination</div>
+            <p class="stepper-desc">Coordinate interview schedules, conduct tech pre-briefs, and support video call setups.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">STAGE 08 // COMMUNICATION</div>
+            <div class="stepper-title">Feedback &amp; Terms</div>
+            <p class="stepper-desc">Proactively follow up with vendor account leads, collect screening feedback, and confirm rate terms.</p>
+          </div>
+          <div class="stepper-node" style="border-color: var(--accent-teal); background: var(--soft-teal);">
+            <div class="stepper-step" style="color: #11706c;">STAGE 09 // START</div>
+            <div class="stepper-title" style="color: var(--accent-teal);">Onboarding &amp; Launch</div>
+            <p class="stepper-desc">Assist with background checks, MSA/SOW documentation, and project start date coordination.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 09 — REQUIREMENT MATCHING
-         ========================================================================== -->
-    <section class="section-spacing matching-section" id="matching">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
-          <div class="eyebrow" style="justify-content: center;">TECHNICAL COMPATIBILITY</div>
-          <h2 class="section-title">Alignment Matters.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            Rigorous attribute comparison matching consultant depth directly to technical deliverables.
-          </p>
-        </div>
+      <!-- ==================== 08. REQUIREMENT MATCHING COMPARATOR ==================== -->
+      <section class="ws-section" id="matching">
+        <div class="ws-subhead-bar">07 / ACCURACY // REQUIREMENT MATCHING ENGINE</div>
+        <h2 class="ws-title">Alignment <span>Matters.</span></h2>
+        <p class="ws-subtitle">
+          Rigorous attribute comparison matching consultant depth directly to technical deliverables.
+        </p>
 
-        <div class="matching-hud-grid reveal">
+        <div class="matching-hud-grid">
           <div class="matching-panel">
-            <div class="panel-kicker">Consultant Profile Attributes</div>
-            <div class="hud-row"><span class="hud-key">Technical Skills</span><span class="hud-val">Cloud Infrastructure, Terraform, AWS</span></div>
-            <div class="hud-row"><span class="hud-key">Experience</span><span class="hud-val">7+ Years Enterprise Eng.</span></div>
-            <div class="hud-row"><span class="hud-key">Location</span><span class="hud-val">US East Coast (Remote)</span></div>
-            <div class="hud-row"><span class="hud-key">Availability</span><span class="hud-val">Immediate Engagement</span></div>
-            <div class="hud-row"><span class="hud-key">Work Authorization</span><span class="hud-val">Work-Authorized Status</span></div>
-            <div class="hud-row"><span class="hud-key">Preference</span><span class="hud-val">Long-Term C2C Assignment</span></div>
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--accent-teal); font-weight: 700; text-transform: uppercase;">
+              CONSULTANT PROFILE ATTRIBUTES
+            </div>
+            <div class="hud-row"><span class="hud-key">Technical Skills</span><span class="hud-val">Cloud Infra, Terraform, AWS</span></div>
+            <div class="hud-row"><span class="hud-key">Experience Depth</span><span class="hud-val">8+ Years Enterprise Architecture</span></div>
+            <div class="hud-row"><span class="hud-key">Location Scope</span><span class="hud-val">US Remote / EST Timezone</span></div>
+            <div class="hud-row"><span class="hud-key">Availability</span><span class="hud-val">Immediate Deployment</span></div>
+            <div class="hud-row"><span class="hud-key">Work Authorization</span><span class="hud-val">Authorized Status (Verified)</span></div>
+            <div class="hud-row"><span class="hud-key">Engagement Type</span><span class="hud-val">Long-Term C2C Contracting</span></div>
           </div>
 
           <div class="match-connector-column">
             <div class="alignment-badge">
               <span>ATTRIBUTE</span><br>
-              <strong>ALIGNMENT</strong>
+              <strong>MATCHED</strong>
             </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
 
           <div class="matching-panel">
-            <div class="panel-kicker">Opportunity Requirement Attributes</div>
-            <div class="hud-row"><span class="hud-key">Technology</span><span class="hud-val">AWS, Terraform, Containerization</span></div>
-            <div class="hud-row"><span class="hud-key">Experience</span><span class="hud-val">Senior DevOps Engineer (6+ Yrs)</span></div>
-            <div class="hud-row"><span class="hud-key">Location</span><span class="hud-val">US Remote / EST Hours</span></div>
-            <div class="hud-row"><span class="hud-key">Engagement Type</span><span class="hud-val">Contract / Long-term</span></div>
-            <div class="hud-row"><span class="hud-key">Start Date</span><span class="hud-val">Immediate Deployment</span></div>
-            <div class="hud-row"><span class="hud-key">Required Skills</span><span class="hud-val">IaC, CI/CD Pipelines, Kubernetes</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 10 — COMMUNICATION & COORDINATION
-         ========================================================================== -->
-    <section class="section-spacing" id="coordination">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">COMMUNICATION INTEGRITY</div>
-          <h2 class="section-title">Keeping the Opportunity Moving.</h2>
-          <p class="section-lead">
-            Bench sales involves more than sending a resume. Clear communication and timely coordination are essential throughout the opportunity lifecycle.
-          </p>
-        </div>
-
-        <div class="comm-grid reveal">
-          <div class="comm-card">
-            <h3 class="comm-title">Requirement Communication</h3>
-            <p class="comm-desc">Timely validation of role specifications and technical expectations.</p>
-          </div>
-          <div class="comm-card">
-            <h3 class="comm-title">Submission Coordination</h3>
-            <p class="comm-desc">Direct follow-ups ensuring profiles are received and reviewed.</p>
-          </div>
-          <div class="comm-card">
-            <h3 class="comm-title">Interview Scheduling</h3>
-            <p class="comm-desc">Proactive calendar alignment between consultant and client panels.</p>
-          </div>
-          <div class="comm-card">
-            <h3 class="comm-title">Feedback Follow-Up</h3>
-            <p class="comm-desc">Prompt collection and delivery of technical screening feedback.</p>
-          </div>
-          <div class="comm-card">
-            <h3 class="comm-title">Consultant Updates</h3>
-            <p class="comm-desc">Continuous status reporting on active submissions and interviews.</p>
-          </div>
-        </div>
-
-        <!-- Sections 11 & 12: Dual Stakeholders -->
-        <div class="dual-stakeholder-grid reveal">
-          <div class="stakeholder-card">
-            <div>
-              <div class="eyebrow">FOR CONSULTANTS</div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Built to Support Your Next Opportunity.</h3>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
-                Receive structured profile positioning, requirement matching, and active submission representation across the US technical staffing ecosystem.
-              </p>
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--brand-blue); font-weight: 700; text-transform: uppercase;">
+              PRIME VENDOR REQUIREMENT
             </div>
-            <button class="btn btn-primary open-bench-modal">
-              <span>Submit Your Profile &rarr;</span>
-            </button>
+            <div class="hud-row"><span class="hud-key">Required Tech</span><span class="hud-val">AWS, Terraform, Kubernetes</span></div>
+            <div class="hud-row"><span class="hud-key">Role Seniority</span><span class="hud-val">Lead Cloud DevOps Engineer</span></div>
+            <div class="hud-row"><span class="hud-key">Location Scope</span><span class="hud-val">100% US Remote / EST Hours</span></div>
+            <div class="hud-row"><span class="hud-key">Contract Scope</span><span class="hud-val">12+ Month Renewable SOW</span></div>
+            <div class="hud-row"><span class="hud-key">Target Rate</span><span class="hud-val">Aligned with Profile Expectation</span></div>
+            <div class="hud-row"><span class="hud-key">Submission Window</span><span class="hud-val">Active Interview Slot Ready</span></div>
           </div>
+        </div>
+      </section>
 
-          <div class="stakeholder-card">
+      <!-- ==================== 09. COMMUNICATION & STAKEHOLDERS ==================== -->
+      <section class="ws-section" id="coordination">
+        <div class="ws-subhead-bar">08 / INTEGRITY // COMMUNICATION &amp; DUAL STAKEHOLDERS</div>
+        <div class="grid-2-col">
+          <div class="division-app-card" style="cursor: default;">
             <div>
-              <div class="eyebrow">FOR STAFFING PARTNERS</div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Structured Representation for Staffing Opportunities.</h3>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
-                TJR Tech supports staffing workflows by communicating verified consultant profiles against relevant open requirements and coordinating interview schedules.
+              <div class="stepper-step">FOR CONSULTANTS</div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.45rem 0;">Built to Support Your Next Contract.</h3>
+              <p style="font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; margin-bottom: 1.25rem;">
+                Receive dedicated representation, daily submission tracking, transparent feedback, and direct Tier-1 visibility across leading North American clients.
               </p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Dedicated Recruiter</span>
+                <span class="chip-tag">Rate Transparency</span>
+                <span class="chip-tag">Direct Vendor Reach</span>
+              </div>
             </div>
-            <button class="btn btn-secondary open-bench-modal">
-              <span>Share a Requirement &rarr;</span>
-            </button>
+            <div style="margin-top: 1.25rem;">
+              <button class="btn btn-teal" onclick="openBenchModal()" style="width: 100%;">Submit Your Profile &rarr;</button>
+            </div>
+          </div>
+
+          <div class="division-app-card" style="cursor: default;">
+            <div>
+              <div class="stepper-step" style="color: var(--brand-blue);">FOR STAFFING PARTNERS</div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0.45rem 0;">Verified Profiles for Open Requirements.</h3>
+              <p style="font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; margin-bottom: 1.25rem;">
+                TJR Tech supports Tier-1 vendor channels by supplying thoroughly screened, work-authorized consultants with clear communication and fast turnaround.
+              </p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Pre-Screened Talent</span>
+                <span class="chip-tag">Rapid Response</span>
+                <span class="chip-tag">Clean Compliance</span>
+              </div>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <button class="btn btn-secondary" onclick="openBenchModal()" style="width: 100%;">Share a Requirement &rarr;</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 13 — WORK AUTHORIZATION
-         ========================================================================== -->
-    <section class="section-spacing" id="work-auth" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="auth-banner reveal">
-          <div class="eyebrow" style="justify-content: center;">COMPLIANCE CLARITY</div>
-          <h2 class="section-title">Professional Profile Information Matters.</h2>
-          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; max-width: 800px; margin: 1rem auto 0 auto;">
-            Work authorization and availability are important components of US IT staffing. Consultant profiles should clearly communicate applicable work authorization information so opportunities can be evaluated appropriately.
+      <!-- ==================== 10. WORK AUTHORIZATION CLARITY ==================== -->
+      <section class="ws-section" id="work-auth">
+        <div class="ws-subhead-bar">09 / COMPLIANCE // WORK AUTHORIZATION &amp; INTEGRITY</div>
+        <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 2.25rem; box-shadow: var(--shadow-card); text-align: center;">
+          <h2 class="ws-title" style="font-size: 1.65rem; margin-bottom: 0.45rem;">
+            Professional Profile Information <span>Matters.</span>
+          </h2>
+          <p style="font-size: 0.925rem; color: var(--secondary-text); max-width: 720px; margin: 0 auto 1.5rem auto; line-height: 1.65;">
+            Work authorization clarity is critical in the US staffing market. Consultant profiles must accurately communicate authorization parameters so opportunities can be targeted without delays.
           </p>
-
-          <div class="auth-badges-flex">
-            <span class="auth-badge-node">OPT / STEM OPT</span>
-            <span class="auth-badge-node">H-1B</span>
-            <span class="auth-badge-node">H-4 EAD</span>
-            <span class="auth-badge-node">GC EAD</span>
-            <span class="auth-badge-node">US Citizen</span>
-            <span class="auth-badge-node">Permanent Resident</span>
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 1.5rem;">
+            <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700;">US Citizen</span>
+            <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700;">Permanent Resident (GC)</span>
+            <span class="chip-tag">H-1B Transfer / Extension</span>
+            <span class="chip-tag">H-4 EAD</span>
+            <span class="chip-tag">OPT / STEM OPT</span>
+            <span class="chip-tag">GC EAD</span>
           </div>
-
-          <p style="font-size: 0.8125rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; line-height: 1.6;">
-            Work authorization requirements vary by opportunity. Consultants should verify eligibility and employment requirements for each specific position. TJR Tech does not provide immigration or legal advice.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 14 — WHY STRUCTURE MATTERS
-         ========================================================================== -->
-    <section class="section-spacing" id="structure-matters">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">PROCESS OVER CHANCE</div>
-          <h2 class="section-title">Bench Sales Is a Process — Not Just a Submission.</h2>
-          <p class="section-lead">
-            Effective consultant representation depends on the quality of the profile, relevance of the opportunity, clarity of communication, and consistency throughout the process.
-          </p>
-        </div>
-
-        <div class="structure-scroll-grid reveal">
-          <div class="structure-statement-card">
-            <div class="structure-num">01</div>
-            <h3 class="structure-title">Clear Profile</h3>
-            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55;">Precise technical positioning avoiding ambiguous or generic claims.</p>
-          </div>
-
-          <div class="structure-statement-card">
-            <div class="structure-num">02</div>
-            <h3 class="structure-title">Relevant Requirement</h3>
-            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55;">Targeting opportunities that strictly match experience and availability.</p>
-          </div>
-
-          <div class="structure-statement-card">
-            <div class="structure-num">03</div>
-            <h3 class="structure-title">Professional Communication</h3>
-            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55;">Transparent coordination between consultant and staffing channel.</p>
-          </div>
-
-          <div class="structure-statement-card">
-            <div class="structure-num">04</div>
-            <h3 class="structure-title">Consistent Follow-Up</h3>
-            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55;">Disciplined submission tracking to ensure actionable feedback.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 15 — TJR TECH DIFFERENCE
-         ========================================================================== -->
-    <section class="section-spacing" id="difference" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">OUR COMMITMENT</div>
-          <h2 class="section-title">A People-First Approach to Technology Staffing.</h2>
-        </div>
-
-        <div class="difference-grid reveal">
-          <div class="diff-card">
-            <h3 class="diff-title">People Focused</h3>
-            <p class="diff-desc">We begin with the professional behind the profile.</p>
-          </div>
-          <div class="diff-card">
-            <h3 class="diff-title">Requirement Driven</h3>
-            <p class="diff-desc">We focus on understanding the requirement before positioning a consultant.</p>
-          </div>
-          <div class="diff-card">
-            <h3 class="diff-title">Structured</h3>
-            <p class="diff-desc">Defined steps create clarity throughout the opportunity lifecycle.</p>
-          </div>
-          <div class="diff-card">
-            <h3 class="diff-title">Technology Aware</h3>
-            <p class="diff-desc">We understand the technical language behind modern IT roles.</p>
-          </div>
-          <div class="diff-card">
-            <h3 class="diff-title">Professional Communication</h3>
-            <p class="diff-desc">Clear communication supports stronger coordination between all parties.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 16 — VISUAL ECOSYSTEM
-         ========================================================================== -->
-    <section class="section-spacing" id="ecosystem">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3rem auto;">
-          <div class="eyebrow" style="justify-content: center;">COORDINATION LAYER</div>
-          <h2 class="section-title">The TJR Tech Connection Layer.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            Acting as a disciplined bridge between consultant readiness, staffing channels, and live technical opportunities.
+          <p style="font-size: 0.785rem; color: var(--muted-text); max-width: 650px; margin: 0 auto; line-height: 1.5;">
+            * Note: TJR Tech provides professional representation and staffing coordination. We do not provide legal or immigration advice. Consultants should verify individual eligibility for specific corporate requirements.
           </p>
         </div>
+      </section>
 
-        <div class="ecosystem-canvas-box reveal">
-          <canvas id="ecosystemCanvas"></canvas>
-          <div class="eco-core">TJR TECH</div>
-          <div class="eco-satellite esat-1">CONSULTANTS</div>
-          <div class="eco-satellite esat-2">REQUIREMENTS</div>
-          <div class="eco-satellite esat-3">STAFFING CONTACTS</div>
-          <div class="eco-satellite esat-4">TECHNOLOGY</div>
-          <div class="eco-satellite esat-5">OPPORTUNITIES</div>
-          <div class="eco-satellite esat-6">INTERVIEWS</div>
-          <div class="eco-satellite esat-7">PLACEMENT</div>
+      <!-- ==================== 11. SERVICE SNAPSHOT ==================== -->
+      <section class="ws-section" id="snapshot">
+        <div class="snapshot-matrix-card">
+          <div class="ws-kicker-badge" style="margin-bottom: 1rem;">BENCH PRACTICE MATRIX</div>
+          <div class="snapshot-stream">
+            <div>POSITION <span>•</span> ALIGN <span>•</span> SUBMIT</div>
+            <div>TIER-1 REACH <span>•</span> RATE TRANSPARENCY <span>•</span> C2C</div>
+            <div>JAVA <span>•</span> CLOUD <span>•</span> DATA <span>•</span> DEVOPS</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 17 — FAQ ACCORDION
-         ========================================================================== -->
-    <section class="section-spacing" id="faq" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
-          <div class="eyebrow" style="justify-content: center;">QUESTIONS &amp; TRANSPARENCY</div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
+      <!-- ==================== 12. FREQUENTLY ASKED QUESTIONS ==================== -->
+      <section class="ws-section" id="faq">
+        <div class="ws-kicker-badge">
+          <span>10 / CLARITY // FREQUENTLY ASKED QUESTIONS</span>
         </div>
+        <h2 class="ws-title">Common Questions Regarding <span>Bench Sales.</span></h2>
+        <p class="ws-subtitle">Direct answers concerning representation terms, prime vendor submittals, and candidate intake.</p>
 
-        <div class="faq-accordion-wrap reveal">
+        <div class="faq-accordion-wrap">
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
               <span>What is US IT Bench Sales?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>US IT Bench Sales is the process of marketing and positioning available technology consultants for relevant opportunities in the US IT staffing market.</p>
+              <p>US IT Bench Sales is the professional process of marketing and positioning available technical consultants for relevant contract opportunities within the North American enterprise staffing and prime vendor ecosystem.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Who can work with TJR Tech?</span>
+              <span>Who can work with TJR Tech for bench sales representation?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Technology professionals seeking relevant US IT opportunities can contact TJR Tech to discuss their profile and requirements.</p>
+              <p>Work-authorized technology consultants, engineers rolling off existing client projects, independent contractors, and staffing firms seeking marketing support for their technical bench can partner with TJR Tech.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Do you guarantee a job or placement?</span>
+              <span>Does TJR Tech guarantee interviews or job placements?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>No. TJR Tech does not guarantee employment, interviews, offers, placement, salary, or any specific outcome.</p>
+              <p>No. We operate with strict professional transparency: final placement outcomes depend on client technical evaluations, budget approvals, and candidate alignment. We guarantee disciplined representation and structured submittals, not unverified placements.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>What information is needed from a consultant?</span>
+              <span>What information is required to begin marketing a profile?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Typical information may include a resume, technical skills, experience, location, availability, work authorization, and preferred engagement type.</p>
+              <p>We require an updated resume, breakdown of verified technical skills, location preferences, current availability date, work authorization details, and target hourly rate expectations.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Can staffing companies share requirements?</span>
+              <span>Can staffing partners and prime vendors share requirements with TJR Tech?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Yes. Staffing partners can contact TJR Tech to discuss relevant technology requirements and consultant profiles.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Do you provide immigration advice?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>TJR Tech's role is focused on staffing and professional opportunity support. Immigration and legal matters should be verified with qualified professionals or the appropriate authorities.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>How does the submission process work?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>After reviewing a consultant profile and identifying a relevant requirement, the profile may be presented for consideration, followed by communication and coordination through the interview and placement stages.</p>
+              <p>Yes. Prime vendors and Tier-1 staffing suppliers can share open job requisitions directly with our bench sales desk for rapid profile matching and compliant submissions.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 18 — CONSULTANT CTA & 19. FINAL BRAND STATEMENT
-         ========================================================================== -->
-    <section class="section-spacing cta-section" id="cta">
-      <div class="container">
-        <div class="cta-container reveal">
-          <div class="eyebrow" style="justify-content: center;">BENCH SALES CONSULTATION</div>
-          <h2 class="section-title" style="margin-bottom: 1.25rem;">Ready to Put Your Profile in Motion?</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
-            Share your professional profile with TJR Tech and let our team understand your skills, experience, and opportunity preferences.
+      <!-- ==================== 13. CALL TO ACTION ==================== -->
+      <section class="ws-section" id="cta" style="margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--soft-teal) 100%); border: 1px solid var(--surface-border); border-radius: 10px; padding: 3rem 2.25rem; box-shadow: var(--shadow-card); text-align: center;">
+          <div class="ws-kicker-badge">11 // CONVERGE // DIRECT ACTION</div>
+          <h2 class="ws-title" style="font-size: 2.35rem;">
+            Ready to Market <span>Your Profile?</span>
+          </h2>
+          <p class="ws-subtitle" style="margin: 0.65rem auto 0 auto; text-align: center;">
+            Submit your resume, technical stack, and availability to initiate structured representation across our prime vendor network.
           </p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-            <button class="btn btn-primary open-bench-modal">
-              <span>Submit Your Profile</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-            <a href="/contact" class="btn btn-secondary">
-              <span>Contact TJR Tech</span>
-            </a>
+
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap;">
+            <button class="btn btn-teal" onclick="openBenchModal()">Submit Profile for Marketing</button>
+            <a href="us-it-staffing.html" class="btn btn-secondary">Explore Staffing Services</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Bench Desk</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- CONTEXTUAL RIGHT PANEL (INSPECTOR) -->
+    <aside class="app-right-panel" id="appRightPanel">
+      <div>
+        <div class="panel-header">
+          <div>
+            <div class="panel-kicker">INSPECTOR</div>
+            <h3 class="panel-title" id="panelTitle">US IT Bench Sales</h3>
+          </div>
+          <button class="icon-btn" onclick="toggleRightPanel()" title="Close Inspector">&times;</button>
+        </div>
+
+        <div class="panel-content">
+          <div>
+            <div class="panel-section-label">OVERVIEW</div>
+            <p style="font-size: 0.85rem; color: var(--secondary-text); line-height: 1.6;" id="panelDesc">
+              Structured consultant representation, candidate marketing, resume narrative optimization, and active prime vendor matching for work-authorized technical professionals.
+            </p>
+          </div>
+
+          <div>
+            <div class="panel-section-label">OPERATING METRICS</div>
+            <ul class="panel-specs-list" id="panelSpecsList">
+              <li class="panel-spec-row">
+                <span>Vendor Access</span>
+                <span id="spec-1">Tier-1 Direct</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Representation</span>
+                <span id="spec-2">Dedicated Lead</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Rate Model</span>
+                <span id="spec-3">Transparent Terms</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="panel-section-label">CORE CAPABILITIES</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="panelChips">
+              <span class="chip-tag">Profile Optimization</span>
+              <span class="chip-tag">Prime Vendor Reach</span>
+              <span class="chip-tag">Rate Negotiation</span>
+              <span class="chip-tag">Direct Marketing</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="brand-statement-section" aria-label="Brand Signature Sequence">
-      <div class="container reveal">
-        <div class="statement-headline">
-          Technology moves forward. <br>
-          People move with it.
-        </div>
-        <div class="statement-brand-line">
-          TJR TECH — Technology. Talent. Digital Growth.
-        </div>
+      <div class="panel-footer-actions">
+        <button class="btn btn-teal" onclick="openBenchModal()" style="width: 100%;">Market Profile</button>
+        <a href="us-it-staffing.html" class="btn btn-secondary" style="width: 100%; text-decoration: none;">View Staffing Services</a>
       </div>
-    </section>
-  </main>
+    </aside>
+
+  </div>
 
   <!-- ==========================================================================
-       SECTION 20 — FOOTER
+       GLOBAL COMMAND SEARCH MODAL (CTRL+K)
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-title">TJR TECH</div>
-          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
-          <p class="footer-desc">
-            A technology and professional services organization delivering solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
-          </p>
-        </div>
-
-        <div>
-          <div class="footer-heading">Company</div>
-          <ul class="footer-links-list">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/directors">Leadership</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Services</div>
-          <ul class="footer-links-list">
-            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
-            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-            <li><a href="/services/web-development">Web Development</a></li>
-            <li><a href="/services/digital-media">Ads &amp; Digital Media</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Resources</div>
-          <ul class="footer-links-list">
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/services/us-it-bench-sales">Consultant Resources</a></li>
-            <li><a href="/careers">Career Opportunities</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Operations</div>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Hyderabad, Telangana, India
-          </p>
-          <p style="margin-top: 0.5rem; color: var(--text-accent); font-family: var(--font-mono); font-size: 0.8125rem;">
-            Global Delivery &amp; Services
-          </p>
-        </div>
+  <div class="search-modal-backdrop" id="searchBackdrop">
+    <div class="search-modal-card">
+      <div class="search-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="globalSearchField" placeholder="Search bench sales, domains, and processes..." autocomplete="off">
+        <button class="icon-btn" onclick="closeSearch()">&times;</button>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms &amp; Conditions</a>
-          <a href="/cookies">Cookie Policy</a>
-        </div>
-      </div>
+      <div class="search-results-list" id="searchResultsContainer"></div>
     </div>
-  </footer>
+  </div>
 
-  <!-- Bench Sales Profile Submission Modal -->
-  <div class="modal-overlay" id="benchModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
-    <div class="modal-box">
-      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
-      <div class="eyebrow">PROFILE INTAKE</div>
-      <h3 id="modalHeading" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Market Your Profile</h3>
-      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-        Provide your primary technical domain, current availability, and work authorization.
-      </p>
+  <!-- ==========================================================================
+       BENCH PROFILE INTAKE MODAL OVERLAY
+       ========================================================================== -->
+  <div class="contact-modal-backdrop" id="benchModal">
+    <div class="contact-modal-dialog">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+        <div>
+          <div style="font-family: var(--tech-font); font-size: 0.72rem; font-weight: 700; color: var(--accent-teal);">BENCH DESK INTAKE</div>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--strong-text);">Market Your Profile</h3>
+        </div>
+        <button class="icon-btn" onclick="closeBenchModal()">&times;</button>
+      </div>
 
       <form id="benchForm" onsubmit="handleFormSubmission(event)">
         <div class="form-group">
-          <label class="form-label" for="consultantName">Full Name</label>
+          <label class="form-label">Full Name</label>
           <input class="form-input" type="text" id="consultantName" required placeholder="e.g. David Vance">
         </div>
         <div class="form-group">
-          <label class="form-label" for="consultantEmail">Email Address</label>
-          <input class="form-input" type="email" id="consultantEmail" required placeholder="david.vance@example.com">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" id="consultantEmail" required placeholder="david@example.com">
         </div>
         <div class="form-group">
-          <label class="form-label" for="primaryDomainSelect">Primary Domain</label>
+          <label class="form-label">Primary Technical Domain</label>
           <select class="form-select" id="primaryDomainSelect" required>
-            <option value="" disabled selected>Select technical domain</option>
-            <option value="software">Software Engineering</option>
-            <option value="cloud">Cloud &amp; DevOps</option>
-            <option value="data">Data &amp; Analytics</option>
+            <option value="software">Software Engineering (Java / .NET / Python)</option>
+            <option value="cloud">Cloud Architecture &amp; DevOps</option>
+            <option value="data">Data Engineering &amp; Analytics</option>
             <option value="qa">Quality Engineering / SDET</option>
             <option value="infra">Infrastructure &amp; Networking</option>
             <option value="security">Cybersecurity</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="profileDetails">Profile Summary</label>
-          <textarea class="form-textarea" id="profileDetails" required placeholder="Core skills, years of experience, work authorization, preferred contract locations..."></textarea>
+          <label class="form-label">Profile Summary &amp; Availability</label>
+          <textarea class="form-textarea" id="profileDetails" rows="3" required placeholder="Core skills, years of experience, work authorization, preferred contract locations..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">
-          <span>Submit Profile for Review</span>
-        </button>
+        <button type="submit" class="btn btn-teal" style="width: 100%;">Submit Profile for Review</button>
       </form>
     </div>
   </div>
 
   <!-- ==========================================================================
-       MODULAR VANILLA JAVASCRIPT
+       MASTER CORE DATA & JAVASCRIPT CONTROLLER
        ========================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      // 1. Dynamic Copyright Year
-      const yearHolder = document.getElementById('yearHolder');
-      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+      // 1. Inspector Data Model
+      const INSPECTOR_DATA = {
+        bench: {
+          title: 'US IT Bench Sales',
+          desc: 'Structured consultant representation, candidate marketing, resume narrative optimization, and active prime vendor matching for work-authorized technical professionals.',
+          specs: [
+            { k: 'Vendor Access', v: 'Tier-1 Direct' },
+            { k: 'Representation', v: 'Dedicated Lead' },
+            { k: 'Rate Model', v: 'Transparent Terms' }
+          ],
+          chips: ['Profile Optimization', 'Prime Vendor Reach', 'Rate Negotiation', 'Direct Marketing']
+        },
+        experienced: {
+          title: 'Senior Consultants',
+          desc: 'Architect-level software practitioners, distributed systems leads, and data engineering leads positioned for high-tier enterprise contracts.',
+          specs: [
+            { k: 'Experience', v: '8–15+ Years' },
+            { k: 'Target Roles', v: 'Architect / Lead' },
+            { k: 'Channel', v: 'Direct MSP / Prime' }
+          ],
+          chips: ['Enterprise Architecture', 'Team Leads', 'High Billing Tier', 'Cloud Migration']
+        },
+        contractors: {
+          title: 'Rolling Contractors',
+          desc: 'Technical specialists transitioning between contracts with immediate availability requiring rapid submittal turnaround and zero bench lag.',
+          specs: [
+            { k: 'Notice Period', v: 'Immediate / 1–2 Wks' },
+            { k: 'Contract Type', v: 'C2C / 1099' },
+            { k: 'Turnaround', v: 'Under 48 Hours' }
+          ],
+          chips: ['Active Bench', 'Fast SOW Start', 'Clean Background', 'US Timezones']
+        },
+        specialists: {
+          title: 'In-Demand Specialists',
+          desc: 'High-demand niche engineering practitioners spanning Kubernetes, Snowflake, Kafka, and SDET automation frameworks.',
+          specs: [
+            { k: 'Tech Stack', v: 'Specialized / Niche' },
+            { k: 'Demand Index', v: 'Very High' },
+            { k: 'Rate Range', v: 'Premium Tier' }
+          ],
+          chips: ['Cloud Mesh', 'Snowflake DW', 'SDET Playwright', 'SecOps CI/CD']
+        }
+      };
 
-      // 2. Navigation Scroll Treatment & Progress Bar
-      const header = document.getElementById('mainHeader');
+      // Submenu Toggle Engine
+      window.toggleSidebarMenu = function (menuId, toggleBtnId) {
+        const menu = document.getElementById(menuId);
+        const btn = document.getElementById(toggleBtnId);
+        if (!menu || !btn) return;
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      };
+
+      // Contextual Inspector Handlers
+      window.inspectBench = function (itemId) {
+        const item = INSPECTOR_DATA[itemId] || INSPECTOR_DATA.bench;
+
+        document.getElementById('panelTitle').textContent = item.title;
+        document.getElementById('panelDesc').textContent = item.desc;
+        document.getElementById('spec-1').textContent = item.specs[0].v;
+        document.getElementById('spec-2').textContent = item.specs[1].v;
+        document.getElementById('spec-3').textContent = item.specs[2].v;
+
+        const chipsWrap = document.getElementById('panelChips');
+        chipsWrap.innerHTML = item.chips.map(chip => `<span class="chip-tag">${chip}</span>`).join('');
+
+        const shell = document.getElementById('appShell');
+        shell.classList.remove('panel-collapsed');
+
+        const select = document.getElementById('primaryDomainSelect');
+        if (select && itemId === 'specialists') {
+          select.value = 'cloud';
+        }
+      };
+
+      window.toggleRightPanel = function () {
+        const shell = document.getElementById('appShell');
+        shell.classList.toggle('panel-collapsed');
+      };
+
+      document.getElementById('togglePanelBtn').addEventListener('click', toggleRightPanel);
+
+      // Mobile Menu Toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      if (window.innerWidth <= 768) {
+        mobileMenuToggle.style.display = 'inline-flex';
+      }
+      mobileMenuToggle.addEventListener('click', () => {
+        document.getElementById('appSidebar').classList.toggle('mobile-open');
+      });
+
+      // Global Search Overlay (Ctrl+K)
+      const searchBackdrop = document.getElementById('searchBackdrop');
+      const searchInput = document.getElementById('globalSearchField');
+      const searchResultsContainer = document.getElementById('searchResultsContainer');
+
+      const SEARCH_ENTRIES = [
+        { title: 'Home Dashboard', tag: 'Page', href: 'index.html' },
+        { title: 'About TJR Tech', tag: 'Page', href: 'about.html' },
+        { title: 'US IT Staffing', tag: 'Service', href: 'us-it-staffing.html' },
+        { title: 'US IT Bench Sales', tag: 'Service', href: 'us-it-bench-sales.html' },
+        { title: 'Web Development', tag: 'Service', href: 'web-development.html' },
+        { title: 'Ads & Digital Media', tag: 'Service', href: 'ads-digital-media.html' },
+        { title: 'Positioning Engine', tag: 'Section', href: '#intro' },
+        { title: '7-Step Bench Flow', tag: 'Section', href: '#definition' },
+        { title: 'Who We Support', tag: 'Section', href: '#who-we-support' },
+        { title: 'Profile Positioning', tag: 'Section', href: '#positioning' },
+        { title: 'Technical Constellation', tag: 'Section', href: '#technology-constellation' },
+        { title: '9-Stage Execution Lifecycle', tag: 'Section', href: '#process' },
+        { title: 'Requirement Matching Comparator', tag: 'Section', href: '#matching' },
+        { title: 'Work Authorization Standards', tag: 'Section', href: '#work-auth' },
+        { title: 'Solutions Overview', tag: 'Solution', href: 'solutions.html' },
+        { title: 'For Consultants', tag: 'Solution', href: 'for-consultants.html' },
+        { title: 'For Professionals', tag: 'Solution', href: 'for-professionals.html' },
+        { title: 'For Businesses', tag: 'Solution', href: 'for-businesses.html' },
+        { title: 'Portfolio', tag: 'Page', href: 'portfolio.html' },
+        { title: 'Insights', tag: 'Page', href: 'insights.html' },
+        { title: 'Careers', tag: 'Page', href: 'careers.html' },
+        { title: 'Contact', tag: 'Page', href: 'contact.html' }
+      ];
+
+      function openSearch() {
+        searchBackdrop.classList.add('open');
+        searchInput.focus();
+        renderSearchResults('');
+      }
+
+      function closeSearch() {
+        searchBackdrop.classList.remove('open');
+        searchInput.value = '';
+      }
+
+      function renderSearchResults(query) {
+        const q = query.toLowerCase().trim();
+        const matches = q ? SEARCH_ENTRIES.filter(e => e.title.toLowerCase().includes(q) || e.tag.toLowerCase().includes(q)) : SEARCH_ENTRIES;
+
+        searchResultsContainer.innerHTML = matches.map(m => `
+          <a class="search-result-row" href="${m.href}" onclick="closeSearch()">
+            <span>${m.title}</span>
+            <span class="s-tag">${m.tag}</span>
+          </a>
+        `).join('');
+      }
+
+      document.getElementById('searchTriggerBtn').addEventListener('click', openSearch);
+
+      searchInput.addEventListener('input', (e) => {
+        renderSearchResults(e.target.value);
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          searchBackdrop.classList.contains('open') ? closeSearch() : openSearch();
+        }
+        if (e.key === 'Escape') {
+          closeSearch();
+          closeBenchModal();
+        }
+      });
+
+      searchBackdrop.addEventListener('click', (e) => {
+        if (e.target === searchBackdrop) closeSearch();
+      });
+
+      // Bench Intake Modal Handlers
+      const benchModal = document.getElementById('benchModal');
+
+      window.openBenchModal = function () {
+        benchModal.classList.add('open');
+      };
+
+      window.closeBenchModal = function () {
+        benchModal.classList.remove('open');
+      };
+
+      benchModal.addEventListener('click', (e) => {
+        if (e.target === benchModal) closeBenchModal();
+      });
+
+      window.handleFormSubmission = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your profile details. A TJR Tech consultant representation lead will review your information and follow up directly.');
+        closeBenchModal();
+        e.target.reset();
+      };
+
+      // Scroll Progress Indicator
+      const workspace = document.getElementById('mainWorkspace');
       const progressBar = document.getElementById('scrollProgress');
 
-      window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-
-        if (progressBar) progressBar.style.width = scrolled + '%';
-        if (winScroll > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }, { passive: true });
-
-      // 3. Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileDrawer = document.getElementById('mobileMenuDrawer');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function toggleMobile() {
-        const isOpen = mobileDrawer.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (workspace && progressBar) {
+        workspace.addEventListener('scroll', () => {
+          const scrollPos = workspace.scrollTop;
+          const totalHeight = workspace.scrollHeight - workspace.clientHeight;
+          const scrolled = (scrollPos / totalHeight) * 100;
+          progressBar.style.width = scrolled + '%';
+        }, { passive: true });
       }
 
-      if (mobileMenuBtn && mobileDrawer) {
-        mobileMenuBtn.addEventListener('click', toggleMobile);
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (mobileDrawer.classList.contains('active')) toggleMobile();
-          });
-        });
-      }
-
-      // 4. Scroll Indicator Button
-      const scrollDownBtn = document.getElementById('scrollDownBtn');
-      if (scrollDownBtn) {
-        scrollDownBtn.addEventListener('click', () => {
-          const introEl = document.getElementById('intro');
-          if (introEl) introEl.scrollIntoView({ behavior: 'smooth' });
-        });
-      }
-
-      // 5. Scroll Reveal Engine
-      const reveals = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-        reveals.forEach(el => revealObserver.observe(el));
-      } else {
-        reveals.forEach(el => el.classList.add('active'));
-      }
-
-      // 6. Hero Digital Consultant Network Canvas
+      // 2. Interactive Hero Network Canvas (Bench Theme-Optimized)
       (function initBenchCanvas() {
         const canvas = document.getElementById('benchNetworkCanvas');
         if (!canvas) return;
@@ -2545,7 +2517,7 @@
         let width, height;
         let nodes = [];
 
-        function resize() {
+        function setSize() {
           const rect = canvas.parentElement.getBoundingClientRect();
           width = canvas.width = rect.width;
           height = canvas.height = rect.height;
@@ -2554,20 +2526,32 @@
 
         function initNodes() {
           nodes = [];
-          for (let i = 0; i < 30; i++) {
+          const count = Math.min(Math.floor((width * height) / 10000), 45);
+          for (let i = 0; i < count; i++) {
             nodes.push({
               x: Math.random() * width,
               y: Math.random() * height,
-              vx: (Math.random() - 0.5) * 0.65,
-              vy: (Math.random() - 0.5) * 0.65,
+              vx: (Math.random() - 0.5) * 0.5,
+              vy: (Math.random() - 0.5) * 0.5,
               radius: Math.random() * 2 + 1.2,
-              pulse: Math.random() > 0.4
+              teal: Math.random() > 0.4
             });
           }
         }
 
         function render() {
           ctx.clearRect(0, 0, width, height);
+
+          // Orbit Center Indicator
+          const cx = width / 2;
+          const cy = height / 2;
+          ctx.beginPath();
+          ctx.arc(cx, cy, 90, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(22, 140, 135, 0.12)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([4, 6]);
+          ctx.stroke();
+          ctx.setLineDash([]);
 
           for (let i = 0; i < nodes.length; i++) {
             const p = nodes[i];
@@ -2579,17 +2563,17 @@
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = p.pulse ? 'rgba(45, 212, 191, 0.85)' : 'rgba(56, 189, 248, 0.65)';
+            ctx.fillStyle = p.teal ? 'rgba(22, 140, 135, 0.75)' : 'rgba(49, 95, 206, 0.6)';
             ctx.fill();
 
             for (let j = i + 1; j < nodes.length; j++) {
               const p2 = nodes[j];
               const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-              if (dist < 105) {
+              if (dist < 90) {
                 ctx.beginPath();
                 ctx.moveTo(p.x, p.y);
                 ctx.lineTo(p2.x, p2.y);
-                ctx.strokeStyle = `rgba(45, 212, 191, ${0.18 * (1 - dist / 105)})`;
+                ctx.strokeStyle = `rgba(22, 140, 135, ${0.16 * (1 - dist / 90)})`;
                 ctx.lineWidth = 1;
                 ctx.stroke();
               }
@@ -2598,49 +2582,49 @@
           requestAnimationFrame(render);
         }
 
-        window.addEventListener('resize', resize);
-        resize();
+        window.addEventListener('resize', setSize);
+        setSize();
         render();
       })();
 
-      // 7. Technology Constellation Field
+      // 3. Interactive Technology Constellation Ecosystem
       (function initConstellation() {
         const data = [
           {
             kicker: 'DOMAIN 01',
             title: 'SOFTWARE ENGINEERING',
-            desc: 'Core architecture, microservices, and distributed application platforms engineered in enterprise environments.',
-            tags: ['Java', '.NET Core', 'Python', 'Full Stack', 'Backend', 'Frontend']
+            desc: 'Core architecture, microservices, and distributed application platforms engineered in enterprise Java, .NET, and Python environments.',
+            tags: ['Java 17 / Spring Boot', '.NET Core / C#', 'Python Microservices', 'Full-Stack React / Node']
           },
           {
             kicker: 'DOMAIN 02',
             title: 'CLOUD & DEVOPS',
-            desc: 'Infrastructure-as-code automation, containerization topologies, and multi-region deployment orchestration.',
-            tags: ['AWS', 'Azure', 'GCP', 'DevOps', 'Kubernetes', 'Terraform']
+            desc: 'Infrastructure-as-code automation, containerization topologies, and multi-region deployment orchestration across AWS, Azure, and GCP.',
+            tags: ['AWS Solution Arch', 'Kubernetes & Docker', 'Terraform CI/CD', 'Helm & ArgoCD']
           },
           {
             kicker: 'DOMAIN 03',
             title: 'DATA & ANALYTICS',
-            desc: 'Scalable data warehouse pipelines, real-time streaming architectures, and modern analytical systems.',
-            tags: ['Data Engineering', 'SQL', 'Spark', 'Hadoop', 'Kafka', 'Snowflake', 'BI & Analytics']
+            desc: 'Scalable data warehouse pipelines, real-time streaming architectures, Snowflake implementations, and modern analytical systems.',
+            tags: ['Snowflake / Databricks', 'Apache Kafka / Spark', 'PySpark ETL', 'PostgreSQL / NoSQL']
           },
           {
             kicker: 'DOMAIN 04',
             title: 'QUALITY ENGINEERING',
-            desc: 'Automated test suites, continuous integration testing pipelines, and performance benchmark systems.',
-            tags: ['QA Automation', 'SDET', 'Selenium', 'API Testing', 'Performance Testing']
+            desc: 'Automated test suites, continuous verification pipelines, performance benchmark suites, and SDET testing frameworks.',
+            tags: ['Selenium / Cypress', 'Playwright / TestNG', 'SDET Java / Python', 'JMeter Performance']
           },
           {
             kicker: 'DOMAIN 05',
             title: 'INFRASTRUCTURE & NETWORKING',
-            desc: 'Resilient network frameworks, data center migrations, systems administration, and enterprise cloud operations.',
-            tags: ['Systems', 'Networking', 'Cloud Infrastructure', 'Enterprise Infrastructure']
+            desc: 'Resilient network topologies, enterprise systems administration, hybrid data center operations, and technical reliability.',
+            tags: ['Linux Systems Eng', 'Cisco / Juniper Routing', 'Hybrid Cloud Networking', 'Zero Downtime Ops']
           },
           {
             kicker: 'DOMAIN 06',
             title: 'CYBERSECURITY',
-            desc: 'Identity governance, application security posture, cloud compliance, and security operations coordination.',
-            tags: ['Security Engineering', 'Cloud Security', 'Application Security', 'Identity & Access']
+            desc: 'Identity and access governance, application security posture, cloud compliance, and security operations coordination.',
+            tags: ['SecOps & SOC', 'IAM & Okta', 'Cloud Security Posture', 'Vulnerability Audits']
           }
         ];
 
@@ -2676,8 +2660,8 @@
             ctx.moveTo(hx, hy);
             ctx.lineTo(bx, by);
             ctx.strokeStyle = btn.classList.contains('active')
-              ? 'rgba(45, 212, 191, 0.65)'
-              : 'rgba(255, 255, 255, 0.08)';
+              ? 'rgba(22, 140, 135, 0.45)'
+              : 'rgba(215, 224, 236, 0.7)';
             ctx.lineWidth = btn.classList.contains('active') ? 1.5 : 1;
             ctx.setLineDash([4, 4]);
             ctx.stroke();
@@ -2699,7 +2683,7 @@
               tagsEl.innerHTML = '';
               data[idx].tags.forEach(tag => {
                 const s = document.createElement('span');
-                s.className = 'tech-tag';
+                s.className = 'chip-tag';
                 s.textContent = tag;
                 tagsEl.appendChild(s);
               });
@@ -2709,53 +2693,10 @@
         });
 
         window.addEventListener('resize', updateCanvas);
-        setTimeout(updateCanvas, 350);
+        setTimeout(updateCanvas, 300);
       })();
 
-      // 8. Visual Ecosystem Connectors Canvas
-      (function initEcosystemConnectors() {
-        const canvas = document.getElementById('ecosystemCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        function drawConnections() {
-          const wrap = canvas.parentElement;
-          canvas.width = wrap.offsetWidth;
-          canvas.height = wrap.offsetHeight;
-
-          const core = wrap.querySelector('.eco-core');
-          const satellites = wrap.querySelectorAll('.eco-satellite');
-          if (!core || satellites.length === 0) return;
-
-          const cRect = core.getBoundingClientRect();
-          const wRect = wrap.getBoundingClientRect();
-          const cx = cRect.left + cRect.width / 2 - wRect.left;
-          const cy = cRect.top + cRect.height / 2 - wRect.top;
-
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-          satellites.forEach(sat => {
-            const sRect = sat.getBoundingClientRect();
-            const sx = sRect.left + sRect.width / 2 - wRect.left;
-            const sy = sRect.top + sRect.height / 2 - wRect.top;
-
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(sx, sy);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.22)';
-            ctx.lineWidth = 1;
-            ctx.setLineDash([4, 4]);
-            ctx.stroke();
-            ctx.setLineDash([]);
-          });
-        }
-
-        window.addEventListener('resize', drawConnections);
-        setTimeout(drawConnections, 350);
-      })();
-
-      // 9. FAQ Accordion Interaction
+      // 4. FAQ Accordion Interaction
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
         const btn = item.querySelector('.faq-question-btn');
@@ -2776,41 +2717,6 @@
           }
         });
       });
-
-      // 10. Bench Sales Intake Modal Handlers
-      const benchModal = document.getElementById('benchModal');
-      const openModalButtons = document.querySelectorAll('.open-bench-modal');
-      const closeModalBtn = document.getElementById('closeModalBtn');
-
-      function openModal(e) {
-        if (e) e.preventDefault();
-        benchModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        benchModal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
-      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-      if (benchModal) {
-        benchModal.addEventListener('click', (e) => {
-          if (e.target === benchModal) closeModal();
-        });
-      }
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && benchModal.classList.contains('active')) closeModal();
-      });
-
-      window.handleFormSubmission = function (e) {
-        e.preventDefault();
-        alert('Thank you for submitting your profile details. A TJR Tech consultant representation specialist will review your information and follow up directly.');
-        closeModal();
-        e.target.reset();
-      };
     })();
   </script>
 </body>
