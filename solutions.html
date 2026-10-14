@@ -5,143 +5,275 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO Metadata -->
-  <title>Technology &amp; Staffing Solutions | TJR Tech</title>
+  <title>Solutions Overview — Systems Platform • TJR Tech</title>
   <meta name="description" content="TJR Tech provides audience-focused solutions for businesses, technology consultants, and professionals across staffing, technology, digital development, and professional experiences.">
-  <meta name="keywords" content="Business Solutions, Consultant Solutions, Professional Portfolios, US IT Staffing, Digital Engineering, Audience-First Technology, TJR Tech">
-  <meta name="theme-color" content="#020617">
-  <link rel="canonical" href="https://www.tjrtech.com/solutions">
+  <meta name="keywords" content="Business Solutions, Consultant Solutions, Professional Solutions, US IT Staffing, Digital Engineering, Audience-First Technology, TJR Tech">
+  <link rel="canonical" href="solutions.html">
 
-  <!-- Open Graph / Protocol -->
+  <!-- Open Graph / Meta Protocol -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tjrtech.com/solutions">
-  <meta property="og:title" content="Technology &amp; Staffing Solutions | TJR Tech">
+  <meta property="og:url" content="solutions.html">
+  <meta property="og:title" content="Solutions Overview — Systems Platform • TJR Tech">
   <meta property="og:description" content="Solutions Built Around People, Technology &amp; Opportunity. Audience-first frameworks for Businesses, Consultants, and Professionals.">
   <meta property="og:site_name" content="TJR TECH">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Technology &amp; Staffing Solutions | TJR Tech">
-  <meta name="twitter:description" content="Different challenges require different approaches. Discover audience-focused solutions built for your exact objectives.">
-
-  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk (Exact Match to Master Dashboard) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       01. DESIGN SYSTEM & CSS VARIABLES
+       01. DESIGN TOKENS & MASTER COLOR SYSTEM (EXACT MATCH TO INDEX & REDESIGNED PAGES)
        ========================================================================== */
     :root {
-      --bg-primary: #020617;        /* Near black void */
-      --bg-secondary: #070f26;      /* Deep midnight blue */
-      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
-      --bg-surface: #0e1d47;
-      --bg-card: rgba(12, 24, 61, 0.45);
-      --bg-card-hover: rgba(18, 36, 88, 0.75);
+      /* Surfaces & Canvases */
+      --app-bg: #F3F6FA;
+      --workspace-bg: #F8FAFD;
+      --card-bg: #FFFFFF;
+      --card-bg-hover: #FCFDFF;
+      --surface-border: #D7E0EC;
+      --surface-border-light: #E7EDF6;
 
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-medium: rgba(255, 255, 255, 0.16);
-      --border-accent: rgba(45, 212, 191, 0.35);
+      /* Primary Brand Royal Blues */
+      --brand-blue: #315FCE;
+      --brand-blue-deep: #23479D;
+      --brand-blue-secondary: #527FE0;
+      --soft-blue-surface: #E6EDFF;
+      --soft-blue-hover: #DCE6FD;
 
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
-      --text-accent: #2dd4bf;       /* Teal Accent */
-      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+      /* High-Contrast Typography */
+      --strong-text: #17253B;
+      --secondary-text: #596A82;
+      --muted-text: #8696AD;
+      --white-text: #FFFFFF;
 
-      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
-      --glow-teal: rgba(45, 212, 191, 0.14);
+      /* Semantic Practice Accents */
+      --accent-teal: #168C87;
+      --soft-teal: #E0F4F1;
+      --accent-copper: #C47A4A;
+      --soft-copper: #F8EADF;
+      --accent-violet: #7766C8;
+      --soft-violet: #EEEAFE;
+      --active-green: #1F9268;
 
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-mono: 'Space Grotesk', monospace;
+      /* Dimensions & Layout */
+      --topbar-height: 64px;
+      --sidebar-width: 260px;
+      --right-panel-width: 350px;
+      --app-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --tech-font: 'Space Grotesk', monospace;
 
-      --container-max: 1280px;
-      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 14px;
+      /* Shadows & Motion */
+      --shadow-sm: 0 2px 6px rgba(23, 37, 59, 0.04);
+      --shadow-card: 0 4px 18px rgba(23, 37, 59, 0.05), 0 1px 3px rgba(23, 37, 59, 0.03);
+      --shadow-hover: 0 12px 28px rgba(49, 95, 206, 0.12), 0 3px 8px rgba(23, 37, 59, 0.04);
+      --shadow-panel: -4px 0 24px rgba(23, 37, 59, 0.06);
+      --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.22s var(--ease-bounce);
     }
 
-    /* Reset & Base */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-    }
-
-    body {
-      font-family: var(--font-sans);
-      line-height: 1.65;
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--app-bg);
+      color: var(--strong-text);
+      font-family: var(--app-font);
+      font-size: 14px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      background: var(--bg-primary);
     }
 
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E4; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--brand-blue-secondary); }
+
+    /* Scroll Progress Bar */
     #scrollProgress {
       position: fixed;
       top: 0;
       left: 0;
       width: 0%;
-      height: 2.5px;
-      background: var(--accent-gradient);
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand-blue) 0%, var(--accent-teal) 50%, var(--accent-violet) 100%);
       z-index: 10000;
       transition: width 0.1s linear;
     }
 
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 2rem;
+    /* ==========================================================================
+       02. THREE-PANEL MASTER APPLICATION SHELL
+       ========================================================================== */
+    .app-shell {
+      display: grid;
+      grid-template-rows: var(--topbar-height) 1fr;
+      grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
+      grid-template-areas:
+        "top top top"
+        "side main panel";
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transition: grid-template-columns 0.28s var(--ease-bounce);
     }
 
-    .section-spacing {
-      padding: 7.5rem 0;
+    .app-shell.panel-collapsed {
+      grid-template-columns: var(--sidebar-width) 1fr 0px;
+    }
+
+    /* ==========================================================================
+       03. TOP COMMAND NAVIGATION BAR
+       ========================================================================== */
+    .app-topbar {
+      grid-area: top;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .brand-id {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
+      border-radius: 7px;
+      color: #ffffff;
+      font-family: var(--tech-font);
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 8px rgba(49, 95, 206, 0.28);
       position: relative;
+      overflow: hidden;
     }
 
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 100%);
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--strong-text);
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      font-family: var(--tech-font);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--brand-blue);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--text-accent);
-      margin-bottom: 0.85rem;
-      display: inline-flex;
+    }
+
+    .topbar-search-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      color: var(--secondary-text);
+      font-size: 0.825rem;
+      cursor: pointer;
+      width: 310px;
+      transition: var(--transition);
+      box-shadow: inset 0 1px 2px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-search-trigger:hover {
+      background: #ffffff;
+      border-color: var(--brand-blue);
+      color: var(--strong-text);
+      box-shadow: 0 2px 8px rgba(49, 95, 206, 0.08);
+    }
+
+    .kbd-shortcut {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--surface-border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: var(--secondary-text);
+      margin-left: auto;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .telemetry-chip {
+      display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      background: var(--app-bg);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 12px;
-      height: 1.5px;
-      background: var(--text-accent);
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--active-green);
+      box-shadow: 0 0 0 2px rgba(31, 146, 104, 0.22);
+      animation: pulseGlow 2.4s infinite;
     }
 
-    .section-title {
-      font-size: clamp(2rem, 3.5vw, 3.25rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      color: var(--text-primary);
-    }
-
-    .section-lead {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 680px;
-      margin-top: 1rem;
-      line-height: 1.6;
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     /* Buttons */
@@ -149,536 +281,583 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
-      padding: 0.95rem 1.85rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      border-radius: var(--radius-sm);
-      transition: var(--transition-smooth);
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
+      transition: var(--transition);
       border: 1px solid transparent;
+      outline: none;
       white-space: nowrap;
+      user-select: none;
     }
 
     .btn-primary {
-      background: var(--accent-gradient);
-      color: #020617;
-      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+      background: var(--brand-blue);
+      color: var(--white-text);
+      border-color: var(--brand-blue);
+      box-shadow: 0 2px 6px rgba(49, 95, 206, 0.24);
     }
 
     .btn-primary:hover {
-      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
-      transform: translateY(-2px);
+      background: var(--brand-blue-deep);
+      border-color: var(--brand-blue-deep);
+      box-shadow: 0 4px 12px rgba(35, 71, 157, 0.32);
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-primary);
-      border-color: var(--border-medium);
+      background: var(--card-bg);
+      color: var(--strong-text);
+      border-color: var(--surface-border);
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
+      background: var(--soft-blue-surface);
+      border-color: var(--brand-blue-secondary);
+      color: var(--brand-blue);
     }
 
-    .inline-link {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-accent);
-      text-decoration: none;
+    .btn-sm {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: gap 0.2s ease;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      color: var(--secondary-text);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
-    .inline-link:hover {
-      gap: 0.75rem;
+    .icon-btn:hover {
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
+      border-color: var(--brand-blue-secondary);
     }
 
     /* ==========================================================================
-       02. GLOBAL HEADER & NAVIGATION
+       04. PERSISTENT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER)
        ========================================================================== */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: 1px solid transparent;
-      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
-      height: 86px;
+    .app-sidebar {
+      grid-area: side;
+      background: #FFFFFF;
+      border-right: 1px solid var(--surface-border);
       display: flex;
-      align-items: center;
-    }
-
-    .site-header.scrolled {
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      height: 72px;
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      width: 100%;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text-accent);
-    }
-
-    .logo-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.5rem 0;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: var(--text-primary);
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: -1rem;
-      background: rgba(7, 15, 38, 0.96);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 0.75rem 0;
-      min-width: 250px;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
-      transition: all 0.25s ease;
-      list-style: none;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-
-    .nav-item:hover .dropdown-menu {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
-    .dropdown-item a {
-      display: block;
-      padding: 0.65rem 1.25rem;
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .dropdown-item a:hover, .dropdown-item a.active-item {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-accent);
-    }
-
-    .mobile-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0.5rem;
-    }
-
-    .mobile-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      transition: var(--transition-smooth);
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: var(--bg-primary);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      padding: 6rem 2rem 3rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 1.25rem 0.85rem;
       overflow-y: auto;
     }
 
-    .mobile-menu.active {
-      transform: translateX(0);
+    .nav-group-title {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.6rem 0.75rem 0.3rem 0.75rem;
     }
 
-    .mobile-nav-list {
+    .nav-menu {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 0.2rem;
     }
 
-    .mobile-nav-list a {
-      font-size: 1.25rem;
+    .nav-item-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 0.85rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: var(--secondary-text);
+      font-size: 0.835rem;
       font-weight: 600;
-      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
       text-decoration: none;
     }
 
-    .mobile-submenu {
-      list-style: none;
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+    .nav-item-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, stroke 0.2s ease;
     }
 
-    .mobile-submenu a {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      font-weight: 400;
+    .nav-item-btn:hover {
+      background: var(--app-bg);
+      color: var(--strong-text);
+    }
+
+    .nav-item-btn:hover svg {
+      stroke: var(--brand-blue);
+    }
+
+    .nav-item-btn.active {
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
+      font-weight: 700;
+      border-color: rgba(49, 95, 206, 0.2);
+    }
+
+    .nav-item-btn.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3.5px;
+      background: var(--brand-blue);
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Submenus */
+    .nav-toggle-btn {
+      justify-content: flex-start;
+    }
+
+    .nav-chevron {
+      margin-left: auto;
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s var(--ease-bounce);
+    }
+
+    .nav-toggle-btn[aria-expanded="true"] .nav-chevron {
+      transform: rotate(90deg);
+    }
+
+    .nav-submenu {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-left: 2rem;
+      margin: 0.15rem 0 0.35rem 0;
+    }
+
+    .nav-submenu.open {
+      display: flex;
+    }
+
+    .nav-sub-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      color: var(--secondary-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .nav-sub-link:hover {
+      background: var(--app-bg);
+      color: var(--brand-blue);
+    }
+
+    .nav-sub-link.active-sub {
+      color: var(--brand-blue);
+      background: var(--soft-blue-surface);
+      font-weight: 700;
+    }
+
+    .nav-sub-bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--muted-text);
+      flex-shrink: 0;
+      transition: background 0.2s ease;
+    }
+
+    .nav-sub-link:hover .nav-sub-bullet,
+    .nav-sub-link.active-sub .nav-sub-bullet {
+      background: var(--brand-blue);
+    }
+
+    .sidebar-footer-card {
+      background: linear-gradient(180deg, var(--workspace-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.85rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1.5rem;
+    }
+
+    .sf-header {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sf-sub {
+      color: var(--secondary-text);
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      line-height: 1.4;
     }
 
     /* ==========================================================================
-       SECTION 01 — HERO
+       05. MAIN WORKSPACE WITH BLUEPRINT GRID BACKGROUND
        ========================================================================== */
-    .solutions-hero-section {
-      min-height: 94vh;
-      display: flex;
-      align-items: center;
+    .app-workspace {
+      grid-area: main;
+      background: var(--workspace-bg);
+      overflow-y: auto;
+      padding: 2.25rem 2.5rem;
       position: relative;
-      padding-top: 120px;
-      padding-bottom: 4.5rem;
-      overflow: hidden;
-      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+      background-image: 
+        radial-gradient(circle at 100% 0%, rgba(49, 95, 206, 0.035) 0%, transparent 45%),
+        linear-gradient(to right, rgba(215, 224, 236, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(215, 224, 236, 0.25) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 3.5rem;
+    .ws-section {
+      margin-bottom: 3.5rem;
       position: relative;
-      z-index: 2;
     }
 
-    .hero-title-main {
-      font-size: clamp(2.5rem, 4.8vw, 4.2rem);
+    .ws-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--soft-blue-surface);
+      border: 1px solid rgba(49, 95, 206, 0.2);
+      border-radius: 5px;
+      padding: 0.25rem 0.65rem;
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.65rem;
+    }
+
+    .ws-title {
+      font-size: 2.15rem;
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.08;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--strong-text);
+      line-height: 1.18;
     }
 
-    .hero-title-main span {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .ws-title span {
+      color: var(--brand-blue);
     }
 
-    .hero-supporting-copy {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
+    .ws-subtitle {
+      font-size: 1rem;
+      color: var(--secondary-text);
+      margin-top: 0.6rem;
+      max-width: 780px;
       line-height: 1.65;
-      margin-bottom: 2.25rem;
-      max-width: 620px;
     }
 
-    .hero-actions {
+    .ws-action-ribbon {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
       flex-wrap: wrap;
     }
 
-    .solutions-canvas-wrap {
-      position: relative;
-      width: 100%;
-      height: 480px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #solutionsEcosystemCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* ==========================================================================
-       SECTION 02 — INTRODUCTION
-       ========================================================================== */
-    .intro-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .intro-narrative {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    .statement-box {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      padding: 2.5rem;
-      text-align: center;
-    }
-
-    .statement-stream {
-      font-family: var(--font-mono);
-      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+    .ws-subhead-bar {
+      font-family: var(--tech-font);
+      font-size: 0.75rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--secondary-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.15rem;
       display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
       align-items: center;
+      gap: 0.5rem;
     }
 
-    .statement-stream span {
-      color: var(--text-accent);
-    }
-
-    .statement-target {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border-subtle);
-      font-size: 1.65rem;
-      font-weight: 800;
-      color: var(--text-accent-cyan);
-      letter-spacing: 0.1em;
-    }
-
-    /* ==========================================================================
-       SECTION 03 — SOLUTION ARCHITECTURE (THREE CORE CARDS)
-       ========================================================================== */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-
-    .audience-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.25rem;
+    /* Cards & Grids */
+    .division-app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.65rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: var(--transition-smooth);
+      transition: var(--transition);
+      cursor: pointer;
       position: relative;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
     }
 
-    .audience-card::before {
+    .division-app-card::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent-gradient);
-      transition: width 0.35s ease;
+      right: 0;
+      height: 3px;
+      background: var(--brand-blue);
+      opacity: 0.85;
+      transition: height 0.2s ease, opacity 0.2s ease;
     }
 
-    .audience-card:hover {
-      border-color: var(--border-accent);
-      background: var(--bg-card-hover);
-      transform: translateY(-5px);
+    .division-app-card.accent-teal::before { background: var(--accent-teal); }
+    .division-app-card.accent-violet::before { background: var(--accent-violet); }
+    .division-app-card.accent-copper::before { background: var(--accent-copper); }
+
+    .division-app-card:hover {
+      border-color: rgba(49, 95, 206, 0.35);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      background: var(--card-bg-hover);
     }
 
-    .audience-card:hover::before {
-      width: 100%;
+    .division-app-card:hover::before {
+      height: 4px;
+      opacity: 1;
     }
 
-    .audience-label {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .audience-headline {
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #fff;
+    .div-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       margin-bottom: 1rem;
-      line-height: 1.3;
     }
 
-    .audience-desc {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 2.25rem;
+    .div-card-id {
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border-light);
     }
 
-    .card-schematic-wrap {
-      height: 120px;
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px dashed rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-sm);
+    .div-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.45rem;
+      letter-spacing: -0.01em;
+    }
+
+    .div-card-desc {
+      font-size: 0.875rem;
+      color: var(--secondary-text);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+    }
+
+    .div-card-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .chip-tag {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .division-app-card:hover .chip-tag {
+      background: #FFFFFF;
+      color: var(--strong-text);
+    }
+
+    .div-card-footer {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      text-align: center;
-      padding: 1rem;
+      justify-content: space-between;
+      border-top: 1px dashed var(--surface-border);
+      padding-top: 0.95rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brand-blue);
     }
 
-    /* ==========================================================================
-       SECTION 04 — HOW WE THINK ABOUT SOLUTIONS
-       ========================================================================== */
-    .process-sequence-grid {
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-4-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .grid-6-col {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 1.25rem;
-      margin-top: 3.5rem;
+      gap: 0.85rem;
     }
 
-    .process-step-node {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 2rem 1.25rem;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition-smooth);
-    }
-
-    .process-step-node:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .step-badge {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent);
-      margin-bottom: 0.65rem;
-    }
-
-    .step-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .step-prompt {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    /* ==========================================================================
-       SECTION 05 — ECOSYSTEM CONNECTIVITY (TRI-DIRECTIONAL)
-       ========================================================================== */
-    .ecosystem-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .triad-ecosystem-box {
+    /* Hero Canvas Stage for Audience Ecosystem */
+    .hero-solutions-canvas-wrap {
       position: relative;
-      height: 520px;
-      margin-top: 3.5rem;
+      width: 100%;
+      height: 380px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.75rem;
+      overflow: hidden;
+    }
+
+    #solutionsEcosystemCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .canvas-hud-overlay {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.25rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      color: var(--secondary-text);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid var(--surface-border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Narrative Focus Quote */
+    .story-focus-quote {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--strong-text);
+      border-left: 3.5px solid var(--brand-blue);
+      padding: 1.25rem 1.5rem;
+      background: var(--card-bg);
+      border-radius: 0 8px 8px 0;
+      box-shadow: var(--shadow-card);
+      margin: 1.25rem 0;
+      border-top: 1px solid var(--surface-border-light);
+      border-right: 1px solid var(--surface-border-light);
+      border-bottom: 1px solid var(--surface-border-light);
+    }
+
+    /* Stepper Nodes for Process */
+    .stepper-node {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stepper-node:hover {
+      border-color: var(--brand-blue);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .stepper-step {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+      margin-bottom: 0.35rem;
+    }
+
+    .stepper-title {
+      font-size: 0.925rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .stepper-desc {
+      font-size: 0.785rem;
+      color: var(--secondary-text);
+      line-height: 1.45;
+    }
+
+    /* Interactive Tri-Directional Ecosystem Hub */
+    .triad-ecosystem-box {
+      position: relative;
+      height: 440px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
     }
 
     #triadCanvas {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
@@ -687,47 +866,58 @@
     .center-hub-node {
       position: relative;
       z-index: 5;
-      padding: 1.5rem 2.5rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 30px var(--glow-teal);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--tech-font);
+      font-size: 0.95rem;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(49, 95, 206, 0.32);
+      border: 3px solid #ffffff;
       text-align: center;
     }
 
     .sat-pod {
       position: absolute;
-      padding: 1.25rem 1.5rem;
-      background: rgba(12, 24, 61, 0.92);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      width: 250px;
+      padding: 1.15rem 1.35rem;
+      background: var(--card-bg);
+      border: 1.5px solid var(--surface-border);
+      border-radius: 8px;
+      width: 230px;
       z-index: 6;
-      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: pointer;
     }
 
     .sat-pod:hover {
-      border-color: var(--border-accent);
-      transform: scale(1.03);
+      border-color: var(--brand-blue);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
 
     .sat-pod-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 0.4rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.45rem;
+      border-bottom: 1px solid var(--surface-border-light);
+      padding-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .sat-pod-list {
       list-style: none;
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
+      font-size: 0.785rem;
+      color: var(--secondary-text);
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
@@ -735,388 +925,303 @@
 
     .sat-pod-list li::before {
       content: "• ";
-      color: var(--text-accent);
+      color: var(--brand-blue);
+      font-weight: 700;
     }
 
     .pod-biz { top: 12%; left: 8%; }
     .pod-cons { top: 12%; right: 8%; }
     .pod-prof { bottom: 8%; left: 50%; transform: translateX(-50%); }
 
-    /* ==========================================================================
-       SECTION 06 — SOLUTION AREAS MATRIX
-       ========================================================================== */
-    .matrix-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
+    /* Service Snapshot Grid Card */
+    .snapshot-matrix-card {
+      background: linear-gradient(135deg, var(--card-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 2.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.5rem;
     }
 
-    .matrix-col {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .matrix-col-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 0.75rem;
+    .snapshot-stream {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-    }
-
-    .matrix-links-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-
-    .matrix-link-item a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.85rem 1rem;
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-      font-size: 0.875rem;
-      transition: var(--transition-smooth);
-      text-decoration: none;
-    }
-
-    .matrix-link-item a:hover {
-      border-color: var(--border-accent);
-      color: var(--text-accent);
-      background: var(--bg-tertiary);
-      transform: translateX(4px);
-    }
-
-    /* ==========================================================================
-       SECTION 07 — WHY AUDIENCE-FIRST SOLUTIONS?
-       ========================================================================== */
-    .why-audience-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .states-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin: 3.5rem 0 2.5rem 0;
-    }
-
-    .state-card {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 2rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .state-card:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-4px);
-    }
-
-    .state-sub {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
-      margin-top: 0.5rem;
-    }
-
-    .resolution-banner {
-      background: linear-gradient(135deg, rgba(12, 24, 61, 0.7) 0%, rgba(7, 15, 38, 0.9) 100%);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-md);
-      padding: 2.5rem;
-      text-align: center;
-    }
-
-    /* ==========================================================================
-       SECTION 08 — FINAL SOLUTION CTA
-       ========================================================================== */
-    .cta-section {
-      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
-      text-align: center;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .cta-container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .tri-cta-flex {
-      display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 1.25rem;
       flex-wrap: wrap;
-      margin: 2.5rem 0;
+      gap: 1.5rem 3rem;
+      font-family: var(--tech-font);
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: 0.04em;
     }
 
-    .statement-closing {
-      font-family: var(--font-mono);
-      font-size: 1.15rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-accent);
-      margin-top: 2rem;
+    .snapshot-stream span {
+      color: var(--brand-blue);
     }
 
     /* ==========================================================================
-       SECTION 09 — FOOTER
+       06. CONTEXTUAL RIGHT PANEL (INSPECTOR)
        ========================================================================== */
-    .site-footer {
-      background-color: #01040f;
-      padding: 5.5rem 0 2.5rem 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-      gap: 3.5rem;
-      margin-bottom: 4.5rem;
-    }
-
-    .footer-brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-tagline {
-      font-size: 0.875rem;
-      color: var(--text-accent);
-      font-family: var(--font-mono);
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-desc {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .footer-heading {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-links-list {
-      list-style: none;
+    .app-right-panel {
+      grid-area: panel;
+      background: #FFFFFF;
+      border-left: 1px solid var(--surface-border);
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
+      justify-content: space-between;
+      overflow-y: auto;
+      transition: var(--transition);
+      box-shadow: var(--shadow-panel);
     }
 
-    .footer-links-list a {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links-list a:hover {
-      color: var(--text-accent);
-    }
-
-    .footer-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-subtle);
+    .panel-header {
+      padding: 1.25rem 1.4rem;
+      border-bottom: 1px solid var(--surface-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-      gap: 1rem;
+      background: var(--workspace-bg);
     }
 
-    .footer-bottom-links {
+    .panel-kicker {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .panel-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: -0.01em;
+      margin-top: 0.15rem;
+    }
+
+    .panel-content {
+      padding: 1.4rem;
+      flex: 1;
       display: flex;
+      flex-direction: column;
       gap: 1.5rem;
     }
 
-    .footer-bottom-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
+    .panel-section-label {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
     }
 
-    .footer-bottom-links a:hover {
-      color: var(--text-secondary);
+    .panel-specs-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
-    /* Consultation Modal */
-    .modal-overlay {
+    .panel-spec-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--app-bg);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
+    }
+
+    .panel-spec-row span:first-child { color: var(--secondary-text); }
+    .panel-spec-row span:last-child {
+      font-weight: 700;
+      color: var(--brand-blue);
+      font-family: var(--tech-font);
+    }
+
+    .panel-footer-actions {
+      padding: 1.25rem 1.4rem;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      background: var(--workspace-bg);
+    }
+
+    /* ==========================================================================
+       07. GLOBAL SEARCH COMMAND & CONSULTATION MODAL
+       ========================================================================== */
+    .search-modal-backdrop, .contact-modal-backdrop {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(12px);
-      z-index: 2000;
+      inset: 0;
+      background: rgba(23, 37, 59, 0.45);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.3s ease;
+      transition: var(--transition);
     }
 
-    .modal-overlay.active {
+    .search-modal-backdrop {
+      align-items: flex-start;
+      padding-top: 12vh;
+    }
+
+    .search-modal-backdrop.open, .contact-modal-backdrop.open {
       opacity: 1;
       pointer-events: all;
     }
 
-    .modal-box {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      width: 100%;
-      max-width: 580px;
-      padding: 2.5rem;
-      position: relative;
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
+    .search-modal-card {
+      width: 90%;
+      max-width: 560px;
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: 0 20px 48px rgba(23, 37, 59, 0.18);
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition: var(--transition);
     }
 
-    .modal-overlay.active .modal-box {
+    .search-modal-backdrop.open .search-modal-card {
       transform: translateY(0);
     }
 
-    .modal-close {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      color: var(--text-muted);
-      font-size: 1.5rem;
-      background: none;
+    .search-input-row {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.35rem;
+      border-bottom: 1px solid var(--surface-border);
+      gap: 0.85rem;
+    }
+
+    .search-input-row input {
+      flex: 1;
       border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: var(--app-font);
+      color: var(--strong-text);
+    }
+
+    .search-results-list {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .search-result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.95rem;
+      border-radius: 6px;
       cursor: pointer;
-      line-height: 1;
+      transition: var(--transition);
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .modal-close:hover {
-      color: #fff;
+    .search-result-row:hover {
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
     }
 
-    .form-group {
-      margin-bottom: 1.25rem;
+    .s-tag {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      padding: 0.15rem 0.45rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border-light);
     }
+
+    .contact-modal-dialog {
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.25rem;
+      box-shadow: 0 24px 50px rgba(23, 37, 59, 0.2);
+    }
+
+    .form-group { margin-bottom: 1.15rem; }
 
     .form-label {
       display: block;
+      font-family: var(--tech-font);
       font-size: 0.75rem;
-      font-family: var(--font-mono);
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.35rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
-    .form-input, .form-select, .form-textarea {
+    .form-input, .form-textarea, .form-select {
       width: 100%;
-      padding: 0.85rem 1rem;
-      background: rgba(2, 6, 23, 0.8);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-      font-size: 0.9375rem;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-family: var(--app-font);
       outline: none;
-      transition: border-color 0.2s ease;
+      transition: var(--transition);
+      background: #FFFFFF;
     }
 
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--text-accent);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    /* Scroll Trigger Animation Utility */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 3px rgba(49, 95, 206, 0.15);
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       08. RESPONSIVE BREAKPOINTS
        ========================================================================== */
-    @media (max-width: 1080px) {
-      .cards-grid,
-      .matrix-grid,
-      .states-row {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .process-sequence-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .sat-pod {
-        width: 220px;
-      }
+    @media (max-width: 1100px) {
+      .app-shell { grid-template-columns: var(--sidebar-width) 1fr 0px; }
+      .app-right-panel { display: none; }
+      .grid-4-col, .grid-6-col { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .intro-grid {
+    @media (max-width: 768px) {
+      .app-shell { grid-template-columns: 0px 1fr 0px; }
+      .app-sidebar {
+        position: fixed;
+        top: var(--topbar-height);
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.25s var(--ease-bounce);
+        box-shadow: 8px 0 24px rgba(23, 37, 59, 0.12);
+      }
+      .app-sidebar.mobile-open { transform: translateX(0); }
+      .grid-2-col, .grid-3-col, .grid-4-col, .grid-6-col {
         grid-template-columns: 1fr;
-      }
-      .nav-links, .nav-cta {
-        display: none;
-      }
-      .mobile-toggle {
-        display: flex;
-      }
-      .solutions-canvas-wrap {
-        height: 340px;
       }
       .triad-ecosystem-box {
         height: auto;
         flex-direction: column;
-        padding: 2.5rem 1.5rem;
-        gap: 1.5rem;
-      }
-      .center-hub-node {
-        position: static;
-        margin-bottom: 1rem;
+        padding: 2.5rem 1.25rem;
+        gap: 1.25rem;
       }
       .sat-pod {
         position: static;
@@ -1126,662 +1231,977 @@
       #triadCanvas {
         display: none;
       }
-    }
-
-    @media (max-width: 640px) {
-      .cards-grid,
-      .matrix-grid,
-      .states-row,
-      .process-sequence-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .section-spacing {
-        padding: 5rem 0;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-      }
+      .topbar-search-trigger { width: 180px; }
+      .app-workspace { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Indicator -->
+  <!-- Top Scroll Progress Bar -->
   <div id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ==========================================================================
-       GLOBAL NAVIGATION
+       APPLICATION SHELL
        ========================================================================== -->
-  <header class="site-header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
-        <div class="logo-mark">T</div>
-        <span class="logo-title">TJR TECH</span>
-      </a>
+  <div class="app-shell" id="appShell">
 
-      <nav aria-label="Desktop Navigation">
-        <ul class="nav-links">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-          <li class="nav-item">
-            <a href="/services" class="nav-link">
-              Services
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
-              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
-              <li class="dropdown-item"><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="/solutions" class="nav-link active">
-              Solutions
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/solutions/for-businesses">For Businesses</a></li>
-              <li class="dropdown-item"><a href="/solutions/for-consultants">For Consultants</a></li>
-              <li class="dropdown-item"><a href="/solutions/for-professionals">For Professionals</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
-          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
-          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
-          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- TOP NAVIGATION COMMAND BAR -->
+    <header class="app-topbar">
+      <div class="topbar-left">
+        <button class="icon-btn" id="mobileMenuToggle" style="display: none;" aria-label="Toggle Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
 
-      <div class="nav-cta">
-        <button class="btn btn-secondary open-consult-modal" style="padding: 0.65rem 1.25rem;">
-          <span>Talk to TJR Tech</span>
+        <a class="brand-id" href="index.html">
+          <div class="brand-mark">T</div>
+          <div class="brand-title-wrap">
+            <span class="brand-title">TJR TECH</span>
+            <span class="brand-tagline">Solutions Platform</span>
+          </div>
+        </a>
+
+        <!-- Global Command Search Trigger (Ctrl+K) -->
+        <div class="topbar-search-trigger" id="searchTriggerBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search solutions &amp; pathways...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="telemetry-chip">
+          <span class="pulse-dot"></span>
+          <span>SOLUTIONS // AUDIENCE-FIRST</span>
+        </div>
+
+        <a href="index.html" class="btn btn-secondary btn-sm">Home Dashboard</a>
+        <button class="btn btn-primary btn-sm" onclick="openConsultModal()">Consult Architecture</button>
+
+        <button class="icon-btn" id="togglePanelBtn" title="Toggle Contextual Inspector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
         </button>
       </div>
+    </header>
 
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
-    <ul class="mobile-nav-list">
-      <li><a href="/" class="mobile-link">Home</a></li>
-      <li><a href="/about" class="mobile-link">About Us</a></li>
-      <li>
-        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
-        <ul class="mobile-submenu">
-          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
-          <li><a href="/services/us-it-bench-sales" class="mobile-link">US IT Bench Sales</a></li>
-          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
-          <li><a href="/services/ads-digital-media" class="mobile-link">Ads &amp; Digital Media</a></li>
-        </ul>
-      </li>
-      <li>
-        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Solutions</span>
-        <ul class="mobile-submenu">
-          <li><a href="/solutions/for-businesses" class="mobile-link">For Businesses</a></li>
-          <li><a href="/solutions/for-consultants" class="mobile-link">For Consultants</a></li>
-          <li><a href="/solutions/for-professionals" class="mobile-link">For Professionals</a></li>
-        </ul>
-      </li>
-      <li><a href="/portfolio" class="mobile-link">Work</a></li>
-      <li><a href="/careers" class="mobile-link">Careers</a></li>
-      <li><a href="/insights" class="mobile-link">Insights</a></li>
-      <li><a href="/contact" class="mobile-link">Contact</a></li>
-    </ul>
-    <button class="btn btn-primary open-consult-modal" style="width: 100%;">Talk to TJR Tech</button>
-  </div>
-
-  <main>
-    <!-- ==========================================================================
-         SECTION 01 — HERO
-         ========================================================================== -->
-    <section class="solutions-hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="eyebrow">TJR TECH / SOLUTIONS HUB</div>
-          <h1 class="hero-title-main">
-            Solutions Built Around People, <span>Technology &amp; Opportunity.</span>
-          </h1>
-          <p class="hero-supporting-copy">
-            Different challenges require different approaches. TJR Tech creates practical technology, staffing, digital, and professional solutions around the needs of businesses, consultants, and professionals.
-          </p>
-          <div class="hero-actions">
-            <a href="#solution-architecture" class="btn btn-primary">
-              <span>Explore Solutions</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+    <!-- PERSISTENT LEFT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER) -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div>
+        <div class="nav-group-title">WORKSPACE</div>
+        <ul class="nav-menu">
+          <!-- 1. HOME -->
+          <li>
+            <a href="index.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Home</span>
             </a>
-            <button class="btn btn-secondary open-consult-modal">
-              <span>Talk to TJR Tech</span>
+          </li>
+
+          <!-- 2. ABOUT -->
+          <li>
+            <a href="about.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>About</span>
+            </a>
+          </li>
+
+          <!-- 3. SERVICES (COLLAPSIBLE) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn" id="servicesToggleBtn" aria-expanded="false" onclick="toggleSidebarMenu('servicesSubmenu', 'servicesToggleBtn')">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Services</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
             </button>
+            <ul class="nav-submenu" id="servicesSubmenu">
+              <li>
+                <a href="us-it-staffing.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Staffing</span>
+                </a>
+              </li>
+              <li>
+                <a href="us-it-bench-sales.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Bench Sales</span>
+                </a>
+              </li>
+              <li>
+                <a href="web-development.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Web Development</span>
+                </a>
+              </li>
+              <li>
+                <a href="ads-digital-media.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Ads &amp; Digital Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 4. SOLUTIONS (ACTIVE & EXPANDED) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn active" id="solutionsToggleBtn" aria-expanded="true" onclick="toggleSidebarMenu('solutionsSubmenu', 'solutionsToggleBtn')">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Solutions</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu open" id="solutionsSubmenu">
+              <li>
+                <a href="solutions.html" class="nav-sub-link active-sub">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Solutions Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-consultants.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Consultants</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-professionals.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Professionals</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-businesses.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Businesses</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 5. PORTFOLIO -->
+          <li>
+            <a href="portfolio.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span>Portfolio</span>
+            </a>
+          </li>
+
+          <!-- 6. INSIGHTS -->
+          <li>
+            <a href="insights.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Insights</span>
+            </a>
+          </li>
+
+          <!-- 7. CAREERS -->
+          <li>
+            <a href="careers.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3v4M8 3v4"/></svg>
+              <span>Careers</span>
+            </a>
+          </li>
+
+          <!-- 8. CONTACT -->
+          <li>
+            <a href="contact.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- PAGE CHAPTER ANCHORS -->
+        <div class="nav-group-title" style="margin-top: 1.25rem;">SOLUTIONS CHAPTERS</div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#intro" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Ecosystem Convergence</span>
+            </a>
+          </li>
+          <li>
+            <a href="#solution-architecture" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Audience Frameworks</span>
+            </a>
+          </li>
+          <li>
+            <a href="#interconnected-ecosystem" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Triad Ecosystem</span>
+            </a>
+          </li>
+          <li>
+            <a href="#solution-thinking" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Delivery Lifecycle</span>
+            </a>
+          </li>
+          <li>
+            <a href="#solution-matrix" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Capabilities Matrix</span>
+            </a>
+          </li>
+          <li>
+            <a href="#why-audience-first" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Audience-First Model</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer-card">
+        <div class="sf-header">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <span>Solutions Hub</span>
+        </div>
+        <div class="sf-sub">Hyderabad Hub &bull; US-Wide Delivery</div>
+      </div>
+    </aside>
+
+    <!-- CENTRAL WORKSPACE (BLUEPRINT CANVAS) -->
+    <main class="app-workspace" id="mainWorkspace">
+
+      <!-- ==================== 01. HERO SECTION ==================== -->
+      <section class="ws-section" id="hero">
+        <div class="ws-kicker-badge">
+          <span>STRATEGIC FRAMEWORKS // SOLUTIONS ARCHITECTURE</span>
+        </div>
+        <h1 class="ws-title">
+          Solutions Built Around People, <br>
+          <span>Technology &amp; Opportunity.</span>
+        </h1>
+        <p class="ws-subtitle" style="font-weight: 600; color: var(--strong-text);">
+          Different challenges require different approaches. TJR Tech creates practical technology, staffing, digital, and professional solutions around the exact needs of businesses, consultants, and professionals.
+        </p>
+        <p class="ws-subtitle">
+          Whether you are an enterprise acquiring engineering talent, an independent technical consultant seeking prime vendor placement, or a software practitioner establishing an authoritative digital identity, our solutions operate on verified execution rather than generic templates.
+        </p>
+
+        <div class="ws-action-ribbon">
+          <a href="#solution-architecture" class="btn btn-primary">Explore Audience Pathways</a>
+          <button class="btn btn-secondary" onclick="openConsultModal()">Consult Solutions Architect</button>
+          <a href="contact.html" class="btn btn-secondary">Direct Channel</a>
+        </div>
+
+        <!-- Interactive Audience Triad Canvas Visualizer -->
+        <div class="hero-solutions-canvas-wrap">
+          <canvas id="solutionsEcosystemCanvas" aria-label="Interactive three-node audience ecosystem canvas"></canvas>
+          <div class="canvas-hud-overlay">
+            <span class="pulse-dot"></span>
+            <span>ECOSYSTEM NODES: <strong style="color: var(--brand-blue);">3 AUDIENCES SYNCHRONIZED</strong> &bull; ENTERPRISE &bull; TALENT &bull; IDENTITY</span>
           </div>
         </div>
+      </section>
 
-        <div class="solutions-canvas-wrap">
-          <canvas id="solutionsEcosystemCanvas" aria-label="Interactive three-node audience ecosystem"></canvas>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 02 — INTRODUCTION
-         ========================================================================== -->
-    <section class="section-spacing intro-section" id="intro">
-      <div class="container">
-        <div class="intro-grid reveal">
+      <!-- ==================== 02. INTRODUCTION & CONVERGENCE ==================== -->
+      <section class="ws-section" id="intro">
+        <div class="ws-subhead-bar">01 / CONVERGENCE // ONE COMPANY. CONNECTED SOLUTIONS.</div>
+        <div class="grid-2-col">
           <div>
-            <div class="eyebrow">CONNECTED ECOSYSTEM</div>
-            <h2 class="section-title">One Company. Different Needs. Connected Solutions.</h2>
-            <div class="intro-narrative" style="margin-top: 1.5rem;">
-              <p>
-                Businesses need access to technology talent and digital capabilities. Consultants need structured support and relevant opportunities. Professionals need strong digital and professional representation.
-              </p>
-              <p>
-                TJR Tech brings these needs into a connected ecosystem built around people, technology, staffing, digital experiences, and professional support.
-              </p>
+            <h2 class="ws-title" style="font-size: 1.85rem;">
+              One Company. Different Needs. <span>Connected Solutions.</span>
+            </h2>
+            <blockquote class="story-focus-quote">
+              Businesses need vetted technology talent and digital capabilities. Consultants need structured support and prime vendor access. Professionals need impactful digital identities.
+            </blockquote>
+            <p style="font-size: 0.925rem; color: var(--secondary-text); line-height: 1.65; margin-top: 1rem;">
+              TJR Tech unifies these distinct objectives into an integrated ecosystem where verified staffing pipelines, tailored software engineering, and brand cinema feed into one another seamlessly.
+            </p>
+            <div style="margin-top: 1.25rem;">
+              <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue); font-weight: 700; font-size: 0.785rem; padding: 0.35rem 0.75rem;">
+                BUSINESS + CONSULTANT + PROFESSIONAL = OPERATIONAL OPPORTUNITY
+              </span>
             </div>
           </div>
 
-          <div class="statement-box">
-            <div class="statement-stream">
-              <div>BUSINESS</div>
-              <div>+</div>
-              <div>TALENT</div>
-              <div>+</div>
-              <div>TECHNOLOGY</div>
-              <div>+</div>
-              <div>DIGITAL</div>
-              <div style="font-size: 1.25rem; margin: 0.5rem 0;">&darr;</div>
+          <!-- Statement Target Box -->
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 2rem; box-shadow: var(--shadow-card); display: flex; flex-direction: column; justify-content: center; text-align: center;">
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--brand-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem;">
+              ECOSYSTEM FLOW MATRIX
             </div>
-            <div class="statement-target">OPPORTUNITY</div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; flex-wrap: wrap; font-family: var(--tech-font); font-size: 1.1rem; font-weight: 800; color: var(--strong-text);">
+              <span>ENTERPRISE NEED</span>
+              <span style="color: var(--brand-blue);">&rarr;</span>
+              <span>TALENT MESH</span>
+              <span style="color: var(--accent-teal);">&rarr;</span>
+              <span>DIGITAL ASSETS</span>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed var(--surface-border); font-family: var(--tech-font); font-size: 1.45rem; font-weight: 800; color: var(--brand-blue);">
+              MEASURABLE RESULTS
+            </div>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); margin-top: 0.5rem;">
+              Predictable execution without administrative friction or misplaced expectations.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 03 — SOLUTION ARCHITECTURE
-         ========================================================================== -->
-    <section class="section-spacing" id="solution-architecture">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">AUDIENCE FRAMEWORKS</div>
-          <h2 class="section-title">Choose the Solution Built Around You.</h2>
-          <p class="section-lead">Dedicated pathways tailored specifically to organizational growth, consultant career transitions, and professional digital identity.</p>
-        </div>
+      <!-- ==================== 03. SOLUTION ARCHITECTURE (THREE CORE AUDIENCE CARDS) ==================== -->
+      <section class="ws-section" id="solution-architecture">
+        <div class="ws-subhead-bar">02 / PATHWAYS // CHOOSE THE SOLUTION BUILT AROUND YOU</div>
+        <h2 class="ws-title">Three Tailored <span>Engagement Environments.</span></h2>
+        <p class="ws-subtitle">
+          Select the solution environment configured to solve your specific technical, staffing, or positioning challenges.
+        </p>
 
-        <div class="cards-grid">
-          <!-- Card 01 -->
-          <article class="audience-card reveal">
+        <div class="grid-3-col" style="margin-top: 1.75rem;">
+          <!-- Card 01: For Businesses -->
+          <div class="division-app-card" onclick="inspectSolution('business')">
             <div>
-              <div class="audience-label">CARD 01 / FOR BUSINESSES</div>
-              <h3 class="audience-headline">Technology Solutions for Growing Organizations</h3>
-              <p class="audience-desc">
-                Support your technology hiring, digital presence, and business requirements through structured staffing and technology services.
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue);">PATHWAY 01</span>
+                <span class="div-card-id" style="color: var(--brand-blue);">FOR // BUSINESSES</span>
+              </div>
+              <h3 class="div-card-title">Technology Solutions for Growing Organizations</h3>
+              <p class="div-card-desc">
+                Support your technical hiring pipelines, custom software architectures, and commercial presence through verified staffing models and custom web development.
               </p>
-              <div class="card-schematic-wrap">
-                [ Corporate Tech Ecosystem: Staffing &bull; Web &bull; Media ]
+              <div class="div-card-chips">
+                <span class="chip-tag">Vetted Tech Talent</span>
+                <span class="chip-tag">Web Platforms</span>
+                <span class="chip-tag">Brand Cinema</span>
+                <span class="chip-tag">Contract &amp; C2C</span>
               </div>
             </div>
-            <a href="/solutions/for-businesses" class="btn btn-secondary" style="width: 100%;">
-              <span>Explore Business Solutions &rarr;</span>
-            </a>
-          </article>
+            <div class="div-card-footer">
+              <a href="for-businesses.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; width: 100%;">
+                <span>Explore Business Solutions</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
 
-          <!-- Card 02 -->
-          <article class="audience-card reveal">
+          <!-- Card 02: For Consultants -->
+          <div class="division-app-card accent-teal" onclick="inspectSolution('consultant')">
             <div>
-              <div class="audience-label">CARD 02 / FOR CONSULTANTS</div>
-              <h3 class="audience-headline">Opportunity Support for Technology Consultants</h3>
-              <p class="audience-desc">
-                Structured support for technology professionals navigating US IT staffing opportunities, profile positioning, submissions, interviews, and placement coordination.
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">PATHWAY 02</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">FOR // CONSULTANTS</span>
+              </div>
+              <h3 class="div-card-title">Opportunity Support for Technology Consultants</h3>
+              <p class="div-card-desc">
+                Dedicated representation for work-authorized technical professionals: profile positioning, direct Tier-1 prime vendor matching, rate negotiation, and submission tracking.
               </p>
-              <div class="card-schematic-wrap">
-                [ Consultant &rarr; Skills &rarr; Opportunity Network ]
+              <div class="div-card-chips">
+                <span class="chip-tag">Prime Vendor Tier-1</span>
+                <span class="chip-tag">Profile Optimization</span>
+                <span class="chip-tag">Rate Management</span>
+                <span class="chip-tag">Direct Representation</span>
               </div>
             </div>
-            <a href="/solutions/for-consultants" class="btn btn-secondary" style="width: 100%;">
-              <span>Explore Consultant Solutions &rarr;</span>
-            </a>
-          </article>
+            <div class="div-card-footer" style="color: var(--accent-teal);">
+              <a href="for-consultants.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; width: 100%;">
+                <span>Explore Consultant Solutions</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
 
-          <!-- Card 03 -->
-          <article class="audience-card reveal">
+          <!-- Card 03: For Professionals -->
+          <div class="division-app-card accent-violet" onclick="inspectSolution('professional')">
             <div>
-              <div class="audience-label">CARD 03 / FOR PROFESSIONALS</div>
-              <h3 class="audience-headline">Digital Solutions for Professional Growth</h3>
-              <p class="audience-desc">
-                Build a stronger professional presence through modern portfolios, digital experiences, and technology-driven professional solutions.
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-violet); color: var(--accent-violet);">PATHWAY 03</span>
+                <span class="div-card-id" style="color: var(--accent-violet);">FOR // PROFESSIONALS</span>
+              </div>
+              <h3 class="div-card-title">Digital Solutions for Professional Growth</h3>
+              <p class="div-card-desc">
+                Showcase senior engineering capabilities, executive authority, and technical depth through bespoke digital portfolios, personal branding, and custom web identities.
               </p>
-              <div class="card-schematic-wrap">
-                [ Profile &rarr; Portfolio &rarr; Digital Identity ]
+              <div class="div-card-chips">
+                <span class="chip-tag">Executive Portfolios</span>
+                <span class="chip-tag">Digital Identity</span>
+                <span class="chip-tag">Artifact Showcase</span>
+                <span class="chip-tag">Personal Platforms</span>
               </div>
             </div>
-            <a href="/solutions/for-professionals" class="btn btn-secondary" style="width: 100%;">
-              <span>Explore Professional Solutions &rarr;</span>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 04 — HOW WE THINK ABOUT SOLUTIONS
-         ========================================================================== -->
-    <section class="section-spacing" id="solution-thinking" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">METHODOLOGICAL DISCIPLINE</div>
-          <h2 class="section-title">Start With the Need. Build the Right Solution.</h2>
-          <p class="section-lead">A repeatable delivery cycle engineered to replace speculative effort with measured execution.</p>
-        </div>
-
-        <div class="process-sequence-grid reveal">
-          <div class="process-step-node">
-            <span class="step-badge">01</span>
-            <h3 class="step-name">UNDERSTAND</h3>
-            <p class="step-prompt">What are you trying to achieve?</p>
-          </div>
-
-          <div class="process-step-node">
-            <span class="step-badge">02</span>
-            <h3 class="step-name">DEFINE</h3>
-            <p class="step-prompt">What does the challenge require?</p>
-          </div>
-
-          <div class="process-step-node">
-            <span class="step-badge">03</span>
-            <h3 class="step-name">ALIGN</h3>
-            <p class="step-prompt">Which TJR Tech capability is relevant?</p>
-          </div>
-
-          <div class="process-step-node">
-            <span class="step-badge">04</span>
-            <h3 class="step-name">BUILD</h3>
-            <p class="step-prompt">Create the appropriate solution.</p>
-          </div>
-
-          <div class="process-step-node">
-            <span class="step-badge">05</span>
-            <h3 class="step-name">DELIVER</h3>
-            <p class="step-prompt">Launch and implement.</p>
-          </div>
-
-          <div class="process-step-node" style="border-color: var(--border-accent);">
-            <span class="step-badge" style="color: var(--text-accent);">06</span>
-            <h3 class="step-name">EVOLVE</h3>
-            <p class="step-prompt">Improve as requirements change.</p>
+            <div class="div-card-footer" style="color: var(--accent-violet);">
+              <a href="for-professionals.html" style="color: inherit; text-decoration: none; display: flex; justify-content: space-between; width: 100%;">
+                <span>Explore Professional Solutions</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 05 — TRI-DIRECTIONAL INTERCONNECTED ECOSYSTEM
-         ========================================================================== -->
-    <section class="section-spacing ecosystem-section" id="interconnected-ecosystem">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3rem auto;">
-          <div class="eyebrow" style="justify-content: center;">ECOSYSTEM CONVERGENCE</div>
-          <h2 class="section-title">Connecting Different Sides of the Technology Ecosystem.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            TJR Tech functions as an active coordination layer linking organizational demand, consultant capability, and professional digital identity.
-          </p>
-        </div>
+      <!-- ==================== 04. TRIAD INTERCONNECTED ECOSYSTEM ==================== -->
+      <section class="ws-section" id="interconnected-ecosystem">
+        <div class="ws-subhead-bar">03 / CONVERGENCE // TRI-DIRECTIONAL INTERCONNECTED ECOSYSTEM</div>
+        <h2 class="ws-title">Connecting Different Sides of the <span>Technology Ecosystem.</span></h2>
+        <p class="ws-subtitle">
+          TJR Tech functions as an active coordination layer linking enterprise demand, consultant capabilities, and personal digital authority.
+        </p>
 
-        <div class="triad-ecosystem-box reveal">
+        <div class="triad-ecosystem-box">
           <canvas id="triadCanvas"></canvas>
-          
           <div class="center-hub-node">
-            TJR TECH
+            <span>TJR TECH</span>
+            <span style="font-size: 0.65rem; opacity: 0.85; margin-top: 2px;">CORE NEXUS</span>
           </div>
 
-          <!-- Left: Business -->
-          <div class="sat-pod pod-biz">
-            <div class="sat-pod-title">BUSINESS</div>
+          <!-- Pod 1: Business -->
+          <div class="sat-pod pod-biz" onclick="window.location.href='for-businesses.html'">
+            <div class="sat-pod-title">
+              <span>BUSINESSES</span>
+              <span style="color: var(--brand-blue);">&rarr;</span>
+            </div>
             <ul class="sat-pod-list">
-              <li>Technology Talent</li>
-              <li>Staffing Models</li>
-              <li>Digital Presence</li>
-              <li>Technology Services</li>
+              <li>Vetted Tech Talent Pods</li>
+              <li>W-2 / C2C Staffing Models</li>
+              <li>Enterprise Web Platforms</li>
+              <li>Commercial Video Cinema</li>
             </ul>
           </div>
 
-          <!-- Right: Consultant -->
-          <div class="sat-pod pod-cons">
-            <div class="sat-pod-title">CONSULTANT</div>
+          <!-- Pod 2: Consultant -->
+          <div class="sat-pod pod-cons" onclick="window.location.href='for-consultants.html'">
+            <div class="sat-pod-title">
+              <span>CONSULTANTS</span>
+              <span style="color: var(--accent-teal);">&rarr;</span>
+            </div>
             <ul class="sat-pod-list">
-              <li>Profile Positioning</li>
-              <li>Opportunity Matching</li>
-              <li>Submission Support</li>
-              <li>Interview Coordination</li>
+              <li>Profile Optimization</li>
+              <li>Direct Prime Vendor Reach</li>
+              <li>Contract Rate Guidance</li>
+              <li>Structured Submissions</li>
             </ul>
           </div>
 
-          <!-- Bottom: Professional -->
-          <div class="sat-pod pod-prof">
-            <div class="sat-pod-title">PROFESSIONAL</div>
+          <!-- Pod 3: Professional -->
+          <div class="sat-pod pod-prof" onclick="window.location.href='for-professionals.html'">
+            <div class="sat-pod-title">
+              <span>PROFESSIONALS</span>
+              <span style="color: var(--accent-violet);">&rarr;</span>
+            </div>
             <ul class="sat-pod-list">
-              <li>Professional Identity</li>
-              <li>Portfolio Web Systems</li>
-              <li>Digital Presence</li>
-              <li>Web Experience</li>
+              <li>Executive Digital Portfolios</li>
+              <li>Technical Brand Authority</li>
+              <li>Work Showcase Artifacts</li>
+              <li>High-Conversion Presence</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 06 — SOLUTION AREAS MATRIX
-         ========================================================================== -->
-    <section class="section-spacing" id="solution-matrix">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">CAPABILITY MATRIX</div>
-          <h2 class="section-title">Capabilities Across the Ecosystem.</h2>
-          <p class="section-lead">Explore how our cross-practice competencies align with each stakeholder group.</p>
+      <!-- ==================== 05. HOW WE THINK ABOUT SOLUTIONS ==================== -->
+      <section class="ws-section" id="solution-thinking">
+        <div class="ws-subhead-bar">04 / DISCIPLINE // 6-STAGE SOLUTION DELIVERY LIFECYCLE</div>
+        <h2 class="ws-title">Start With the Need. <span>Build the Right Solution.</span></h2>
+        <p class="ws-subtitle">
+          A repeatable delivery lifecycle engineered to replace speculative guesswork with disciplined operational execution.
+        </p>
+
+        <div class="grid-6-col" style="margin-top: 1.75rem;">
+          <div class="stepper-node">
+            <div class="stepper-step">01 // INTAKE</div>
+            <div class="stepper-title">Understand</div>
+            <p class="stepper-desc">Audit the exact technical, staffing, or brand positioning requirements.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">02 // SCOPE</div>
+            <div class="stepper-title">Define</div>
+            <p class="stepper-desc">Isolate scope, engagement parameters, timeframes, and deliverables.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">03 // MESH</div>
+            <div class="stepper-title">Align</div>
+            <p class="stepper-desc">Deploy the appropriate practice division (Staffing, Bench, Web, or Media).</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">04 // SPRINT</div>
+            <div class="stepper-title">Build</div>
+            <p class="stepper-desc">Execute candidate vetting, software development, or video production.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">05 // SHIP</div>
+            <div class="stepper-title">Deliver</div>
+            <p class="stepper-desc">Complete placements, deploy web platforms, or launch campaigns.</p>
+          </div>
+          <div class="stepper-node" style="border-color: var(--brand-blue); background: var(--soft-blue-surface);">
+            <div class="stepper-step" style="color: var(--brand-blue-deep);">06 // SCALE</div>
+            <div class="stepper-title" style="color: var(--brand-blue);">Evolve</div>
+            <p class="stepper-desc">Maintain continuity, adapt to feedback, and support future expansions.</p>
+          </div>
         </div>
+      </section>
 
-        <div class="matrix-grid reveal">
+      <!-- ==================== 06. CAPABILITIES MATRIX ACROSS THE ECOSYSTEM ==================== -->
+      <section class="ws-section" id="solution-matrix">
+        <div class="ws-subhead-bar">05 / MATRIX // CROSS-PRACTICE CAPABILITIES BY AUDIENCE</div>
+        <h2 class="ws-title">Capabilities Across <span>the Ecosystem.</span></h2>
+        <p class="ws-subtitle">
+          Explore how our 4 core divisions align directly with each stakeholder group.
+        </p>
+
+        <div class="grid-3-col" style="margin-top: 1.75rem;">
           <!-- Business Col -->
-          <div class="matrix-col">
-            <h3 class="matrix-col-title">
-              <span>BUSINESS</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">SOLUTIONS</span>
-            </h3>
-            <ul class="matrix-links-list">
-              <li class="matrix-link-item"><a href="/services/us-it-staffing"><span>US IT Staffing</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/solutions/for-businesses"><span>Technology Services</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/services/web-development"><span>Web Development</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/services/ads-digital-media"><span>Digital Media</span> &rarr;</a></li>
-            </ul>
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.85rem; box-shadow: var(--shadow-card);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--surface-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--strong-text);">FOR BUSINESSES</h3>
+              <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue);">ENTERPRISE</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <a href="us-it-staffing.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>US IT Staffing (W-2, C2C, Perm)</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="for-businesses.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Engineering Pod Deployment</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="web-development.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Custom Corporate Web Platforms</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="ads-digital-media.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Commercial Cinema &amp; Brand Ads</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
           </div>
 
           <!-- Consultant Col -->
-          <div class="matrix-col">
-            <h3 class="matrix-col-title">
-              <span>CONSULTANT</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">SOLUTIONS</span>
-            </h3>
-            <ul class="matrix-links-list">
-              <li class="matrix-link-item"><a href="/services/us-it-bench-sales"><span>Profile Positioning</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/solutions/for-consultants"><span>Opportunity Matching</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/services/us-it-bench-sales"><span>Submission Support</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/services/us-it-bench-sales"><span>Interview Coordination</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/solutions/for-consultants"><span>Placement Support</span> &rarr;</a></li>
-            </ul>
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.85rem; box-shadow: var(--shadow-card);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--surface-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--strong-text);">FOR CONSULTANTS</h3>
+              <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">BENCH DESK</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <a href="us-it-bench-sales.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>US IT Bench Representation</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="for-consultants.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Tier-1 Prime Vendor Submissions</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="us-it-bench-sales.html#positioning" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Resume Narrative Optimization</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="us-it-bench-sales.html#matching" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Transparent Rate Negotiation</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
           </div>
 
           <!-- Professional Col -->
-          <div class="matrix-col">
-            <h3 class="matrix-col-title">
-              <span>PROFESSIONAL</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent);">SOLUTIONS</span>
-            </h3>
-            <ul class="matrix-links-list">
-              <li class="matrix-link-item"><a href="/services/web-development"><span>Professional Portfolio</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/solutions/for-professionals"><span>Personal Website</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/solutions/for-professionals"><span>Digital Identity</span> &rarr;</a></li>
-              <li class="matrix-link-item"><a href="/services/web-development"><span>Web Experience</span> &rarr;</a></li>
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.85rem; box-shadow: var(--shadow-card);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--surface-border-light); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--strong-text);">FOR PROFESSIONALS</h3>
+              <span class="chip-tag" style="background: var(--soft-violet); color: var(--accent-violet);">IDENTITY</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <a href="for-professionals.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Executive Digital Portfolios</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="web-development.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Modern Portfolio Engineering</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="for-professionals.html#identity" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Technical Credential Framing</span>
+                <span>&rarr;</span>
+              </a>
+              <a href="ads-digital-media.html" class="nav-item-btn" style="border: 1px solid var(--surface-border-light); justify-content: space-between;">
+                <span>Personal Executive Cinema</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 07. WHY AUDIENCE-FIRST? ==================== -->
+      <section class="ws-section" id="why-audience-first">
+        <div class="ws-subhead-bar">06 / RATIONALE // WHY AUDIENCE-FIRST ARCHITECTURE?</div>
+        <div class="division-app-card" style="padding: 2.25rem; cursor: default;">
+          <h2 class="ws-title" style="font-size: 1.65rem; margin-bottom: 0.45rem;">
+            Because the Same Technology <span>Does Not Solve Every Problem.</span>
+          </h2>
+          <p style="font-size: 0.925rem; color: var(--secondary-text); max-width: 760px; line-height: 1.65; margin-bottom: 1.5rem;">
+            A business hiring for an infrastructure sprint, an independent consultant marketing their bench availability, and a senior practitioner seeking executive authority have fundamentally different commercial needs. TJR Tech designs distinct engagement workflows for each tier.
+          </p>
+
+          <div class="grid-3-col" style="margin-bottom: 0;">
+            <div style="background: var(--app-bg); border-radius: 8px; padding: 1.15rem; border: 1px solid var(--surface-border-light); text-align: center;">
+              <strong style="color: var(--brand-blue); font-family: var(--tech-font);">ENTERPRISE</strong>
+              <div style="font-size: 0.85rem; color: var(--strong-text); font-weight: 700; margin-top: 0.25rem;">Business Challenge</div>
+              <div style="font-size: 0.785rem; color: var(--secondary-text);">Talent velocity, reliable software &amp; brand assets.</div>
+            </div>
+            <div style="background: var(--app-bg); border-radius: 8px; padding: 1.15rem; border: 1px solid var(--surface-border-light); text-align: center;">
+              <strong style="color: var(--accent-teal); font-family: var(--tech-font);">CONSULTANT</strong>
+              <div style="font-size: 0.85rem; color: var(--strong-text); font-weight: 700; margin-top: 0.25rem;">Career Opportunity</div>
+              <div style="font-size: 0.785rem; color: var(--secondary-text);">Tier-1 matching, rate fairness &amp; representation.</div>
+            </div>
+            <div style="background: var(--app-bg); border-radius: 8px; padding: 1.15rem; border: 1px solid var(--surface-border-light); text-align: center;">
+              <strong style="color: var(--accent-violet); font-family: var(--tech-font);">PROFESSIONAL</strong>
+              <div style="font-size: 0.85rem; color: var(--strong-text); font-weight: 700; margin-top: 0.25rem;">Digital Identity</div>
+              <div style="font-size: 0.785rem; color: var(--secondary-text);">High-visibility portfolio &amp; verified career proof.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 08. SERVICE SNAPSHOT ==================== -->
+      <section class="ws-section" id="snapshot">
+        <div class="snapshot-matrix-card">
+          <div class="ws-kicker-badge" style="margin-bottom: 1rem;">INTEGRATED SOLUTIONS MATRIX</div>
+          <div class="snapshot-stream">
+            <div>FOR BUSINESSES <span>•</span> FOR CONSULTANTS <span>•</span> FOR PROFESSIONALS</div>
+            <div>STAFFING <span>•</span> BENCH SALES <span>•</span> WEB DEV <span>•</span> DIGITAL MEDIA</div>
+            <div>PEOPLE <span>•</span> TECHNOLOGY <span>•</span> DIGITAL GROWTH</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 09. CALL TO ACTION ==================== -->
+      <section class="ws-section" id="cta" style="margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--soft-blue-surface) 100%); border: 1px solid var(--surface-border); border-radius: 10px; padding: 3rem 2.25rem; box-shadow: var(--shadow-card); text-align: center;">
+          <div class="ws-kicker-badge">07 // CONVERGE // DIRECT ACTION</div>
+          <h2 class="ws-title" style="font-size: 2.35rem;">
+            Find Your <span>Solution Pathway.</span>
+          </h2>
+          <p class="ws-subtitle" style="margin: 0.65rem auto 0 auto; text-align: center;">
+            Select your primary objective to enter dedicated capability environments and begin working with our specialized teams.
+          </p>
+
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap;">
+            <a href="for-businesses.html" class="btn btn-primary">For Businesses</a>
+            <a href="for-consultants.html" class="btn btn-secondary">For Consultants</a>
+            <a href="for-professionals.html" class="btn btn-secondary">For Professionals</a>
+            <button class="btn btn-secondary" onclick="openConsultModal()">Consult Architecture</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- CONTEXTUAL RIGHT PANEL (INSPECTOR) -->
+    <aside class="app-right-panel" id="appRightPanel">
+      <div>
+        <div class="panel-header">
+          <div>
+            <div class="panel-kicker">INSPECTOR</div>
+            <h3 class="panel-title" id="panelTitle">Solutions Architecture</h3>
+          </div>
+          <button class="icon-btn" onclick="toggleRightPanel()" title="Close Inspector">&times;</button>
+        </div>
+
+        <div class="panel-content">
+          <div>
+            <div class="panel-section-label">OVERVIEW</div>
+            <p style="font-size: 0.85rem; color: var(--secondary-text); line-height: 1.6;" id="panelDesc">
+              Audience-centric operational pathways built around verified business requirements, technical consultant marketing, and executive professional digital identities.
+            </p>
+          </div>
+
+          <div>
+            <div class="panel-section-label">OPERATING METRICS</div>
+            <ul class="panel-specs-list" id="panelSpecsList">
+              <li class="panel-spec-row">
+                <span>Core Frameworks</span>
+                <span id="spec-1">3 Audience Paths</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Divisions Integrated</span>
+                <span id="spec-2">4 Practice Lines</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Delivery Reach</span>
+                <span id="spec-3">US National &bull; Global Hub</span>
+              </li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ==========================================================================
-         SECTION 07 — WHY AUDIENCE-FIRST SOLUTIONS?
-         ========================================================================== -->
-    <section class="section-spacing why-audience-section" id="why-audience-first">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">DIFFERENTIATION RATIONALE</div>
-          <h2 class="section-title">Because the Same Technology Does Not Solve Every Problem.</h2>
-          <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; margin-top: 1.25rem;">
-            <p>
-              A business hiring for a technical role, a consultant seeking an opportunity, and a professional building a digital identity have very different requirements.
-            </p>
-            <p>
-              Instead of offering one generic workflow, TJR Tech organizes its solutions around the people and organizations it serves.
-            </p>
-          </div>
-        </div>
-
-        <div class="states-row reveal">
-          <div class="state-card">
-            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: #fff;">BUSINESS</div>
-            <div class="state-sub">&rarr; Business Challenge</div>
-          </div>
-          <div class="state-card">
-            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: #fff;">CONSULTANT</div>
-            <div class="state-sub">&rarr; Career Opportunity</div>
-          </div>
-          <div class="state-card">
-            <div style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: #fff;">PROFESSIONAL</div>
-            <div class="state-sub">&rarr; Digital Identity</div>
-          </div>
-        </div>
-
-        <div class="resolution-banner reveal">
-          <div style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: #fff;">
-            TJR TECH <span style="color: var(--text-accent);">&rarr;</span> Relevant Solution
+          <div>
+            <div class="panel-section-label">SOLUTION DOMAINS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="panelChips">
+              <span class="chip-tag">Business Staffing</span>
+              <span class="chip-tag">Consultant Marketing</span>
+              <span class="chip-tag">Executive Portfolios</span>
+              <span class="chip-tag">Custom Web Stacks</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ==========================================================================
-         SECTION 08 — FINAL SOLUTION CTA
-         ========================================================================== -->
-    <section class="section-spacing cta-section" id="cta">
-      <div class="container">
-        <div class="cta-container reveal">
-          <div class="eyebrow" style="justify-content: center;">YOUR SOLUTION PATH</div>
-          <h2 class="section-title" style="margin-bottom: 1rem;">Find Your Starting Point.</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65;">
-            Select your primary objective to explore dedicated solution capabilities and structured engagement paths.
-          </p>
-
-          <div class="tri-cta-flex">
-            <a href="/solutions/for-businesses" class="btn btn-primary">For Businesses</a>
-            <a href="/solutions/for-consultants" class="btn btn-primary">For Consultants</a>
-            <a href="/solutions/for-professionals" class="btn btn-primary">For Professionals</a>
-          </div>
-
-          <div class="statement-closing">
-            People. Technology. Possibility.
-          </div>
-        </div>
+      <div class="panel-footer-actions">
+        <button class="btn btn-primary" onclick="openConsultModal()" style="width: 100%;">Consult Solutions Architect</button>
+        <a href="for-businesses.html" class="btn btn-secondary" style="width: 100%; text-decoration: none;">View Business Path</a>
       </div>
-    </section>
-  </main>
+    </aside>
+
+  </div>
 
   <!-- ==========================================================================
-       SECTION 09 — FOOTER
+       GLOBAL COMMAND SEARCH MODAL (CTRL+K)
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-title">TJR TECH</div>
-          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
-          <p class="footer-desc">
-            A technology and professional services organization delivering integrated solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
-          </p>
-        </div>
-
-        <div>
-          <div class="footer-heading">Solutions</div>
-          <ul class="footer-links-list">
-            <li><a href="/solutions/for-businesses">For Businesses</a></li>
-            <li><a href="/solutions/for-consultants">For Consultants</a></li>
-            <li><a href="/solutions/for-professionals">For Professionals</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Services</div>
-          <ul class="footer-links-list">
-            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
-            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-            <li><a href="/services/web-development">Web Development</a></li>
-            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Company</div>
-          <ul class="footer-links-list">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/directors">Leadership</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Work</div>
-          <ul class="footer-links-list">
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/services/ads-digital-media#selected-work">Selected Work</a></li>
-          </ul>
-        </div>
+  <div class="search-modal-backdrop" id="searchBackdrop">
+    <div class="search-modal-card">
+      <div class="search-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="globalSearchField" placeholder="Search solutions, pathways, and capabilities..." autocomplete="off">
+        <button class="icon-btn" onclick="closeSearch()">&times;</button>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-        </div>
-      </div>
+      <div class="search-results-list" id="searchResultsContainer"></div>
     </div>
-  </footer>
+  </div>
 
-  <!-- Strategic Inquiry Modal -->
-  <div class="modal-overlay" id="consultModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
-    <div class="modal-box">
-      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
-      <div class="eyebrow">STRATEGIC INTAKE</div>
-      <h3 id="modalHeading" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Talk to TJR Tech</h3>
-      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-        Specify your audience segment and challenge so we can route you to the appropriate solution architect.
-      </p>
+  <!-- ==========================================================================
+       STRATEGIC CONSULTATION INTAKE MODAL OVERLAY
+       ========================================================================== -->
+  <div class="contact-modal-backdrop" id="consultModal">
+    <div class="contact-modal-dialog">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+        <div>
+          <div style="font-family: var(--tech-font); font-size: 0.72rem; font-weight: 700; color: var(--brand-blue);">STRATEGIC INTAKE</div>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--strong-text);">Consult with TJR Tech</h3>
+        </div>
+        <button class="icon-btn" onclick="closeConsultModal()">&times;</button>
+      </div>
 
       <form id="consultForm" onsubmit="handleFormSubmission(event)">
         <div class="form-group">
-          <label class="form-label" for="clientName">Full Name / Organization</label>
-          <input class="form-input" type="text" id="clientName" required placeholder="e.g. Apex Global / Alex Reed">
+          <label class="form-label">Full Name / Organization</label>
+          <input class="form-input" type="text" id="clientName" required placeholder="e.g. Acme Corp / Alex Reed">
         </div>
         <div class="form-group">
-          <label class="form-label" for="clientEmail">Email Address</label>
+          <label class="form-label">Official Email Address</label>
           <input class="form-input" type="email" id="clientEmail" required placeholder="alex@company.com">
         </div>
         <div class="form-group">
-          <label class="form-label" for="audienceSelect">Audience Profile</label>
+          <label class="form-label">Target Audience Pathway</label>
           <select class="form-select" id="audienceSelect" required>
-            <option value="" disabled selected>Select your profile</option>
-            <option value="business">Business / Organization</option>
-            <option value="consultant">Technical Consultant (US IT)</option>
-            <option value="professional">Professional Seeking Portfolio / Digital Presence</option>
-            <option value="other">General Inquiries</option>
+            <option value="business">For Businesses (Staffing, Web Systems, Brand Media)</option>
+            <option value="consultant">For Consultants (Bench Representation &amp; Tier-1 Marketing)</option>
+            <option value="professional">For Professionals (Executive Digital Portfolios)</option>
+            <option value="general">General Corporate Inquiry</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="challengeBrief">Requirement Brief</label>
-          <textarea class="form-textarea" id="challengeBrief" required placeholder="Describe what you are looking to achieve..."></textarea>
+          <label class="form-label">Challenge or Requirement Brief</label>
+          <textarea class="form-textarea" id="challengeBrief" rows="3" required placeholder="Describe your objectives, tech requirements, or timeline..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">
-          <span>Submit Solution Inquiry</span>
-        </button>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Solution Brief</button>
       </form>
     </div>
   </div>
 
   <!-- ==========================================================================
-       MODULAR VANILLA JAVASCRIPT
+       MASTER CORE DATA & JAVASCRIPT CONTROLLER
        ========================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      // 1. Dynamic Copyright Year
-      const yearHolder = document.getElementById('yearHolder');
-      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+      // 1. Inspector Data Model
+      const INSPECTOR_DATA = {
+        solutions: {
+          title: 'Solutions Architecture',
+          desc: 'Audience-centric operational pathways built around verified business requirements, technical consultant marketing, and executive professional digital identities.',
+          specs: [
+            { k: 'Core Frameworks', v: '3 Audience Paths' },
+            { k: 'Divisions Integrated', v: '4 Practice Lines' },
+            { k: 'Delivery Reach', v: 'US National &bull; Global Hub' }
+          ],
+          chips: ['Business Staffing', 'Consultant Marketing', 'Executive Portfolios', 'Custom Web Stacks']
+        },
+        business: {
+          title: 'Solutions For Businesses',
+          desc: 'Comprehensive engineering velocity: verified technical talent acquisition, modern web application systems, and corporate brand media production.',
+          specs: [
+            { k: 'Engagement', v: 'W-2 / C2C / Perm' },
+            { k: 'Engineering', v: 'Next.js & Cloud' },
+            { k: 'Production', v: 'Cinema 4K Commercials' }
+          ],
+          chips: ['Vetted Tech Pods', 'Staffing Turnaround', 'Corporate Portals', 'Commercial Cinema']
+        },
+        consultant: {
+          title: 'Solutions For Consultants',
+          desc: 'Direct market representation: profile narrative optimization, Tier-1 prime vendor submittals, and transparent contract rate guidance for US technical consultants.',
+          specs: [
+            { k: 'Representation', v: 'Dedicated Recruiter' },
+            { k: 'Access', v: 'Tier-1 Direct Prime' },
+            { k: 'Rates', v: 'Transparent Terms' }
+          ],
+          chips: ['Resume Framing', 'Direct Marketing', 'Rate Management', 'Placement Sync']
+        },
+        professional: {
+          title: 'Solutions For Professionals',
+          desc: 'Executive technical authority: bespoke personal portfolio engineering, technical artifact showcase framing, and high-impact digital presence.',
+          specs: [
+            { k: 'Product', v: 'Custom Portfolio' },
+            { k: 'Architecture', v: 'High-Performance Web' },
+            { k: 'Impact', v: 'Career Elevation' }
+          ],
+          chips: ['Personal Platforms', 'Technical Showcase', 'Editorial Design', 'Executive Identity']
+        }
+      };
 
-      // 2. Navigation Scroll Treatment & Progress Bar
-      const header = document.getElementById('mainHeader');
+      // Submenu Toggle Engine
+      window.toggleSidebarMenu = function (menuId, toggleBtnId) {
+        const menu = document.getElementById(menuId);
+        const btn = document.getElementById(toggleBtnId);
+        if (!menu || !btn) return;
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      };
+
+      // Contextual Inspector Handlers
+      window.inspectSolution = function (itemId) {
+        const item = INSPECTOR_DATA[itemId] || INSPECTOR_DATA.solutions;
+
+        document.getElementById('panelTitle').textContent = item.title;
+        document.getElementById('panelDesc').textContent = item.desc;
+        document.getElementById('spec-1').textContent = item.specs[0].v;
+        document.getElementById('spec-2').textContent = item.specs[1].v;
+        document.getElementById('spec-3').textContent = item.specs[2].v;
+
+        const chipsWrap = document.getElementById('panelChips');
+        chipsWrap.innerHTML = item.chips.map(chip => `<span class="chip-tag">${chip}</span>`).join('');
+
+        const shell = document.getElementById('appShell');
+        shell.classList.remove('panel-collapsed');
+
+        const select = document.getElementById('audienceSelect');
+        if (select && (itemId === 'business' || itemId === 'consultant' || itemId === 'professional')) {
+          select.value = itemId;
+        }
+      };
+
+      window.toggleRightPanel = function () {
+        const shell = document.getElementById('appShell');
+        shell.classList.toggle('panel-collapsed');
+      };
+
+      document.getElementById('togglePanelBtn').addEventListener('click', toggleRightPanel);
+
+      // Mobile Menu Toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      if (window.innerWidth <= 768) {
+        mobileMenuToggle.style.display = 'inline-flex';
+      }
+      mobileMenuToggle.addEventListener('click', () => {
+        document.getElementById('appSidebar').classList.toggle('mobile-open');
+      });
+
+      // Global Search Overlay (Ctrl+K)
+      const searchBackdrop = document.getElementById('searchBackdrop');
+      const searchInput = document.getElementById('globalSearchField');
+      const searchResultsContainer = document.getElementById('searchResultsContainer');
+
+      const SEARCH_ENTRIES = [
+        { title: 'Home Dashboard', tag: 'Page', href: 'index.html' },
+        { title: 'About TJR Tech', tag: 'Page', href: 'about.html' },
+        { title: 'US IT Staffing', tag: 'Service', href: 'us-it-staffing.html' },
+        { title: 'US IT Bench Sales', tag: 'Service', href: 'us-it-bench-sales.html' },
+        { title: 'Web Development', tag: 'Service', href: 'web-development.html' },
+        { title: 'Ads & Digital Media', tag: 'Service', href: 'ads-digital-media.html' },
+        { title: 'Solutions Overview', tag: 'Solution', href: 'solutions.html' },
+        { title: 'For Businesses', tag: 'Solution', href: 'for-businesses.html' },
+        { title: 'For Consultants', tag: 'Solution', href: 'for-consultants.html' },
+        { title: 'For Professionals', tag: 'Solution', href: 'for-professionals.html' },
+        { title: 'Triad Ecosystem Nexus', tag: 'Section', href: '#interconnected-ecosystem' },
+        { title: '6-Stage Solution Lifecycle', tag: 'Section', href: '#solution-thinking' },
+        { title: 'Capabilities Matrix by Audience', tag: 'Section', href: '#solution-matrix' },
+        { title: 'Why Audience-First Architecture?', tag: 'Section', href: '#why-audience-first' },
+        { title: 'Portfolio Proofs', tag: 'Page', href: 'portfolio.html' },
+        { title: 'Insights', tag: 'Page', href: 'insights.html' },
+        { title: 'Careers', tag: 'Page', href: 'careers.html' },
+        { title: 'Contact', tag: 'Page', href: 'contact.html' }
+      ];
+
+      function openSearch() {
+        searchBackdrop.classList.add('open');
+        searchInput.focus();
+        renderSearchResults('');
+      }
+
+      function closeSearch() {
+        searchBackdrop.classList.remove('open');
+        searchInput.value = '';
+      }
+
+      function renderSearchResults(query) {
+        const q = query.toLowerCase().trim();
+        const matches = q ? SEARCH_ENTRIES.filter(e => e.title.toLowerCase().includes(q) || e.tag.toLowerCase().includes(q)) : SEARCH_ENTRIES;
+
+        searchResultsContainer.innerHTML = matches.map(m => `
+          <a class="search-result-row" href="${m.href}" onclick="closeSearch()">
+            <span>${m.title}</span>
+            <span class="s-tag">${m.tag}</span>
+          </a>
+        `).join('');
+      }
+
+      document.getElementById('searchTriggerBtn').addEventListener('click', openSearch);
+
+      searchInput.addEventListener('input', (e) => {
+        renderSearchResults(e.target.value);
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          searchBackdrop.classList.contains('open') ? closeSearch() : openSearch();
+        }
+        if (e.key === 'Escape') {
+          closeSearch();
+          closeConsultModal();
+        }
+      });
+
+      searchBackdrop.addEventListener('click', (e) => {
+        if (e.target === searchBackdrop) closeSearch();
+      });
+
+      // Consultation Modal Handlers
+      const consultModal = document.getElementById('consultModal');
+
+      window.openConsultModal = function () {
+        consultModal.classList.add('open');
+      };
+
+      window.closeConsultModal = function () {
+        consultModal.classList.remove('open');
+      };
+
+      consultModal.addEventListener('click', (e) => {
+        if (e.target === consultModal) closeConsultModal();
+      });
+
+      window.handleFormSubmission = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your solution brief. A TJR Tech practice architect will review your parameters and follow up directly.');
+        closeConsultModal();
+        e.target.reset();
+      };
+
+      // Scroll Progress Indicator
+      const workspace = document.getElementById('mainWorkspace');
       const progressBar = document.getElementById('scrollProgress');
 
-      window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-
-        if (progressBar) progressBar.style.width = scrolled + '%';
-        if (winScroll > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }, { passive: true });
-
-      // 3. Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileDrawer = document.getElementById('mobileMenuDrawer');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function toggleMobile() {
-        const isOpen = mobileDrawer.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (workspace && progressBar) {
+        workspace.addEventListener('scroll', () => {
+          const scrollPos = workspace.scrollTop;
+          const totalHeight = workspace.scrollHeight - workspace.clientHeight;
+          const scrolled = (scrollPos / totalHeight) * 100;
+          progressBar.style.width = scrolled + '%';
+        }, { passive: true });
       }
 
-      if (mobileMenuBtn && mobileDrawer) {
-        mobileMenuBtn.addEventListener('click', toggleMobile);
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (mobileDrawer.classList.contains('active')) toggleMobile();
-          });
-        });
-      }
-
-      // 4. Scroll Reveal Observer
-      const reveals = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-        reveals.forEach(el => revealObserver.observe(el));
-      } else {
-        reveals.forEach(el => el.classList.add('active'));
-      }
-
-      // 5. Hero Three-Node Audience Ecosystem Canvas
+      // 2. Interactive Hero Audience Triad Canvas (Theme-Optimized to Light System)
       (function initSolutionsEcosystemCanvas() {
         const canvas = document.getElementById('solutionsEcosystemCanvas');
         if (!canvas) return;
@@ -1800,28 +2220,25 @@
 
           const cx = width / 2;
           const cy = height / 2;
-          const radius = Math.min(width, height) * 0.38;
+          const radius = Math.min(width, height) * 0.36;
 
-          // Central Hub: TJR TECH
+          // Central Hub
           ctx.beginPath();
-          ctx.arc(cx, cy, 28, 0, Math.PI * 2);
-          ctx.fillStyle = '#0c183d';
+          ctx.arc(cx, cy, 26, 0, Math.PI * 2);
+          ctx.fillStyle = '#315FCE';
           ctx.fill();
-          ctx.strokeStyle = '#2dd4bf';
-          ctx.lineWidth = 2;
-          ctx.stroke();
 
-          ctx.font = '11px Space Grotesk, monospace';
-          ctx.fillStyle = '#fff';
+          ctx.font = '700 10.5px Space Grotesk, monospace';
+          ctx.fillStyle = '#FFFFFF';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.fillText('TJR TECH', cx, cy);
 
-          // Three Nodes: Businesses, Consultants, Professionals
+          // Three Nodes
           const nodes = [
-            { label: 'BUSINESSES', offset: 0 },
-            { label: 'CONSULTANTS', offset: (2 * Math.PI) / 3 },
-            { label: 'PROFESSIONALS', offset: (4 * Math.PI) / 3 }
+            { label: 'BUSINESSES', offset: 0, color: '#315FCE' },
+            { label: 'CONSULTANTS', offset: (2 * Math.PI) / 3, color: '#168C87' },
+            { label: 'PROFESSIONALS', offset: (4 * Math.PI) / 3, color: '#7766C8' }
           ];
 
           nodes.forEach(node => {
@@ -1829,29 +2246,26 @@
             const nx = cx + Math.cos(rad) * radius;
             const ny = cy + Math.sin(rad) * radius;
 
-            // Connecting animated line
+            // Connecting line
             ctx.beginPath();
             ctx.moveTo(cx, cy);
             ctx.lineTo(nx, ny);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.28)';
+            ctx.strokeStyle = 'rgba(49, 95, 206, 0.22)';
             ctx.setLineDash([4, 4]);
             ctx.lineWidth = 1.2;
             ctx.stroke();
             ctx.setLineDash([]);
 
-            // Satellite node circle
+            // Satellite node
             ctx.beginPath();
-            ctx.arc(nx, ny, 16, 0, Math.PI * 2);
-            ctx.fillStyle = '#070f26';
+            ctx.arc(nx, ny, 14, 0, Math.PI * 2);
+            ctx.fillStyle = node.color;
             ctx.fill();
-            ctx.strokeStyle = '#38bdf8';
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
 
             // Label
-            ctx.font = '10px Space Grotesk, monospace';
-            ctx.fillStyle = '#94a3b8';
-            const labelY = ny > cy ? ny + 26 : ny - 26;
+            ctx.font = '700 9.5px Space Grotesk, monospace';
+            ctx.fillStyle = '#17253B';
+            const labelY = ny > cy ? ny + 22 : ny - 22;
             ctx.fillText(node.label, nx, labelY);
           });
 
@@ -1864,7 +2278,7 @@
         render();
       })();
 
-      // 6. Triad Ecosystem Canvas Connectors (Section 05)
+      // 3. Triad Canvas Connectors
       (function initTriadCanvas() {
         const canvas = document.getElementById('triadCanvas');
         if (!canvas) return;
@@ -1895,7 +2309,7 @@
             ctx.beginPath();
             ctx.moveTo(cx, cy);
             ctx.lineTo(px, py);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.24)';
+            ctx.strokeStyle = 'rgba(49, 95, 206, 0.25)';
             ctx.lineWidth = 1.5;
             ctx.setLineDash([6, 6]);
             ctx.stroke();
@@ -1906,41 +2320,6 @@
         window.addEventListener('resize', drawConnections);
         setTimeout(drawConnections, 350);
       })();
-
-      // 7. Modal Handlers
-      const consultModal = document.getElementById('consultModal');
-      const openModalButtons = document.querySelectorAll('.open-consult-modal');
-      const closeModalBtn = document.getElementById('closeModalBtn');
-
-      function openModal(e) {
-        if (e) e.preventDefault();
-        consultModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        consultModal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
-      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-      if (consultModal) {
-        consultModal.addEventListener('click', (e) => {
-          if (e.target === consultModal) closeModal();
-        });
-      }
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && consultModal.classList.contains('active')) closeModal();
-      });
-
-      window.handleFormSubmission = function (e) {
-        e.preventDefault();
-        alert('Thank you for your solution inquiry. A TJR Tech practice architect will review your brief and route you to the appropriate solution pathway.');
-        closeModal();
-        e.target.reset();
-      };
     })();
   </script>
 </body>
