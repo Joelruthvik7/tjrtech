@@ -5,143 +5,281 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO Metadata -->
-  <title>Careers at TJR Tech | Technology &amp; Professional Opportunities</title>
-  <meta name="description" content="Explore career opportunities at TJR Tech across technology, staffing, digital, creative, sales, and business operations.">
-  <meta name="keywords" content="TJR Tech Careers, Technology Jobs, IT Recruitment Careers, Software Engineering Opportunities, Digital Media Jobs, Professional Growth">
-  <meta name="theme-color" content="#020617">
-  <link rel="canonical" href="https://www.tjrtech.com/careers">
+  <title>Careers at TJR Tech — Systems Platform • Opportunities &amp; Talent Engine</title>
+  <meta name="description" content="Explore career opportunities at TJR Tech across technology, staffing, digital development, creative media, sales, and business operations.">
+  <meta name="keywords" content="TJR Tech Careers, Technology Jobs, IT Recruitment Careers, Software Engineering Opportunities, Digital Media Jobs, Professional Growth, Hyderabad Delivery Hub">
+  <link rel="canonical" href="careers.html">
 
-  <!-- Open Graph / Protocol -->
+  <!-- Open Graph / Meta Protocol -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tjrtech.com/careers">
-  <meta property="og:title" content="Careers at TJR Tech | Technology &amp; Professional Opportunities">
+  <meta property="og:url" content="careers.html">
+  <meta property="og:title" content="Careers at TJR Tech — Systems Platform • Opportunities &amp; Talent Engine">
   <meta property="og:description" content="Build Your Career Around Opportunity. Work with people, technology, and ideas that are moving forward.">
   <meta property="og:site_name" content="TJR TECH">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Careers at TJR Tech | Technology &amp; Professional Opportunities">
+  <meta name="twitter:title" content="Careers at TJR Tech — Systems Platform • Opportunities &amp; Talent Engine">
   <meta name="twitter:description" content="Explore open roles and career paths at TJR Tech across technical engineering, recruitment operations, and creative media.">
 
-  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk (Exact Match to Master Dashboard) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       01. DESIGN SYSTEM & CSS VARIABLES
+       01. DESIGN TOKENS & MASTER COLOR SYSTEM (EXACT MATCH TO INDEX & REDESIGNED PAGES)
        ========================================================================== */
     :root {
-      --bg-primary: #020617;        /* Near black void */
-      --bg-secondary: #070f26;      /* Deep midnight blue */
-      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
-      --bg-surface: #0e1d47;
-      --bg-card: rgba(12, 24, 61, 0.45);
-      --bg-card-hover: rgba(18, 36, 88, 0.75);
+      /* Surfaces & Canvases */
+      --app-bg: #F3F6FA;
+      --workspace-bg: #F8FAFD;
+      --card-bg: #FFFFFF;
+      --card-bg-hover: #FCFDFF;
+      --surface-border: #D7E0EC;
+      --surface-border-light: #E7EDF6;
 
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-medium: rgba(255, 255, 255, 0.16);
-      --border-accent: rgba(45, 212, 191, 0.35);
+      /* Primary Brand Royal Blues */
+      --brand-blue: #315FCE;
+      --brand-blue-deep: #23479D;
+      --brand-blue-secondary: #527FE0;
+      --soft-blue-surface: #E6EDFF;
+      --soft-blue-hover: #DCE6FD;
 
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
-      --text-accent: #2dd4bf;       /* Teal Accent */
-      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+      /* High-Contrast Typography */
+      --strong-text: #17253B;
+      --secondary-text: #596A82;
+      --muted-text: #8696AD;
+      --white-text: #FFFFFF;
 
-      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
-      --glow-teal: rgba(45, 212, 191, 0.14);
+      /* Semantic Practice Accents */
+      --accent-teal: #168C87;
+      --soft-teal: #E0F4F1;
+      --accent-copper: #C47A4A;
+      --soft-copper: #F8EADF;
+      --accent-violet: #7766C8;
+      --soft-violet: #EEEAFE;
+      --active-green: #1F9268;
+      --danger-red: #D9383A;
 
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-mono: 'Space Grotesk', monospace;
+      /* Dimensions & Layout */
+      --topbar-height: 64px;
+      --sidebar-width: 260px;
+      --right-panel-width: 350px;
+      --app-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --tech-font: 'Space Grotesk', monospace;
 
-      --container-max: 1280px;
-      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 14px;
+      /* Shadows & Motion */
+      --shadow-sm: 0 2px 6px rgba(23, 37, 59, 0.04);
+      --shadow-card: 0 4px 18px rgba(23, 37, 59, 0.05), 0 1px 3px rgba(23, 37, 59, 0.03);
+      --shadow-hover: 0 12px 28px rgba(35, 71, 157, 0.12), 0 3px 8px rgba(23, 37, 59, 0.04);
+      --shadow-panel: -4px 0 24px rgba(23, 37, 59, 0.06);
+      --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.22s var(--ease-bounce);
     }
 
-    /* Reset & Base */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-    }
-
-    body {
-      font-family: var(--font-sans);
-      line-height: 1.65;
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--app-bg);
+      color: var(--strong-text);
+      font-family: var(--app-font);
+      font-size: 14px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      background: var(--bg-primary);
     }
 
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E4; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--brand-blue-secondary); }
+
+    /* Scroll Progress Bar */
     #scrollProgress {
       position: fixed;
       top: 0;
       left: 0;
       width: 0%;
-      height: 2.5px;
-      background: var(--accent-gradient);
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand-blue) 0%, var(--accent-teal) 50%, var(--accent-violet) 100%);
       z-index: 10000;
       transition: width 0.1s linear;
     }
 
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 2rem;
+    /* ==========================================================================
+       02. THREE-PANEL MASTER APPLICATION SHELL
+       ========================================================================== */
+    .app-shell {
+      display: grid;
+      grid-template-rows: var(--topbar-height) 1fr;
+      grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
+      grid-template-areas:
+        "top top top"
+        "side main panel";
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transition: grid-template-columns 0.28s var(--ease-bounce);
     }
 
-    .section-spacing {
-      padding: 7.5rem 0;
+    .app-shell.panel-collapsed {
+      grid-template-columns: var(--sidebar-width) 1fr 0px;
+    }
+
+    /* ==========================================================================
+       03. TOP COMMAND NAVIGATION BAR
+       ========================================================================== */
+    .app-topbar {
+      grid-area: top;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .brand-id {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
+      border-radius: 7px;
+      color: #ffffff;
+      font-family: var(--tech-font);
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 8px rgba(49, 95, 206, 0.28);
       position: relative;
+      overflow: hidden;
     }
 
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 100%);
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--strong-text);
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      font-family: var(--tech-font);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--brand-blue);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--text-accent);
-      margin-bottom: 0.85rem;
-      display: inline-flex;
+    }
+
+    .topbar-search-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      color: var(--secondary-text);
+      font-size: 0.825rem;
+      cursor: pointer;
+      width: 310px;
+      transition: var(--transition);
+      box-shadow: inset 0 1px 2px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-search-trigger:hover {
+      background: #ffffff;
+      border-color: var(--brand-blue);
+      color: var(--strong-text);
+      box-shadow: 0 2px 8px rgba(49, 95, 206, 0.08);
+    }
+
+    .kbd-shortcut {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--surface-border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: var(--secondary-text);
+      margin-left: auto;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .telemetry-chip {
+      display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      background: var(--app-bg);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 12px;
-      height: 1.5px;
-      background: var(--text-accent);
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--active-green);
+      box-shadow: 0 0 0 2px rgba(31, 146, 104, 0.22);
+      animation: pulseGlow 2.4s infinite;
     }
 
-    .section-title {
-      font-size: clamp(2rem, 3.5vw, 3.25rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      color: var(--text-primary);
-    }
-
-    .section-lead {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 680px;
-      margin-top: 1rem;
-      line-height: 1.6;
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     /* Buttons */
@@ -149,734 +287,663 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
-      padding: 0.95rem 1.85rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      border-radius: var(--radius-sm);
-      transition: var(--transition-smooth);
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
+      transition: var(--transition);
       border: 1px solid transparent;
+      outline: none;
       white-space: nowrap;
+      user-select: none;
     }
 
     .btn-primary {
-      background: var(--accent-gradient);
-      color: #020617;
-      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+      background: var(--brand-blue);
+      color: var(--white-text);
+      border-color: var(--brand-blue);
+      box-shadow: 0 2px 6px rgba(49, 95, 206, 0.24);
     }
 
     .btn-primary:hover {
-      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
-      transform: translateY(-2px);
+      background: var(--brand-blue-deep);
+      border-color: var(--brand-blue-deep);
+      box-shadow: 0 4px 12px rgba(35, 71, 157, 0.32);
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-primary);
-      border-color: var(--border-medium);
+      background: var(--card-bg);
+      color: var(--strong-text);
+      border-color: var(--surface-border);
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
+      background: var(--soft-blue-surface);
+      border-color: var(--brand-blue-secondary);
+      color: var(--brand-blue);
     }
 
-    .inline-link {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-accent);
-      text-decoration: none;
+    .btn-sm {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: gap 0.2s ease;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      color: var(--secondary-text);
       cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
-    .inline-link:hover {
-      gap: 0.75rem;
+    .icon-btn:hover {
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
+      border-color: var(--brand-blue-secondary);
     }
 
     /* ==========================================================================
-       02. GLOBAL HEADER & NAVIGATION
+       04. PERSISTENT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER)
        ========================================================================== */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: 1px solid transparent;
-      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
-      height: 86px;
+    .app-sidebar {
+      grid-area: side;
+      background: #FFFFFF;
+      border-right: 1px solid var(--surface-border);
       display: flex;
-      align-items: center;
-    }
-
-    .site-header.scrolled {
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      height: 72px;
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      width: 100%;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text-accent);
-    }
-
-    .logo-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.5rem 0;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: var(--text-primary);
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: -1rem;
-      background: rgba(7, 15, 38, 0.96);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 0.75rem 0;
-      min-width: 250px;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
-      transition: all 0.25s ease;
-      list-style: none;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-
-    .nav-item:hover .dropdown-menu {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
-    .dropdown-item a {
-      display: block;
-      padding: 0.65rem 1.25rem;
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .dropdown-item a:hover {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-accent);
-    }
-
-    .mobile-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0.5rem;
-    }
-
-    .mobile-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      transition: var(--transition-smooth);
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: var(--bg-primary);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      padding: 6rem 2rem 3rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 1.25rem 0.85rem;
       overflow-y: auto;
     }
 
-    .mobile-menu.active {
-      transform: translateX(0);
+    .nav-group-title {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.6rem 0.75rem 0.3rem 0.75rem;
     }
 
-    .mobile-nav-list {
+    .nav-menu {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 0.2rem;
     }
 
-    .mobile-nav-list a {
-      font-size: 1.25rem;
+    .nav-item-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 0.85rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: var(--secondary-text);
+      font-size: 0.835rem;
       font-weight: 600;
-      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
       text-decoration: none;
     }
 
-    .mobile-submenu {
-      list-style: none;
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+    .nav-item-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, stroke 0.2s ease;
     }
 
-    .mobile-submenu a {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      font-weight: 400;
+    .nav-item-btn:hover {
+      background: var(--app-bg);
+      color: var(--strong-text);
+    }
+
+    .nav-item-btn:hover svg {
+      stroke: var(--brand-blue);
+    }
+
+    .nav-item-btn.active {
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
+      font-weight: 700;
+      border-color: rgba(49, 95, 206, 0.2);
+    }
+
+    .nav-item-btn.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3.5px;
+      background: var(--brand-blue);
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Submenus */
+    .nav-toggle-btn {
+      justify-content: flex-start;
+    }
+
+    .nav-chevron {
+      margin-left: auto;
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s var(--ease-bounce);
+    }
+
+    .nav-toggle-btn[aria-expanded="true"] .nav-chevron {
+      transform: rotate(90deg);
+    }
+
+    .nav-submenu {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-left: 2rem;
+      margin: 0.15rem 0 0.35rem 0;
+    }
+
+    .nav-submenu.open {
+      display: flex;
+    }
+
+    .nav-sub-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      color: var(--secondary-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .nav-sub-link:hover {
+      background: var(--app-bg);
+      color: var(--brand-blue);
+    }
+
+    .nav-sub-bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--muted-text);
+      flex-shrink: 0;
+      transition: background 0.2s ease;
+    }
+
+    .nav-sub-link:hover .nav-sub-bullet {
+      background: var(--brand-blue);
+    }
+
+    .sidebar-footer-card {
+      background: linear-gradient(180deg, var(--workspace-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.85rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1.5rem;
+    }
+
+    .sf-header {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sf-sub {
+      color: var(--secondary-text);
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      line-height: 1.4;
     }
 
     /* ==========================================================================
-       SECTION 01 — HERO
+       05. MAIN WORKSPACE WITH BLUEPRINT GRID BACKGROUND
        ========================================================================== */
-    .careers-hero-section {
-      min-height: 94vh;
-      display: flex;
-      align-items: center;
+    .app-workspace {
+      grid-area: main;
+      background: var(--workspace-bg);
+      overflow-y: auto;
+      padding: 2.25rem 2.5rem;
       position: relative;
-      padding-top: 120px;
-      padding-bottom: 4.5rem;
-      overflow: hidden;
-      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+      background-image: 
+        radial-gradient(circle at 100% 0%, rgba(49, 95, 206, 0.035) 0%, transparent 45%),
+        linear-gradient(to right, rgba(215, 224, 236, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(215, 224, 236, 0.25) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 3.5rem;
+    .ws-section {
+      margin-bottom: 3.5rem;
       position: relative;
-      z-index: 2;
     }
 
-    .hero-title-main {
-      font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+    .ws-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--soft-blue-surface);
+      border: 1px solid rgba(49, 95, 206, 0.2);
+      border-radius: 5px;
+      padding: 0.25rem 0.65rem;
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.65rem;
+    }
+
+    .ws-title {
+      font-size: 2.15rem;
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--strong-text);
+      line-height: 1.18;
     }
 
-    .hero-title-main span {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .ws-title span {
+      color: var(--brand-blue);
     }
 
-    .hero-supporting-copy {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.45;
-      margin-bottom: 1.25rem;
+    .ws-subtitle {
+      font-size: 1rem;
+      color: var(--secondary-text);
+      margin-top: 0.6rem;
+      max-width: 780px;
+      line-height: 1.65;
     }
 
-    .hero-secondary-copy {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 2.25rem;
-    }
-
-    .hero-actions {
+    .ws-action-ribbon {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
       flex-wrap: wrap;
     }
 
-    .careers-canvas-wrap {
-      position: relative;
-      width: 100%;
-      height: 480px;
+    .ws-subhead-bar {
+      font-family: var(--tech-font);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--secondary-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.15rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.5rem;
     }
 
-    #careersHeroCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* ==========================================================================
-       SECTION 02 — WHY TJR TECH (5 CARDS)
-       ========================================================================== */
-    .why-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 3.5rem;
-    }
-
-    .why-item-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 1.5rem;
+    /* Cards & Grids */
+    .division-app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.65rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: var(--transition-smooth);
+      transition: var(--transition);
+      cursor: pointer;
       position: relative;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
     }
 
-    .why-item-card::before {
+    .division-app-card::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent-gradient);
-      transition: width 0.35s ease;
+      right: 0;
+      height: 3px;
+      background: var(--brand-blue);
+      opacity: 0.85;
+      transition: height 0.2s ease, opacity 0.2s ease;
     }
 
-    .why-item-card:hover {
-      border-color: var(--border-accent);
-      background: var(--bg-card-hover);
-      transform: translateY(-4px);
+    .division-app-card.accent-teal::before { background: var(--accent-teal); }
+    .division-app-card.accent-violet::before { background: var(--accent-violet); }
+    .division-app-card.accent-copper::before { background: var(--accent-copper); }
+
+    .division-app-card:hover {
+      border-color: rgba(49, 95, 206, 0.35);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      background: var(--card-bg-hover);
     }
 
-    .why-item-card:hover::before {
-      width: 100%;
+    .division-app-card:hover::before {
+      height: 4px;
+      opacity: 1;
     }
 
-    .why-num {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
+    .div-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       margin-bottom: 1rem;
     }
 
-    .why-title {
-      font-size: 1.2rem;
+    .div-card-id {
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
       font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border-light);
     }
 
-    .why-desc {
+    .div-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.45rem;
+      letter-spacing: -0.01em;
+    }
+
+    .div-card-desc {
       font-size: 0.875rem;
-      color: var(--text-secondary);
+      color: var(--secondary-text);
       line-height: 1.55;
-    }
-
-    /* ==========================================================================
-       SECTION 03 — WHO WE LOOK FOR
-       ========================================================================== */
-    .constellation-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .talent-pills-matrix {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.85rem;
-      margin-top: 3rem;
-      max-width: 980px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .talent-pill {
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      padding: 0.65rem 1.25rem;
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      transition: var(--transition-smooth);
-    }
-
-    .talent-pill:hover {
-      border-color: var(--border-accent);
-      color: var(--text-accent);
-      transform: translateY(-2px);
-    }
-
-    /* ==========================================================================
-       SECTION 04 — CAREER AREAS
-       ========================================================================== */
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-
-    .areas-grid .area-card:nth-child(4),
-    .areas-grid .area-card:nth-child(5) {
-      grid-column: span 1.5;
-    }
-
-    .area-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition-smooth);
-    }
-
-    .area-card:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-4px);
-    }
-
-    .area-index {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent);
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .area-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #fff;
       margin-bottom: 1.25rem;
     }
 
-    .area-roles-list {
-      list-style: none;
+    .div-card-chips {
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--text-secondary);
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
     }
 
-    .area-roles-list li::before {
-      content: "• ";
-      color: var(--text-accent);
+    .chip-tag {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border);
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
-    /* ==========================================================================
-       SECTION 05 & 06 — CURRENT OPENINGS & INTERACTIVE SEARCH
-       ========================================================================== */
-    .openings-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
+    .division-app-card:hover .chip-tag {
+      background: #FFFFFF;
+      color: var(--strong-text);
     }
 
-    .search-filter-panel {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem;
-      margin-top: 3.5rem;
+    .div-card-footer {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px dashed var(--surface-border);
+      padding-top: 0.95rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+    }
+
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-4-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.25rem;
+    }
+
+    .grid-5-col {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+    .grid-7-col {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.75rem;
+    }
+
+    /* Hero Careers Canvas Visualizer */
+    .hero-careers-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.75rem;
+      overflow: hidden;
+    }
+
+    #careersHeroCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      cursor: crosshair;
+    }
+
+    .canvas-hud-overlay {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.25rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      color: var(--secondary-text);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid var(--surface-border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Narrative Focus Boxquote */
+    .story-focus-quote {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--strong-text);
+      border-left: 3.5px solid var(--brand-blue);
+      padding: 1.25rem 1.5rem;
+      background: var(--card-bg);
+      border-radius: 0 8px 8px 0;
+      box-shadow: var(--shadow-card);
+      margin: 1.25rem 0;
+      border-top: 1px solid var(--surface-border-light);
+      border-right: 1px solid var(--surface-border-light);
+      border-bottom: 1px solid var(--surface-border-light);
+    }
+
+    /* Search & Filter Toolbar */
+    .search-filter-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.35rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .search-inputs-row {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr auto;
-      gap: 1rem;
+      gap: 0.85rem;
       align-items: center;
     }
 
     .filter-select, .search-input {
-      padding: 0.75rem 1rem;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
+      padding: 0.65rem 0.85rem;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      color: var(--strong-text);
+      font-family: var(--app-font);
+      font-size: 0.85rem;
       outline: none;
-      transition: border-color 0.2s ease;
+      transition: var(--transition);
       width: 100%;
     }
 
     .filter-select:focus, .search-input:focus {
-      border-color: var(--text-accent);
+      background: #FFFFFF;
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 3px rgba(49, 95, 206, 0.15);
     }
 
+    /* Job Listings List */
     .jobs-display-list {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
-      margin-top: 2rem;
+      gap: 1rem;
     }
 
     .job-card-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.65rem 1.85rem;
       display: grid;
       grid-template-columns: 2fr 1.5fr 1fr auto;
       gap: 1.5rem;
       align-items: center;
-      transition: var(--transition-smooth);
-    }
-
-    .job-card-item:hover {
-      border-color: var(--border-accent);
-      background: var(--bg-card-hover);
-      transform: translateY(-2px);
-    }
-
-    .job-meta-tag {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    .no-jobs-box {
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px dashed var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    /* ==========================================================================
-       SECTION 08 — LIFE AT TJR TECH & 09. WORKING PHILOSOPHY
-       ========================================================================== */
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 3.5rem;
-    }
-
-    .philo-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.5rem;
-      transition: var(--transition-smooth);
-    }
-
-    .philo-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    /* ==========================================================================
-       SECTION 10 — CAREER JOURNEY & 11. CROSS-FUNCTIONAL
-       ========================================================================== */
-    .journey-progression-bar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem 2.25rem;
-      margin-top: 3.5rem;
-      font-family: var(--font-mono);
-      font-size: clamp(1rem, 2vw, 1.35rem);
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .journey-progression-bar span {
-      color: var(--text-accent);
-    }
-
-    .ecosystem-canvas-box {
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
       position: relative;
-      height: 480px;
-      margin-top: 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
     }
 
-    #crossFunctionalCanvas {
+    .job-card-item::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
+      bottom: 0;
+      width: 3px;
+      background: var(--brand-blue);
+      opacity: 0.85;
     }
 
-    .cross-core-hub {
-      position: relative;
-      z-index: 5;
-      padding: 1.5rem 2.5rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 30px var(--glow-teal);
+    .job-card-item:hover {
+      border-color: rgba(49, 95, 206, 0.35);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      background: var(--card-bg-hover);
     }
 
-    /* ==========================================================================
-       SECTION 12 — EARLY CAREER & 13. EXPERIENCED PROFESSIONALS
-       ========================================================================== */
-    .career-levels-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      margin-top: 4rem;
+    .job-meta-tag {
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      color: var(--secondary-text);
+      margin-top: 0.25rem;
     }
 
-    .level-panel {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.5rem;
+    /* Stepper Nodes for Workflow */
+    .stepper-node {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .level-pills-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin: 2rem 0;
+    .stepper-node:hover {
+      border-color: var(--brand-blue);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .level-pill {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      padding: 0.4rem 0.85rem;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
+    .stepper-step {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+      margin-bottom: 0.35rem;
     }
 
-    /* ==========================================================================
-       SECTION 14 — HOW WE HIRE (7 STAGES)
-       ========================================================================== */
-    .hiring-process-timeline {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 1rem;
-      margin-top: 3.5rem;
+    .stepper-title {
+      font-size: 0.925rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.4rem;
     }
 
-    .hire-step-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.75rem 1rem;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition-smooth);
+    .stepper-desc {
+      font-size: 0.785rem;
+      color: var(--secondary-text);
+      line-height: 1.45;
     }
 
-    .hire-step-box:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    /* ==========================================================================
-       SECTION 15 — APPLICATION EXPERIENCE FORM & 16. GENERAL INTAKE
-       ========================================================================== */
+    /* General Application Intake Card */
     .app-section-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-top: 4rem;
+      gap: 2rem;
+      margin-top: 1.5rem;
       align-items: start;
     }
 
     .form-container-card {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      padding: 3rem 2.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 2.5rem 2.25rem;
+      box-shadow: var(--shadow-card);
     }
 
     .form-group {
@@ -885,29 +952,31 @@
 
     .form-label {
       display: block;
+      font-family: var(--tech-font);
       font-size: 0.75rem;
-      font-family: var(--font-mono);
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.35rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
     .form-input, .form-textarea {
       width: 100%;
-      padding: 0.85rem 1rem;
-      background: rgba(12, 24, 61, 0.5);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-      font-size: 0.9375rem;
+      padding: 0.65rem 0.85rem;
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      color: var(--strong-text);
+      font-family: var(--app-font);
+      font-size: 0.875rem;
       outline: none;
-      transition: border-color 0.2s ease;
+      transition: var(--transition);
     }
 
     .form-input:focus, .form-textarea:focus {
-      border-color: var(--text-accent);
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 3px rgba(49, 95, 206, 0.15);
     }
 
     .form-textarea {
@@ -918,234 +987,127 @@
     .form-consent-wrap {
       display: flex;
       align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--secondary-text);
+      line-height: 1.5;
     }
 
-    /* ==========================================================================
-       SECTION 17 — PRIVACY & 18. FAQ & 19. TALENT COMMUNITY
-       ========================================================================== */
-    .privacy-notice-box {
-      background: rgba(12, 24, 61, 0.3);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.75rem;
-      margin-top: 3.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-    }
-
+    /* FAQ Accordion */
     .faq-accordion-wrap {
-      max-width: 860px;
-      margin: 3.5rem auto 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
     }
 
     .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
       overflow: hidden;
-      transition: var(--transition-smooth);
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
     .faq-item.active {
-      border-color: var(--border-medium);
-      background: rgba(14, 29, 71, 0.7);
+      border-color: var(--brand-blue);
+      box-shadow: 0 4px 14px rgba(49, 95, 206, 0.08);
     }
 
     .faq-question-btn {
       width: 100%;
-      padding: 1.5rem 1.75rem;
+      padding: 1.25rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background: none;
       border: none;
-      color: var(--text-primary);
-      font-size: 1.05rem;
-      font-weight: 600;
+      color: var(--strong-text);
+      font-size: 0.95rem;
+      font-weight: 700;
       text-align: left;
       cursor: pointer;
-      font-family: var(--font-sans);
+      font-family: var(--app-font);
     }
 
     .faq-indicator {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--text-accent);
-      transition: transform 0.3s ease;
+      font-family: var(--tech-font);
+      font-size: 1.1rem;
+      color: var(--brand-blue);
+      transition: transform 0.2s var(--ease-bounce);
+      border-radius: 4px;
+      background: var(--soft-blue-surface);
     }
 
     .faq-item.active .faq-indicator {
       transform: rotate(45deg);
+      background: var(--brand-blue);
+      color: #ffffff;
     }
 
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
-      padding: 0 1.75rem;
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    .faq-item.active .faq-answer {
-      padding-bottom: 1.5rem;
-    }
-
-    /* ==========================================================================
-       SECTION 20 — CAREER CTA & 21. BRAND STATEMENT
-       ========================================================================== */
-    .cta-section {
-      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
-      text-align: center;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .cta-container {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .brand-statement-section {
-      padding: 6.5rem 0;
-      text-align: center;
-      background: #020617;
-    }
-
-    .statement-pulse-trio {
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-      margin-bottom: 2rem;
-    }
-
-    /* ==========================================================================
-       SECTION 22 — FOOTER
-       ========================================================================== */
-    .site-footer {
-      background-color: #01040f;
-      padding: 5.5rem 0 2.5rem 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-      gap: 3.5rem;
-      margin-bottom: 4.5rem;
-    }
-
-    .footer-brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-tagline {
-      font-size: 0.875rem;
-      color: var(--text-accent);
-      font-family: var(--font-mono);
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-desc {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
+      transition: max-height 0.28s cubic-bezier(0.16, 1, 0.3, 1), padding 0.28s ease;
+      padding: 0 1.5rem;
+      font-size: 0.885rem;
+      color: var(--secondary-text);
       line-height: 1.6;
     }
 
-    .footer-heading {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.25rem;
     }
 
-    .footer-links-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
+    /* Service Snapshot Grid Card */
+    .snapshot-matrix-card {
+      background: linear-gradient(135deg, var(--card-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 2.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.5rem;
     }
 
-    .footer-links-list a {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links-list a:hover {
-      color: var(--text-accent);
-    }
-
-    .footer-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-subtle);
+    .snapshot-stream {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem 3rem;
+      font-family: var(--tech-font);
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: 0.04em;
     }
 
-    .footer-bottom-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-bottom-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--text-secondary);
+    .snapshot-stream span {
+      color: var(--brand-blue);
     }
 
     /* Modal System: Job Details View */
     .modal-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(2, 6, 23, 0.92);
-      backdrop-filter: blur(14px);
-      z-index: 3000;
+      inset: 0;
+      background: rgba(23, 37, 59, 0.45);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.35s ease;
+      transition: var(--transition);
     }
 
     .modal-overlay.active {
@@ -1154,17 +1116,18 @@
     }
 
     .modal-container-box {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
       width: 100%;
       max-width: 820px;
-      padding: 3rem;
+      padding: 2.75rem 2.5rem;
       position: relative;
       transform: translateY(20px);
-      transition: transform 0.3s ease;
-      max-height: 90vh;
+      transition: var(--transition);
+      max-height: 88vh;
       overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(23, 37, 59, 0.2);
     }
 
     .modal-overlay.active .modal-container-box {
@@ -1175,397 +1138,715 @@
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-      color: var(--text-muted);
-      font-size: 1.5rem;
-      background: none;
-      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      color: var(--secondary-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
+      font-size: 1.5rem;
       line-height: 1;
+      transition: var(--transition);
     }
 
     .modal-close-trigger:hover {
-      color: #fff;
-    }
-
-    /* Scroll Trigger Animation Engine */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
+      border-color: var(--brand-blue-secondary);
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       06. CONTEXTUAL RIGHT PANEL (INSPECTOR)
        ========================================================================== */
-    @media (max-width: 1080px) {
-      .why-cards-grid,
-      .philosophy-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .areas-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .areas-grid .area-card:nth-child(4),
-      .areas-grid .area-card:nth-child(5) {
-        grid-column: span 1;
-      }
-      .search-inputs-row {
-        grid-template-columns: 1fr 1fr;
-      }
-      .hiring-process-timeline {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    .app-right-panel {
+      grid-area: panel;
+      background: #FFFFFF;
+      border-left: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      transition: var(--transition);
+      box-shadow: var(--shadow-panel);
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .career-levels-grid,
-      .app-section-grid {
+    .panel-header {
+      padding: 1.25rem 1.4rem;
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--workspace-bg);
+    }
+
+    .panel-kicker {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .panel-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: -0.01em;
+      margin-top: 0.15rem;
+    }
+
+    .panel-content {
+      padding: 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .panel-section-label {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .panel-specs-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .panel-spec-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--app-bg);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
+    }
+
+    .panel-spec-row span:first-child { color: var(--secondary-text); }
+    .panel-spec-row span:last-child {
+      font-weight: 700;
+      color: var(--brand-blue);
+      font-family: var(--tech-font);
+    }
+
+    .panel-footer-actions {
+      padding: 1.25rem 1.4rem;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      background: var(--workspace-bg);
+    }
+
+    /* ==========================================================================
+       07. GLOBAL SEARCH COMMAND MODAL (CTRL+K)
+       ========================================================================== */
+    .search-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 37, 59, 0.45);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 12vh;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .search-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .search-modal-card {
+      width: 90%;
+      max-width: 560px;
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: 0 20px 48px rgba(23, 37, 59, 0.18);
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition: var(--transition);
+    }
+
+    .search-modal-backdrop.open .search-modal-card {
+      transform: translateY(0);
+    }
+
+    .search-input-row {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.35rem;
+      border-bottom: 1px solid var(--surface-border);
+      gap: 0.85rem;
+    }
+
+    .search-input-row input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: var(--app-font);
+      color: var(--strong-text);
+    }
+
+    .search-results-list {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .search-result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.95rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .search-result-row:hover {
+      background: var(--soft-blue-surface);
+      color: var(--brand-blue);
+    }
+
+    .s-tag {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      padding: 0.15rem 0.45rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border-light);
+    }
+
+    /* ==========================================================================
+       08. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1100px) {
+      .app-shell { grid-template-columns: var(--sidebar-width) 1fr 0px; }
+      .app-right-panel { display: none; }
+      .grid-3-col { grid-template-columns: repeat(2, 1fr); }
+      .grid-4-col, .grid-5-col, .grid-7-col { grid-template-columns: repeat(2, 1fr); }
+      .search-inputs-row { grid-template-columns: 1fr 1fr; }
+      .app-section-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .app-shell { grid-template-columns: 0px 1fr 0px; }
+      .app-sidebar {
+        position: fixed;
+        top: var(--topbar-height);
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.25s var(--ease-bounce);
+        box-shadow: 8px 0 24px rgba(23, 37, 59, 0.12);
+      }
+      .app-sidebar.mobile-open { transform: translateX(0); }
+      .grid-2-col, .grid-3-col, .grid-4-col, .grid-5-col, .grid-7-col, .app-section-grid {
         grid-template-columns: 1fr;
-      }
-      .nav-links, .nav-cta {
-        display: none;
-      }
-      .mobile-toggle {
-        display: flex;
-      }
-      .careers-canvas-wrap {
-        height: 360px;
       }
       .job-card-item {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.75rem;
       }
-    }
-
-    @media (max-width: 640px) {
-      .why-cards-grid,
-      .philosophy-grid,
-      .areas-grid,
-      .search-inputs-row,
-      .hiring-process-timeline {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .section-spacing {
-        padding: 5rem 0;
-      }
-      .modal-container-box {
-        padding: 2rem 1.5rem;
-      }
-      .privacy-notice-box {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-      }
+      .search-inputs-row { grid-template-columns: 1fr; }
+      .modal-container-box { padding: 2rem 1.5rem; }
+      .topbar-search-trigger { width: 180px; }
+      .app-workspace { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Indicator -->
+  <!-- Top Scroll Progress Bar -->
   <div id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ==========================================================================
-       GLOBAL NAVIGATION
+       APPLICATION SHELL
        ========================================================================== -->
-  <header class="site-header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
-        <div class="logo-mark">T</div>
-        <span class="logo-title">TJR TECH</span>
-      </a>
+  <div class="app-shell" id="appShell">
 
-      <nav aria-label="Desktop Navigation">
-        <ul class="nav-links">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-          <li class="nav-item">
-            <a href="/services" class="nav-link">
-              Services
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
-              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
-              <li class="dropdown-item"><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="/solutions" class="nav-link">
-              Solutions
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/solutions/for-businesses">For Businesses</a></li>
-              <li class="dropdown-item"><a href="/solutions/for-consultants">For Consultants</a></li>
-              <li class="dropdown-item"><a href="/solutions/for-professionals">For Professionals</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
-          <li class="nav-item"><a href="/careers" class="nav-link active">Careers</a></li>
-          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
-          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- TOP NAVIGATION COMMAND BAR -->
+    <header class="app-topbar">
+      <div class="topbar-left">
+        <button class="icon-btn" id="mobileMenuToggle" style="display: none;" aria-label="Toggle Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
 
-      <div class="nav-cta">
-        <a href="#openings" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">
-          <span>Explore Open Roles</span>
+        <a class="brand-id" href="index.html">
+          <div class="brand-mark">T</div>
+          <div class="brand-title-wrap">
+            <span class="brand-title">TJR TECH</span>
+            <span class="brand-tagline">Careers Hub</span>
+          </div>
         </a>
+
+        <!-- Global Command Search Trigger (Ctrl+K) -->
+        <div class="topbar-search-trigger" id="searchTriggerBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search open roles &amp; disciplines...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </div>
       </div>
 
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+      <div class="topbar-right">
+        <div class="telemetry-chip">
+          <span class="pulse-dot"></span>
+          <span>TALENT COMMUNITY ACTIVE</span>
+        </div>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
-    <ul class="mobile-nav-list">
-      <li><a href="/" class="mobile-link">Home</a></li>
-      <li><a href="/about" class="mobile-link">About Us</a></li>
-      <li><a href="/services" class="mobile-link">Services</a></li>
-      <li><a href="/solutions" class="mobile-link">Solutions</a></li>
-      <li><a href="/portfolio" class="mobile-link">Work</a></li>
-      <li><a href="/careers" class="mobile-link">Careers</a></li>
-      <li><a href="/insights" class="mobile-link">Insights</a></li>
-      <li><a href="/contact" class="mobile-link">Contact</a></li>
-    </ul>
-    <a href="#openings" class="btn btn-primary" style="width: 100%;">Explore Open Roles</a>
-  </div>
+        <a href="index.html" class="btn btn-secondary btn-sm">Home Dashboard</a>
+        <a href="#general-intake" class="btn btn-primary btn-sm">Submit Profile</a>
 
-  <main>
-    <!-- ==========================================================================
-         SECTION 01 — HERO
-         ========================================================================== -->
-    <section class="careers-hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="eyebrow">TJR TECH / CAREERS</div>
-          <h1 class="hero-title-main">
-            Build Your Career <span>Around Opportunity.</span>
-          </h1>
-          <p class="hero-supporting-copy">
-            Work with people, technology, and ideas that are moving forward.
-          </p>
-          <p class="hero-secondary-copy">
-            TJR Tech brings together technology services, staffing, digital development, and creative capabilities. We look for people who are ready to learn, contribute, collaborate, and grow with the organization.
-          </p>
-          <div class="hero-actions">
-            <a href="#openings" class="btn btn-primary">
-              <span>Explore Open Roles</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <button class="icon-btn" id="togglePanelBtn" title="Toggle Contextual Inspector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- PERSISTENT LEFT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER) -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div>
+        <div class="nav-group-title">WORKSPACE</div>
+        <ul class="nav-menu">
+          <!-- 1. HOME -->
+          <li>
+            <a href="index.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Home</span>
             </a>
-            <a href="#general-intake" class="btn btn-secondary">
-              <span>Submit Your Profile</span>
+          </li>
+
+          <!-- 2. ABOUT -->
+          <li>
+            <a href="about.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>About</span>
             </a>
+          </li>
+
+          <!-- 3. SERVICES (COLLAPSIBLE) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn" id="servicesToggleBtn" aria-expanded="false" onclick="toggleSidebarMenu('servicesSubmenu', 'servicesToggleBtn')">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 22"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Services</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu" id="servicesSubmenu">
+              <li>
+                <a href="us-it-staffing.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Staffing</span>
+                </a>
+              </li>
+              <li>
+                <a href="us-it-bench-sales.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Bench Sales</span>
+                </a>
+              </li>
+              <li>
+                <a href="web-development.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Web Development</span>
+                </a>
+              </li>
+              <li>
+                <a href="ads-digital-media.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Ads &amp; Digital Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 4. SOLUTIONS (COLLAPSIBLE) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn" id="solutionsToggleBtn" aria-expanded="false" onclick="toggleSidebarMenu('solutionsSubmenu', 'solutionsToggleBtn')">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Solutions</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu" id="solutionsSubmenu">
+              <li>
+                <a href="solutions.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Solutions Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-consultants.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Consultants</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-professionals.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Professionals</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-businesses.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Businesses</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 5. PORTFOLIO -->
+          <li>
+            <a href="portfolio.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span>Portfolio</span>
+            </a>
+          </li>
+
+          <!-- 6. INSIGHTS -->
+          <li>
+            <a href="insights.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Insights</span>
+            </a>
+          </li>
+
+          <!-- 7. CAREERS (ACTIVE) -->
+          <li>
+            <a href="careers.html" class="nav-item-btn active">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3v4M8 3v4"/></svg>
+              <span>Careers</span>
+            </a>
+          </li>
+
+          <!-- 8. CONTACT -->
+          <li>
+            <a href="contact.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- PAGE CHAPTER ANCHORS -->
+        <div class="nav-group-title" style="margin-top: 1.25rem;">CAREER CHAPTERS</div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#why-tjr" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Why TJR Tech</span>
+            </a>
+          </li>
+          <li>
+            <a href="#career-areas" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>5 Career Disciplines</span>
+            </a>
+          </li>
+          <li>
+            <a href="#openings" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Job Search Database</span>
+            </a>
+          </li>
+          <li>
+            <a href="#how-we-hire" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>7-Stage Hiring Process</span>
+            </a>
+          </li>
+          <li>
+            <a href="#general-intake" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Submit Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#career-faq" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Careers FAQs</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer-card">
+        <div class="sf-header">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/></svg>
+          <span>People &amp; Culture</span>
+        </div>
+        <div class="sf-sub">Hyderabad Hub &bull; US-Aligned Growth</div>
+      </div>
+    </aside>
+
+    <!-- CENTRAL WORKSPACE (BLUEPRINT CANVAS) -->
+    <main class="app-workspace" id="mainWorkspace">
+
+      <!-- ==================== 01. HERO SECTION ==================== -->
+      <section class="ws-section" id="hero">
+        <div class="ws-kicker-badge">
+          <span>TALENT COMMUNITY // OPPORTUNITIES AT TJR TECH</span>
+        </div>
+        <h1 class="ws-title">
+          Build Your Career <br>
+          <span>Around Opportunity.</span>
+        </h1>
+        <p class="ws-subtitle" style="font-weight: 600; color: var(--strong-text);">
+          Work with people, technology, and ideas that are moving forward.
+        </p>
+        <p class="ws-subtitle">
+          TJR Tech brings together technology services, IT recruitment, digital development, and creative media. We look for ambitious individuals ready to learn, take ownership, collaborate, and contribute across multidisciplinary initiatives.
+        </p>
+
+        <div class="ws-action-ribbon">
+          <a href="#openings" class="btn btn-primary">Explore Open Roles</a>
+          <a href="#general-intake" class="btn btn-secondary">Submit Your Profile</a>
+          <a href="#career-areas" class="btn btn-secondary">5 Career Disciplines</a>
+        </div>
+
+        <!-- Interactive Career Ecosystem Canvas Visualizer -->
+        <div class="hero-careers-canvas-wrap">
+          <canvas id="careersHeroCanvas" aria-label="Futuristic human and technology career ecosystem canvas"></canvas>
+          <div class="canvas-hud-overlay">
+            <span class="pulse-dot"></span>
+            <span>TALENT GRID: <strong style="color: var(--brand-blue);">ACTIVE</strong> &bull; PEOPLE &bull; TECHNOLOGY &bull; IDEAS &bull; OPPORTUNITY</span>
           </div>
         </div>
+      </section>
 
-        <div class="careers-canvas-wrap">
-          <canvas id="careersHeroCanvas" aria-label="Futuristic human and technology career ecosystem"></canvas>
+      <!-- ==================== 02. WHY TJR TECH (5 CARDS) ==================== -->
+      <section class="ws-section" id="why-tjr">
+        <div class="ws-subhead-bar">01 / WORK ENVIRONMENT // MORE THAN A JOB. A PLACE TO BUILD.</div>
+        <h2 class="ws-title">Principles That Shape <span>Your Growth.</span></h2>
+        <p class="ws-subtitle">
+          Career development is defined by the environment, the peers you collaborate with, and the genuine responsibilities you take on.
+        </p>
+
+        <div class="grid-5-col" style="margin-top: 1.75rem;">
+          <div class="division-app-card" style="padding: 1.35rem;">
+            <div class="stepper-step">01 // KNOWLEDGE</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">LEARN</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55;">
+              Build hands-on technical competence through real responsibilities and exposure to enterprise challenges.
+            </p>
+          </div>
+
+          <div class="division-app-card accent-teal" style="padding: 1.35rem;">
+            <div class="stepper-step" style="color: var(--accent-teal);">02 // PERSPECTIVE</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">CONTRIBUTE</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55;">
+              Bring your ideas, engineering skills, and authentic perspective directly to production initiatives.
+            </p>
+          </div>
+
+          <div class="division-app-card accent-violet" style="padding: 1.35rem;">
+            <div class="stepper-step" style="color: var(--accent-violet);">03 // TEAMWORK</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">COLLABORATE</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55;">
+              Work across multidisciplinary squads spanning software engineering, recruiting, and brand media.
+            </p>
+          </div>
+
+          <div class="division-app-card accent-copper" style="padding: 1.35rem;">
+            <div class="stepper-step" style="color: var(--accent-copper);">04 // INTEGRITY</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">OWN</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55;">
+              Take authentic responsibility for your work, deliverables, and the commitments made to stakeholders.
+            </p>
+          </div>
+
+          <div class="division-app-card" style="padding: 1.35rem;">
+            <div class="stepper-step">05 // LEADERSHIP</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">GROW</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55;">
+              Advance your professional trajectory as your domain depth and operational contributions expand.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 02 — WHY TJR TECH (5 CARDS)
-         ========================================================================== -->
-    <section class="section-spacing" id="why-tjr">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">WORK ENVIRONMENT</div>
-          <h2 class="section-title">More Than a Job. A Place to Build.</h2>
-          <p class="section-lead">
-            Career growth is shaped by the environment, the people you work with, the responsibilities you take on, and the opportunities you pursue.
+      <!-- ==================== 03. WHO WE LOOK FOR (TALENT QUALITIES) ==================== -->
+      <section class="ws-section" id="who-we-look-for">
+        <div class="ws-subhead-bar">02 / QUALITIES // WE LOOK FOR BUILDERS</div>
+        <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 2.25rem; box-shadow: var(--shadow-card); text-align: center;">
+          <h2 class="ws-title" style="font-size: 1.65rem; margin-bottom: 0.45rem;">
+            People Who Want to <span>Build &amp; Solve.</span>
+          </h2>
+          <p style="font-size: 0.925rem; color: var(--secondary-text); max-width: 720px; margin: 0 auto 1.5rem auto; line-height: 1.65;">
+            Specific technical requirements vary by opening. Across all teams, we value individuals who communicate clearly, embrace continuous learning, and act with accountability.
           </p>
-        </div>
 
-        <div class="why-cards-grid reveal">
-          <div class="why-item-card">
-            <div class="why-num">01</div>
-            <h3 class="why-title">LEARN</h3>
-            <p class="why-desc">Build knowledge through real responsibilities and continuous exposure to new challenges.</p>
-          </div>
-          <div class="why-item-card">
-            <div class="why-num">02</div>
-            <h3 class="why-title">CONTRIBUTE</h3>
-            <p class="why-desc">Bring your ideas, skills, and perspective to the work.</p>
-          </div>
-          <div class="why-item-card">
-            <div class="why-num">03</div>
-            <h3 class="why-title">COLLABORATE</h3>
-            <p class="why-desc">Work across people, teams, technology, and business requirements.</p>
-          </div>
-          <div class="why-item-card">
-            <div class="why-num">04</div>
-            <h3 class="why-title">OWN</h3>
-            <p class="why-desc">Take responsibility for your work and the outcomes you are accountable for.</p>
-          </div>
-          <div class="why-item-card">
-            <div class="why-num">05</div>
-            <h3 class="why-title">GROW</h3>
-            <p class="why-desc">Develop professionally as your responsibilities and experience evolve.</p>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.65rem;">
+            <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue); font-weight: 700; padding: 0.4rem 0.85rem;">Curiosity</span>
+            <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700; padding: 0.4rem 0.85rem;">Ownership</span>
+            <span class="chip-tag" style="padding: 0.4rem 0.85rem;">Adaptability</span>
+            <span class="chip-tag" style="padding: 0.4rem 0.85rem;">Clear Communication</span>
+            <span class="chip-tag" style="background: var(--soft-violet); color: var(--accent-violet); font-weight: 700; padding: 0.4rem 0.85rem;">Problem Solving</span>
+            <span class="chip-tag" style="padding: 0.4rem 0.85rem;">Technical Thinking</span>
+            <span class="chip-tag" style="background: var(--soft-copper); color: var(--accent-copper); font-weight: 700; padding: 0.4rem 0.85rem;">Creativity</span>
+            <span class="chip-tag" style="padding: 0.4rem 0.85rem;">Teamwork</span>
+            <span class="chip-tag" style="padding: 0.4rem 0.85rem;">Professional Candor</span>
+            <span class="chip-tag" style="padding: 0.4rem 0.85rem;">Learning Mindset</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 03 — WHO WE LOOK FOR (TALENT CONSTELLATION)
-         ========================================================================== -->
-    <section class="section-spacing constellation-section" id="who-we-look-for">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 1.5rem auto;">
-          <div class="eyebrow" style="justify-content: center;">INDIVIDUAL QUALITIES</div>
-          <h2 class="section-title">We Look for People Who Want to Build.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            Specific requirements vary by role. We value people who can learn, communicate clearly, take responsibility, and contribute to a professional working environment.
-          </p>
-        </div>
+      <!-- ==================== 04. FIVE CAREER DISCIPLINES ==================== -->
+      <section class="ws-section" id="career-areas">
+        <div class="ws-subhead-bar">03 / DISCIPLINES // FIVE OPERATIONAL PRACTICE AREAS</div>
+        <h2 class="ws-title">Find Your Place at <span>TJR Tech.</span></h2>
+        <p class="ws-subtitle">
+          Explore the multidisciplinary divisions that form our operational organization.
+        </p>
 
-        <div class="talent-pills-matrix reveal">
-          <div class="talent-pill">Curiosity</div>
-          <div class="talent-pill">Ownership</div>
-          <div class="talent-pill">Adaptability</div>
-          <div class="talent-pill">Communication</div>
-          <div class="talent-pill">Problem Solving</div>
-          <div class="talent-pill">Technical Thinking</div>
-          <div class="talent-pill">Creativity</div>
-          <div class="talent-pill">Teamwork</div>
-          <div class="talent-pill">Professionalism</div>
-          <div class="talent-pill">Learning Mindset</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 04 — CAREER AREAS
-         ========================================================================== -->
-    <section class="section-spacing" id="career-areas">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">PRACTICE DOMAINS</div>
-          <h2 class="section-title">Find Your Place at TJR Tech.</h2>
-          <p class="section-lead">Explore the multidisciplinary divisions that form our operational organization.</p>
-        </div>
-
-        <div class="areas-grid reveal">
-          <div class="area-card">
+        <div class="grid-3-col" style="margin-top: 1.75rem;">
+          <!-- Discipline 1: Technology -->
+          <div class="division-app-card" onclick="setDepartmentFilter('Technology')">
             <div>
-              <div class="area-index">01 / DISCIPLINE</div>
-              <h3 class="area-title">Technology</h3>
-              <ul class="area-roles-list">
-                <li>Software Development</li>
-                <li>Web Development</li>
-                <li>Cloud &amp; DevOps</li>
-                <li>Data &amp; Analytics</li>
-                <li>QA / Testing</li>
-                <li>Infrastructure</li>
-                <li>Cybersecurity</li>
-              </ul>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue);">01 // TECH</span>
+                <span class="div-card-id" style="color: var(--brand-blue);">SYSTEMS</span>
+              </div>
+              <h3 class="div-card-title">Technology &amp; Engineering</h3>
+              <p class="div-card-desc">Software development, web applications, cloud infrastructure, data pipelines, automated testing, and cybersecurity.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Full-Stack</span>
+                <span class="chip-tag">Next.js</span>
+                <span class="chip-tag">AWS / DevOps</span>
+                <span class="chip-tag">Data Engineering</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Filter Roles</span>
+              <span>&rarr;</span>
             </div>
           </div>
 
-          <div class="area-card">
+          <!-- Discipline 2: Staffing -->
+          <div class="division-app-card accent-teal" onclick="setDepartmentFilter('Staffing')">
             <div>
-              <div class="area-index">02 / DISCIPLINE</div>
-              <h3 class="area-title">Staffing &amp; Recruitment</h3>
-              <ul class="area-roles-list">
-                <li>Talent Acquisition</li>
-                <li>US IT Recruitment</li>
-                <li>Bench Sales</li>
-                <li>Recruiting Operations</li>
-                <li>Candidate Coordination</li>
-                <li>Account / Staffing Support</li>
-              </ul>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">02 // STAFFING</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">RECRUITMENT</span>
+              </div>
+              <h3 class="div-card-title">Staffing &amp; Recruitment</h3>
+              <p class="div-card-desc">Technical talent acquisition, US IT recruiting workflows, bench sales candidate marketing, candidate coordination, and account delivery.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">US IT Recruiting</span>
+                <span class="chip-tag">Bench Sales</span>
+                <span class="chip-tag">Candidate Ingestion</span>
+              </div>
+            </div>
+            <div class="div-card-footer" style="color: var(--accent-teal);">
+              <span>Filter Roles</span>
+              <span>&rarr;</span>
             </div>
           </div>
 
-          <div class="area-card">
+          <!-- Discipline 3: Sales -->
+          <div class="division-app-card accent-violet" onclick="setDepartmentFilter('Sales')">
             <div>
-              <div class="area-index">03 / DISCIPLINE</div>
-              <h3 class="area-title">Sales &amp; Business Development</h3>
-              <ul class="area-roles-list">
-                <li>IT Sales</li>
-                <li>Business Development</li>
-                <li>Client Relations</li>
-                <li>Account Management</li>
-                <li>Partnership Development</li>
-              </ul>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-violet); color: var(--accent-violet);">03 // SALES</span>
+                <span class="div-card-id" style="color: var(--accent-violet);">COMMERCIAL</span>
+              </div>
+              <h3 class="div-card-title">Sales &amp; Business Development</h3>
+              <p class="div-card-desc">Commercial client partnerships, IT staffing account management, Tier-1 vendor development, and technology service sales.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Account Management</span>
+                <span class="chip-tag">Client Partnerships</span>
+                <span class="chip-tag">Growth</span>
+              </div>
+            </div>
+            <div class="div-card-footer" style="color: var(--accent-violet);">
+              <span>Filter Roles</span>
+              <span>&rarr;</span>
             </div>
           </div>
 
-          <div class="area-card">
+          <!-- Discipline 4: Digital Media -->
+          <div class="division-app-card accent-copper" onclick="setDepartmentFilter('Digital')">
             <div>
-              <div class="area-index">04 / DISCIPLINE</div>
-              <h3 class="area-title">Digital &amp; Creative</h3>
-              <ul class="area-roles-list">
-                <li>Digital Media</li>
-                <li>Video Production</li>
-                <li>Video Editing</li>
-                <li>Motion Graphics</li>
-                <li>Creative Direction</li>
-                <li>Digital Marketing</li>
-              </ul>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-copper); color: var(--accent-copper);">04 // MEDIA</span>
+                <span class="div-card-id" style="color: var(--accent-copper);">TJR MEDIA</span>
+              </div>
+              <h3 class="div-card-title">Digital &amp; Creative Media</h3>
+              <p class="div-card-desc">Commercial 4K video production, documentary storytelling, post-production editing, motion graphics, and digital advertising.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Cinema 4K</span>
+                <span class="chip-tag">Video Editing</span>
+                <span class="chip-tag">Motion Design</span>
+              </div>
+            </div>
+            <div class="div-card-footer" style="color: var(--accent-copper);">
+              <span>Filter Roles</span>
+              <span>&rarr;</span>
             </div>
           </div>
 
-          <div class="area-card">
+          <!-- Discipline 5: Operations -->
+          <div class="division-app-card" onclick="setDepartmentFilter('Operations')" style="grid-column: span 2;">
             <div>
-              <div class="area-index">05 / DISCIPLINE</div>
-              <h3 class="area-title">Business &amp; Operations</h3>
-              <ul class="area-roles-list">
-                <li>Administration</li>
-                <li>Operations</li>
-                <li>Finance Coordination</li>
-                <li>Documentation</li>
-                <li>Business Support</li>
-              </ul>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue);">05 // OPS</span>
+                <span class="div-card-id" style="color: var(--brand-blue);">DELIVERY</span>
+              </div>
+              <h3 class="div-card-title">Business &amp; Operations</h3>
+              <p class="div-card-desc">Organizational administration, commercial contracts coordination, documentation, corporate finance, and business support systems.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Contract Operations</span>
+                <span class="chip-tag">Delivery Coordination</span>
+                <span class="chip-tag">Administrative Support</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Filter Roles</span>
+              <span>&rarr;</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 05 & 06 — CURRENT OPENINGS & JOB SEARCH INTERFACE
-         ========================================================================== -->
-    <section class="section-spacing openings-section" id="openings">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">REACTIVE JOB DATABASE</div>
-          <h2 class="section-title">Current Opportunities</h2>
-          <p class="section-lead">Explore roles currently available at TJR Tech. Filter by department, location, work type, or experience.</p>
-        </div>
+      <!-- ==================== 05. OPENINGS DATABASE & INTERACTIVE SEARCH ==================== -->
+      <section class="ws-section" id="openings">
+        <div class="ws-subhead-bar">04 / OPPORTUNITIES // INTERACTIVE JOB SEARCH DATABASE</div>
+        <h2 class="ws-title">Current <span>Opportunities.</span></h2>
+        <p class="ws-subtitle">
+          Explore roles currently active at TJR Tech. Filter by department, location model, or experience tier.
+        </p>
 
-        <!-- Section 06: Search & Filter Interface -->
-        <div class="search-filter-panel reveal">
+        <!-- Search & Filter Controls Panel -->
+        <div class="search-filter-panel">
           <div class="search-inputs-row">
             <input type="text" id="jobSearchInput" class="search-input" placeholder="Search by title, technology, keyword...">
             
@@ -1574,6 +1855,8 @@
               <option value="Technology">Technology</option>
               <option value="Staffing">Staffing &amp; Recruitment</option>
               <option value="Digital">Digital &amp; Creative</option>
+              <option value="Sales">Sales &amp; Business</option>
+              <option value="Operations">Operations</option>
             </select>
 
             <select id="workTypeFilter" class="filter-select">
@@ -1584,243 +1867,108 @@
             </select>
 
             <select id="experienceFilter" class="filter-select">
-              <option value="">All Experience Levels</option>
+              <option value="">All Experience</option>
               <option value="Senior">Senior Level</option>
               <option value="Mid">Mid Level</option>
               <option value="Early">Early Career</option>
             </select>
 
-            <button id="clearFiltersBtn" class="btn btn-secondary" style="padding: 0.75rem 1.25rem;">Clear Filters</button>
+            <button id="clearFiltersBtn" class="btn btn-secondary btn-sm">Reset</button>
           </div>
         </div>
 
-        <!-- Section 05: Dynamic Openings Render -->
-        <div class="jobs-display-list reveal" id="jobsContainer">
-          <!-- Rendered via CMS architecture in vanilla JS below -->
-        </div>
-      </div>
-    </section>
+        <!-- Dynamic Openings Rendered via CMS Architecture -->
+        <div class="jobs-display-list" id="jobsContainer"></div>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 08 — LIFE AT TJR TECH & 09. WORKING PHILOSOPHY
-         ========================================================================== -->
-    <section class="section-spacing" id="working-philosophy">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">ORGANIZATIONAL PRINCIPLES</div>
-          <h2 class="section-title">How We Work.</h2>
-          <p class="section-lead">Principles guiding day-to-day collaboration, decision-making, and execution.</p>
-        </div>
+      <!-- ==================== 06. SEVEN-STAGE HIRING PROCESS ==================== -->
+      <section class="ws-section" id="how-we-hire">
+        <div class="ws-subhead-bar">05 / EVALUATION // 7-STAGE HIRING JOURNEY</div>
+        <h2 class="ws-title">A Transparent <span>Hiring Process.</span></h2>
+        <p class="ws-subtitle">
+          A structured progression keeping candidates informed throughout the assessment cycle.
+        </p>
 
-        <div class="philosophy-grid reveal">
-          <div class="philo-card">
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Communicate Clearly</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Clear communication creates better collaboration and removes ambiguity.</p>
+        <div class="grid-7-col" style="margin-top: 1.75rem;">
+          <div class="stepper-node">
+            <div class="stepper-step">01 // INTAKE</div>
+            <div class="stepper-title">Application</div>
+            <p class="stepper-desc">Submit your application or professional profile.</p>
           </div>
-          <div class="philo-card">
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Take Ownership</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Own your responsibilities and follow through to resolution.</p>
+          <div class="stepper-node">
+            <div class="stepper-step">02 // REVIEW</div>
+            <div class="stepper-title">Screening</div>
+            <p class="stepper-desc">The practice lead reviews background materials.</p>
           </div>
-          <div class="philo-card">
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Stay Curious</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Technology and business continue to change; maintain learning momentum.</p>
+          <div class="stepper-node">
+            <div class="stepper-step">03 // CHAT</div>
+            <div class="stepper-title">Initial Dialogue</div>
+            <p class="stepper-desc">Discussion regarding experience and role scope.</p>
           </div>
-          <div class="philo-card">
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Work Together</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Good work is built through cross-disciplinary respect and collaboration.</p>
+          <div class="stepper-node">
+            <div class="stepper-step">04 // INTERVIEW</div>
+            <div class="stepper-title">Technical Deep-Dive</div>
+            <p class="stepper-desc">Hands-on assessment of craft and problem solving.</p>
           </div>
-          <div class="philo-card">
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Keep Evolving</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Learn from experience, embrace feedback, and improve continuously.</p>
+          <div class="stepper-node">
+            <div class="stepper-step">05 // CULTURE</div>
+            <div class="stepper-title">Evaluation</div>
+            <p class="stepper-desc">Team alignment and operational contribution review.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 10 — CAREER JOURNEY & 11. CROSS-FUNCTIONAL OPPORTUNITIES
-         ========================================================================== -->
-    <section class="section-spacing" id="career-journey" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 2rem auto;">
-          <div class="eyebrow" style="justify-content: center;">DEVELOPMENT PATHWAY</div>
-          <h2 class="section-title">Your Journey Can Evolve.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            Responsibilities can evolve as people develop their skills, experience, and contribution to the organization.
-          </p>
-        </div>
-
-        <div class="journey-progression-bar reveal">
-          <div>JOIN</div>
-          <span>&rarr;</span>
-          <div>LEARN</div>
-          <span>&rarr;</span>
-          <div>CONTRIBUTE</div>
-          <span>&rarr;</span>
-          <div>OWN</div>
-          <span>&rarr;</span>
-          <div>GROW</div>
-          <span>&rarr;</span>
-          <div style="color: var(--text-accent);">LEAD</div>
-        </div>
-
-        <!-- Section 11: Cross-Functional Canvas -->
-        <div class="section-header reveal" style="margin-top: 5.5rem; text-align: center;">
-          <div class="eyebrow" style="justify-content: center;">UNIFIED ECOSYSTEM</div>
-          <h2 class="section-title">Technology Doesn't Work in Silos.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            TJR Tech operates across multiple areas, creating opportunities for people with different skills and professional backgrounds to contribute to the broader organization.
-          </p>
-        </div>
-
-        <div class="ecosystem-canvas-box reveal">
-          <canvas id="crossFunctionalCanvas"></canvas>
-          <div class="cross-core-hub">TJR TECH</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 12 — EARLY CAREER & 13. EXPERIENCED PROFESSIONALS
-         ========================================================================== -->
-    <section class="section-spacing" id="career-stages">
-      <div class="container">
-        <div class="career-levels-grid reveal">
-          <!-- Early Career -->
-          <div class="level-panel">
-            <div>
-              <div class="eyebrow">FOUNDATIONAL EXPERIENCE</div>
-              <h3 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Starting Your Career?</h3>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                Early-career professionals can explore opportunities that allow them to develop practical skills, understand professional workflows, and contribute to real responsibilities.
-              </p>
-              <div class="level-pills-wrap">
-                <span class="level-pill">Learning Mindset</span>
-                <span class="level-pill">Active Collaboration</span>
-                <span class="level-pill">Practical Experience</span>
-                <span class="level-pill">Professional Communication</span>
-                <span class="level-pill">Technology Exposure</span>
-              </div>
-            </div>
-            <a href="#openings" class="btn btn-secondary">Explore Early Roles &rarr;</a>
+          <div class="stepper-node">
+            <div class="stepper-step">06 // OFFER</div>
+            <div class="stepper-title">Decision</div>
+            <p class="stepper-desc">Prompt communication of selection decision.</p>
           </div>
-
-          <!-- Experienced -->
-          <div class="level-panel">
-            <div>
-              <div class="eyebrow">SENIOR LEADERSHIP &amp; DEPTH</div>
-              <h3 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Bring Your Experience.</h3>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                Experienced professionals can bring specialized knowledge, leadership, technical expertise, and new perspectives to growing teams and client initiatives.
-              </p>
-              <div class="level-pills-wrap">
-                <span class="level-pill">Technical Architecture</span>
-                <span class="level-pill">Practice Leadership</span>
-                <span class="level-pill">Business Development</span>
-                <span class="level-pill">Recruiting Operations</span>
-                <span class="level-pill">Creative Direction</span>
-              </div>
-            </div>
-            <a href="#openings" class="btn btn-secondary">Explore Senior Openings &rarr;</a>
+          <div class="stepper-node" style="border-color: var(--brand-blue); background: var(--soft-blue-surface);">
+            <div class="stepper-step" style="color: var(--brand-blue-deep);">07 // LAUNCH</div>
+            <div class="stepper-title" style="color: var(--brand-blue);">Onboarding</div>
+            <p class="stepper-desc">Structured orientation and team integration.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 14 — HOW WE HIRE (7 STAGES)
-         ========================================================================== -->
-    <section class="section-spacing" id="how-we-hire" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">TRANSPARENT EVALUATION</div>
-          <h2 class="section-title">A Clearer Hiring Journey.</h2>
-          <p class="section-lead">A structured progression keeping candidates informed throughout the assessment cycle.</p>
-        </div>
-
-        <div class="hiring-process-timeline reveal">
-          <div class="hire-step-box">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">01</span>
-            <strong style="color: #fff; font-size: 0.95rem; margin-bottom: 0.4rem;">APPLICATION</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">Submit your application or professional profile.</p>
-          </div>
-
-          <div class="hire-step-box">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">02</span>
-            <strong style="color: #fff; font-size: 0.95rem; margin-bottom: 0.4rem;">REVIEW</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">The relevant team reviews the submitted information.</p>
-          </div>
-
-          <div class="hire-step-box">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">03</span>
-            <strong style="color: #fff; font-size: 0.95rem; margin-bottom: 0.4rem;">INITIAL CHAT</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">Initial dialogue regarding background and role scope.</p>
-          </div>
-
-          <div class="hire-step-box">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">04</span>
-            <strong style="color: #fff; font-size: 0.95rem; margin-bottom: 0.4rem;">INTERVIEW</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">Selected candidates proceed through interview stages.</p>
-          </div>
-
-          <div class="hire-step-box">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">05</span>
-            <strong style="color: #fff; font-size: 0.95rem; margin-bottom: 0.4rem;">EVALUATION</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">Technical and operational alignment assessment.</p>
-          </div>
-
-          <div class="hire-step-box">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">06</span>
-            <strong style="color: #fff; font-size: 0.95rem; margin-bottom: 0.4rem;">DECISION</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">Decisions communicated promptly to candidates.</p>
-          </div>
-
-          <div class="hire-step-box" style="border-color: var(--border-accent);">
-            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">07</span>
-            <strong style="color: var(--text-accent); font-size: 0.95rem; margin-bottom: 0.4rem;">ONBOARDING</strong>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;">Onboarding follows the applicable engagement process.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 15 & 16 — APPLICATION & GENERAL PROFILE SUBMISSION
-         ========================================================================== -->
-    <section class="section-spacing" id="general-intake">
-      <div class="container">
-        <div class="app-section-grid reveal">
+      <!-- ==================== 07. GENERAL APPLICATION PROFILE INTAKE ==================== -->
+      <section class="ws-section" id="general-intake">
+        <div class="ws-subhead-bar">06 / INTAKE // TALENT COMMUNITY SUBMISSION</div>
+        
+        <div class="app-section-grid">
           <div>
-            <div class="eyebrow">TALENT ACQUISITION</div>
-            <h2 class="section-title">Start With Your Profile.</h2>
-            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; margin: 1.5rem 0 2rem 0;">
-              Your next opportunity may not always appear as an active opening. You can submit your professional profile for consideration when relevant opportunities arise across our divisions.
+            <h2 class="ws-title" style="font-size: 1.85rem;">
+              Start With <span>Your Profile.</span>
+            </h2>
+            <blockquote class="story-focus-quote">
+              Your next opportunity may not always appear as an active vacancy on the board today. Introduce yourself to our practice leads so we can evaluate your skills as new initiatives open.
+            </blockquote>
+            <p style="font-size: 0.925rem; color: var(--secondary-text); line-height: 1.65; margin-top: 1rem;">
+              We maintain an active talent community across software engineering, recruitment operations, sales, and digital cinema.
             </p>
 
-            <div class="privacy-notice-box">
+            <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <strong style="color: #fff; font-size: 0.875rem;">Your Information Matters</strong>
-                <p style="color: var(--text-muted); font-size: 0.8125rem; margin-top: 0.25rem;">
-                  TJR Tech processes application data strictly in accordance with applicable privacy policies.
-                </p>
+                <strong style="font-size: 0.85rem; color: var(--strong-text);">Privacy &amp; Data Ethics</strong>
+                <p style="font-size: 0.75rem; color: var(--secondary-text); margin-top: 0.2rem;">Candidate information is handled strictly for hiring review.</p>
               </div>
-              <a href="/privacy" class="inline-link" style="white-space: nowrap;">Privacy Notice &rarr;</a>
+              <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">Confidential</span>
             </div>
           </div>
 
           <!-- Application Form -->
           <div class="form-container-card">
-            <h3 style="color: #fff; font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">General Candidate Submission</h3>
-            
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--strong-text); margin-bottom: 0.35rem;">Candidate Intake Form</h3>
+            <p style="font-size: 0.85rem; color: var(--secondary-text); margin-bottom: 1.25rem;">
+              Provide your background details and professional links below.
+            </p>
+
             <form id="candidateApplicationForm" onsubmit="handleCandidateApplication(event)">
               <div class="form-group">
-                <label class="form-label" for="appName">Full Name</label>
+                <label class="form-label" for="appName">Full Name *</label>
                 <input class="form-input" type="text" id="appName" required placeholder="e.g. Alex Mercer">
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="appEmail">Email Address</label>
-                <input class="form-input" type="email" id="appEmail" required placeholder="alex.mercer@example.com">
+                <label class="form-label" for="appEmail">Email Address *</label>
+                <input class="form-input" type="email" id="appEmail" required placeholder="alex@example.com">
               </div>
 
               <div class="form-group">
@@ -1829,12 +1977,7 @@
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="appLocation">Current Location</label>
-                <input class="form-input" type="text" id="appLocation" required placeholder="e.g. Hyderabad, India / Dallas, TX">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="appArea">Target Professional Area</label>
+                <label class="form-label" for="appArea">Target Professional Discipline *</label>
                 <select class="form-input" id="appArea" required>
                   <option value="" disabled selected>Select functional area</option>
                   <option value="Technology">Technology / Software / Cloud</option>
@@ -1846,349 +1989,248 @@
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="appExperience">Years of Relevant Experience</label>
-                <input class="form-input" type="text" id="appExperience" placeholder="e.g. 5 Years">
-              </div>
-
-              <div class="form-group">
                 <label class="form-label" for="appLinkedIn">LinkedIn / Portfolio URL</label>
                 <input class="form-input" type="url" id="appLinkedIn" placeholder="https://linkedin.com/in/username">
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="appMessage">Summary / Cover Letter</label>
+                <label class="form-label" for="appMessage">Summary / Candidate Note</label>
                 <textarea class="form-textarea" id="appMessage" placeholder="Brief outline of your background, primary technical skills, and target responsibilities..."></textarea>
               </div>
 
               <div class="form-consent-wrap">
                 <input type="checkbox" id="appConsent" required style="margin-top: 3px;">
-                <label for="appConsent">I confirm that the information provided is accurate to the best of my knowledge.</label>
+                <label for="appConsent">I confirm that the information provided is accurate and agree to be contacted regarding relevant career openings.</label>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <span>Submit Profile for Consideration</span>
+                <span>Submit Profile for Consideration &rarr;</span>
               </button>
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-       SECTION 18 — CAREER FAQ & 19. TALENT COMMUNITY
-       ========================================================================== -->
-    <section class="section-spacing constellation-section" id="career-faq">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
-          <div class="eyebrow" style="justify-content: center;">CLARITY &amp; INFORMATION</div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
+      <!-- ==================== 08. SERVICE SNAPSHOT ==================== -->
+      <section class="ws-section" id="snapshot">
+        <div class="snapshot-matrix-card">
+          <div class="ws-kicker-badge" style="margin-bottom: 1rem;">CAREERS SPECIFICATION MATRIX</div>
+          <div class="snapshot-stream">
+            <div>PEOPLE BUILD TECHNOLOGY <span>•</span> PEOPLE BUILD COMPANIES</div>
+            <div>SOFTWARE <span>•</span> RECRUITING <span>•</span> DIGITAL MEDIA <span>•</span> OPERATIONS</div>
+            <div>HYDERABAD GLOBAL HUB <span>•</span> DISCIPLINED GROWTH</div>
+          </div>
         </div>
+      </section>
 
-        <div class="faq-accordion-wrap reveal">
+      <!-- ==================== 09. FREQUENTLY ASKED QUESTIONS ==================== -->
+      <section class="ws-section" id="career-faq">
+        <div class="ws-kicker-badge">
+          <span>07 / CLARITY // FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="ws-title">Common Questions Regarding <span>Careers at TJR Tech.</span></h2>
+        <p class="ws-subtitle">Direct information concerning application reviews, remote arrangements, and hiring timelines.</p>
+
+        <div class="faq-accordion-wrap">
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Where can I see current openings?</span>
+              <span>Where can I view active vacancies at TJR Tech?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Current opportunities are listed in the Current Opportunities section above when positions are available.</p>
+              <p>Active, verified roles are listed in the Current Opportunities search database on this page. You can filter by department, work type, or experience level.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Can I submit my resume without applying for a specific role?</span>
+              <span>Can I submit my profile even if there is no exact matching vacancy?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Yes. When no suitable opening is available, you can submit your professional profile for future consideration through our candidate intake form.</p>
+              <p>Yes. You can submit your candidate profile through the Candidate Intake Form on this page. Our talent acquisition team reviews general submissions when staffing new client squads and internal teams.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Do you offer remote positions?</span>
+              <span>Does TJR Tech offer remote or hybrid work arrangements?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Work arrangements vary by role. Please refer to the specific job listing for the applicable work arrangement.</p>
+              <p>Work models vary based on the requirements of each role. Certain engineering and recruiting positions support remote work, while other operational and media roles require on-site presence at our Hyderabad hub.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question-btn" aria-expanded="false">
-              <span>Can students or early-career professionals apply?</span>
+              <span>Does submitting a profile guarantee an interview?</span>
               <span class="faq-indicator">+</span>
             </button>
             <div class="faq-answer">
-              <p>Eligibility depends on the specific role and its requirements.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Can experienced professionals apply?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. Experienced professionals can explore roles that match their skills and background.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>What happens after I apply?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Applications are reviewed against the requirements of the relevant role. Candidates may be contacted for further discussion or interview stages where applicable.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Can I apply for multiple positions?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, provided you meet the requirements of the positions. Each application should accurately reflect your relevant experience.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Does submitting a resume guarantee an interview?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>No. Application and interview decisions depend on the requirements of the role and the evaluation process.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Can I update my profile later?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Where the application system supports it, profile information may be updated. Otherwise, you can contact the TJR Tech team regarding relevant changes.</p>
+              <p>No. We evaluate each application against active project needs, technical competence, and communication clarity. We guarantee that verified submissions are reviewed directly by human practice leads.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==========================================================================
-         SECTION 20 — CAREER CTA & 21. BRAND STATEMENT
-         ========================================================================== -->
-    <section class="section-spacing cta-section" id="cta">
-      <div class="container">
-        <div class="cta-container reveal">
-          <div class="eyebrow" style="justify-content: center;">JOIN OUR ORGANIZATION</div>
-          <h2 class="section-title" style="margin-bottom: 1.25rem;">Your Next Chapter Could Start Here.</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
+      <!-- ==================== 10. CALL TO ACTION ==================== -->
+      <section class="ws-section" id="cta" style="margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--soft-blue-surface) 100%); border: 1px solid var(--surface-border); border-radius: 10px; padding: 3rem 2.25rem; box-shadow: var(--shadow-card); text-align: center;">
+          <div class="ws-kicker-badge">08 // CONVERGE // DIRECT ACTION</div>
+          <h2 class="ws-title" style="font-size: 2.35rem;">
+            Your Next Chapter Could <span>Start Here.</span>
+          </h2>
+          <p class="ws-subtitle" style="margin: 0.65rem auto 0 auto; text-align: center;">
             Explore current opportunities or introduce yourself to the TJR Tech team.
           </p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-            <a href="#openings" class="btn btn-primary">
-              <span>View Open Roles</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-            <a href="#general-intake" class="btn btn-secondary">
-              <span>Submit Your Profile</span>
-            </a>
+
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap;">
+            <a href="#openings" class="btn btn-primary">View Open Roles</a>
+            <a href="#general-intake" class="btn btn-secondary">Submit Your Profile</a>
+            <a href="about.html" class="btn btn-secondary">About TJR Tech</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- CONTEXTUAL RIGHT PANEL (INSPECTOR) -->
+    <aside class="app-right-panel" id="appRightPanel">
+      <div>
+        <div class="panel-header">
+          <div>
+            <div class="panel-kicker">INSPECTOR</div>
+            <h3 class="panel-title" id="panelTitle">Careers &amp; Culture</h3>
+          </div>
+          <button class="icon-btn" onclick="toggleRightPanel()" title="Close Inspector">&times;</button>
+        </div>
+
+        <div class="panel-content">
+          <div>
+            <div class="panel-section-label">OVERVIEW</div>
+            <p style="font-size: 0.85rem; color: var(--secondary-text); line-height: 1.6;" id="panelDesc">
+              Explore professional growth opportunities across technology engineering, US IT staffing, digital media production, and business operations at TJR Tech.
+            </p>
+          </div>
+
+          <div>
+            <div class="panel-section-label">TALENT METRICS</div>
+            <ul class="panel-specs-list" id="panelSpecsList">
+              <li class="panel-spec-row">
+                <span>Hub Location</span>
+                <span id="spec-1">Hyderabad, India</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Practices</span>
+                <span id="spec-2">5 Disciplines</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Hiring Cycle</span>
+                <span id="spec-3">7-Stage Evaluation</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="panel-section-label">PRACTICE TEAMS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="panelChips">
+              <span class="chip-tag">Cloud &amp; DevOps</span>
+              <span class="chip-tag">US IT Recruiting</span>
+              <span class="chip-tag">Web Platforms</span>
+              <span class="chip-tag">Creative Media</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="brand-statement-section" aria-label="Brand Closing Progression">
-      <div class="container reveal">
-        <div class="statement-pulse-trio">
-          <span>PEOPLE BUILD TECHNOLOGY.</span>
-          <span>PEOPLE BUILD COMPANIES.</span>
-          <span>PEOPLE BUILD THE FUTURE.</span>
-        </div>
-        <div style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--text-accent); letter-spacing: 0.15em; text-transform: uppercase;">
-          TJR TECH — Technology. Talent. Digital Growth.
-        </div>
+      <div class="panel-footer-actions">
+        <a href="#openings" class="btn btn-primary" style="width: 100%; text-decoration: none;">Explore Openings</a>
+        <a href="about.html" class="btn btn-secondary" style="width: 100%; text-decoration: none;">Company Profile</a>
       </div>
-    </section>
-  </main>
+    </aside>
+
+  </div>
 
   <!-- ==========================================================================
-       SECTION 22 — FOOTER
+       GLOBAL COMMAND SEARCH MODAL (CTRL+K)
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-title">TJR TECH</div>
-          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
-          <p class="footer-desc">
-            A technology and professional services organization delivering integrated solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
-          </p>
-        </div>
-
-        <div>
-          <div class="footer-heading">Company</div>
-          <ul class="footer-links-list">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/directors">Leadership</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Services</div>
-          <ul class="footer-links-list">
-            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
-            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-            <li><a href="/services/web-development">Web Development</a></li>
-            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Solutions</div>
-          <ul class="footer-links-list">
-            <li><a href="/solutions/for-businesses">For Businesses</a></li>
-            <li><a href="/solutions/for-consultants">For Consultants</a></li>
-            <li><a href="/solutions/for-professionals">For Professionals</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Work</div>
-          <ul class="footer-links-list">
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/services/ads-digital-media#selected-work">Selected Work</a></li>
-          </ul>
-        </div>
+  <div class="search-modal-backdrop" id="searchBackdrop">
+    <div class="search-modal-card">
+      <div class="search-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="globalSearchField" placeholder="Search roles, skills, and disciplines..." autocomplete="off">
+        <button class="icon-btn" onclick="closeSearch()">&times;</button>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-        </div>
-      </div>
+      <div class="search-results-list" id="searchResultsContainer"></div>
     </div>
-  </footer>
+  </div>
 
   <!-- ==========================================================================
-       SECTION 07 — JOB DETAIL MODAL (DEDICATED VIEW)
+       JOB DETAIL MODAL (DEDICATED VIEW)
        ========================================================================== -->
   <div class="modal-overlay" id="jobDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalJobTitle">
     <div class="modal-container-box">
       <button class="modal-close-trigger" id="closeJobDetailBtn" aria-label="Close modal">&times;</button>
       
-      <div class="eyebrow" id="modalJobDepartment">DEPARTMENT</div>
-      <h3 id="modalJobTitle" style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Job Title</h3>
+      <div class="ws-kicker-badge" id="modalJobDepartment">DEPARTMENT</div>
+      <h3 id="modalJobTitle" style="font-size: 1.85rem; font-weight: 800; color: var(--strong-text); margin-top: 0.4rem; margin-bottom: 0.5rem;">Job Title</h3>
       
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-accent); margin-bottom: 2rem;">
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; font-family: var(--tech-font); font-size: 0.75rem; color: var(--brand-blue); font-weight: 700; margin-bottom: 1.5rem;">
         <span id="modalJobLocation">Location</span> &bull; 
         <span id="modalJobWorkType">Work Type</span> &bull; 
         <span id="modalJobEmploymentType">Employment Type</span> &bull; 
         <span id="modalJobExperience">Experience</span>
       </div>
 
-      <div style="margin-bottom: 2rem;">
-        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.75rem;">About the Role</h4>
-        <p id="modalJobDesc" style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;"></p>
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="color: var(--strong-text); font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem;">Role Overview</h4>
+        <p id="modalJobDesc" style="color: var(--secondary-text); line-height: 1.65; font-size: 0.9rem;"></p>
       </div>
 
-      <div style="margin-bottom: 2rem;">
-        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.75rem;">Responsibilities</h4>
-        <ul id="modalJobResp" style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem; padding-left: 1.25rem;"></ul>
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="color: var(--strong-text); font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem;">Core Responsibilities</h4>
+        <ul id="modalJobResp" style="color: var(--secondary-text); line-height: 1.65; font-size: 0.885rem; padding-left: 1.25rem;"></ul>
       </div>
 
-      <div style="margin-bottom: 2rem;">
-        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.75rem;">Requirements</h4>
-        <ul id="modalJobReq" style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem; padding-left: 1.25rem;"></ul>
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="color: var(--strong-text); font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem;">Candidate Requirements</h4>
+        <ul id="modalJobReq" style="color: var(--secondary-text); line-height: 1.65; font-size: 0.885rem; padding-left: 1.25rem;"></ul>
       </div>
 
-      <div style="margin-bottom: 2.5rem;" id="modalJobTechWrap">
-        <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.75rem;">Technologies</h4>
-        <div id="modalJobTech" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+      <div style="margin-bottom: 2rem;" id="modalJobTechWrap">
+        <h4 style="color: var(--strong-text); font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem;">Primary Technologies &amp; Tools</h4>
+        <div id="modalJobTech" style="display: flex; flex-wrap: wrap; gap: 0.45rem;"></div>
       </div>
 
-      <a href="#general-intake" class="btn btn-primary" id="applyForJobBtn" style="width: 100%;">
-        <span>Apply for this Role</span>
-      </a>
+      <button class="btn btn-primary" id="applyForJobBtn" style="width: 100%;">
+        <span>Apply for this Role &rarr;</span>
+      </button>
     </div>
   </div>
 
   <!-- ==========================================================================
-       MODULAR VANILLA JAVASCRIPT & CMS DATA ENGINE
+       MASTER CORE DATA & JAVASCRIPT CONTROLLER
        ========================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      // 1. Dynamic Copyright Year
-      const yearHolder = document.getElementById('yearHolder');
-      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
-
-      // 2. Navigation Scroll & Progress Bar
-      const header = document.getElementById('mainHeader');
-      const progressBar = document.getElementById('scrollProgress');
-
-      window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-
-        if (progressBar) progressBar.style.width = scrolled + '%';
-        if (winScroll > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
+      // 1. Data Model for Contextual Inspector
+      const INSPECTOR_DATA = {
+        default: {
+          title: 'Careers & Culture',
+          desc: 'Explore professional growth opportunities across technology engineering, US IT staffing, digital media production, and business operations at TJR Tech.',
+          specs: [
+            { k: 'Hub Location', v: 'Hyderabad, India' },
+            { k: 'Practices', v: '5 Disciplines' },
+            { k: 'Hiring Cycle', v: '7-Stage Evaluation' }
+          ],
+          chips: ['Cloud & DevOps', 'US IT Recruiting', 'Web Platforms', 'Creative Media']
         }
-      }, { passive: true });
+      };
 
-      // 3. Mobile Navigation Drawer
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileDrawer = document.getElementById('mobileMenuDrawer');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function toggleMobile() {
-        const isOpen = mobileDrawer.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      }
-
-      if (mobileMenuBtn && mobileDrawer) {
-        mobileMenuBtn.addEventListener('click', toggleMobile);
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (mobileDrawer.classList.contains('active')) toggleMobile();
-          });
-        });
-      }
-
-      // 4. Scroll Reveal Observer
-      const reveals = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-        reveals.forEach(el => revealObserver.observe(el));
-      } else {
-        reveals.forEach(el => el.classList.add('active'));
-      }
-
-      // 5. Careers Dynamic CMS Architecture & Job Database (Sections 05, 06, 07)
-      // Only jobs with status === 'OPEN' are publicly visible. Set status to 'CLOSED' or empty array to see "NO CURRENT OPENINGS".
+      // 2. Verified Job Database (CMS Structure)
       const jobsDatabase = [
         {
           id: "job-01",
@@ -2246,15 +2288,148 @@
         }
       ];
 
+      // Submenu Toggle Engine
+      window.toggleSidebarMenu = function (menuId, toggleBtnId) {
+        const menu = document.getElementById(menuId);
+        const btn = document.getElementById(toggleBtnId);
+        if (!menu || !btn) return;
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      };
+
+      window.toggleRightPanel = function () {
+        const shell = document.getElementById('appShell');
+        shell.classList.toggle('panel-collapsed');
+      };
+
+      document.getElementById('togglePanelBtn').addEventListener('click', toggleRightPanel);
+
+      // Mobile Menu Toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      if (window.innerWidth <= 768) {
+        mobileMenuToggle.style.display = 'inline-flex';
+      }
+      mobileMenuToggle.addEventListener('click', () => {
+        document.getElementById('appSidebar').classList.toggle('mobile-open');
+      });
+
+      // Global Search Overlay (Ctrl+K)
+      const searchBackdrop = document.getElementById('searchBackdrop');
+      const searchInput = document.getElementById('globalSearchField');
+      const searchResultsContainer = document.getElementById('searchResultsContainer');
+
+      const SEARCH_ENTRIES = [
+        { title: 'Home Dashboard', tag: 'Page', href: 'index.html' },
+        { title: 'About TJR Tech', tag: 'Page', href: 'about.html' },
+        { title: 'US IT Staffing', tag: 'Service', href: 'us-it-staffing.html' },
+        { title: 'US IT Bench Sales', tag: 'Service', href: 'us-it-bench-sales.html' },
+        { title: 'Web Development', tag: 'Service', href: 'web-development.html' },
+        { title: 'Ads & Digital Media', tag: 'Service', href: 'ads-digital-media.html' },
+        { title: 'Solutions Overview', tag: 'Solution', href: 'solutions.html' },
+        { title: 'For Consultants', tag: 'Solution', href: 'for-consultants.html' },
+        { title: 'For Professionals', tag: 'Solution', href: 'for-professionals.html' },
+        { title: 'For Businesses', tag: 'Solution', href: 'for-businesses.html' },
+        { title: 'Portfolio Showcase', tag: 'Page', href: 'portfolio.html' },
+        { title: 'Insights', tag: 'Page', href: 'insights.html' },
+        { title: 'Careers at TJR Tech', tag: 'Page', href: 'careers.html' },
+        { title: 'Senior DevOps Engineer', tag: 'Job', role: 'senior-devops-engineer' },
+        { title: 'US IT Recruitment Lead', tag: 'Job', role: 'us-it-recruitment-lead' },
+        { title: 'Candidate Profile Intake', tag: 'Section', href: '#general-intake' },
+        { title: '7-Stage Hiring Process', tag: 'Section', href: '#how-we-hire' },
+        { title: 'Contact', tag: 'Page', href: 'contact.html' }
+      ];
+
+      function openSearch() {
+        searchBackdrop.classList.add('open');
+        searchInput.focus();
+        renderSearchResults('');
+      }
+
+      function closeSearch() {
+        searchBackdrop.classList.remove('open');
+        searchInput.value = '';
+      }
+
+      function renderSearchResults(query) {
+        const q = query.toLowerCase().trim();
+        const matches = q ? SEARCH_ENTRIES.filter(e => e.title.toLowerCase().includes(q) || e.tag.toLowerCase().includes(q)) : SEARCH_ENTRIES;
+
+        searchResultsContainer.innerHTML = matches.map(m => {
+          if (m.role) {
+            return `
+              <div class="search-result-row" onclick="openJobDetail('${m.role}'); closeSearch();">
+                <span>${m.title}</span>
+                <span class="s-tag">${m.tag}</span>
+              </div>
+            `;
+          } else {
+            return `
+              <a class="search-result-row" href="${m.href}" onclick="closeSearch()">
+                <span>${m.title}</span>
+                <span class="s-tag">${m.tag}</span>
+              </a>
+            `;
+          }
+        }).join('');
+      }
+
+      document.getElementById('searchTriggerBtn').addEventListener('click', openSearch);
+
+      searchInput.addEventListener('input', (e) => {
+        renderSearchResults(e.target.value);
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          searchBackdrop.classList.contains('open') ? closeSearch() : openSearch();
+        }
+        if (e.key === 'Escape') {
+          closeSearch();
+          closeJobDetail();
+        }
+      });
+
+      searchBackdrop.addEventListener('click', (e) => {
+        if (e.target === searchBackdrop) closeSearch();
+      });
+
+      // Scroll Progress Indicator
+      const workspace = document.getElementById('mainWorkspace');
+      const progressBar = document.getElementById('scrollProgress');
+
+      if (workspace && progressBar) {
+        workspace.addEventListener('scroll', () => {
+          const scrollPos = workspace.scrollTop;
+          const totalHeight = workspace.scrollHeight - workspace.clientHeight;
+          const scrolled = (scrollPos / totalHeight) * 100;
+          progressBar.style.width = scrolled + '%';
+        }, { passive: true });
+      }
+
+      // 3. Job Search & Filtering Engine
       const jobsContainer = document.getElementById('jobsContainer');
-      const searchInput = document.getElementById('jobSearchInput');
+      const jobSearchInput = document.getElementById('jobSearchInput');
       const deptFilter = document.getElementById('departmentFilter');
       const workFilter = document.getElementById('workTypeFilter');
       const expFilter = document.getElementById('experienceFilter');
       const clearBtn = document.getElementById('clearFiltersBtn');
 
+      window.setDepartmentFilter = function (dept) {
+        if (deptFilter) deptFilter.value = dept;
+        renderJobs();
+        const openingsEl = document.getElementById('openings');
+        if (openingsEl) openingsEl.scrollIntoView({ behavior: 'smooth' });
+      };
+
       function renderJobs() {
-        const query = searchInput.value.toLowerCase().trim();
+        const query = jobSearchInput.value.toLowerCase().trim();
         const selectedDept = deptFilter.value;
         const selectedWork = workFilter.value;
         const selectedExp = expFilter.value;
@@ -2278,13 +2453,13 @@
 
         if (filtered.length === 0) {
           jobsContainer.innerHTML = `
-            <div class="no-jobs-box">
-              <div class="eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">STATUS: UPDATED</div>
-              <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">NO MATCHING OPENINGS</h3>
-              <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 1.5rem auto; font-size: 0.95rem;">
-                No open roles match your current search criteria. You can still submit your professional profile for consideration as new opportunities open.
+            <div style="padding: 3rem; background: var(--card-bg); border: 1px dashed var(--surface-border); border-radius: 10px; text-align: center;">
+              <div class="ws-kicker-badge" style="margin-bottom: 0.5rem;">STATUS: REAL-TIME</div>
+              <h3 style="color: var(--strong-text); font-size: 1.3rem; margin-bottom: 0.5rem;">No Matching Vacancies Found</h3>
+              <p style="color: var(--secondary-text); max-width: 500px; margin: 0 auto 1.5rem auto; font-size: 0.875rem;">
+                No open roles match your current search criteria. You can submit your candidate profile for consideration when relevant opportunities arise.
               </p>
-              <a href="#general-intake" class="btn btn-primary">Submit Your Profile</a>
+              <a href="#general-intake" class="btn btn-primary btn-sm">Submit Candidate Profile</a>
             </div>
           `;
           return;
@@ -2295,26 +2470,25 @@
           card.className = 'job-card-item';
           card.innerHTML = `
             <div>
-              <span class="eyebrow" style="font-size: 0.7rem; margin-bottom: 0.35rem;">${job.department.toUpperCase()}</span>
-              <h3 style="color: #fff; font-size: 1.35rem; font-weight: 700;">${job.title}</h3>
-              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.4rem; line-height: 1.5;">${job.shortDescription}</p>
+              <span class="chip-tag" style="background: var(--soft-blue-surface); color: var(--brand-blue); font-size: 0.65rem;">${job.department.toUpperCase()}</span>
+              <h3 style="color: var(--strong-text); font-size: 1.25rem; font-weight: 800; margin-top: 0.35rem;">${job.title}</h3>
+              <p style="color: var(--secondary-text); font-size: 0.85rem; margin-top: 0.35rem; line-height: 1.5;">${job.shortDescription}</p>
             </div>
             <div>
-              <div style="font-size: 0.875rem; color: var(--text-primary); font-weight: 600;">${job.location}</div>
+              <div style="font-size: 0.85rem; color: var(--strong-text); font-weight: 700;">${job.location}</div>
               <div class="job-meta-tag">${job.workType} &bull; ${job.employmentType}</div>
             </div>
             <div>
-              <span class="job-meta-tag" style="color: var(--text-accent); font-family: var(--font-mono);">${job.experience}</span>
+              <span class="chip-tag">${job.experience}</span>
             </div>
             <div>
-              <button class="inline-link view-role-btn" data-slug="${job.slug}">View Role &rarr;</button>
+              <button class="btn btn-secondary btn-sm view-role-trigger" data-slug="${job.slug}">View Details &rarr;</button>
             </div>
           `;
           jobsContainer.appendChild(card);
         });
 
-        // Attach modal trigger to dynamically generated buttons
-        document.querySelectorAll('.view-role-btn').forEach(btn => {
+        document.querySelectorAll('.view-role-trigger').forEach(btn => {
           btn.addEventListener('click', () => {
             const slug = btn.getAttribute('data-slug');
             openJobDetail(slug);
@@ -2322,29 +2496,27 @@
         });
       }
 
-      // Event Listeners for Filters
-      searchInput.addEventListener('input', renderJobs);
+      jobSearchInput.addEventListener('input', renderJobs);
       deptFilter.addEventListener('change', renderJobs);
       workFilter.addEventListener('change', renderJobs);
       expFilter.addEventListener('change', renderJobs);
 
       clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
+        jobSearchInput.value = '';
         deptFilter.value = '';
         workFilter.value = '';
         expFilter.value = '';
         renderJobs();
       });
 
-      // Initial Render
       renderJobs();
 
-      // 6. Job Detail Modal View Handlers (Section 07)
+      // 4. Job Detail Modal View Handlers
       const jobModal = document.getElementById('jobDetailModal');
       const closeJobModalBtn = document.getElementById('closeJobDetailBtn');
       const applyForJobBtn = document.getElementById('applyForJobBtn');
 
-      function openJobDetail(slug) {
+      window.openJobDetail = function (slug) {
         const job = jobsDatabase.find(j => j.slug === slug);
         if (!job) return;
 
@@ -2376,28 +2548,29 @@
         techWrap.innerHTML = '';
         job.technologies.forEach(t => {
           const span = document.createElement('span');
-          span.className = 'level-pill';
+          span.className = 'chip-tag';
           span.textContent = t;
           techWrap.appendChild(span);
         });
 
-        // Prepopulate area in application form
         applyForJobBtn.onclick = () => {
           closeJobDetail();
           const targetArea = document.getElementById('appArea');
           if (targetArea) {
             targetArea.value = job.department === 'Technology' ? 'Technology' : 'Staffing';
           }
+          const intakeEl = document.getElementById('general-intake');
+          if (intakeEl) intakeEl.scrollIntoView({ behavior: 'smooth' });
         };
 
         jobModal.classList.add('active');
         document.body.style.overflow = 'hidden';
-      }
+      };
 
-      function closeJobDetail() {
+      window.closeJobDetail = function () {
         jobModal.classList.remove('active');
         document.body.style.overflow = '';
-      }
+      };
 
       if (closeJobModalBtn) closeJobModalBtn.addEventListener('click', closeJobDetail);
       if (jobModal) {
@@ -2406,147 +2579,14 @@
         });
       }
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && jobModal.classList.contains('active')) closeJobDetail();
-      });
+      // 5. Candidate Profile Application Form Submission
+      window.handleCandidateApplication = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your candidate profile. Our talent acquisition and recruitment leads will review your background and follow up if your experience aligns with an open role.');
+        e.target.reset();
+      };
 
-      // 7. Hero Careers Canvas (People -> Technology -> Ideas -> Opportunity)
-      (function initCareersHeroCanvas() {
-        const canvas = document.getElementById('careersHeroCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        let width, height;
-        let angle = 0;
-
-        function resize() {
-          const rect = canvas.parentElement.getBoundingClientRect();
-          width = canvas.width = rect.width;
-          height = canvas.height = rect.height;
-        }
-
-        const nodes = [
-          { label: 'PEOPLE', offset: 0 },
-          { label: 'TECHNOLOGY', offset: Math.PI / 2 },
-          { label: 'IDEAS', offset: Math.PI },
-          { label: 'OPPORTUNITY', offset: (3 * Math.PI) / 2 }
-        ];
-
-        function render() {
-          ctx.clearRect(0, 0, width, height);
-
-          const cx = width / 2;
-          const cy = height / 2;
-          const radius = Math.min(width, height) * 0.38;
-
-          // Central TJR Tech Core
-          ctx.beginPath();
-          ctx.arc(cx, cy, 32, 0, Math.PI * 2);
-          ctx.fillStyle = '#0c183d';
-          ctx.fill();
-          ctx.strokeStyle = '#2dd4bf';
-          ctx.lineWidth = 2;
-          ctx.stroke();
-
-          ctx.font = '11px Space Grotesk, monospace';
-          ctx.fillStyle = '#fff';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.fillText('TJR TECH', cx, cy);
-
-          // Connected Satellite Nodes
-          nodes.forEach(node => {
-            const rad = node.offset + angle;
-            const nx = cx + Math.cos(rad) * radius;
-            const ny = cy + Math.sin(rad) * radius;
-
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(nx, ny);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.22)';
-            ctx.lineWidth = 1.2;
-            ctx.setLineDash([4, 4]);
-            ctx.stroke();
-            ctx.setLineDash([]);
-
-            ctx.beginPath();
-            ctx.arc(nx, ny, 16, 0, Math.PI * 2);
-            ctx.fillStyle = '#070f26';
-            ctx.fill();
-            ctx.strokeStyle = '#38bdf8';
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-
-            ctx.font = '10px Space Grotesk, monospace';
-            ctx.fillStyle = '#94a3b8';
-            const labelY = ny > cy ? ny + 24 : ny - 24;
-            ctx.fillText(node.label, nx, labelY);
-          });
-
-          angle += 0.0025;
-          requestAnimationFrame(render);
-        }
-
-        window.addEventListener('resize', resize);
-        resize();
-        render();
-      })();
-
-      // 8. Cross Functional Canvas (Section 11)
-      (function initCrossFunctionalCanvas() {
-        const canvas = document.getElementById('crossFunctionalCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        let width, height;
-
-        function resize() {
-          const rect = canvas.parentElement.getBoundingClientRect();
-          width = canvas.width = rect.width;
-          height = canvas.height = rect.height;
-          draw();
-        }
-
-        function draw() {
-          ctx.clearRect(0, 0, width, height);
-
-          const cx = width / 2;
-          const cy = height / 2;
-
-          const satellites = [
-            { name: 'TECHNOLOGY', x: 0.2, y: 0.25 },
-            { name: 'STAFFING', x: 0.8, y: 0.25 },
-            { name: 'SALES', x: 0.85, y: 0.65 },
-            { name: 'DIGITAL', x: 0.5, y: 0.85 },
-            { name: 'CREATIVE', x: 0.15, y: 0.65 },
-            { name: 'OPERATIONS', x: 0.5, y: 0.12 }
-          ];
-
-          satellites.forEach(s => {
-            const sx = width * s.x;
-            const sy = height * s.y;
-
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(sx, sy);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.2)';
-            ctx.lineWidth = 1;
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.arc(sx, sy, 7, 0, Math.PI * 2);
-            ctx.fillStyle = '#2dd4bf';
-            ctx.fill();
-
-            ctx.font = '11px Space Grotesk, monospace';
-            ctx.fillStyle = '#94a3b8';
-            ctx.fillText(s.name, sx + 12, sy + 4);
-          });
-        }
-
-        window.addEventListener('resize', resize);
-        resize();
-      })();
-
-      // 9. FAQ Accordion Interaction
+      // 6. FAQ Accordion Interaction
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
         const btn = item.querySelector('.faq-question-btn');
@@ -2568,12 +2608,80 @@
         });
       });
 
-      // 10. General Application Form Submission
-      window.handleCandidateApplication = function (e) {
-        e.preventDefault();
-        alert('Thank you for submitting your candidate profile. Our recruitment and talent teams will review your information and follow up if your experience aligns with an open role.');
-        e.target.reset();
-      };
+      // 7. Interactive Hero Careers Canvas Visualizer
+      (function initCareersHeroCanvas() {
+        const canvas = document.getElementById('careersHeroCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let angle = 0;
+
+        function resize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          width = canvas.width = rect.width;
+          height = canvas.height = rect.height;
+        }
+
+        const nodes = [
+          { label: 'PEOPLE', offset: 0, color: '#315FCE' },
+          { label: 'TECHNOLOGY', offset: Math.PI / 2, color: '#168C87' },
+          { label: 'IDEAS', offset: Math.PI, color: '#7766C8' },
+          { label: 'OPPORTUNITY', offset: (3 * Math.PI) / 2, color: '#C47A4A' }
+        ];
+
+        function render() {
+          ctx.clearRect(0, 0, width, height);
+
+          const cx = width / 2;
+          const cy = height / 2;
+          const radius = Math.min(width, height) * 0.38;
+
+          // Central TJR Tech Core
+          ctx.beginPath();
+          ctx.arc(cx, cy, 30, 0, Math.PI * 2);
+          ctx.fillStyle = '#315FCE';
+          ctx.fill();
+
+          ctx.font = '700 10px Space Grotesk, monospace';
+          ctx.fillStyle = '#FFFFFF';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText('TJR TECH', cx, cy);
+
+          // Connected Satellite Nodes
+          nodes.forEach(node => {
+            const rad = node.offset + angle;
+            const nx = cx + Math.cos(rad) * radius;
+            const ny = cy + Math.sin(rad) * radius;
+
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(nx, ny);
+            ctx.strokeStyle = 'rgba(49, 95, 206, 0.2)';
+            ctx.lineWidth = 1.2;
+            ctx.setLineDash([4, 4]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            ctx.beginPath();
+            ctx.arc(nx, ny, 14, 0, Math.PI * 2);
+            ctx.fillStyle = node.color;
+            ctx.fill();
+
+            ctx.font = '700 9px Space Grotesk, monospace';
+            ctx.fillStyle = '#17253B';
+            const labelY = ny > cy ? ny + 20 : ny - 20;
+            ctx.fillText(node.label, nx, labelY);
+          });
+
+          angle += 0.0025;
+          requestAnimationFrame(render);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        render();
+      })();
     })();
   </script>
 </body>
