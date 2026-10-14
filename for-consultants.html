@@ -5,143 +5,276 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO Metadata -->
-  <title>Solutions for IT Consultants | TJR Tech</title>
+  <title>Solutions for IT Consultants — Systems Platform • TJR Tech</title>
   <meta name="description" content="TJR Tech provides structured support for US IT technology consultants, including profile positioning, opportunity alignment, submission coordination, interview communication, and placement support.">
   <meta name="keywords" content="IT Consultant Solutions, US IT Bench Sales, Profile Positioning, Requirement Alignment, Submission Coordination, IT Placement Support, TJR Tech">
-  <meta name="theme-color" content="#020617">
-  <link rel="canonical" href="https://www.tjrtech.com/solutions/for-consultants">
+  <link rel="canonical" href="for-consultants.html">
 
-  <!-- Open Graph / Protocol -->
+  <!-- Open Graph / Meta Protocol -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tjrtech.com/solutions/for-consultants">
-  <meta property="og:title" content="Solutions for IT Consultants | TJR Tech">
+  <meta property="og:url" content="for-consultants.html">
+  <meta property="og:title" content="Solutions for IT Consultants — Systems Platform • TJR Tech">
   <meta property="og:description" content="Your Experience. Your Skills. Your Next Opportunity. Structured support for technology consultants navigating the US IT staffing ecosystem.">
   <meta property="og:site_name" content="TJR TECH">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Solutions for IT Consultants | TJR Tech">
-  <meta name="twitter:description" content="Structured profile positioning, requirement matching, and submission coordination for technology consultants.">
-
-  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk (Exact Match to Master Dashboard) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       01. DESIGN SYSTEM & CSS VARIABLES
+       01. DESIGN TOKENS & MASTER COLOR SYSTEM (EXACT MATCH TO INDEX & SOLUTIONS)
        ========================================================================== */
     :root {
-      --bg-primary: #020617;        /* Near black void */
-      --bg-secondary: #070f26;      /* Deep midnight blue */
-      --bg-tertiary: #0c183d;       /* Dark slate / graphite */
-      --bg-surface: #0e1d47;
-      --bg-card: rgba(12, 24, 61, 0.45);
-      --bg-card-hover: rgba(18, 36, 88, 0.75);
+      /* Surfaces & Canvases */
+      --app-bg: #F3F6FA;
+      --workspace-bg: #F8FAFD;
+      --card-bg: #FFFFFF;
+      --card-bg-hover: #FCFDFF;
+      --surface-border: #D7E0EC;
+      --surface-border-light: #E7EDF6;
 
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-medium: rgba(255, 255, 255, 0.16);
-      --border-accent: rgba(45, 212, 191, 0.35);
+      /* Primary Brand Royal Blues */
+      --brand-blue: #315FCE;
+      --brand-blue-deep: #23479D;
+      --brand-blue-secondary: #527FE0;
+      --soft-blue-surface: #E6EDFF;
+      --soft-blue-hover: #DCE6FD;
 
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
-      --text-accent: #2dd4bf;       /* Teal Accent */
-      --text-accent-cyan: #38bdf8;  /* Electric Sky Accent */
+      /* High-Contrast Typography */
+      --strong-text: #17253B;
+      --secondary-text: #596A82;
+      --muted-text: #8696AD;
+      --white-text: #FFFFFF;
 
-      --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
-      --glow-teal: rgba(45, 212, 191, 0.14);
+      /* Semantic Practice Accents (Consultant Primary: Accent Teal) */
+      --accent-teal: #168C87;
+      --soft-teal: #E0F4F1;
+      --soft-teal-hover: #D2EFEA;
+      --accent-copper: #C47A4A;
+      --soft-copper: #F8EADF;
+      --accent-violet: #7766C8;
+      --soft-violet: #EEEAFE;
+      --active-green: #1F9268;
 
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-mono: 'Space Grotesk', monospace;
+      /* Dimensions & Layout */
+      --topbar-height: 64px;
+      --sidebar-width: 260px;
+      --right-panel-width: 350px;
+      --app-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --tech-font: 'Space Grotesk', monospace;
 
-      --container-max: 1280px;
-      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 14px;
+      /* Shadows & Motion */
+      --shadow-sm: 0 2px 6px rgba(23, 37, 59, 0.04);
+      --shadow-card: 0 4px 18px rgba(23, 37, 59, 0.05), 0 1px 3px rgba(23, 37, 59, 0.03);
+      --shadow-hover: 0 12px 28px rgba(22, 140, 135, 0.12), 0 3px 8px rgba(23, 37, 59, 0.04);
+      --shadow-panel: -4px 0 24px rgba(23, 37, 59, 0.06);
+      --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.22s var(--ease-bounce);
     }
 
-    /* Reset & Base */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-    }
-
-    body {
-      font-family: var(--font-sans);
-      line-height: 1.65;
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--app-bg);
+      color: var(--strong-text);
+      font-family: var(--app-font);
+      font-size: 14px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      background: var(--bg-primary);
     }
 
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E4; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-teal); }
+
+    /* Scroll Progress Bar */
     #scrollProgress {
       position: fixed;
       top: 0;
       left: 0;
       width: 0%;
-      height: 2.5px;
-      background: var(--accent-gradient);
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-teal) 0%, var(--brand-blue) 100%);
       z-index: 10000;
       transition: width 0.1s linear;
     }
 
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 2rem;
+    /* ==========================================================================
+       02. THREE-PANEL MASTER APPLICATION SHELL
+       ========================================================================== */
+    .app-shell {
+      display: grid;
+      grid-template-rows: var(--topbar-height) 1fr;
+      grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
+      grid-template-areas:
+        "top top top"
+        "side main panel";
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transition: grid-template-columns 0.28s var(--ease-bounce);
     }
 
-    .section-spacing {
-      padding: 7.5rem 0;
+    .app-shell.panel-collapsed {
+      grid-template-columns: var(--sidebar-width) 1fr 0px;
+    }
+
+    /* ==========================================================================
+       03. TOP COMMAND NAVIGATION BAR
+       ========================================================================== */
+    .app-topbar {
+      grid-area: top;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .brand-id {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
+      border-radius: 7px;
+      color: #ffffff;
+      font-family: var(--tech-font);
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 8px rgba(49, 95, 206, 0.28);
       position: relative;
+      overflow: hidden;
     }
 
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 100%);
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--strong-text);
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      font-family: var(--tech-font);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--text-accent);
-      margin-bottom: 0.85rem;
-      display: inline-flex;
+    }
+
+    .topbar-search-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      color: var(--secondary-text);
+      font-size: 0.825rem;
+      cursor: pointer;
+      width: 310px;
+      transition: var(--transition);
+      box-shadow: inset 0 1px 2px rgba(23, 37, 59, 0.03);
+    }
+
+    .topbar-search-trigger:hover {
+      background: #ffffff;
+      border-color: var(--accent-teal);
+      color: var(--strong-text);
+      box-shadow: 0 2px 8px rgba(22, 140, 135, 0.1);
+    }
+
+    .kbd-shortcut {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--surface-border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: var(--secondary-text);
+      margin-left: auto;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .telemetry-chip {
+      display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      background: var(--app-bg);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 12px;
-      height: 1.5px;
-      background: var(--text-accent);
+    .pulse-dot-teal {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      box-shadow: 0 0 0 2px rgba(22, 140, 135, 0.25);
+      animation: pulseGlowTeal 2.4s infinite;
     }
 
-    .section-title {
-      font-size: clamp(2rem, 3.5vw, 3.25rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      color: var(--text-primary);
-    }
-
-    .section-lead {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 680px;
-      margin-top: 1rem;
-      line-height: 1.6;
+    @keyframes pulseGlowTeal {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     /* Buttons */
@@ -149,2188 +282,1816 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
-      padding: 0.95rem 1.85rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      border-radius: var(--radius-sm);
-      transition: var(--transition-smooth);
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
+      transition: var(--transition);
       border: 1px solid transparent;
+      outline: none;
       white-space: nowrap;
+      user-select: none;
     }
 
-    .btn-primary {
-      background: var(--accent-gradient);
-      color: #020617;
-      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.2);
+    .btn-teal {
+      background: var(--accent-teal);
+      color: var(--white-text);
+      border-color: var(--accent-teal);
+      box-shadow: 0 2px 6px rgba(22, 140, 135, 0.24);
     }
 
-    .btn-primary:hover {
-      box-shadow: 0 6px 26px rgba(45, 212, 191, 0.35);
-      transform: translateY(-2px);
+    .btn-teal:hover {
+      background: #11706c;
+      border-color: #11706c;
+      box-shadow: 0 4px 12px rgba(22, 140, 135, 0.32);
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-primary);
-      border-color: var(--border-medium);
+      background: var(--card-bg);
+      color: var(--strong-text);
+      border-color: var(--surface-border);
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
+      background: var(--soft-teal);
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
     }
 
-    .inline-link {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-accent);
-      text-decoration: none;
+    .btn-sm {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: gap 0.2s ease;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      color: var(--secondary-text);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
-    .inline-link:hover {
-      gap: 0.75rem;
+    .icon-btn:hover {
+      background: var(--soft-teal);
+      color: var(--accent-teal);
+      border-color: var(--accent-teal);
     }
 
     /* ==========================================================================
-       02. GLOBAL HEADER & NAVIGATION
+       04. PERSISTENT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER)
        ========================================================================== */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: 1px solid transparent;
-      transition: background 0.35s ease, border-color 0.35s ease, height 0.35s ease;
-      height: 86px;
+    .app-sidebar {
+      grid-area: side;
+      background: #FFFFFF;
+      border-right: 1px solid var(--surface-border);
       display: flex;
-      align-items: center;
-    }
-
-    .site-header.scrolled {
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      height: 72px;
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      width: 100%;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text-accent);
-    }
-
-    .logo-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-link {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.5rem 0;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: var(--text-primary);
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: -1rem;
-      background: rgba(7, 15, 38, 0.96);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 0.75rem 0;
-      min-width: 250px;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
-      transition: all 0.25s ease;
-      list-style: none;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-
-    .nav-item:hover .dropdown-menu {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
-    .dropdown-item a {
-      display: block;
-      padding: 0.65rem 1.25rem;
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .dropdown-item a:hover, .dropdown-item a.active-item {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-accent);
-    }
-
-    .mobile-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0.5rem;
-    }
-
-    .mobile-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      transition: var(--transition-smooth);
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: var(--bg-primary);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      padding: 6rem 2rem 3rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 1.25rem 0.85rem;
       overflow-y: auto;
     }
 
-    .mobile-menu.active {
-      transform: translateX(0);
+    .nav-group-title {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.6rem 0.75rem 0.3rem 0.75rem;
     }
 
-    .mobile-nav-list {
+    .nav-menu {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 0.2rem;
     }
 
-    .mobile-nav-list a {
-      font-size: 1.25rem;
+    .nav-item-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 0.85rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: var(--secondary-text);
+      font-size: 0.835rem;
       font-weight: 600;
-      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
       text-decoration: none;
     }
 
-    .mobile-submenu {
-      list-style: none;
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+    .nav-item-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, stroke 0.2s ease;
     }
 
-    .mobile-submenu a {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      font-weight: 400;
+    .nav-item-btn:hover {
+      background: var(--app-bg);
+      color: var(--strong-text);
+    }
+
+    .nav-item-btn:hover svg {
+      stroke: var(--accent-teal);
+    }
+
+    .nav-item-btn.active {
+      background: var(--soft-teal);
+      color: var(--accent-teal);
+      font-weight: 700;
+      border-color: rgba(22, 140, 135, 0.2);
+    }
+
+    .nav-item-btn.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3.5px;
+      background: var(--accent-teal);
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Submenus */
+    .nav-toggle-btn {
+      justify-content: flex-start;
+    }
+
+    .nav-chevron {
+      margin-left: auto;
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s var(--ease-bounce);
+    }
+
+    .nav-toggle-btn[aria-expanded="true"] .nav-chevron {
+      transform: rotate(90deg);
+    }
+
+    .nav-submenu {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-left: 2rem;
+      margin: 0.15rem 0 0.35rem 0;
+    }
+
+    .nav-submenu.open {
+      display: flex;
+    }
+
+    .nav-sub-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      color: var(--secondary-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .nav-sub-link:hover {
+      background: var(--app-bg);
+      color: var(--accent-teal);
+    }
+
+    .nav-sub-link.active-sub {
+      color: var(--accent-teal);
+      background: var(--soft-teal);
+      font-weight: 700;
+    }
+
+    .nav-sub-bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--muted-text);
+      flex-shrink: 0;
+      transition: background 0.2s ease;
+    }
+
+    .nav-sub-link:hover .nav-sub-bullet,
+    .nav-sub-link.active-sub .nav-sub-bullet {
+      background: var(--accent-teal);
+    }
+
+    .sidebar-footer-card {
+      background: linear-gradient(180deg, var(--workspace-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 0.85rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1.5rem;
+    }
+
+    .sf-header {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sf-sub {
+      color: var(--secondary-text);
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      line-height: 1.4;
     }
 
     /* ==========================================================================
-       SECTION 01 — HERO
+       05. MAIN WORKSPACE WITH BLUEPRINT GRID BACKGROUND
        ========================================================================== */
-    .consultant-hero-section {
-      min-height: 94vh;
-      display: flex;
-      align-items: center;
+    .app-workspace {
+      grid-area: main;
+      background: var(--workspace-bg);
+      overflow-y: auto;
+      padding: 2.25rem 2.5rem;
       position: relative;
-      padding-top: 120px;
-      padding-bottom: 4.5rem;
-      overflow: hidden;
-      background: radial-gradient(circle at 75% 30%, rgba(14, 29, 71, 0.85) 0%, rgba(2, 6, 23, 1) 70%);
+      background-image: 
+        radial-gradient(circle at 100% 0%, rgba(22, 140, 135, 0.035) 0%, transparent 45%),
+        linear-gradient(to right, rgba(215, 224, 236, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(215, 224, 236, 0.25) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 3.5rem;
+    .ws-section {
+      margin-bottom: 3.5rem;
       position: relative;
-      z-index: 2;
     }
 
-    .hero-title-main {
-      font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+    .ws-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--soft-teal);
+      border: 1px solid rgba(22, 140, 135, 0.25);
+      border-radius: 5px;
+      padding: 0.25rem 0.65rem;
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.65rem;
+    }
+
+    .ws-title {
+      font-size: 2.15rem;
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--strong-text);
+      line-height: 1.18;
     }
 
-    .hero-title-main span {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .ws-title span {
+      color: var(--accent-teal);
     }
 
-    .hero-supporting-copy {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.45;
-      margin-bottom: 1.25rem;
+    .ws-subtitle {
+      font-size: 1rem;
+      color: var(--secondary-text);
+      margin-top: 0.6rem;
+      max-width: 780px;
+      line-height: 1.65;
     }
 
-    .hero-secondary-copy {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 2.25rem;
-    }
-
-    .hero-actions {
+    .ws-action-ribbon {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
       flex-wrap: wrap;
     }
 
-    .profile-canvas-wrap {
+    .ws-subhead-bar {
+      font-family: var(--tech-font);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--secondary-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Cards & Grids */
+    .division-app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+
+    .division-app-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-teal);
+      opacity: 0.85;
+      transition: height 0.2s ease, opacity 0.2s ease;
+    }
+
+    .division-app-card.accent-blue::before { background: var(--brand-blue); }
+    .division-app-card.accent-violet::before { background: var(--accent-violet); }
+    .division-app-card.accent-copper::before { background: var(--accent-copper); }
+
+    .division-app-card:hover {
+      border-color: rgba(22, 140, 135, 0.35);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      background: var(--card-bg-hover);
+    }
+
+    .division-app-card:hover::before {
+      height: 4px;
+      opacity: 1;
+    }
+
+    .div-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .div-card-id {
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--app-bg);
+      border: 1px solid var(--surface-border-light);
+    }
+
+    .div-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.45rem;
+      letter-spacing: -0.01em;
+    }
+
+    .div-card-desc {
+      font-size: 0.875rem;
+      color: var(--secondary-text);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+    }
+
+    .div-card-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .chip-tag {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .division-app-card:hover .chip-tag {
+      background: #FFFFFF;
+      color: var(--strong-text);
+    }
+
+    .div-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px dashed var(--surface-border);
+      padding-top: 0.95rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+    }
+
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-4-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .grid-6-col {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.85rem;
+    }
+
+    .grid-7-col {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.75rem;
+    }
+
+    /* Hero Canvas Stage for Consultant Network */
+    .hero-consultant-canvas-wrap {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: 380px;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.75rem;
+      overflow: hidden;
     }
 
     #consultantHeroCanvas {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
     }
 
-    /* ==========================================================================
-       SECTION 02 — INTRODUCTION
-       ========================================================================== */
-    .intro-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
+    .canvas-hud-overlay {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.25rem;
+      font-family: var(--tech-font);
+      font-size: 0.72rem;
+      color: var(--secondary-text);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid var(--surface-border-light);
+      display: flex;
       align-items: center;
+      gap: 0.5rem;
     }
 
-    .intro-statement-box {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-md);
-      padding: 3rem 2rem;
-      text-align: center;
+    /* Narrative Boxquote */
+    .story-focus-quote {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--strong-text);
+      border-left: 3.5px solid var(--accent-teal);
+      padding: 1.25rem 1.5rem;
+      background: var(--card-bg);
+      border-radius: 0 8px 8px 0;
+      box-shadow: var(--shadow-card);
+      margin: 1.25rem 0;
+      border-top: 1px solid var(--surface-border-light);
+      border-right: 1px solid var(--surface-border-light);
+      border-bottom: 1px solid var(--surface-border-light);
     }
 
-    .progression-stream {
-      font-family: var(--font-mono);
-      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: #fff;
+    /* Stepper Nodes for Workflow */
+    .stepper-node {
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      align-items: center;
+      justify-content: space-between;
     }
 
-    .progression-stream span {
-      color: var(--text-accent);
+    .stepper-node:hover {
+      border-color: var(--accent-teal);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
     }
 
-    /* ==========================================================================
-       SECTION 03 — THE CONSULTANT CHALLENGE
-       ========================================================================== */
-    .challenge-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-
-    .challenge-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 2rem;
-      transition: var(--transition-smooth);
-    }
-
-    .challenge-card:hover {
-      border-color: var(--border-accent);
-      background: var(--bg-card-hover);
-      transform: translateY(-4px);
-    }
-
-    .challenge-num {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-accent);
-      margin-bottom: 1rem;
-    }
-
-    .challenge-title {
-      font-size: 1.25rem;
+    .stepper-step {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
       font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
+      color: var(--accent-teal);
+      margin-bottom: 0.35rem;
     }
 
-    .challenge-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
+    .stepper-title {
+      font-size: 0.925rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      margin-bottom: 0.4rem;
     }
 
-    /* ==========================================================================
-       SECTION 04 — OUR CONSULTANT SOLUTION (8-STAGE JOURNEY)
-       ========================================================================== */
-    .journey-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
+    .stepper-desc {
+      font-size: 0.785rem;
+      color: var(--secondary-text);
+      line-height: 1.45;
     }
 
-    .journey-stepper-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .journey-step-box {
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 2rem 1.5rem;
-      transition: var(--transition-smooth);
-    }
-
-    .journey-step-box:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .journey-num {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .journey-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .journey-desc {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    /* ==========================================================================
-       SECTION 05 — PROFILE POSITIONING & 06. TECH PROFILE
-       ========================================================================== */
-    .profile-categories-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 3.5rem;
-    }
-
-    .category-chip {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem 1rem;
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      color: var(--text-primary);
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .category-chip:hover {
-      border-color: var(--border-accent);
-      color: var(--text-accent);
-      transform: translateY(-2px);
-    }
-
-    .tech-constellation-box {
-      background: rgba(12, 24, 61, 0.4);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem;
-      margin-top: 3.5rem;
-    }
-
-    .constellation-pills-matrix {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-
-    .const-pill {
-      font-family: var(--font-mono);
-      font-size: 0.8125rem;
-      padding: 0.5rem 1rem;
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-    }
-
-    /* ==========================================================================
-       SECTION 07 — OPPORTUNITY ALIGNMENT (TWO-SIDED INTERFACE)
-       ========================================================================== */
-    .alignment-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .alignment-comparison-grid {
+    /* Comparison Interface Grid */
+    .comparison-interface-grid {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
       align-items: center;
-      margin-top: 3.5rem;
+      margin-top: 1.75rem;
     }
 
     .comparison-panel {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.85rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
-    .panel-kicker {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-accent-cyan);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
+    .comp-connector-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .alignment-badge {
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #11706c 100%);
+      color: #ffffff;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      font-family: var(--tech-font);
+      font-size: 0.785rem;
+      font-weight: 800;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(22, 140, 135, 0.28);
     }
 
     .comp-row {
       display: flex;
       justify-content: space-between;
-      padding: 0.55rem 0;
-      font-size: 0.875rem;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+      align-items: center;
+      font-size: 0.835rem;
+      padding: 0.4rem 0.6rem;
+      background: var(--app-bg);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
     }
 
     .comp-key {
-      color: var(--text-muted);
-      font-family: var(--font-mono);
+      color: var(--secondary-text);
+      font-family: var(--tech-font);
+      font-size: 0.75rem;
     }
 
     .comp-val {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    .alignment-central-badge {
-      padding: 1.25rem 1.75rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
+      color: var(--strong-text);
       font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 25px var(--glow-teal);
-      text-align: center;
     }
 
-    /* ==========================================================================
-       SECTION 08 — OPPORTUNITY JOURNEY (HORIZONTAL TRACK)
-       ========================================================================== */
-    .horizontal-journey-track {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 0.75rem;
-      margin-top: 3.5rem;
-    }
-
-    .opp-step-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.5rem 0.85rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .opp-step-box:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .opp-step-num {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      color: var(--text-accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .opp-step-name {
-      font-size: 0.8125rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .opp-step-desc {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    /* ==========================================================================
-       SECTION 09 — COMMUNICATION & 10. WORK AUTH & 11. ENGAGEMENT TYPES
-       ========================================================================== */
-    .comm-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .comm-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 1.75rem;
-    }
-
-    .auth-banner-box {
-      background: rgba(12, 24, 61, 0.4);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 3rem;
-      margin-top: 3.5rem;
-      text-align: center;
-    }
-
-    .auth-pills-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
-      margin: 2rem 0;
-    }
-
-    .auth-badge {
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      padding: 0.6rem 1.25rem;
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-    }
-
-    .engagement-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 3.5rem;
-    }
-
-    .engage-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 2rem 1.25rem;
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .engage-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    /* ==========================================================================
-       SECTION 12 — CONSULTANT SUPPORT & 13. MUTUAL RESPONSIBILITIES
-       ========================================================================== */
-    .support-blocks-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-
-    .support-block {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 2rem;
-      transition: var(--transition-smooth);
-    }
-
-    .support-block:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-4px);
-    }
-
-    .responsibilities-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-top: 3.5rem;
-    }
-
-    .resp-col {
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.5rem;
-    }
-
-    .resp-list {
-      list-style: none;
+    /* FAQ Accordion */
+    .faq-accordion-wrap {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.85rem;
       margin-top: 1.5rem;
     }
 
-    .resp-list li {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .resp-list li::before {
-      content: "—";
-      color: var(--text-accent);
-      font-weight: 700;
-    }
-
-    /* ==========================================================================
-       SECTION 14 — RESOURCES & 15. DIGITAL PORTFOLIO & 16. PROGRESSION
-       ========================================================================== */
-    .resources-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .res-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 2rem 1.5rem;
-    }
-
-    .portfolio-bridge-box {
-      background: linear-gradient(135deg, rgba(12, 24, 61, 0.7) 0%, rgba(7, 15, 38, 0.9) 100%);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      padding: 3.5rem;
-      margin-top: 4rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    .progression-statement-section {
-      padding: 6.5rem 0;
-      text-align: center;
-      background: #020617;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .progression-stream-large {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem 2.5rem;
-      font-family: var(--font-mono);
-      font-size: clamp(1.4rem, 3.2vw, 2.75rem);
-      font-weight: 800;
-      color: #fff;
-    }
-
-    .progression-stream-large span {
-      color: var(--text-accent);
-    }
-
-    /* ==========================================================================
-       SECTION 17 — WHY TJR TECH & 18. CONSULTANT ECOSYSTEM
-       ========================================================================== */
-    .why-consultant-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 3.5rem;
-    }
-
-    .why-c-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2rem 1.5rem;
-      transition: var(--transition-smooth);
-    }
-
-    .why-c-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-4px);
-    }
-
-    .consultant-ecosystem-box {
-      position: relative;
-      height: 480px;
-      margin-top: 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(2, 6, 23, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-    }
-
-    #consultantEcosystemCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-
-    .eco-c-core {
-      position: relative;
-      z-index: 5;
-      padding: 1.25rem 2.25rem;
-      background: var(--bg-tertiary);
-      border: 2px solid var(--text-accent);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      box-shadow: 0 0 25px var(--glow-teal);
-    }
-
-    /* ==========================================================================
-       SECTION 19 — CONSULTANT CTA & 20. FAQ & 21. BRAND STATEMENT
-       ========================================================================== */
-    .cta-section {
-      background: radial-gradient(circle at 50% 50%, rgba(12, 24, 61, 0.95) 0%, rgba(2, 6, 23, 1) 100%);
-      text-align: center;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .cta-container {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .faq-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .faq-accordion-wrap {
-      max-width: 860px;
-      margin: 3.5rem auto 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
     .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
+      background: var(--card-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
       overflow: hidden;
-      transition: var(--transition-smooth);
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
     }
 
     .faq-item.active {
-      border-color: var(--border-medium);
-      background: rgba(14, 29, 71, 0.7);
+      border-color: var(--accent-teal);
+      box-shadow: 0 4px 14px rgba(22, 140, 135, 0.08);
     }
 
     .faq-question-btn {
       width: 100%;
-      padding: 1.5rem 1.75rem;
+      padding: 1.25rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background: none;
       border: none;
-      color: var(--text-primary);
-      font-size: 1.05rem;
-      font-weight: 600;
+      color: var(--strong-text);
+      font-size: 0.95rem;
+      font-weight: 700;
       text-align: left;
       cursor: pointer;
-      font-family: var(--font-sans);
+      font-family: var(--app-font);
     }
 
     .faq-indicator {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--text-accent);
-      transition: transform 0.3s ease;
+      font-family: var(--tech-font);
+      font-size: 1.1rem;
+      color: var(--accent-teal);
+      transition: transform 0.2s var(--ease-bounce);
+      border-radius: 4px;
+      background: var(--soft-teal);
     }
 
     .faq-item.active .faq-indicator {
       transform: rotate(45deg);
+      background: var(--accent-teal);
+      color: #ffffff;
     }
 
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
-      padding: 0 1.75rem;
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    .faq-item.active .faq-answer {
-      padding-bottom: 1.5rem;
-    }
-
-    .brand-statement-section {
-      padding: 6.5rem 0;
-      text-align: center;
-      background: #020617;
-    }
-
-    .statement-headline-prog {
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .statement-brand-line {
-      font-family: var(--font-mono);
-      font-size: 1.25rem;
-      color: var(--text-accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    /* ==========================================================================
-       SECTION 23 — FOOTER
-       ========================================================================== */
-    .site-footer {
-      background-color: #01040f;
-      padding: 5.5rem 0 2.5rem 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-      gap: 3.5rem;
-      margin-bottom: 4.5rem;
-    }
-
-    .footer-brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-tagline {
-      font-size: 0.875rem;
-      color: var(--text-accent);
-      font-family: var(--font-mono);
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-desc {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
+      transition: max-height 0.28s cubic-bezier(0.16, 1, 0.3, 1), padding 0.28s ease;
+      padding: 0 1.5rem;
+      font-size: 0.885rem;
+      color: var(--secondary-text);
       line-height: 1.6;
     }
 
-    .footer-heading {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.25rem;
     }
 
-    .footer-links-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
+    /* Service Snapshot Grid Card */
+    .snapshot-matrix-card {
+      background: linear-gradient(135deg, var(--card-bg) 0%, #FFFFFF 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 2.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      margin-top: 1.5rem;
     }
 
-    .footer-links-list a {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links-list a:hover {
-      color: var(--text-accent);
-    }
-
-    .footer-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-bottom-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--text-secondary);
-    }
-
-    /* Modal Styling */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(2, 6, 23, 0.88);
-      backdrop-filter: blur(12px);
-      z-index: 2000;
+    .snapshot-stream {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
+      flex-wrap: wrap;
+      gap: 1.5rem 3rem;
+      font-family: var(--tech-font);
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: 0.04em;
     }
 
-    .modal-overlay.active {
+    .snapshot-stream span {
+      color: var(--accent-teal);
+    }
+
+    /* ==========================================================================
+       06. CONTEXTUAL RIGHT PANEL (INSPECTOR)
+       ========================================================================== */
+    .app-right-panel {
+      grid-area: panel;
+      background: #FFFFFF;
+      border-left: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      transition: var(--transition);
+      box-shadow: var(--shadow-panel);
+    }
+
+    .panel-header {
+      padding: 1.25rem 1.4rem;
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--workspace-bg);
+    }
+
+    .panel-kicker {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .panel-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--strong-text);
+      letter-spacing: -0.01em;
+      margin-top: 0.15rem;
+    }
+
+    .panel-content {
+      padding: 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .panel-section-label {
+      font-family: var(--tech-font);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .panel-specs-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .panel-spec-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--app-bg);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border-light);
+    }
+
+    .panel-spec-row span:first-child { color: var(--secondary-text); }
+    .panel-spec-row span:last-child {
+      font-weight: 700;
+      color: var(--accent-teal);
+      font-family: var(--tech-font);
+    }
+
+    .panel-footer-actions {
+      padding: 1.25rem 1.4rem;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      background: var(--workspace-bg);
+    }
+
+    /* ==========================================================================
+       07. GLOBAL SEARCH COMMAND & INTAKE MODAL
+       ========================================================================== */
+    .search-modal-backdrop, .contact-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 37, 59, 0.45);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .search-modal-backdrop {
+      align-items: flex-start;
+      padding-top: 12vh;
+    }
+
+    .search-modal-backdrop.open, .contact-modal-backdrop.open {
       opacity: 1;
       pointer-events: all;
     }
 
-    .modal-box {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-medium);
-      border-radius: var(--radius-md);
-      width: 100%;
-      max-width: 580px;
-      padding: 2.5rem;
-      position: relative;
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
+    .search-modal-card {
+      width: 90%;
+      max-width: 560px;
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      box-shadow: 0 20px 48px rgba(23, 37, 59, 0.18);
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition: var(--transition);
     }
 
-    .modal-overlay.active .modal-box {
+    .search-modal-backdrop.open .search-modal-card {
       transform: translateY(0);
     }
 
-    .modal-close {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      color: var(--text-muted);
-      font-size: 1.5rem;
-      background: none;
+    .search-input-row {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.35rem;
+      border-bottom: 1px solid var(--surface-border);
+      gap: 0.85rem;
+    }
+
+    .search-input-row input {
+      flex: 1;
       border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: var(--app-font);
+      color: var(--strong-text);
+    }
+
+    .search-results-list {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .search-result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.95rem;
+      border-radius: 6px;
       cursor: pointer;
-      line-height: 1;
+      transition: var(--transition);
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .modal-close:hover {
-      color: #fff;
+    .search-result-row:hover {
+      background: var(--soft-teal);
+      color: var(--accent-teal);
     }
 
-    .form-group {
-      margin-bottom: 1.25rem;
+    .s-tag {
+      font-family: var(--tech-font);
+      font-size: 0.68rem;
+      padding: 0.15rem 0.45rem;
+      background: var(--app-bg);
+      border-radius: 4px;
+      color: var(--secondary-text);
+      border: 1px solid var(--surface-border-light);
     }
+
+    .contact-modal-dialog {
+      background: #FFFFFF;
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.25rem;
+      box-shadow: 0 24px 50px rgba(23, 37, 59, 0.2);
+    }
+
+    .form-group { margin-bottom: 1.15rem; }
 
     .form-label {
       display: block;
+      font-family: var(--tech-font);
       font-size: 0.75rem;
-      font-family: var(--font-mono);
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--strong-text);
+      margin-bottom: 0.35rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
-    .form-input, .form-select, .form-textarea {
+    .form-input, .form-textarea, .form-select {
       width: 100%;
-      padding: 0.85rem 1rem;
-      background: rgba(2, 6, 23, 0.8);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-      font-size: 0.9375rem;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-family: var(--app-font);
       outline: none;
-      transition: border-color 0.2s ease;
+      transition: var(--transition);
+      background: #FFFFFF;
     }
 
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--text-accent);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    /* Scroll Trigger Animation Engine */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 0 3px rgba(22, 140, 135, 0.15);
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       08. RESPONSIVE BREAKPOINTS
        ========================================================================== */
-    @media (max-width: 1080px) {
-      .challenge-grid,
-      .support-blocks-grid,
-      .resources-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .journey-stepper-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .horizontal-journey-track {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .why-consultant-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .alignment-comparison-grid {
-        grid-template-columns: 1fr;
-      }
-      .portfolio-bridge-box {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    @media (max-width: 1100px) {
+      .app-shell { grid-template-columns: var(--sidebar-width) 1fr 0px; }
+      .app-right-panel { display: none; }
+      .grid-4-col, .grid-6-col, .grid-7-col { grid-template-columns: repeat(3, 1fr); }
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .intro-grid,
-      .responsibilities-grid {
+    @media (max-width: 768px) {
+      .app-shell { grid-template-columns: 0px 1fr 0px; }
+      .app-sidebar {
+        position: fixed;
+        top: var(--topbar-height);
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.25s var(--ease-bounce);
+        box-shadow: 8px 0 24px rgba(23, 37, 59, 0.12);
+      }
+      .app-sidebar.mobile-open { transform: translateX(0); }
+      .grid-2-col, .grid-3-col, .grid-4-col, .grid-6-col, .grid-7-col, .comparison-interface-grid {
         grid-template-columns: 1fr;
       }
-      .nav-links, .nav-cta {
-        display: none;
-      }
-      .mobile-toggle {
-        display: flex;
-      }
-      .profile-canvas-wrap {
-        height: 360px;
-      }
-      .profile-categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .comm-cards-grid {
-        grid-template-columns: 1fr;
-      }
-      .engagement-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .challenge-grid,
-      .support-blocks-grid,
-      .resources-grid,
-      .journey-stepper-grid,
-      .horizontal-journey-track,
-      .why-consultant-grid,
-      .profile-categories-grid,
-      .engagement-cards-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .section-spacing {
-        padding: 5rem 0;
-      }
-      .portfolio-bridge-box {
-        padding: 2rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-      }
+      .topbar-search-trigger { width: 180px; }
+      .app-workspace { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Indicator -->
+  <!-- Top Scroll Progress Bar -->
   <div id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ==========================================================================
-       GLOBAL NAVIGATION
+       APPLICATION SHELL
        ========================================================================== -->
-  <header class="site-header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="/" class="logo-container" aria-label="TJR Tech Homepage">
-        <div class="logo-mark">T</div>
-        <span class="logo-title">TJR TECH</span>
-      </a>
+  <div class="app-shell" id="appShell">
 
-      <nav aria-label="Desktop Navigation">
-        <ul class="nav-links">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-          <li class="nav-item">
-            <a href="/services" class="nav-link">
-              Services
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/services/us-it-staffing">US IT Staffing</a></li>
-              <li class="dropdown-item"><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-              <li class="dropdown-item"><a href="/services/web-development">Web Development</a></li>
-              <li class="dropdown-item"><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="/solutions" class="nav-link active">
-              Solutions
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="/solutions/for-businesses">For Businesses</a></li>
-              <li class="dropdown-item"><a href="/solutions/for-consultants" class="active-item">For Consultants</a></li>
-              <li class="dropdown-item"><a href="/solutions/for-professionals">For Professionals</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="/portfolio" class="nav-link">Work</a></li>
-          <li class="nav-item"><a href="/careers" class="nav-link">Careers</a></li>
-          <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
-          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- TOP NAVIGATION COMMAND BAR -->
+    <header class="app-topbar">
+      <div class="topbar-left">
+        <button class="icon-btn" id="mobileMenuToggle" style="display: none;" aria-label="Toggle Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
 
-      <div class="nav-cta">
-        <button class="btn btn-secondary open-consultant-modal" style="padding: 0.65rem 1.25rem;">
-          <span>Submit Your Profile</span>
+        <a class="brand-id" href="index.html">
+          <div class="brand-mark">T</div>
+          <div class="brand-title-wrap">
+            <span class="brand-title">TJR TECH</span>
+            <span class="brand-tagline">Consultant Pathway</span>
+          </div>
+        </a>
+
+        <!-- Global Command Search Trigger (Ctrl+K) -->
+        <div class="topbar-search-trigger" id="searchTriggerBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search consultant solutions...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="telemetry-chip">
+          <span class="pulse-dot-teal"></span>
+          <span>PATHWAY // FOR CONSULTANTS</span>
+        </div>
+
+        <a href="solutions.html" class="btn btn-secondary btn-sm">Solutions Overview</a>
+        <button class="btn btn-teal btn-sm" onclick="openConsultantModal()">Submit Profile</button>
+
+        <button class="icon-btn" id="togglePanelBtn" title="Toggle Contextual Inspector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
         </button>
       </div>
+    </header>
 
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    <!-- PERSISTENT LEFT SIDEBAR NAVIGATION (SYNCHRONIZED WITH MASTER) -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div>
+        <div class="nav-group-title">WORKSPACE</div>
+        <ul class="nav-menu">
+          <!-- 1. HOME -->
+          <li>
+            <a href="index.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Home</span>
+            </a>
+          </li>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
-    <ul class="mobile-nav-list">
-      <li><a href="/" class="mobile-link">Home</a></li>
-      <li><a href="/about" class="mobile-link">About Us</a></li>
-      <li>
-        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Services</span>
-        <ul class="mobile-submenu">
-          <li><a href="/services/us-it-staffing" class="mobile-link">US IT Staffing</a></li>
-          <li><a href="/services/us-it-bench-sales" class="mobile-link">US IT Bench Sales</a></li>
-          <li><a href="/services/web-development" class="mobile-link">Web Development</a></li>
-          <li><a href="/services/ads-digital-media" class="mobile-link">Ads &amp; Digital Media</a></li>
+          <!-- 2. ABOUT -->
+          <li>
+            <a href="about.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>About</span>
+            </a>
+          </li>
+
+          <!-- 3. SERVICES (COLLAPSIBLE) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn" id="servicesToggleBtn" aria-expanded="false" onclick="toggleSidebarMenu('servicesSubmenu', 'servicesToggleBtn')">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Services</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu" id="servicesSubmenu">
+              <li>
+                <a href="us-it-staffing.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Staffing</span>
+                </a>
+              </li>
+              <li>
+                <a href="us-it-bench-sales.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>US IT Bench Sales</span>
+                </a>
+              </li>
+              <li>
+                <a href="web-development.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Web Development</span>
+                </a>
+              </li>
+              <li>
+                <a href="ads-digital-media.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Ads &amp; Digital Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 4. SOLUTIONS (ACTIVE & EXPANDED) -->
+          <li>
+            <button class="nav-item-btn nav-toggle-btn active" id="solutionsToggleBtn" aria-expanded="true" onclick="toggleSidebarMenu('solutionsSubmenu', 'solutionsToggleBtn')">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Solutions</span>
+              <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <ul class="nav-submenu open" id="solutionsSubmenu">
+              <li>
+                <a href="solutions.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>Solutions Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-consultants.html" class="nav-sub-link active-sub">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Consultants</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-professionals.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Professionals</span>
+                </a>
+              </li>
+              <li>
+                <a href="for-businesses.html" class="nav-sub-link">
+                  <span class="nav-sub-bullet"></span>
+                  <span>For Businesses</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 5. PORTFOLIO -->
+          <li>
+            <a href="portfolio.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span>Portfolio</span>
+            </a>
+          </li>
+
+          <!-- 6. INSIGHTS -->
+          <li>
+            <a href="insights.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Insights</span>
+            </a>
+          </li>
+
+          <!-- 7. CAREERS -->
+          <li>
+            <a href="careers.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3v4M8 3v4"/></svg>
+              <span>Careers</span>
+            </a>
+          </li>
+
+          <!-- 8. CONTACT -->
+          <li>
+            <a href="contact.html" class="nav-item-btn">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Contact</span>
+            </a>
+          </li>
         </ul>
-      </li>
-      <li>
-        <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-family: var(--font-mono);">Solutions</span>
-        <ul class="mobile-submenu">
-          <li><a href="/solutions/for-businesses" class="mobile-link">For Businesses</a></li>
-          <li><a href="/solutions/for-consultants" class="mobile-link">For Consultants</a></li>
-          <li><a href="/solutions/for-professionals" class="mobile-link">For Professionals</a></li>
+
+        <!-- PAGE CHAPTER ANCHORS -->
+        <div class="nav-group-title" style="margin-top: 1.25rem;">CONSULTANT CHAPTERS</div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#intro" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Representation Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#support-areas" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Core Support Areas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#journey" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>7-Step Workflow</span>
+            </a>
+          </li>
+          <li>
+            <a href="#specializations" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Tech Specializations</span>
+            </a>
+          </li>
+          <li>
+            <a href="#alignment" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Opportunity Alignment</span>
+            </a>
+          </li>
+          <li>
+            <a href="#compliance-responsibilities" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Compliance &amp; Role</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="nav-sub-link">
+              <span class="nav-sub-bullet"></span>
+              <span>Consultant FAQs</span>
+            </a>
+          </li>
         </ul>
-      </li>
-      <li><a href="/portfolio" class="mobile-link">Work</a></li>
-      <li><a href="/careers" class="mobile-link">Careers</a></li>
-      <li><a href="/insights" class="mobile-link">Insights</a></li>
-      <li><a href="/contact" class="mobile-link">Contact</a></li>
-    </ul>
-    <button class="btn btn-primary open-consultant-modal" style="width: 100%;">Submit Your Profile</button>
+      </div>
+
+      <div class="sidebar-footer-card">
+        <div class="sf-header">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4-4-4 4M12 16V8"/></svg>
+          <span>Consultant Desk</span>
+        </div>
+        <div class="sf-sub">Hyderabad Hub &bull; Direct US Prime Reach</div>
+      </div>
+    </aside>
+
+    <!-- CENTRAL WORKSPACE (BLUEPRINT CANVAS) -->
+    <main class="app-workspace" id="mainWorkspace">
+
+      <!-- ==================== 01. HERO SECTION ==================== -->
+      <section class="ws-section" id="hero">
+        <div class="ws-kicker-badge">
+          <span>TALENT PATHWAY // SOLUTIONS FOR CONSULTANTS</span>
+        </div>
+        <h1 class="ws-title">
+          Solutions for IT Consultants <br>
+          <span>Your Skills. Your Opportunity.</span>
+        </h1>
+        <p class="ws-subtitle" style="font-weight: 600; color: var(--strong-text);">
+          Your Experience. Your Skills. Your Next Opportunity.
+        </p>
+        <p class="ws-subtitle">
+          TJR Tech helps technology consultants present their profiles clearly, align their experience with funded Tier-1 openings, coordinate direct submissions, manage rate negotiations, and navigate interview communication with dedicated recruiter support.
+        </p>
+
+        <div class="ws-action-ribbon">
+          <button class="btn btn-teal" onclick="openConsultantModal()">Submit Your Profile</button>
+          <a href="contact.html" class="btn btn-secondary">Contact TJR Tech</a>
+          <a href="us-it-bench-sales.html" class="btn btn-secondary">Explore Bench Sales</a>
+        </div>
+
+        <!-- Interactive Consultant Profile Node Network Canvas -->
+        <div class="hero-consultant-canvas-wrap">
+          <canvas id="consultantHeroCanvas" aria-label="Digital consultant profile node network canvas"></canvas>
+          <div class="canvas-hud-overlay">
+            <span class="pulse-dot-teal"></span>
+            <span>CONSULTANT PROFILE MESH: <strong style="color: var(--accent-teal);">ACTIVE</strong> &bull; DIRECT TIER-1 PRIME VENDOR CHANNELS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 02. CONSULTANT OVERVIEW ==================== -->
+      <section class="ws-section" id="intro">
+        <div class="ws-subhead-bar">01 / OVERVIEW // BEYOND THE STATIC RESUME</div>
+        <div class="grid-2-col">
+          <div>
+            <h2 class="ws-title" style="font-size: 1.85rem;">
+              Your Resume Is Only <span>the Beginning.</span>
+            </h2>
+            <blockquote class="story-focus-quote">
+              A technology consultant's profile is far more than a document. Verified architectural depth, project history, immediate availability, location flexibility, work authorization status, and rate parameters dictate genuine opportunity alignment.
+            </blockquote>
+            <p style="font-size: 0.925rem; color: var(--secondary-text); line-height: 1.65; margin-top: 1rem;">
+              TJR Tech provides structured representation around these critical data points so that consultant profiles are presented with commercial precision and vetted requirements are evaluated with complete transparency.
+            </p>
+            <div style="margin-top: 1.25rem;">
+              <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700; font-size: 0.785rem; padding: 0.35rem 0.75rem;">
+                EXPERIENCE &rarr; POSITIONING &rarr; DIRECT SUBMITTAL &rarr; PLACEMENT
+              </span>
+            </div>
+          </div>
+
+          <!-- Consultant Representation Snapshot Card -->
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.85rem; box-shadow: var(--shadow-card); display: flex; flex-direction: column; gap: 0.85rem;">
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--accent-teal); font-weight: 700; text-transform: uppercase;">
+              CONSULTANT DESK METRICS
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 0.75rem; background: var(--app-bg); border-radius: 6px;">
+              <span>Representation Model</span>
+              <strong style="color: var(--strong-text);">Dedicated Recruiter Lead</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 0.75rem; background: var(--app-bg); border-radius: 6px;">
+              <span>Vendor Tier Access</span>
+              <strong style="color: var(--accent-teal);">Tier-1 Prime Direct Channels</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 0.75rem; background: var(--app-bg); border-radius: 6px;">
+              <span>Rate Terms</span>
+              <strong style="color: var(--active-green);">Full Transparency &bull; No Hidden Cuts</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 0.75rem; background: var(--app-bg); border-radius: 6px;">
+              <span>Contract Modes</span>
+              <strong style="color: var(--strong-text);">C2C &bull; 1099 &bull; W-2 Flexible</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 03. CONSULTANT SUPPORT AREAS ==================== -->
+      <section class="ws-section" id="support-areas">
+        <div class="ws-subhead-bar">02 / PILLARS // CONSULTANT SUPPORT DOMAINS</div>
+        <h2 class="ws-title">Comprehensive <span>Opportunity Support.</span></h2>
+        <p class="ws-subtitle">
+          Six focused support disciplines designed to keep your profile active, visible, and aligned with market demand.
+        </p>
+
+        <div class="grid-3-col" style="margin-top: 1.75rem;">
+          <div class="division-app-card" onclick="inspectConsultant('positioning')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">SUPPORT 01</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">PILLAR // 01</span>
+              </div>
+              <h3 class="div-card-title">Profile Positioning</h3>
+              <p class="div-card-desc">Restructuring and formatting technical resumes according to current North American enterprise standards to ensure high screening conversion.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Resume Formatting</span>
+                <span class="chip-tag">Architecture Framing</span>
+                <span class="chip-tag">Clarity</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Pillar</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" onclick="inspectConsultant('skills')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">SUPPORT 02</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">PILLAR // 02</span>
+              </div>
+              <h3 class="div-card-title">Technical Skills Presentation</h3>
+              <p class="div-card-desc">Categorizing multi-stack proficiency (languages, frameworks, cloud topologies) so client hiring managers quickly grasp authentic seniority.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Stack Taxonomy</span>
+                <span class="chip-tag">Seniority Verification</span>
+                <span class="chip-tag">Depth</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Pillar</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" onclick="inspectConsultant('alignment')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">SUPPORT 03</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">PILLAR // 03</span>
+              </div>
+              <h3 class="div-card-title">Requirement Alignment</h3>
+              <p class="div-card-desc">Auditing live requisitions against your exact tech stack, geographic time zones, and target rates before submitting to avoid mismatched cycles.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Criteria Matching</span>
+                <span class="chip-tag">Target Rates</span>
+                <span class="chip-tag">Timezone Sync</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Pillar</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" onclick="inspectConsultant('submission')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">SUPPORT 04</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">PILLAR // 04</span>
+              </div>
+              <h3 class="div-card-title">Submission Coordination</h3>
+              <p class="div-card-desc">Transmitting tailored candidate packages directly through verified Tier-1 vendor management systems and dedicated recruitment accounts.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Direct VMS Ingestion</span>
+                <span class="chip-tag">Rate Confirmation</span>
+                <span class="chip-tag">Tier-1 Leads</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Pillar</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" onclick="inspectConsultant('interview')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">SUPPORT 05</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">PILLAR // 05</span>
+              </div>
+              <h3 class="div-card-title">Interview Communication</h3>
+              <p class="div-card-desc">Managing calendar invites, technical pre-briefs, video conferencing links, and client briefing expectations throughout multi-round interviews.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Calendar Management</span>
+                <span class="chip-tag">Pre-Brief Calls</span>
+                <span class="chip-tag">Client Context</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Pillar</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" onclick="inspectConsultant('tracking')">
+            <div>
+              <div class="div-card-top">
+                <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal);">SUPPORT 06</span>
+                <span class="div-card-id" style="color: var(--accent-teal);">PILLAR // 06</span>
+              </div>
+              <h3 class="div-card-title">Opportunity Updates &amp; Follow-Up</h3>
+              <p class="div-card-desc">Continuous feedback loops: timely collection and delivery of technical feedback, status updates, and contractual onboarding guidance.</p>
+              <div class="div-card-chips">
+                <span class="chip-tag">Proactive Tracking</span>
+                <span class="chip-tag">Client Feedback</span>
+                <span class="chip-tag">Onboarding SOW</span>
+              </div>
+            </div>
+            <div class="div-card-footer">
+              <span>Inspect Pillar</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 04. CONSULTANT JOURNEY ==================== -->
+      <section class="ws-section" id="journey">
+        <div class="ws-subhead-bar">03 / WORKFLOW // 7-STEP CONSULTANT JOURNEY</div>
+        <h2 class="ws-title">From Availability to <span>Contract Launch.</span></h2>
+        <p class="ws-subtitle">
+          A transparent seven-step progression defining how your profile moves through representation into production engagement.
+        </p>
+
+        <div class="grid-7-col" style="margin-top: 1.75rem;">
+          <div class="stepper-node">
+            <div class="stepper-step">01 // INTAKE</div>
+            <div class="stepper-title">Share Profile</div>
+            <p class="stepper-desc">Submit current resume, core stacks, rates, and availability date.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">02 // AUDIT</div>
+            <div class="stepper-title">Review Experience</div>
+            <p class="stepper-desc">Detailed evaluation of systems built, architectures, and code depth.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">03 // SOURCING</div>
+            <div class="stepper-title">Identify Openings</div>
+            <p class="stepper-desc">Scan verified Tier-1 prime requisitions matching your core tier.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">04 // POSITION</div>
+            <div class="stepper-title">Align Profile</div>
+            <p class="stepper-desc">Contextualize resume narrative to highlight client-specific keywords.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">05 // OUTREACH</div>
+            <div class="stepper-title">Submit Candidate</div>
+            <p class="stepper-desc">Transmit candidate dossier with rate terms directly into client VMS.</p>
+          </div>
+          <div class="stepper-node">
+            <div class="stepper-step">06 // STAGE</div>
+            <div class="stepper-title">Interviews</div>
+            <p class="stepper-desc">Coordinate panel discussions, coding rounds, and manager briefs.</p>
+          </div>
+          <div class="stepper-node" style="border-color: var(--accent-teal); background: var(--soft-teal);">
+            <div class="stepper-step" style="color: #11706c;">07 // ONBOARD</div>
+            <div class="stepper-title" style="color: var(--accent-teal);">Track &amp; Onboard</div>
+            <p class="stepper-desc">Complete background checks, execute SOW terms, and launch project.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 05. TECHNOLOGY SPECIALIZATIONS ==================== -->
+      <section class="ws-section" id="specializations">
+        <div class="ws-subhead-bar">04 / SPECIALIZATIONS // RELEVANT TECHNOLOGY CATEGORIES</div>
+        <h2 class="ws-title">Represented Across <span>Modern Engineering Domains.</span></h2>
+        <p class="ws-subtitle">
+          We represent practitioners across primary enterprise technical streams based on authentic skills and project experience.
+        </p>
+
+        <div class="grid-4-col" style="margin-top: 1.75rem;">
+          <div class="division-app-card" style="padding: 1.4rem;">
+            <div class="stepper-step">DOMAIN 01</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">Software Engineering</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55; margin-bottom: 0.85rem;">
+              Full-lifecycle application engineering in enterprise Java, .NET Core, Python microservices, and React ecosystems.
+            </p>
+            <div class="div-card-chips">
+              <span class="chip-tag">Java 17</span>
+              <span class="chip-tag">Spring Boot</span>
+              <span class="chip-tag">.NET Core</span>
+              <span class="chip-tag">React / Node</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" style="padding: 1.4rem;">
+            <div class="stepper-step" style="color: var(--brand-blue);">DOMAIN 02</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">Cloud &amp; DevOps</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55; margin-bottom: 0.85rem;">
+              Multi-region cloud infrastructure, containerization topologies, infrastructure-as-code, and automated CI/CD pipelines.
+            </p>
+            <div class="div-card-chips">
+              <span class="chip-tag">AWS / Azure / GCP</span>
+              <span class="chip-tag">Kubernetes</span>
+              <span class="chip-tag">Terraform</span>
+              <span class="chip-tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" style="padding: 1.4rem;">
+            <div class="stepper-step" style="color: var(--accent-violet);">DOMAIN 03</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">Data Engineering &amp; BI</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55; margin-bottom: 0.85rem;">
+              Distributed analytical pipelines, real-time event streaming architectures, modern data warehousing, and ETL design.
+            </p>
+            <div class="div-card-chips">
+              <span class="chip-tag">Snowflake</span>
+              <span class="chip-tag">Kafka</span>
+              <span class="chip-tag">Apache Spark</span>
+              <span class="chip-tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="division-app-card" style="padding: 1.4rem;">
+            <div class="stepper-step" style="color: var(--accent-copper);">DOMAIN 04</div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0.35rem 0;">Quality Engineering</h3>
+            <p style="font-size: 0.825rem; color: var(--secondary-text); line-height: 1.55; margin-bottom: 0.85rem;">
+              Automated testing architectures, SDET frameworks, API test harness creation, and continuous performance validation.
+            </p>
+            <div class="div-card-chips">
+              <span class="chip-tag">Selenium</span>
+              <span class="chip-tag">Playwright / Cypress</span>
+              <span class="chip-tag">SDET Frameworks</span>
+              <span class="chip-tag">JMeter</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 06. PROFILE & OPPORTUNITY ALIGNMENT COMPARATOR ==================== -->
+      <section class="ws-section" id="alignment">
+        <div class="ws-subhead-bar">05 / CRITERIA // PROFILE &amp; OPPORTUNITY ALIGNMENT ENGINE</div>
+        <h2 class="ws-title">Alignment <span>Matters.</span></h2>
+        <p class="ws-subtitle">
+          Rigorous attribute comparison matching consultant depth directly to verified client parameters.
+        </p>
+
+        <div class="comparison-interface-grid">
+          <div class="comparison-panel">
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--accent-teal); font-weight: 700; text-transform: uppercase;">
+              CONSULTANT SPECIFICS
+            </div>
+            <div class="comp-row"><span class="comp-key">Technical Skills</span><span class="comp-val">Cloud Eng., Kubernetes, Terraform</span></div>
+            <div class="comp-row"><span class="comp-key">Experience Seniority</span><span class="comp-val">Senior Architect (8+ Yrs)</span></div>
+            <div class="comp-row"><span class="comp-key">Location Scope</span><span class="comp-val">100% US Remote (EST/CST)</span></div>
+            <div class="comp-row"><span class="comp-key">Availability</span><span class="comp-val">Immediate / 1 Week Notice</span></div>
+            <div class="comp-row"><span class="comp-key">Work Authorization</span><span class="comp-val">Authorized Status (Verified)</span></div>
+            <div class="comp-row"><span class="comp-key">Engagement Preference</span><span class="comp-val">Direct C2C / Contract</span></div>
+          </div>
+
+          <div class="comp-connector-column">
+            <div class="alignment-badge">
+              <span>CRITERIA</span><br>
+              <strong>MATCHED</strong>
+            </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+
+          <div class="comparison-panel">
+            <div style="font-family: var(--tech-font); font-size: 0.72rem; color: var(--brand-blue); font-weight: 700; text-transform: uppercase;">
+              REQUIREMENT SPECIFICS
+            </div>
+            <div class="comp-row"><span class="comp-key">Required Stack</span><span class="comp-val">Kubernetes, Terraform, AWS</span></div>
+            <div class="comp-row"><span class="comp-key">Seniority Bar</span><span class="comp-val">Lead Infrastructure Specialist</span></div>
+            <div class="comp-row"><span class="comp-key">Work Model</span><span class="comp-val">US Remote / EST Hours</span></div>
+            <div class="comp-row"><span class="comp-key">Contract Scope</span><span class="comp-val">12-Month Renewable SOW</span></div>
+            <div class="comp-row"><span class="comp-key">Rate Realization</span><span class="comp-val">Aligned With Consultant Bracket</span></div>
+            <div class="comp-row"><span class="comp-key">Interview Slots</span><span class="comp-val">Confirmed Direct Technical Round</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 07. WORK AUTHORIZATION & MUTUAL RESPONSIBILITIES ==================== -->
+      <section class="ws-section" id="compliance-responsibilities">
+        <div class="ws-subhead-bar">06 / COLLABORATION // COMPLIANCE &amp; MUTUAL RESPONSIBILITIES</div>
+        <div class="grid-2-col">
+          <!-- Compliance Box -->
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 2rem; box-shadow: var(--shadow-card);">
+            <div class="ws-kicker-badge">COMPLIANCE TRANSPARENCY</div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--strong-text); margin: 0.35rem 0 0.85rem 0;">Clear Information Matters</h3>
+            <p style="font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; margin-bottom: 1.25rem;">
+              Work authorization is a critical parameter in US IT contracting. Profiles must accurately communicate valid status to ensure compliance across all Tier-1 accounts.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.25rem;">
+              <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700;">US Citizen</span>
+              <span class="chip-tag" style="background: var(--soft-teal); color: var(--accent-teal); font-weight: 700;">Green Card (GC)</span>
+              <span class="chip-tag">H-1B</span>
+              <span class="chip-tag">H-4 EAD</span>
+              <span class="chip-tag">OPT / STEM OPT</span>
+              <span class="chip-tag">GC EAD</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--muted-text); line-height: 1.5;">
+              * Note: TJR Tech provides professional representation and staffing coordination. We do not provide immigration or legal advice.
+            </p>
+          </div>
+
+          <!-- Mutual Responsibilities Box -->
+          <div style="background: var(--card-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 2rem; box-shadow: var(--shadow-card);">
+            <div class="ws-kicker-badge" style="background: var(--soft-blue-surface); color: var(--brand-blue); border-color: rgba(49, 95, 206, 0.25);">TWO-WAY PARTNERSHIP</div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--strong-text); margin: 0.35rem 0 0.85rem 0;">Consultant Commitments</h3>
+            <p style="font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; margin-bottom: 1rem;">
+              Successful opportunity placement is built on clear communication and mutual discipline from both parties:
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem;">
+              <span class="chip-tag">&bull; Provide 100% accurate technical history &amp; project references</span>
+              <span class="chip-tag">&bull; Maintain clear availability dates and notice period commitments</span>
+              <span class="chip-tag">&bull; Punctual attendance at scheduled technical interview panels</span>
+              <span class="chip-tag">&bull; Responsive communication regarding feedback and SOW documentation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 08. SERVICE SNAPSHOT ==================== -->
+      <section class="ws-section" id="snapshot">
+        <div class="snapshot-matrix-card">
+          <div class="ws-kicker-badge" style="margin-bottom: 1rem;">CONSULTANT PATHWAY MATRIX</div>
+          <div class="snapshot-stream">
+            <div>PROFILE <span>•</span> POSITIONING <span>•</span> OPPORTUNITY</div>
+            <div>TIER-1 REACH <span>•</span> RATE TRANSPARENCY <span>•</span> SOW</div>
+            <div>SOFTWARE <span>•</span> CLOUD <span>•</span> DATA <span>•</span> DEVOPS</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 09. FREQUENTLY ASKED QUESTIONS ==================== -->
+      <section class="ws-section" id="faq">
+        <div class="ws-kicker-badge">
+          <span>07 / CLARITY // FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="ws-title">Common Questions Regarding <span>Consultant Solutions.</span></h2>
+        <p class="ws-subtitle">Direct details regarding consultant representation, submission workflows, and portfolio extensions.</p>
+
+        <div class="faq-accordion-wrap">
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Who can partner with TJR Tech for consultant representation?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Work-authorized technology consultants, technical architects, and engineers rolling off existing client assignments who seek direct Tier-1 vendor placement across US enterprise accounts.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What information is required during initial intake?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We review your updated resume, verified technical core stacks, location scope, current availability date, work authorization details, and hourly billing rate expectations.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Does TJR Tech provide guaranteed job placement or offers?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. We operate with complete professional candor: final selection decisions remain with client engineering managers and budget leads. We guarantee structured representation, profile positioning, and transparent submissions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can TJR Tech also engineer a custom digital portfolio for me?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Through our Web Development practice division, we build bespoke executive digital portfolios to showcase senior credentials beyond a traditional static resume document. <a href="for-professionals.html" style="color: var(--accent-teal); font-weight: 700;">Explore Professional Solutions &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 10. CALL TO ACTION ==================== -->
+      <section class="ws-section" id="cta" style="margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, var(--card-bg) 0%, var(--soft-teal) 100%); border: 1px solid var(--surface-border); border-radius: 10px; padding: 3rem 2.25rem; box-shadow: var(--shadow-card); text-align: center;">
+          <div class="ws-kicker-badge">08 // CONVERGE // DIRECT ACTION</div>
+          <h2 class="ws-title" style="font-size: 2.35rem;">
+            Ready to Put Your Profile <span>in Motion?</span>
+          </h2>
+          <p class="ws-subtitle" style="margin: 0.65rem auto 0 auto; text-align: center;">
+            Share your professional profile with TJR Tech and let our team align your experience with active Tier-1 contract requisitions.
+          </p>
+
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap;">
+            <button class="btn btn-teal" onclick="openConsultantModal()">Submit Your Profile</button>
+            <a href="us-it-bench-sales.html" class="btn btn-secondary">Explore Bench Sales</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Consultant Desk</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- CONTEXTUAL RIGHT PANEL (INSPECTOR) -->
+    <aside class="app-right-panel" id="appRightPanel">
+      <div>
+        <div class="panel-header">
+          <div>
+            <div class="panel-kicker">INSPECTOR</div>
+            <h3 class="panel-title" id="panelTitle">For IT Consultants</h3>
+          </div>
+          <button class="icon-btn" onclick="toggleRightPanel()" title="Close Inspector">&times;</button>
+        </div>
+
+        <div class="panel-content">
+          <div>
+            <div class="panel-section-label">OVERVIEW</div>
+            <p style="font-size: 0.85rem; color: var(--secondary-text); line-height: 1.6;" id="panelDesc">
+              Structured representation, profile positioning, Tier-1 prime vendor matching, rate negotiation, and submission tracking for work-authorized technical professionals.
+            </p>
+          </div>
+
+          <div>
+            <div class="panel-section-label">OPERATING METRICS</div>
+            <ul class="panel-specs-list" id="panelSpecsList">
+              <li class="panel-spec-row">
+                <span>Representation</span>
+                <span id="spec-1">Dedicated Recruiter</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Vendor Access</span>
+                <span id="spec-2">Tier-1 Direct Prime</span>
+              </li>
+              <li class="panel-spec-row">
+                <span>Rate Terms</span>
+                <span id="spec-3">Full Transparency</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="panel-section-label">CORE CAPABILITIES</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="panelChips">
+              <span class="chip-tag">Profile Optimization</span>
+              <span class="chip-tag">Direct Vendor Reach</span>
+              <span class="chip-tag">Rate Negotiation</span>
+              <span class="chip-tag">Submission Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-actions">
+        <button class="btn btn-teal" onclick="openConsultantModal()" style="width: 100%;">Submit Profile</button>
+        <a href="us-it-bench-sales.html" class="btn btn-secondary" style="width: 100%; text-decoration: none;">View Bench Sales</a>
+      </div>
+    </aside>
+
   </div>
 
-  <main>
-    <!-- ==========================================================================
-         SECTION 01 — HERO
-         ========================================================================== -->
-    <section class="consultant-hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="eyebrow">TJR TECH / SOLUTIONS FOR CONSULTANTS</div>
-          <h1 class="hero-title-main">
-            Your Experience. Your Skills. <br>
-            <span>Your Next Opportunity.</span>
-          </h1>
-          <p class="hero-supporting-copy">
-            Structured support for technology consultants navigating the US IT staffing ecosystem.
-          </p>
-          <p class="hero-secondary-copy">
-            TJR Tech helps consultants organize their professional profiles, align their experience with relevant requirements, navigate submission workflows, and maintain structured communication throughout the opportunity journey.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-primary open-consultant-modal">
-              <span>Submit Your Profile</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-            <a href="/contact" class="btn btn-secondary">
-              <span>Talk to TJR Tech</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="profile-canvas-wrap">
-          <canvas id="consultantHeroCanvas" aria-label="Digital consultant profile node network canvas"></canvas>
-        </div>
+  <!-- ==========================================================================
+       GLOBAL COMMAND SEARCH MODAL (CTRL+K)
+       ========================================================================== -->
+  <div class="search-modal-backdrop" id="searchBackdrop">
+    <div class="search-modal-card">
+      <div class="search-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="globalSearchField" placeholder="Search consultant solutions and pathways..." autocomplete="off">
+        <button class="icon-btn" onclick="closeSearch()">&times;</button>
       </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 02 — INTRODUCTION
-         ========================================================================== -->
-    <section class="section-spacing intro-section" id="intro">
-      <div class="container">
-        <div class="intro-grid reveal">
-          <div>
-            <div class="eyebrow">BEYOND THE RESUME</div>
-            <h2 class="section-title">Your Resume Is Only the Beginning.</h2>
-            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
-              <p>
-                A technology consultant's professional profile contains more than a resume. Skills, project experience, technical depth, availability, location, work authorization, and career preferences can all matter when evaluating an opportunity.
-              </p>
-              <p>
-                TJR Tech provides structured support around these elements so that consultant information can be communicated clearly and relevant opportunities can be evaluated appropriately.
-              </p>
-            </div>
-          </div>
-
-          <div class="intro-statement-box">
-            <div class="progression-stream">
-              <div>EXPERIENCE</div>
-              <div>&darr;</div>
-              <div>POSITIONING</div>
-              <div>&darr;</div>
-              <div><span>OPPORTUNITY</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 03 — THE CONSULTANT CHALLENGE
-         ========================================================================== -->
-    <section class="section-spacing" id="challenges">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">MARKET COMPLEXITY</div>
-          <h2 class="section-title">Technology Talent Deserves the Right Representation.</h2>
-          <p class="section-lead">Key stages in the US IT landscape where structured coordination creates clarity.</p>
-        </div>
-
-        <div class="challenge-grid reveal">
-          <div class="challenge-card">
-            <div class="challenge-num">01</div>
-            <h3 class="challenge-title">Profile Positioning</h3>
-            <p class="challenge-desc">Technical experience needs to be presented clearly and professionally.</p>
-          </div>
-
-          <div class="challenge-card">
-            <div class="challenge-num">02</div>
-            <h3 class="challenge-title">Requirement Alignment</h3>
-            <p class="challenge-desc">Not every opportunity is relevant to every technical profile.</p>
-          </div>
-
-          <div class="challenge-card">
-            <div class="challenge-num">03</div>
-            <h3 class="challenge-title">Market Communication</h3>
-            <p class="challenge-desc">Consultants need clear and timely communication throughout the process.</p>
-          </div>
-
-          <div class="challenge-card">
-            <div class="challenge-num">04</div>
-            <h3 class="challenge-title">Submission</h3>
-            <p class="challenge-desc">Profiles need to be presented against relevant requirements.</p>
-          </div>
-
-          <div class="challenge-card">
-            <div class="challenge-num">05</div>
-            <h3 class="challenge-title">Interview Coordination</h3>
-            <p class="challenge-desc">Interview stages require organized communication and scheduling.</p>
-          </div>
-
-          <div class="challenge-card">
-            <div class="challenge-num">06</div>
-            <h3 class="challenge-title">Follow-Up</h3>
-            <p class="challenge-desc">Opportunities can involve multiple communication and feedback stages.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 04 — OUR CONSULTANT SOLUTION
-         ========================================================================== -->
-    <section class="section-spacing journey-section" id="solution-journey">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">STRUCTURED ROADMAP</div>
-          <h2 class="section-title">A Structured Journey Around the Consultant.</h2>
-          <p class="section-lead">Eight methodical milestones aligning technical capability with market demand.</p>
-        </div>
-
-        <div class="journey-stepper-grid reveal">
-          <div class="journey-step-box">
-            <div class="journey-num">01</div>
-            <h3 class="journey-title">PROFILE</h3>
-            <p class="journey-desc">Understand the consultant's professional background.</p>
-          </div>
-
-          <div class="journey-step-box">
-            <div class="journey-num">02</div>
-            <h3 class="journey-title">REVIEW</h3>
-            <p class="journey-desc">Review technical skills and experience.</p>
-          </div>
-
-          <div class="journey-step-box">
-            <div class="journey-num">03</div>
-            <h3 class="journey-title">POSITION</h3>
-            <p class="journey-desc">Organize and present the profile appropriately.</p>
-          </div>
-
-          <div class="journey-step-box">
-            <div class="journey-num">04</div>
-            <h3 class="journey-title">ALIGN</h3>
-            <p class="journey-desc">Evaluate relevant requirements.</p>
-          </div>
-
-          <div class="journey-step-box">
-            <div class="journey-num">05</div>
-            <h3 class="journey-title">SUBMIT</h3>
-            <p class="journey-desc">Present the consultant profile for consideration.</p>
-          </div>
-
-          <div class="journey-step-box">
-            <div class="journey-num">06</div>
-            <h3 class="journey-title">INTERVIEW</h3>
-            <p class="journey-desc">Coordinate communication around interview stages.</p>
-          </div>
-
-          <div class="journey-step-box">
-            <div class="journey-num">07</div>
-            <h3 class="journey-title">FEEDBACK</h3>
-            <p class="journey-desc">Follow up on opportunity status and feedback.</p>
-          </div>
-
-          <div class="journey-step-box" style="border-color: var(--border-accent);">
-            <div class="journey-num" style="color: var(--text-accent);">08</div>
-            <h3 class="journey-title">PLACEMENT SUPPORT</h3>
-            <p class="journey-desc">Support communication and coordination through the placement process.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 05 — PROFILE POSITIONING & 06. TECH PROFILE
-         ========================================================================== -->
-    <section class="section-spacing" id="positioning-and-skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">PROFILE ARCHITECTURE</div>
-          <h2 class="section-title">Turn Your Experience Into a Clear Professional Profile.</h2>
-          <p class="section-lead">
-            Strong technical experience becomes more useful when it is clearly structured and aligned with the requirements being considered.
-          </p>
-        </div>
-
-        <div class="profile-categories-grid reveal">
-          <div class="category-chip">Professional Summary</div>
-          <div class="category-chip">Technical Skills</div>
-          <div class="category-chip">Project Experience</div>
-          <div class="category-chip">Industry Experience</div>
-          <div class="category-chip">Education</div>
-          <div class="category-chip">Certifications</div>
-          <div class="category-chip">Location</div>
-          <div class="category-chip">Availability</div>
-          <div class="category-chip">Work Authorization</div>
-          <div class="category-chip">Engagement Preference</div>
-          <div class="category-chip">Target Opportunities</div>
-          <div class="category-chip" style="border-color: var(--border-accent); color: var(--text-accent);">Structured Profile Node</div>
-        </div>
-
-        <!-- Section 06: Technology Constellation -->
-        <div class="tech-constellation-box reveal">
-          <div class="eyebrow">DOMAINS &amp; FRAMEWORKS</div>
-          <h3 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Show What You Actually Know.</h3>
-          <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 800px; line-height: 1.6;">
-            We align profiles across primary IT disciplines based strictly on the verified skills and experiences you provide.
-          </p>
-
-          <div class="constellation-pills-matrix">
-            <span class="const-pill">Java</span>
-            <span class="const-pill">.NET</span>
-            <span class="const-pill">Python</span>
-            <span class="const-pill">JavaScript</span>
-            <span class="const-pill">React</span>
-            <span class="const-pill">AWS</span>
-            <span class="const-pill">Azure</span>
-            <span class="const-pill">GCP</span>
-            <span class="const-pill">Kubernetes</span>
-            <span class="const-pill">Terraform</span>
-            <span class="const-pill">SQL</span>
-            <span class="const-pill">Spark</span>
-            <span class="const-pill">Hadoop</span>
-            <span class="const-pill">Kafka</span>
-            <span class="const-pill">Snowflake</span>
-            <span class="const-pill">Selenium</span>
-            <span class="const-pill">API Testing</span>
-            <span class="const-pill">Networking</span>
-            <span class="const-pill">Cloud Infrastructure</span>
-            <span class="const-pill">Security</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 07 — OPPORTUNITY ALIGNMENT
-         ========================================================================== -->
-    <section class="section-spacing alignment-section" id="alignment">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
-          <div class="eyebrow" style="justify-content: center;">CRITERIA COMPARISON</div>
-          <h2 class="section-title">Relevant Opportunities Matter.</h2>
-          <p class="section-lead" style="margin: 1rem auto 0 auto;">
-            Rigorous attribute alignment matching consultant profile specifics to technical requirements.
-          </p>
-        </div>
-
-        <div class="alignment-comparison-grid reveal">
-          <div class="comparison-panel">
-            <div class="panel-kicker">Consultant Specifics</div>
-            <div class="comp-row"><span class="comp-key">Skills</span><span class="comp-val">Cloud Eng., Kubernetes, Terraform</span></div>
-            <div class="comp-row"><span class="comp-key">Experience</span><span class="comp-val">Senior Level (7+ Yrs)</span></div>
-            <div class="comp-row"><span class="comp-key">Location</span><span class="comp-val">Remote (EST/CST)</span></div>
-            <div class="comp-row"><span class="comp-key">Availability</span><span class="comp-val">Immediate Deployment</span></div>
-            <div class="comp-row"><span class="comp-key">Work Authorization</span><span class="comp-val">Work-Authorized Status</span></div>
-            <div class="comp-row"><span class="comp-key">Engagement Preference</span><span class="comp-val">Contract / C2C</span></div>
-          </div>
-
-          <div>
-            <div class="alignment-central-badge">
-              <span>ATTRIBUTE</span><br>
-              <strong>ALIGNMENT</strong>
-            </div>
-          </div>
-
-          <div class="comparison-panel">
-            <div class="panel-kicker">Requirement Specifics</div>
-            <div class="comp-row"><span class="comp-key">Technology</span><span class="comp-val">Kubernetes, Cloud Infrastructure, IaC</span></div>
-            <div class="comp-row"><span class="comp-key">Experience</span><span class="comp-val">Senior Infrastructure Specialist</span></div>
-            <div class="comp-row"><span class="comp-key">Location</span><span class="comp-val">Remote / US Hours</span></div>
-            <div class="comp-row"><span class="comp-key">Start Date</span><span class="comp-val">Immediate / 2 Weeks</span></div>
-            <div class="comp-row"><span class="comp-key">Engagement Type</span><span class="comp-val">Contract Engagement</span></div>
-            <div class="comp-row"><span class="comp-key">Required Skills</span><span class="comp-val">Terraform, CI/CD, Containerization</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 08 — OPPORTUNITY JOURNEY (HORIZONTAL TRACK)
-         ========================================================================== -->
-    <section class="section-spacing" id="opportunity-journey">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">TRANSPARENT PROGRESSION</div>
-          <h2 class="section-title">From Availability to Opportunity.</h2>
-          <p class="section-lead">A clear sequence defining how requirements progress from review to onboarding.</p>
-        </div>
-
-        <div class="horizontal-journey-track reveal">
-          <div class="opp-step-box">
-            <div class="opp-step-num">01</div>
-            <h3 class="opp-step-name">AVAILABLE</h3>
-            <p class="opp-step-desc">Consultant is available for new opportunities.</p>
-          </div>
-
-          <div class="opp-step-box">
-            <div class="opp-step-num">02</div>
-            <h3 class="opp-step-name">PROFILE REVIEW</h3>
-            <p class="opp-step-desc">Professional information is reviewed.</p>
-          </div>
-
-          <div class="opp-step-box">
-            <div class="opp-step-num">03</div>
-            <h3 class="opp-step-name">RELEVANT REQUIREMENT</h3>
-            <p class="opp-step-desc">Potentially relevant requirements are evaluated.</p>
-          </div>
-
-          <div class="opp-step-box">
-            <div class="opp-step-num">04</div>
-            <h3 class="opp-step-name">SUBMISSION</h3>
-            <p class="opp-step-desc">Profile may be presented for consideration.</p>
-          </div>
-
-          <div class="opp-step-box">
-            <div class="opp-step-num">05</div>
-            <h3 class="opp-step-name">INTERVIEW</h3>
-            <p class="opp-step-desc">Interview communication can be coordinated.</p>
-          </div>
-
-          <div class="opp-step-box">
-            <div class="opp-step-num">06</div>
-            <h3 class="opp-step-name">FEEDBACK</h3>
-            <p class="opp-step-desc">Opportunity status and feedback can be communicated.</p>
-          </div>
-
-          <div class="opp-step-box">
-            <div class="opp-step-num">07</div>
-            <h3 class="opp-step-name">SELECTION</h3>
-            <p class="opp-step-desc">Selection decisions are made by the relevant hiring/staffing parties.</p>
-          </div>
-
-          <div class="opp-step-box" style="border-color: var(--border-accent);">
-            <div class="opp-step-num" style="color: var(--text-accent);">08</div>
-            <h3 class="opp-step-name">ONBOARDING</h3>
-            <p class="opp-step-desc">Onboarding follows the applicable engagement process.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 09 — COMMUNICATION SUPPORT & 10. WORK AUTH & 11. ENGAGEMENT TYPES
-         ========================================================================== -->
-    <section class="section-spacing" id="communication-and-compliance" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <!-- Section 09: Communication -->
-        <div class="section-header reveal">
-          <div class="eyebrow">COORDINATION LOOP</div>
-          <h2 class="section-title">Keep Every Step Connected.</h2>
-          <p class="section-lead">
-            Clear communication helps consultants understand where an opportunity stands and what action may be required next.
-          </p>
-        </div>
-
-        <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-accent); text-align: center; margin: 1.5rem 0;" class="reveal">
-          CONSULTANT &nbsp;&harr;&nbsp; TJR TECH &nbsp;&harr;&nbsp; STAFFING CONTACT &nbsp;&harr;&nbsp; OPPORTUNITY
-        </div>
-
-        <div class="comm-cards-grid reveal">
-          <div class="comm-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Requirement Updates</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Validation of role specifications and technical expectations.</p></div>
-          <div class="comm-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Submission Status</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Direct updates on where your profile has been presented.</p></div>
-          <div class="comm-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Interview Details</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Scheduling coordination, client prep details, and technical topics.</p></div>
-          <div class="comm-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Feedback</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Prompt collection and delivery of technical screening feedback.</p></div>
-          <div class="comm-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Next Steps</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Actionable guidance for rounds, paperwork, and technical tests.</p></div>
-          <div class="comm-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Availability</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Active alignment regarding current timelines and bench transitions.</p></div>
-        </div>
-
-        <!-- Section 10: Work Authorization -->
-        <div class="auth-banner-box reveal">
-          <div class="eyebrow" style="justify-content: center;">COMPLIANCE INTEGRITY</div>
-          <h3 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Professional Information Should Be Clear.</h3>
-          <p style="font-size: 1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; line-height: 1.65;">
-            Work authorization can be an important part of US IT staffing requirements. Consultant profiles should accurately communicate applicable authorization information.
-          </p>
-
-          <div class="auth-pills-row">
-            <span class="auth-badge">OPT / STEM OPT</span>
-            <span class="auth-badge">H-1B</span>
-            <span class="auth-badge">H-4 EAD</span>
-            <span class="auth-badge">GC EAD</span>
-            <span class="auth-badge">US Citizen</span>
-            <span class="auth-badge">Permanent Resident</span>
-          </div>
-
-          <p style="font-size: 0.8125rem; color: var(--text-muted); max-width: 720px; margin: 0 auto; line-height: 1.6;">
-            Work authorization requirements vary by opportunity. Consultants should verify eligibility and employment requirements for each specific position. TJR Tech does not provide immigration or legal advice.
-          </p>
-        </div>
-
-        <!-- Section 11: Engagement Types -->
-        <div class="section-header reveal" style="margin-top: 5.5rem;">
-          <div class="eyebrow">CONTRACT MODELS</div>
-          <h2 class="section-title">Different Opportunities. Different Engagement Models.</h2>
-        </div>
-
-        <div class="engagement-cards-grid reveal">
-          <div class="engage-card"><strong style="color: #fff; font-size: 1.05rem;">Contract</strong><p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.5rem;">Defined project deliverables or durations.</p></div>
-          <div class="engage-card"><strong style="color: #fff; font-size: 1.05rem;">Contract-to-Hire</strong><p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.5rem;">Trial period before potential long-term arrangement.</p></div>
-          <div class="engage-card"><strong style="color: #fff; font-size: 1.05rem;">W-2</strong><p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.5rem;">Direct employment arrangement on technical assignments.</p></div>
-          <div class="engage-card"><strong style="color: #fff; font-size: 1.05rem;">C2C</strong><p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.5rem;">B2B technical consultant representation where permitted.</p></div>
-          <div class="engage-card"><strong style="color: #fff; font-size: 1.05rem;">Full-Time</strong><p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.5rem;">Permanent career placement with partner organizations.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 12 — CONSULTANT SUPPORT & 13. MUTUAL RESPONSIBILITIES
-         ========================================================================== -->
-    <section class="section-spacing" id="support-and-responsibilities">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">COMPREHENSIVE SUPPORT</div>
-          <h2 class="section-title">Support Beyond the Submission.</h2>
-        </div>
-
-        <div class="support-blocks-grid reveal">
-          <div class="support-block">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">01</div>
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Profile Support</h3>
-            <p style="color: var(--text-secondary); font-size: 0.875rem;">Help organize and communicate relevant professional information.</p>
-          </div>
-          <div class="support-block">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">02</div>
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Opportunity Support</h3>
-            <p style="color: var(--text-secondary); font-size: 0.875rem;">Identify and discuss potentially relevant opportunities.</p>
-          </div>
-          <div class="support-block">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">03</div>
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Submission Coordination</h3>
-            <p style="color: var(--text-secondary); font-size: 0.875rem;">Coordinate profile submission activity where appropriate.</p>
-          </div>
-          <div class="support-block">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">04</div>
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Interview Coordination</h3>
-            <p style="color: var(--text-secondary); font-size: 0.875rem;">Support communication around interview scheduling and requirements.</p>
-          </div>
-          <div class="support-block">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">05</div>
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Feedback Communication</h3>
-            <p style="color: var(--text-secondary); font-size: 0.875rem;">Maintain communication around opportunity status and feedback.</p>
-          </div>
-          <div class="support-block">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-accent); margin-bottom: 0.5rem;">06</div>
-            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.5rem;">Placement Coordination</h3>
-            <p style="color: var(--text-secondary); font-size: 0.875rem;">Support communication through applicable placement and onboarding stages.</p>
-          </div>
-        </div>
-
-        <!-- Section 13: Responsibilities -->
-        <div class="section-header reveal" style="margin-top: 5.5rem;">
-          <div class="eyebrow">TRANSPARENT COLLABORATION</div>
-          <h2 class="section-title">Successful Coordination Works Both Ways.</h2>
-          <p class="section-lead">Clear and accurate information from both sides helps create a more organized opportunity process.</p>
-        </div>
-
-        <div class="responsibilities-grid reveal">
-          <div class="resp-col">
-            <div class="eyebrow">OUR COMMITMENT</div>
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">TJR TECH</h3>
-            <ul class="resp-list">
-              <li>Requirement communication</li>
-              <li>Profile coordination</li>
-              <li>Submission support</li>
-              <li>Interview communication</li>
-              <li>Follow-up</li>
-            </ul>
-          </div>
-
-          <div class="resp-col">
-            <div class="eyebrow">CONSULTANT ROLE</div>
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">CONSULTANT</h3>
-            <ul class="resp-list">
-              <li>Provide accurate information</li>
-              <li>Maintain updated availability</li>
-              <li>Respond to communication</li>
-              <li>Attend scheduled interviews</li>
-              <li>Provide required documentation</li>
-              <li>Communicate changes promptly</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 14 — RESOURCES & 15. DIGITAL PORTFOLIO & 16. PROGRESSION
-         ========================================================================== -->
-    <section class="section-spacing" id="resources" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <!-- Section 14: Resources -->
-        <div class="section-header reveal">
-          <div class="eyebrow">INFORMATIONAL TOOLS</div>
-          <h2 class="section-title">Tools for Your Professional Journey.</h2>
-        </div>
-
-        <div class="resources-grid reveal">
-          <div class="res-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Resume / Profile Guidance</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Principles for presenting technical experience clearly.</p></div>
-          <div class="res-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Opportunity Communication</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Structuring dialogue with recruitment contacts.</p></div>
-          <div class="res-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Interview Preparation</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Informational guides for technical review panels.</p></div>
-          <div class="res-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Professional Portfolio</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Presenting projects and technical depth online.</p></div>
-          <div class="res-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Technology Profile</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">Frameworks for categorizing multi-stack proficiency.</p></div>
-          <div class="res-card"><h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.35rem;">Career Resources</h3><p style="font-size: 0.85rem; color: var(--text-secondary);">General US IT staffing market documentation.</p></div>
-        </div>
-
-        <!-- Section 15: Digital Portfolio Connection -->
-        <div class="portfolio-bridge-box reveal">
-          <div>
-            <div class="eyebrow">DIGITAL IDENTITY EXTENSION</div>
-            <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Your Resume Can Become a Digital Experience.</h3>
-            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
-              Consultants and professionals can also create modern digital portfolios that present their experience, skills, projects, and professional identity beyond a traditional resume.
-            </p>
-            <a href="/solutions/for-professionals" class="btn btn-secondary">Explore Professional Solutions &rarr;</a>
-          </div>
-
-          <div style="background: rgba(2, 6, 23, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.5rem; font-family: var(--font-mono); font-size: 0.8125rem; display: flex; flex-direction: column; gap: 0.5rem; text-align: center;">
-            <div>RESUME</div>
-            <div style="color: var(--text-accent);">&darr;</div>
-            <div>EXPERIENCE &bull; PROJECTS &bull; SKILLS</div>
-            <div style="color: var(--text-accent);">&darr;</div>
-            <div>PORTFOLIO</div>
-            <div style="color: var(--text-accent);">&darr;</div>
-            <div style="color: #fff; font-weight: 700;">DIGITAL PRESENCE</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 16: Progression Statement -->
-    <section class="progression-statement-section" aria-label="Professional Progression Statement">
-      <div class="container reveal">
-        <div class="progression-stream-large">
-          <div>SKILL</div>
-          <span>&rarr;</span>
-          <div>EXPERIENCE</div>
-          <span>&rarr;</span>
-          <div>OPPORTUNITY</div>
-          <span>&rarr;</span>
-          <div style="color: var(--text-accent);">GROWTH</div>
-        </div>
-        <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin: 1.5rem auto 0 auto; line-height: 1.6;">
-          TJR Tech's consultant-focused approach is designed around connecting technical capability with relevant professional opportunities.
-        </p>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 17 — WHY TJR TECH & 18. CONSULTANT ECOSYSTEM
-         ========================================================================== -->
-    <section class="section-spacing" id="why-tjr">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="eyebrow">CONSULTANT-FIRST APPROACH</div>
-          <h2 class="section-title">Built Around the Consultant.</h2>
-        </div>
-
-        <div class="why-consultant-grid reveal">
-          <div class="why-c-card">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">People First</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">We focus on the professional behind the profile.</p>
-          </div>
-          <div class="why-c-card">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Requirement Driven</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">We consider the actual requirement before presenting an opportunity.</p>
-          </div>
-          <div class="why-c-card">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Structured</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Defined steps create clarity throughout the process.</p>
-          </div>
-          <div class="why-c-card">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Transparent</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">Clear communication helps consultants understand the status of an opportunity.</p>
-          </div>
-          <div class="why-c-card">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">Technology Aware</h3>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.55;">We understand the technical context behind modern IT requirements.</p>
-          </div>
-        </div>
-
-        <!-- Section 18: Ecosystem Canvas -->
-        <div class="section-header reveal" style="text-align: center; margin: 5.5rem auto 2rem auto;">
-          <div class="eyebrow" style="justify-content: center;">COORDINATION ECOSYSTEM</div>
-          <h2 class="section-title">Connecting Talent With Opportunity.</h2>
-        </div>
-
-        <div class="consultant-ecosystem-box reveal">
-          <canvas id="consultantEcosystemCanvas"></canvas>
-          <div class="eco-c-core">TJR TECH</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 19 — CONSULTANT CTA & 20. FAQ ACCORDION
-         ========================================================================== -->
-    <section class="section-spacing cta-section" id="cta">
-      <div class="container">
-        <div class="cta-container reveal">
-          <div class="eyebrow" style="justify-content: center;">PROFILE INTAKE</div>
-          <h2 class="section-title" style="margin-bottom: 1.25rem;">Ready to Put Your Profile in Motion?</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2.5rem;">
-            Share your professional profile and let TJR Tech understand your experience, skills, availability, and opportunity preferences.
-          </p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-            <button class="btn btn-primary open-consultant-modal">
-              <span>Submit Your Profile</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-            <a href="/contact" class="btn btn-secondary">
-              <span>Contact TJR Tech</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-spacing faq-section" id="faq">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center; margin: 0 auto 3.5rem auto;">
-          <div class="eyebrow" style="justify-content: center;">TRANSPARENT REPLIES</div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="faq-accordion-wrap reveal">
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Who can work with TJR Tech?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Technology consultants and professionals seeking relevant opportunities in the US IT staffing market can contact TJR Tech to discuss their profile.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>What information should I provide?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Relevant information may include your resume, technical skills, project experience, location, availability, work authorization, and preferred engagement type.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Does TJR Tech guarantee a job?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>No. TJR Tech does not guarantee employment, interviews, offers, placement, salary, or any specific outcome.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>How does opportunity matching work?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Consultant profiles can be reviewed against available requirements based on technical skills, experience, location, availability, work authorization, and other applicable criteria.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Do I need to update my profile?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Keeping your resume, technical skills, availability, location, and work authorization information accurate and current helps support relevant opportunity evaluation.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Can you help with interview coordination?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. Where applicable, TJR Tech can support communication and coordination around interview scheduling and related opportunity information.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Do you provide immigration advice?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>TJR Tech's role is focused on staffing and professional opportunity support. Immigration and legal matters should be verified with qualified professionals or the appropriate authorities.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
-              <span>Can you build a professional portfolio?</span>
-              <span class="faq-indicator">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. TJR Tech also provides web development capabilities that can be used to create professional digital portfolios and personal websites. <a href="/services/web-development" style="color: var(--text-accent);">Learn more about Web Development &rarr;</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION 21 — FINAL BRAND STATEMENT & 22. FINAL CTA
-         ========================================================================== -->
-    <section class="brand-statement-section" aria-label="Brand Closing Progression">
-      <div class="container reveal">
-        <div class="statement-headline-prog">
-          <span>Your Skills Have a Story.</span>
-          <span>Your Experience Has Value.</span>
-          <span>Your Next Opportunity Starts With a Conversation.</span>
-        </div>
-        <div class="statement-brand-line">TJR TECH — Technology. Talent. Digital Growth.</div>
-      </div>
-    </section>
-
-    <!-- Section 22: Final Secondary CTA -->
-    <section class="section-spacing cta-section" style="border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
-        <div class="cta-container reveal">
-          <h2 class="section-title" style="margin-bottom: 1rem;">Let's Talk About Your Next Opportunity.</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 2rem;">
-            Start with your profile. Tell us what you're looking for. We'll understand the requirement and discuss the appropriate next step.
-          </p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-            <button class="btn btn-primary open-consultant-modal">Submit Your Profile</button>
-            <a href="/contact" class="btn btn-secondary">Contact TJR Tech</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      <div class="search-results-list" id="searchResultsContainer"></div>
+    </div>
+  </div>
 
   <!-- ==========================================================================
-       SECTION 23 — FOOTER
+       CONSULTANT PROFILE INTAKE MODAL OVERLAY
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
+  <div class="contact-modal-backdrop" id="consultantModal">
+    <div class="contact-modal-dialog">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
         <div>
-          <div class="footer-brand-title">TJR TECH</div>
-          <div class="footer-tagline">Technology • Talent • Digital Growth</div>
-          <p class="footer-desc">
-            A technology and professional services organization delivering integrated solutions across US IT Staffing, IT Consultant Services, Web Development, and Digital Media.
-          </p>
+          <div style="font-family: var(--tech-font); font-size: 0.72rem; font-weight: 700; color: var(--accent-teal);">CONSULTANT INTAKE</div>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--strong-text);">Submit Your Profile</h3>
         </div>
-
-        <div>
-          <div class="footer-heading">Solutions</div>
-          <ul class="footer-links-list">
-            <li><a href="/solutions/for-businesses">For Businesses</a></li>
-            <li><a href="/solutions/for-consultants">For Consultants</a></li>
-            <li><a href="/solutions/for-professionals">For Professionals</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Services</div>
-          <ul class="footer-links-list">
-            <li><a href="/services/us-it-staffing">US IT Staffing</a></li>
-            <li><a href="/services/us-it-bench-sales">US IT Bench Sales</a></li>
-            <li><a href="/services/web-development">Web Development</a></li>
-            <li><a href="/services/ads-digital-media">Ads &amp; Digital Media</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Company</div>
-          <ul class="footer-links-list">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/directors">Leadership</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-heading">Work</div>
-          <ul class="footer-links-list">
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/services/ads-digital-media#selected-work">Selected Work</a></li>
-          </ul>
-        </div>
+        <button class="icon-btn" onclick="closeConsultantModal()">&times;</button>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; <span id="yearHolder"></span> TJR Tech. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Consultant Profile Intake Modal -->
-  <div class="modal-overlay" id="consultantModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
-    <div class="modal-box">
-      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
-      <div class="eyebrow">CONSULTANT PROFILE INTAKE</div>
-      <h3 id="modalHeading" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Submit Your Profile</h3>
-      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-        Provide your primary technical stack, experience level, location, and current work authorization.
-      </p>
 
       <form id="consultantForm" onsubmit="handleFormSubmission(event)">
         <div class="form-group">
-          <label class="form-label" for="consultantName">Full Name</label>
+          <label class="form-label">Full Name</label>
           <input class="form-input" type="text" id="consultantName" required placeholder="e.g. David Vance">
         </div>
         <div class="form-group">
-          <label class="form-label" for="consultantEmail">Email Address</label>
-          <input class="form-input" type="email" id="consultantEmail" required placeholder="david.vance@example.com">
+          <label class="form-label">Official Email Address</label>
+          <input class="form-input" type="email" id="consultantEmail" required placeholder="david@example.com">
         </div>
         <div class="form-group">
-          <label class="form-label" for="primarySkill">Primary Technical Specialization</label>
-          <input class="form-input" type="text" id="primarySkill" required placeholder="e.g. Senior Cloud / DevOps Engineer (AWS/K8s)">
+          <label class="form-label">Primary Technical Specialization</label>
+          <input class="form-input" type="text" id="primarySkill" required placeholder="e.g. Senior Cloud DevOps Engineer (AWS / K8s)">
         </div>
         <div class="form-group">
-          <label class="form-label" for="workAuthSelect">Work Authorization Status</label>
+          <label class="form-label">Work Authorization Status</label>
           <select class="form-select" id="workAuthSelect" required>
-            <option value="" disabled selected>Select authorization category</option>
             <option value="opt">OPT / STEM OPT</option>
             <option value="h1b">H-1B</option>
             <option value="h4ead">H-4 EAD</option>
@@ -2340,82 +2101,251 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="profileSummary">Brief Profile &amp; Availability</label>
-          <textarea class="form-textarea" id="profileSummary" required placeholder="Years of experience, preferred contract types (C2C, W-2), location preferences, notice period..."></textarea>
+          <label class="form-label">Brief Profile Summary &amp; Availability</label>
+          <textarea class="form-textarea" id="profileSummary" rows="3" required placeholder="Years of experience, preferred contract types (C2C, W-2), location preferences, notice period..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">
-          <span>Transmit Profile For Review</span>
-        </button>
+        <button type="submit" class="btn btn-teal" style="width: 100%;">Transmit Profile For Review</button>
       </form>
     </div>
   </div>
 
   <!-- ==========================================================================
-       MODULAR VANILLA JAVASCRIPT
+       MASTER CORE DATA & JAVASCRIPT CONTROLLER
        ========================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      // 1. Dynamic Year
-      const yearHolder = document.getElementById('yearHolder');
-      if (yearHolder) yearHolder.textContent = new Date().getFullYear();
+      // 1. Inspector Data Model
+      const INSPECTOR_DATA = {
+        consultant: {
+          title: 'For IT Consultants',
+          desc: 'Structured representation, profile positioning, Tier-1 prime vendor matching, rate negotiation, and submission tracking for work-authorized technical professionals.',
+          specs: [
+            { k: 'Representation', v: 'Dedicated Recruiter' },
+            { k: 'Vendor Access', v: 'Tier-1 Direct Prime' },
+            { k: 'Rate Terms', v: 'Full Transparency' }
+          ],
+          chips: ['Profile Optimization', 'Direct Vendor Reach', 'Rate Negotiation', 'Submission Tracking']
+        },
+        positioning: {
+          title: 'Profile Positioning',
+          desc: 'Restructuring and formatting technical resumes according to current North American enterprise standards to ensure high screening conversion.',
+          specs: [
+            { k: 'Focus', v: 'Resume Narrative' },
+            { k: 'Standard', v: 'Tier-1 Enterprise' },
+            { k: 'Turnaround', v: '24–48 Hours' }
+          ],
+          chips: ['ATS Alignment', 'Impact Statements', 'Clarity', 'Technical Depth']
+        },
+        skills: {
+          title: 'Skills Taxonomy',
+          desc: 'Categorizing multi-stack proficiency so client hiring managers immediately grasp core seniority across cloud, data, and software streams.',
+          specs: [
+            { k: 'Clarity', v: 'Stack Categorized' },
+            { k: 'Evaluation', v: 'Hands-on Depth' },
+            { k: 'Scope', v: 'Full Lifecycle' }
+          ],
+          chips: ['Cloud Topology', 'Data Pipelines', 'Software Stacks', 'Quality Frameworks']
+        },
+        alignment: {
+          title: 'Requirement Matching',
+          desc: 'Auditing live requisitions against your exact tech stack, geographic time zones, and target rates before submitting to avoid mismatched cycles.',
+          specs: [
+            { k: 'Criteria', v: 'Multi-Vector' },
+            { k: 'Rates', v: 'Target Bracket' },
+            { k: 'Timezones', v: 'EST / CST / PST' }
+          ],
+          chips: ['Precision Match', 'Funded SOWs', 'Verified Roles', 'Direct Client']
+        },
+        submission: {
+          title: 'Submission Pipeline',
+          desc: 'Transmitting tailored candidate packages directly through verified Tier-1 vendor management systems and dedicated recruitment accounts.',
+          specs: [
+            { k: 'Direct Portal', v: 'MSP / VMS Ingestion' },
+            { k: 'Notification', v: 'Real-Time Status' },
+            { k: 'Channel', v: 'Vetted Accounts' }
+          ],
+          chips: ['Direct Prime', 'Rate Lock', 'Candidate Brief', 'Tracking']
+        },
+        interview: {
+          title: 'Interview Briefings',
+          desc: 'Managing calendar invites, technical pre-briefs, video conferencing links, and client briefing expectations throughout multi-round interviews.',
+          specs: [
+            { k: 'Coordination', v: 'Active Recruiter' },
+            { k: 'Preparation', v: 'Client Context' },
+            { k: 'Feedback', v: 'Prompt Delivery' }
+          ],
+          chips: ['Tech Briefs', 'Panel Sync', 'Video Calls', 'Manager Rounds']
+        },
+        tracking: {
+          title: 'Opportunity Tracking',
+          desc: 'Continuous feedback loops: timely collection and delivery of technical feedback, status updates, and contractual onboarding guidance.',
+          specs: [
+            { k: 'Feedback', v: 'Actionable' },
+            { k: 'SOW Launch', v: 'Compliance Ready' },
+            { k: 'Start Date', v: 'Coordinated' }
+          ],
+          chips: ['Status Loops', 'Prompt Follow-Up', 'SOW Support', 'Onboarding']
+        }
+      };
 
-      // 2. Navigation Scroll & Progress Bar
-      const header = document.getElementById('mainHeader');
+      // Submenu Toggle Engine
+      window.toggleSidebarMenu = function (menuId, toggleBtnId) {
+        const menu = document.getElementById(menuId);
+        const btn = document.getElementById(toggleBtnId);
+        if (!menu || !btn) return;
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      };
+
+      // Contextual Inspector Handlers
+      window.inspectConsultant = function (itemId) {
+        const item = INSPECTOR_DATA[itemId] || INSPECTOR_DATA.consultant;
+
+        document.getElementById('panelTitle').textContent = item.title;
+        document.getElementById('panelDesc').textContent = item.desc;
+        document.getElementById('spec-1').textContent = item.specs[0].v;
+        document.getElementById('spec-2').textContent = item.specs[1].v;
+        document.getElementById('spec-3').textContent = item.specs[2].v;
+
+        const chipsWrap = document.getElementById('panelChips');
+        chipsWrap.innerHTML = item.chips.map(chip => `<span class="chip-tag">${chip}</span>`).join('');
+
+        const shell = document.getElementById('appShell');
+        shell.classList.remove('panel-collapsed');
+      };
+
+      window.toggleRightPanel = function () {
+        const shell = document.getElementById('appShell');
+        shell.classList.toggle('panel-collapsed');
+      };
+
+      document.getElementById('togglePanelBtn').addEventListener('click', toggleRightPanel);
+
+      // Mobile Menu Toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      if (window.innerWidth <= 768) {
+        mobileMenuToggle.style.display = 'inline-flex';
+      }
+      mobileMenuToggle.addEventListener('click', () => {
+        document.getElementById('appSidebar').classList.toggle('mobile-open');
+      });
+
+      // Global Search Overlay (Ctrl+K)
+      const searchBackdrop = document.getElementById('searchBackdrop');
+      const searchInput = document.getElementById('globalSearchField');
+      const searchResultsContainer = document.getElementById('searchResultsContainer');
+
+      const SEARCH_ENTRIES = [
+        { title: 'Home Dashboard', tag: 'Page', href: 'index.html' },
+        { title: 'About TJR Tech', tag: 'Page', href: 'about.html' },
+        { title: 'US IT Staffing', tag: 'Service', href: 'us-it-staffing.html' },
+        { title: 'US IT Bench Sales', tag: 'Service', href: 'us-it-bench-sales.html' },
+        { title: 'Web Development', tag: 'Service', href: 'web-development.html' },
+        { title: 'Ads & Digital Media', tag: 'Service', href: 'ads-digital-media.html' },
+        { title: 'Solutions Overview', tag: 'Solution', href: 'solutions.html' },
+        { title: 'For Consultants', tag: 'Solution', href: 'for-consultants.html' },
+        { title: 'For Professionals', tag: 'Solution', href: 'for-professionals.html' },
+        { title: 'For Businesses', tag: 'Solution', href: 'for-businesses.html' },
+        { title: 'Consultant Overview', tag: 'Section', href: '#intro' },
+        { title: 'Support Pillars', tag: 'Section', href: '#support-areas' },
+        { title: '7-Step Workflow', tag: 'Section', href: '#journey' },
+        { title: 'Tech Specializations', tag: 'Section', href: '#specializations' },
+        { title: 'Opportunity Alignment', tag: 'Section', href: '#alignment' },
+        { title: 'Compliance & Roles', tag: 'Section', href: '#compliance-responsibilities' },
+        { title: 'Portfolio Proofs', tag: 'Page', href: 'portfolio.html' },
+        { title: 'Insights', tag: 'Page', href: 'insights.html' },
+        { title: 'Careers', tag: 'Page', href: 'careers.html' },
+        { title: 'Contact', tag: 'Page', href: 'contact.html' }
+      ];
+
+      function openSearch() {
+        searchBackdrop.classList.add('open');
+        searchInput.focus();
+        renderSearchResults('');
+      }
+
+      function closeSearch() {
+        searchBackdrop.classList.remove('open');
+        searchInput.value = '';
+      }
+
+      function renderSearchResults(query) {
+        const q = query.toLowerCase().trim();
+        const matches = q ? SEARCH_ENTRIES.filter(e => e.title.toLowerCase().includes(q) || e.tag.toLowerCase().includes(q)) : SEARCH_ENTRIES;
+
+        searchResultsContainer.innerHTML = matches.map(m => `
+          <a class="search-result-row" href="${m.href}" onclick="closeSearch()">
+            <span>${m.title}</span>
+            <span class="s-tag">${m.tag}</span>
+          </a>
+        `).join('');
+      }
+
+      document.getElementById('searchTriggerBtn').addEventListener('click', openSearch);
+
+      searchInput.addEventListener('input', (e) => {
+        renderSearchResults(e.target.value);
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          searchBackdrop.classList.contains('open') ? closeSearch() : openSearch();
+        }
+        if (e.key === 'Escape') {
+          closeSearch();
+          closeConsultantModal();
+        }
+      });
+
+      searchBackdrop.addEventListener('click', (e) => {
+        if (e.target === searchBackdrop) closeSearch();
+      });
+
+      // Consultant Intake Modal Handlers
+      const consultantModal = document.getElementById('consultantModal');
+
+      window.openConsultantModal = function () {
+        consultantModal.classList.add('open');
+      };
+
+      window.closeConsultantModal = function () {
+        consultantModal.classList.remove('open');
+      };
+
+      consultantModal.addEventListener('click', (e) => {
+        if (e.target === consultantModal) closeConsultantModal();
+      });
+
+      window.handleFormSubmission = function (e) {
+        e.preventDefault();
+        alert('Thank you for submitting your profile details. A TJR Tech consultant representation lead will review your background and reach out directly.');
+        closeConsultantModal();
+        e.target.reset();
+      };
+
+      // Scroll Progress Indicator
+      const workspace = document.getElementById('mainWorkspace');
       const progressBar = document.getElementById('scrollProgress');
 
-      window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-
-        if (progressBar) progressBar.style.width = scrolled + '%';
-        if (winScroll > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }, { passive: true });
-
-      // 3. Mobile Navigation Drawer
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileDrawer = document.getElementById('mobileMenuDrawer');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function toggleMobile() {
-        const isOpen = mobileDrawer.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (workspace && progressBar) {
+        workspace.addEventListener('scroll', () => {
+          const scrollPos = workspace.scrollTop;
+          const totalHeight = workspace.scrollHeight - workspace.clientHeight;
+          const scrolled = (scrollPos / totalHeight) * 100;
+          progressBar.style.width = scrolled + '%';
+        }, { passive: true });
       }
 
-      if (mobileMenuBtn && mobileDrawer) {
-        mobileMenuBtn.addEventListener('click', toggleMobile);
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (mobileDrawer.classList.contains('active')) toggleMobile();
-          });
-        });
-      }
-
-      // 4. Scroll Reveal Observer
-      const reveals = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-        reveals.forEach(el => revealObserver.observe(el));
-      } else {
-        reveals.forEach(el => el.classList.add('active'));
-      }
-
-      // 5. Hero Consultant Profile Canvas (Central Profile with connected attribute nodes)
+      // 2. Interactive Hero Consultant Canvas (Theme-Optimized to Light System)
       (function initConsultantHeroCanvas() {
         const canvas = document.getElementById('consultantHeroCanvas');
         if (!canvas) return;
@@ -2448,21 +2378,18 @@
 
           // Central Profile Hub
           ctx.beginPath();
-          ctx.arc(cx, cy, 32, 0, Math.PI * 2);
-          ctx.fillStyle = '#0c183d';
+          ctx.arc(cx, cy, 30, 0, Math.PI * 2);
+          ctx.fillStyle = '#168C87';
           ctx.fill();
-          ctx.strokeStyle = '#2dd4bf';
-          ctx.lineWidth = 2;
-          ctx.stroke();
 
-          ctx.font = '10px Space Grotesk, monospace';
-          ctx.fillStyle = '#fff';
+          ctx.font = '700 10px Space Grotesk, monospace';
+          ctx.fillStyle = '#FFFFFF';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.fillText('CONSULTANT', cx, cy - 6);
           ctx.fillText('PROFILE', cx, cy + 8);
 
-          // Connected Satellite Nodes
+          // Connected Nodes
           nodes.forEach(node => {
             const rad = node.offset + angle;
             const nx = cx + Math.cos(rad) * radius;
@@ -2471,23 +2398,20 @@
             ctx.beginPath();
             ctx.moveTo(cx, cy);
             ctx.lineTo(nx, ny);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.22)';
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(22, 140, 135, 0.22)';
+            ctx.lineWidth = 1.2;
             ctx.setLineDash([4, 4]);
             ctx.stroke();
             ctx.setLineDash([]);
 
             ctx.beginPath();
-            ctx.arc(nx, ny, 16, 0, Math.PI * 2);
-            ctx.fillStyle = '#070f26';
+            ctx.arc(nx, ny, 14, 0, Math.PI * 2);
+            ctx.fillStyle = '#315FCE';
             ctx.fill();
-            ctx.strokeStyle = '#38bdf8';
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
 
-            ctx.font = '10px Space Grotesk, monospace';
-            ctx.fillStyle = '#94a3b8';
-            const labelY = ny > cy ? ny + 24 : ny - 24;
+            ctx.font = '700 9.5px Space Grotesk, monospace';
+            ctx.fillStyle = '#17253B';
+            const labelY = ny > cy ? ny + 20 : ny - 20;
             ctx.fillText(node.label, nx, labelY);
           });
 
@@ -2500,63 +2424,7 @@
         render();
       })();
 
-      // 6. Consultant Coordination Ecosystem Canvas (Section 18)
-      (function initConsultantEcosystemCanvas() {
-        const canvas = document.getElementById('consultantEcosystemCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        let width, height;
-
-        function resize() {
-          const rect = canvas.parentElement.getBoundingClientRect();
-          width = canvas.width = rect.width;
-          height = canvas.height = rect.height;
-          draw();
-        }
-
-        function draw() {
-          ctx.clearRect(0, 0, width, height);
-
-          const cx = width / 2;
-          const cy = height / 2;
-
-          const satellites = [
-            { name: 'CONSULTANT', x: 0.15, y: 0.25 },
-            { name: 'TECHNOLOGY', x: 0.5, y: 0.12 },
-            { name: 'REQUIREMENT', x: 0.85, y: 0.25 },
-            { name: 'STAFFING CONTACT', x: 0.88, y: 0.6 },
-            { name: 'INTERVIEW', x: 0.65, y: 0.85 },
-            { name: 'OPPORTUNITY', x: 0.35, y: 0.85 },
-            { name: 'PLACEMENT', x: 0.12, y: 0.6 }
-          ];
-
-          satellites.forEach(s => {
-            const sx = width * s.x;
-            const sy = height * s.y;
-
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(sx, sy);
-            ctx.strokeStyle = 'rgba(45, 212, 191, 0.2)';
-            ctx.lineWidth = 1;
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.arc(sx, sy, 7, 0, Math.PI * 2);
-            ctx.fillStyle = '#2dd4bf';
-            ctx.fill();
-
-            ctx.font = '11px Space Grotesk, monospace';
-            ctx.fillStyle = '#94a3b8';
-            ctx.fillText(s.name, sx + 12, sy + 4);
-          });
-        }
-
-        window.addEventListener('resize', resize);
-        resize();
-      })();
-
-      // 7. FAQ Accordion Interaction
+      // 3. FAQ Accordion Interaction
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
         const btn = item.querySelector('.faq-question-btn');
@@ -2577,41 +2445,6 @@
           }
         });
       });
-
-      // 8. Consultant Intake Modal Handlers
-      const consultantModal = document.getElementById('consultantModal');
-      const openModalButtons = document.querySelectorAll('.open-consultant-modal');
-      const closeModalBtn = document.getElementById('closeModalBtn');
-
-      function openModal(e) {
-        if (e) e.preventDefault();
-        consultantModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        consultantModal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
-      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-      if (consultantModal) {
-        consultantModal.addEventListener('click', (e) => {
-          if (e.target === consultantModal) closeModal();
-        });
-      }
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && consultantModal.classList.contains('active')) closeModal();
-      });
-
-      window.handleFormSubmission = function (e) {
-        e.preventDefault();
-        alert('Thank you for submitting your profile details. A TJR Tech consultant representation lead will review your background and reach out directly.');
-        closeModal();
-        e.target.reset();
-      };
     })();
   </script>
 </body>
