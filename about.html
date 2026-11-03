@@ -1175,9 +1175,17 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      overflow-y: auto;
+      overflow: hidden;
+      min-height: 0;
       transition: var(--transition);
       box-shadow: var(--shadow-panel);
+    }
+
+    .panel-shell-content {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      flex: 1;
     }
 
     .panel-header {
@@ -1209,10 +1217,21 @@
     .panel-content {
       padding: 1.4rem;
       flex: 1;
+      min-height: 0;
+      overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
+
+    .panel-extra { display: flex; flex-direction: column; gap: 1.25rem; }
+    .panel-extra[hidden] { display: none; }
+    .panel-extra-section { border-top: 1px solid var(--surface-border-light); padding-top: 1rem; }
+    .panel-extra-section p, .panel-extra-section li { font-size: 0.82rem; color: var(--secondary-text); line-height: 1.65; }
+    .panel-extra-section ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+    .panel-photo { width: 100%; max-height: 260px; object-fit: cover; object-position: 50% 20%; border-radius: 12px; border: 1px solid var(--surface-border); box-shadow: var(--shadow-sm); }
+    .panel-designation { font-family: var(--tech-font); font-size: 0.7rem; line-height: 1.5; color: var(--brand-blue); font-weight: 700; }
+    .panel-vision { font-family: var(--tech-font); color: var(--strong-text) !important; font-weight: 600; }
 
     .panel-section-label {
       font-family: var(--tech-font);
@@ -1400,7 +1419,18 @@
        ========================================================================== */
     @media (max-width: 1100px) {
       .app-shell { grid-template-columns: var(--sidebar-width) 1fr 0px; }
-      .app-right-panel { display: none; }
+      .app-right-panel {
+        display: flex;
+        position: fixed;
+        z-index: 150;
+        top: var(--topbar-height);
+        right: 0;
+        bottom: 0;
+        width: min(420px, 100vw);
+        transform: translateX(105%);
+        transition: transform 0.25s var(--ease-bounce);
+      }
+      .app-shell.panel-open .app-right-panel { transform: translateX(0); }
       .grid-5-col, .grid-6-col { grid-template-columns: repeat(3, 1fr); }
     }
 
@@ -2209,7 +2239,7 @@ OPERATIONS </div>
           <article class="leader-profile-card" onclick="inspectItem('swarna')">
             <div class="leader-image-stage">
               <img
-                src="images/Swarana.jpeg"
+                src="Swarana.jpeg"
                 alt="Swarna - Operations &amp; Relationship Management at TJR Tech"
                 class="leader-photo"
                 style="object-position: 50% 20%;"
@@ -2338,7 +2368,7 @@ ENTERPRISE DELIVERY </div>
 
     <!-- CONTEXTUAL RIGHT PANEL (INSPECTOR) -->
     <aside class="app-right-panel" id="appRightPanel">
-      <div>
+      <div class="panel-shell-content">
         <div class="panel-header">
           <div>
             <div class="panel-kicker">INSPECTOR</div>
@@ -2382,6 +2412,7 @@ ENTERPRISE DELIVERY </div>
               <span class="chip-tag">Brand Cinema</span>
             </div>
           </div>
+          <div id="panelExtra" class="panel-extra" hidden></div>
         </div>
       </div>
 
@@ -2535,121 +2566,140 @@ ENTERPRISE DELIVERY </div>
           chips: ['4K Brand Cinema', 'Executive Profiles', 'Motion Graphics', 'Story Scripting']
         },
         joel: {
-          title: 'Joel Ruthvik',
+          title: 'THUMMALA JOEL RUTHVIK',
           kicker: 'LEADERSHIP SPEC',
-          desc: 'Founder & Chairman leading the strategic direction of TJR Tech, with deep operational experience across US IT staffing, technical recruitment, and digital systems.',
+          designation: 'FOUNDER & CHAIRMAN | STRATEGIC LEADERSHIP • WORKFORCE SOLUTIONS • WEB DESIGN & DEVELOPMENT • TECHNOLOGY & DIGITAL INNOVATION',
+          photo: './images/joelruthvik.png',
+          specsLabel: 'EXECUTIVE PORTFOLIO',
+          chipsLabel: 'CORE LEADERSHIP SCOPE',
+          mandateLabel: 'Strategic Leadership & Business Vision',
+          expertiseLabel: 'Core Areas of Leadership',
+          capabilitiesLabel: 'Enterprise Track Record & Sector Expertise',
+          desc: 'Founder and Chairman of TJR TECH, with a professional background spanning US IT staffing, talent acquisition, recruitment operations, workforce management, and web design and development. His experience across staffing and digital technology informs his strategic approach to building technology-driven businesses.',
           specs: [
-            { k: 'Role', v: 'Founder & Chairman' },
-            { k: 'Focus', v: 'Strategic Direction' },
-            { k: 'Domain', v: 'Systems & Recruitment' }
+            { k: 'Dual Competency', v: 'Workforce & Web — US IT Staffing and Digital Development' },
+            { k: 'Enterprise Portfolio', v: 'Tier-1 Clients — IBM, Capgemini, Tata Elxsi' },
+            { k: 'Domain Scope', v: 'Banking & Telecom — Barclays, Comcast & Enterprise Accounts' },
+            { k: 'Corporate Mandate', v: 'Chairman — Enterprise Growth & Tech Innovation' }
           ],
-          chips: ['Executive Leadership', 'Recruitment Ops', 'Global Strategy']
+          chips: ['Workforce Solutions', 'Digital Development', 'Tier-1 Clients', 'Banking & Telecom', 'Technology Innovation'],
+          executiveProfile: [
+            'Thummala Joel Ruthvik is the Founder and Chairman of TJR TECH, with a professional background spanning US IT staffing, talent acquisition, recruitment operations, workforce management, and web design and development. His experience across staffing and digital technology informs his strategic approach to building and developing technology-driven businesses.',
+            'His staffing and talent acquisition background includes technical recruitment, talent sourcing, consultant marketing, bench sales, recruitment operations, client and vendor engagement, and workforce coordination. His professional exposure includes supporting hiring requirements associated with IBM, Capgemini, Barclays, Comcast, and Tata Elxsi across enterprise technology, IT consulting, banking and finance, telecommunications, and design and technology.',
+            "In addition to his staffing expertise, Joel is a Web Designer and Developer, with experience creating digital and web-based solutions. This combination of workforce solutions and web development capabilities supports TJR TECH's broader focus on IT staffing, technology services, and digital innovation."
+          ],
+          mandate: [
+            'As Founder and Chairman, Joel provides strategic direction for TJR TECH, guiding its business priorities, organizational development, and long-term growth.'
+          ],
+          vision: 'His vision is to build a scalable enterprise that integrates US IT staffing, workforce solutions, technology services, and digital innovation. He aims to establish strong relationships with enterprise clients, technology professionals, and business partners through dependable service, operational discipline, and continuous improvement.',
+          expertise: [
+            { title: 'Pillar 01 — Corporate Strategy & Business Development', text: 'Setting business priorities, identifying growth opportunities, forging corporate alliances, and guiding strategic expansion.' },
+            { title: 'Pillar 02 — US IT Staffing & Workforce Solutions', text: 'Supporting staffing capabilities, talent pipelines, and enterprise contingent workforce requirements with agility.' },
+            { title: 'Pillar 03 — Client & Strategic Partnership Management', text: 'Developing professional relationships with clients, vendors, consultants, and business partners to foster sustainable commercial growth.' },
+            { title: 'Pillar 04 — Talent Acquisition & Recruitment Operations', text: 'Guiding recruitment strategy, technical hiring, consultant engagement, and workforce coordination across multi-tier technology stacks.' },
+            { title: 'Pillar 05 — Web Design & Development', text: 'Creating and developing web-based solutions that support modern digital presence, user experience, and evolving business needs.' },
+            { title: 'Pillar 06 — Technology Services & Digital Innovation', text: "Supporting TJR TECH's development of technology services, custom digital solutions, and strategic expansion into emerging technical domains." }
+          ],
+          capabilities: [
+            { title: 'Banking & Finance', items: ['Barclays & associated accounts', 'Mission-critical technical staffing', 'Compliance vetting and risk management', 'Financial systems talent'] },
+            { title: 'Telecommunications & Media', items: ['Comcast & network partners', 'Contingent workforce deployment', 'Network infrastructure engineering', 'Digital transformation squads'] },
+            { title: 'IT Consulting & Technology', items: ['IBM, Capgemini, and Tata Elxsi', 'Technical recruitment and consultant marketing', 'Bench sales', 'Digital technology solutions'] },
+            { title: 'Workforce & Web', items: ['US IT staffing and talent acquisition', 'Workforce management and recruitment operations', 'Web design and development', 'Technology and digital innovation'] }
+          ],
+          strategicValue: [
+            { title: 'Workforce & Digital Development', text: 'Combines US IT staffing and digital development as TJR TECH dual competencies.' },
+            { title: 'Tier-1 Enterprise Portfolio', text: 'Professional exposure includes IBM, Capgemini, and Tata Elxsi, with enterprise hiring accounts including Barclays and Comcast.' },
+            { title: 'Banking & Telecom Domain Scope', text: 'Supports enterprise accounts across banking, finance, telecommunications, media, and technology.' },
+            { title: 'Enterprise Growth & Technology Innovation', text: 'The corporate mandate as Chairman is enterprise growth and technology innovation.' }
+          ],
+          philosophy: 'Joel’s leadership approach emphasizes strategic thinking, professional integrity, operational excellence, and sustainable growth. He believes in building strong relationships, developing capable teams, and creating long-term value through reliable service delivery and continuous innovation. His combination of staffing industry knowledge, enterprise hiring exposure, operational experience, and web development capabilities provides TJR TECH with a foundation for developing its services and pursuing sustainable growth in the IT staffing and technology services industry.'
         },
         joshua: {
-          title: 'Joshua Rohit',
+          title: 'THUMMALA JOSHUA ROHIT',
           kicker: 'LEADERSHIP SPEC',
-          desc: 'Business & Contract Operations Director focusing on commercial contracts, organizational coordination, and structured vendor relationships.',
+          designation: 'DIRECTOR | US IT STAFFING • WORKFORCE STRATEGY • TALENT OPERATIONS',
+          photo: 'images/Joshua%20Rohit.png',
+          specsLabel: 'EXECUTIVE MANDATE',
+          chipsLabel: 'CORE OPERATING CAPABILITIES',
+          desc: 'A seasoned talent acquisition executive and Director at TJR TECH with domain expertise across North American technical recruitment, talent acquisition, and workforce transformation.',
           specs: [
-            { k: 'Role', v: 'Operations Director' },
-            { k: 'Focus', v: 'Commercial Contracts' },
-            { k: 'Domain', v: 'Business Operations' }
+            { k: 'Primary Mandate', v: 'US IT Staffing — W-2, 1099 & Corp-to-Corp (C2C)' },
+            { k: 'Commercial Lead', v: 'Bench Sales — Consultant Marketing & Deployment' },
+            { k: 'Leadership Scope', v: 'Workforce Strategy & Talent Operations' }
           ],
-          chips: ['Contract Execution', 'Commercial Terms', 'Client Relations']
+          chips: ['Technical Recruitment', 'Talent Acquisition', 'Bench Sales', 'Consultant Engagement', 'Workforce Operations'],
+          executiveProfile: [
+            'Thummala Joshua Rohit is a seasoned talent acquisition executive and Director at TJR TECH, possessing comprehensive domain mastery across the North American technical recruitment, talent acquisition, and workforce transformation landscape. His professional background encompasses end-to-end IT staffing operations, consultant ecosystem architecture, IT bench sales, consultant engagement, and multi-tier recruitment team governance.',
+            'Over the course of his career, Joshua has developed sharp operational acumen in identifying, benchmarking, and onboarding high-caliber software engineering talent. Having served in high-impact capacities as a Talent Acquisition Specialist, Team Lead, and Bench Sales Strategist, he combines rigorous technical candidate evaluation with acute commercial understanding to drive enterprise staffing engagements across competitive US consulting markets.'
+          ],
+          mandate: [
+            "As Director, Joshua is responsible for orchestrating the growth and operational delivery of TJR TECH's US IT staffing division. His role focuses on expanding the firm's consultant ecosystem, instituting repeatable and compliant recruiting frameworks, optimizing submission-to-placement turnaround times, and establishing high-trust partnerships with Tier-1 implementation vendors and corporate enterprise accounts across North America.",
+            "His functional leadership directly drives TJR TECH's core operating model, integrating proactive candidate sourcing, profile positioning, client interview coordination, onboarding compliance, and continuous consultant career advocacy."
+          ],
+          vision: 'Building People. Powering Possibilities. Driving scalable workforce transformation across North American IT markets.',
+          expertise: [
+            { title: 'Pillar 01 — US IT Staffing & Technical Recruitment', text: 'Directing full-lifecycle technical recruiting across diverse corporate frameworks including W-2, 1099, and Corp-to-Corp (C2C). Implementing structured technical sourcing, profile evaluation, and compliance workflows to fulfill client demands with velocity.' },
+            { title: 'Pillar 02 — Talent Acquisition & Pipeline Architecture', text: 'Engineering sustainable, pre-qualified talent pipelines across high-demand enterprise technologies including Cloud Infrastructure, Java/Full-Stack, Data Engineering, and Enterprise Guidewire/ERP platforms to support rapid client fulfillment.' },
+            { title: 'Pillar 03 — IT Bench Sales & Consultant Marketing', text: 'Spearheading bench marketing initiatives, prime vendor portal integrations, rate negotiations, and submission optimization to reduce bench time and secure placements for in-house and networked consultants.' },
+            { title: 'Pillar 04 — Recruitment Operations & Team Leadership', text: 'Mentoring and governing recruitment teams, establishing operational metrics, defining SLA governance, optimizing submission-to-interview ratios, and institutionalizing recruiting best practices.' },
+            { title: 'Pillar 05 — Consultant Relationship Lifecycle', text: 'Cultivating transparent, long-term consultant relationships. Overseeing client onboarding, background checks, immigration compliance, and active assignment support.' },
+            { title: 'Pillar 06 — Business Growth & Staffing Operations', text: 'Connecting specialized global technical talent with North American enterprise demand, developing strategic MSP/VMS account relationships, and scaling consulting service engagements.' }
+          ],
+          capabilities: [
+            { title: 'Staffing Engagement Models', items: ['W-2', '1099', 'Corp-to-Corp (C2C)', 'Consulting engagements'] },
+            { title: 'Technical Talent Domains', items: ['Cloud Infrastructure', 'Java / Full-Stack', 'Data Engineering', 'Enterprise Guidewire / ERP'] },
+            { title: 'Recruitment & Bench Sales', items: ['Technical sourcing and candidate evaluation', 'Talent pipeline architecture', 'Bench marketing and vendor portal integrations', 'Rate negotiation and submission optimization'] },
+            { title: 'Operations & Consultant Lifecycle', items: ['Recruitment team governance and SLA metrics', 'Interview coordination and onboarding compliance', 'Background checks and immigration compliance', 'Assignment support and consultant career advocacy'] }
+          ],
+          strategicValue: [
+            { title: 'Scalable US Staffing Engine', text: "Brings hands-on leadership to TJR TECH's core mission of establishing a premier US IT staffing firm, with the operational capability to deploy technical consultants at scale." },
+            { title: 'Bench Sales & Margin Optimization', text: 'Specialized IT bench sales and prime vendor relationship management accelerate revenue realization, reduce consultant bench lag, and maximize billable utilization.' },
+            { title: 'End-to-End Delivery Governance', text: 'Enforces disciplined workflows covering candidate vetting, client interview preparation, contract execution, compliance checks, and post-placement retention.' },
+            { title: 'Enterprise Synergy', text: "Links TJR TECH's technical recruitment division with its enterprise software delivery and custom digital solution practices to provide a comprehensive commercial offering." }
+          ]
         },
         swarna: {
-  title: 'MANIMALA SWARNA LATHA',
+          title: 'MANIMALA SWARNA LATHA',
+          kicker: 'LEADERSHIP SPEC',
+          designation: 'DIRECTOR | TECHNOLOGY LEADERSHIP • DIGITAL SOLUTIONS • ENTERPRISE DELIVERY',
+          photo: 'Swarana.jpeg',
+          desc: 'A seasoned enterprise technology professional and Director at TJR TECH, with over six years of specialized experience in large-scale IT consulting, enterprise insurance architectures, and mission-critical software engineering. She has delivered for international corporate clients across the United States, the United Kingdom, and South Africa.',
+          specs: [
+            { k: 'Core Enterprise Pedigree', v: '6+ Years IT' },
+            { k: 'Previous Organizations', v: 'NTT DATA Services, Capgemini, HCL' },
+            { k: 'Domain Specialization', v: 'Guidewire ClaimCenter, Gosu, Java, SQL' }
+          ],
+          chips: ['Guidewire ClaimCenter', 'Gosu', 'Java', 'SQL', 'System Integrations'],
+          executiveProfile: 'Having built a distinguished track record with Tier-1 multinational leaders—including NTT DATA Services, Capgemini, and HCL—she commands deep functional and technical authority in Guidewire ClaimCenter, Gosu development, Java, SQL, system integrations, business rules, and high-availability production support. Her enterprise delivery acumen bridges technical architecture with business strategy, ensuring reliable and scalable outcomes.',
+          mandate: [
+            "As Director, Manimala spearheads TJR TECH's enterprise technology roadmap and delivery governance.",
+            "Her role complements the company's core businesses across US IT staffing, W-2 consultant services, web/digital development, technical vetting, and future technology consulting.",
+            'She provides strategic oversight in translating enterprise-grade engineering benchmarks into client solutions, with cross-border coordination between onshore North American clients and offshore technical delivery squads.'
+          ],
+          vision: 'Engineering enterprise reliability, modernizing digital core platforms, and scaling Tier-1 global delivery solutions.',
+          expertise: [
+            { title: 'Pillar 01 — Technology Strategy & Delivery', text: "Architecting and executing TJR TECH's technology-focused initiatives, establishing modern digital capability frameworks, and ensuring architectural rigor across all client solutions." },
+            { title: 'Pillar 02 — Technical Solutions & Engineering', text: 'Contributing enterprise-grade depth in Guidewire ClaimCenter, Gosu, Core Java, SQL databases, API middleware, and custom application integrations for multinational clients.' },
+            { title: 'Pillar 03 — Talent & Technical Evaluation', text: "Enforcing rigorous technical screening and skillset benchmarking to qualify top-tier software engineers aligned with TJR TECH's US IT staffing and W-2 consultant operations." },
+            { title: 'Pillar 04 — Quality & Operational Excellence', text: 'Applying structured technical analysis, proactive root-cause analysis (RCA), defect triage, and strict SLA governance to maintain multinational service standards.' },
+            { title: 'Pillar 05 — Client & Stakeholder Engagement', text: 'Collaborating with US enterprise clients, QA squads, and functional consultants to analyze complex requirements and translate them into robust, high-performance technical deliverables.' },
+            { title: 'Pillar 06 — Innovation & Future Technology', text: "Directing TJR TECH's expansion into long-term enterprise application maintenance, automated business workflow solutions, and high-value custom technical consulting." }
+          ],
+          capabilities: [
+            { title: 'Core Enterprise Platforms', items: ['Guidewire ClaimCenter', 'Gosu Framework', 'Core Java', 'SQL Server', 'Relational Databases'] },
+            { title: 'Integration & Architecture', items: ['RESTful / SOAP Web Services', 'Enterprise Middleware', 'Business Rules Automation Engines'] },
+            { title: 'Production Engineering', items: ['High-Availability Production Support', 'Incident Management', 'Defect Triage', 'RCA Protocols'] },
+            { title: 'Delivery Governance', items: ['Full SDLC Lifecycle Management', 'Agile/Scrum Methodologies', 'QA & UAT Release Governance'] }
+          ],
+          strategicValue: [
+            { title: 'Enterprise Delivery Credibility', text: 'Infuses multinational software engineering standards from NTT DATA, Capgemini, and HCL directly into TJR TECH’s corporate identity and service portfolio.' },
+            { title: 'High-Value Technical Depth', text: 'Brings specialized Guidewire and enterprise integration knowledge for premium technical staffing accounts.' },
+            { title: 'Cross-Border Delivery Assurance', text: 'Bridges onshore North American commercial expectations with offshore engineering squads, supporting delivery punctuality and SLA compliance.' },
+            { title: 'Scalable Technology Partner', text: "Anchors the company's evolution from a specialized IT staffing agency into a comprehensive enterprise digital solutions partner." }
+          ]
+        }
+      };
 
-  kicker: 'DIRECTOR | TECHNOLOGY LEADERSHIP',
-
-  desc: 'Manimala Swarna Latha is an enterprise technology professional and Director at TJR TECH, with 6+ years of experience in IT consulting, software engineering, and enterprise insurance platforms. Her expertise includes Guidewire ClaimCenter, Gosu, Java, SQL, and enterprise integrations. At TJR TECH, she leads technology strategy, engineering excellence, and enterprise delivery, supporting scalable solutions and global client engagements.',
-
-  specs: [
-    { k: 'Experience', v: '6+ Years in IT' },
-    { k: 'Previous Companies', v: 'NTT DATA, Capgemini, HCL' },
-    { k: 'Specialization', v: 'Guidewire ClaimCenter' },
-    { k: 'Technical Expertise', v: 'Gosu, Java, SQL' },
-    { k: 'Global Experience', v: 'US, UK & South Africa' },
-    { k: 'Leadership Focus', v: 'Technology & Enterprise Delivery' }
-  ],
-
-  chips: [
-    'Technology Strategy',
-    'Enterprise Engineering',
-    'Technical Evaluation',
-    'Quality & Governance',
-    'Client Engagement',
-    'Digital Solutions'
-  ],
-
-  profile: {
-    heading: 'Executive Leadership Profile',
-    text: 'With experience at NTT DATA Services, Capgemini, and HCL, Manimala has contributed to enterprise technology platforms and mission-critical software engineering. Her expertise spans Guidewire ClaimCenter, Gosu development, Java, SQL, system integrations, business rules, and production support.'
-  },
-
-  leadership: {
-    heading: 'Directorship Mandate at TJR TECH',
-    text: 'Leads TJR TECH’s enterprise technology roadmap and delivery governance across US IT staffing, W-2 consultant services, web and digital development, technical vetting, and technology consulting. Supports coordination between North American clients and offshore technical delivery teams.'
-  },
-
-  expertise: [
-    {
-      title: 'Technology Strategy & Delivery',
-      desc: 'Developing technology initiatives, digital capability frameworks, and architectural standards.'
-    },
-    {
-      title: 'Technical Solutions & Engineering',
-      desc: 'Guidewire ClaimCenter, Gosu, Core Java, SQL databases, API middleware, and enterprise integrations.'
-    },
-    {
-      title: 'Talent & Technical Evaluation',
-      desc: 'Technical screening and skill benchmarking for software engineers supporting US IT staffing and W-2 operations.'
-    },
-    {
-      title: 'Quality & Operational Excellence',
-      desc: 'Root-cause analysis, defect triage, incident management, and SLA governance.'
-    },
-    {
-      title: 'Client & Stakeholder Engagement',
-      desc: 'Collaborating with enterprise clients, QA teams, and functional consultants to deliver reliable technical solutions.'
-    },
-    {
-      title: 'Innovation & Future Technology',
-      desc: 'Supporting enterprise application maintenance, automated workflows, and technology consulting.'
-    }
-  ],
-
-  technical: [
-    {
-      title: 'Core Enterprise Platforms',
-      value: 'Guidewire ClaimCenter, Gosu, Core Java, SQL Server, Relational Databases'
-    },
-    {
-      title: 'Integration & Architecture',
-      value: 'RESTful / SOAP Web Services, Enterprise Middleware, Business Rules Automation'
-    },
-    {
-      title: 'Production Engineering',
-      value: 'High-Availability Support, Incident Management, Defect Triage, Root-Cause Analysis'
-    },
-    {
-      title: 'Delivery Governance',
-      value: 'Full SDLC, Agile/Scrum, QA & UAT Release Governance'
-    }
-  ],
-
-  vision: {
-    heading: 'Leadership Vision',
-    text: 'Engineering enterprise reliability, modernizing digital core platforms, and scaling Tier-1 global delivery solutions.'
-  },
-
-  strategicValue: [
-    'Bringing multinational engineering standards from NTT DATA, Capgemini, and HCL into TJR TECH.',
-    'Strengthening enterprise technology expertise and consulting capabilities.',
-    'Connecting North American client expectations with offshore engineering teams.',
-    'Supporting TJR TECH’s growth into an enterprise digital solutions partner.'
-  ]
-}
-};
       // Submenu Toggle Engine
       window.toggleSidebarMenu = function (menuId, toggleBtnId) {
         const menu = document.getElementById(menuId);
@@ -2672,15 +2722,53 @@ ENTERPRISE DELIVERY </div>
 
         document.getElementById('panelTitle').textContent = item.title;
         document.getElementById('panelDesc').textContent = item.desc;
-        document.getElementById('spec-1').textContent = item.specs[0].v;
-        document.getElementById('spec-2').textContent = item.specs[1].v;
-        document.getElementById('spec-3').textContent = item.specs[2].v;
+        const specsList = document.getElementById('panelSpecsList');
+        while (specsList.children.length < item.specs.length) {
+          const row = document.createElement('li');
+          row.className = 'panel-spec-row';
+          row.innerHTML = '<span></span><span></span>';
+          specsList.appendChild(row);
+        }
+        const specsRows = specsList.querySelectorAll('.panel-spec-row');
+        specsRows.forEach((row, index) => {
+          const spec = item.specs[index];
+          row.hidden = !spec;
+          if (spec) {
+            row.querySelector('span:first-child').textContent = spec.k;
+            row.querySelector('span:last-child').textContent = spec.v;
+          }
+        });
 
+        const specsLabel = document.querySelector('#panelSpecsList').previousElementSibling;
+        if (specsLabel) specsLabel.textContent = item.specsLabel || 'OPERATING METRICS';
         const chipsWrap = document.getElementById('panelChips');
         chipsWrap.innerHTML = item.chips.map(chip => `<span class="chip-tag">${chip}</span>`).join('');
+        const chipsLabel = chipsWrap.previousElementSibling;
+        if (chipsLabel) chipsLabel.textContent = item.chipsLabel || 'CORE CAPABILITIES';
+        const extra = document.getElementById('panelExtra');
+        if (item.executiveProfile) {
+          const esc = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+          const section = (heading, body) => `<section class="panel-extra-section"><div class="panel-section-label">${esc(heading)}</div>${body}</section>`;
+          const profileBody = Array.isArray(item.executiveProfile)
+            ? item.executiveProfile.map(paragraph => `<p>${esc(paragraph)}</p>`).join('')
+            : `<p>${esc(item.executiveProfile)}</p>`;
+          extra.innerHTML = `<img class="panel-photo" src="${esc(item.photo)}" alt="${esc(item.title)}" style="object-position:50% 15%"><div class="panel-designation">${esc(item.designation)}</div>` +
+            section('Executive Leadership Profile', profileBody) +
+            section(item.mandateLabel || 'Directorship Mandate at TJR TECH', `<ul>${item.mandate.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`) +
+            section('Leadership Vision', `<p class="panel-vision">“${esc(item.vision)}”</p>`) +
+            section(item.expertiseLabel || 'Areas of Strategic Expertise & Core Contributions', `<ul>${item.expertise.map(x => `<li><strong>${esc(x.title)}:</strong> ${esc(x.text)}</li>`).join('')}</ul>`) +
+            section(item.capabilitiesLabel || 'Technical Capabilities Matrix', item.capabilities.map(group => `<div style="margin-bottom:.7rem"><strong style="font-size:.8rem;color:var(--strong-text)">${esc(group.title)}</strong><ul>${group.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')) +
+            (item.philosophy ? section('Leadership Philosophy', `<p>${esc(item.philosophy)}</p>`) : '') +
+            (item.strategicValue ? section('Strategic Value to TJR TECH & Corporate Investors', `<ul>${item.strategicValue.map(x => `<li><strong>${esc(x.title)}:</strong> ${esc(x.text)}</li>`).join('')}</ul>`) : '');
+          extra.hidden = false;
+        } else {
+          extra.hidden = true;
+          extra.innerHTML = '';
+        }
 
         const shell = document.getElementById('appShell');
         shell.classList.remove('panel-collapsed');
+        if (window.innerWidth <= 1100) shell.classList.add('panel-open');
 
         const select = document.getElementById('modalServiceSelect');
         if (select && (itemId === 'staffing' || itemId === 'bench' || itemId === 'web' || itemId === 'media')) {
@@ -2690,7 +2778,11 @@ ENTERPRISE DELIVERY </div>
 
       window.toggleRightPanel = function () {
         const shell = document.getElementById('appShell');
-        shell.classList.toggle('panel-collapsed');
+        if (window.innerWidth <= 1100) {
+          shell.classList.remove('panel-open');
+        } else {
+          shell.classList.toggle('panel-collapsed');
+        }
       };
 
       document.getElementById('togglePanelBtn').addEventListener('click', toggleRightPanel);
